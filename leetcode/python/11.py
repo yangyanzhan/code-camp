@@ -17,4 +17,3 @@ class Solution:
             else:
                 start += 1
         return res
-        
