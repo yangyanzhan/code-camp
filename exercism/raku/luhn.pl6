@@ -5,11 +5,6 @@ unit module Luhn;
 
 sub is-luhn-valid ($input is copy) is export {
     $input ~~ s:g/\s//;
-    return False if $input ~~ /\D/ || $input.chars <= 1;
-    my $sum = [+] $input.comb.reverse.kv.map({
-        my $num = ($^a %% 2 ?? 1 !! 2) * $^b;
-        $num -= 9 if $num > 9;
-        $num;
-    });
-    $sum %% 10;
+    return False if $input.chars <= 1 || $input ~~ /\D/;
+    $input.comb.reverse.kv.map({$^a %% 2 ?? $^b !! 2 * $^b}).map({$^a > 9 ?? $^a - 9 !! $^a}).reduce({$^a + $^b}) %% 10;
 }
