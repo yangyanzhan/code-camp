@@ -3,32 +3,16 @@
 # It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 # Disclaimer: this solution is quoted from Rosetta Code, for more solutions and code snippets, please visit Rosetta Code Website : http://rosettacode.org/wiki/Rosetta_Code . Thanks for the great work done by Rosetta maintainers and contributors, I could make video tutorials for Rosetta.
 
-my @todo = $[1];
-my @sums = 0;
-sub nextrow($n) {
-    for +@todo .. $n -> $l {
-        @sums[$l] = 0;
-        print $l,"\r" if $l < $n;
-        my $r = [];
-        for reverse ^$l -> $x {
-            my @x := @todo[$x];
-            if @x {
-                $r.push: @sums[$x] += @x.shift;
-            }
-            else {
-                $r.push: @sums[$x];
-            }
-        }
-        @todo.push($r);
+my @rows = [1],;
+sub next-row($n) {
+    my $row = [];
+    for 1..$n -> $i {
+        $row.push([+](@rows[$n - $i][0..^min($i, @rows[$n - $i].elems)]));
     }
-    @todo[$n];
+    @rows.push($row);
+    @rows[$n];
 }
  
 say "rows:";
-say .fmt('%2d'), ": ", nextrow($_)[] for 1..10;
+say .fmt('%2d'), ": ", next-row($_) for 1..10;
  
- 
-say "\nsums:";
-for 23, 123, 1234, 12345 {
-    say $_, "\t", [+] nextrow($_)[];
-}
