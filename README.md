@@ -1,14 +1,28 @@
 # code-camp
 
+## HackerRank.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/hackerrank/c%2B%2B)
+
 ## Exercism.
 
 [solutions in Raku](https://github.com/yangyanzhan/code-camp/tree/master/exercism/raku)
 
 [videos in Raku](https://www.youtube.com/playlist?list=PLauAmRFUiNdsy3AD7YXmSBUiJsWVeO_3q)
 
-## Leetcode.
+## LeetCode.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/leetcode/c%2B%2B)
+
+[solutions in Python](https://github.com/yangyanzhan/code-camp/tree/master/leetcode/python)
+
+## Google Code Jam.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/google-code-jam/c%2B%2B)
+
+## Rosetta Code.
+
+[solutions in Raku](https://github.com/yangyanzhan/code-camp/tree/master/rosetta/raku)
 
 ## Why do I make this repo?
 
