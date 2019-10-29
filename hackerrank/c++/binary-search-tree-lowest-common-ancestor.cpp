@@ -1,0 +1,13 @@
+// Hi, I'm Yanzhan. For more algothmic problems, visit my Youtube Channel (Yanzhan Yang's Youtube Channel) : https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber or my Twitter Account (Yanzhan Yang's Twitter) : https://twitter.com/YangYanzhan or my GitHub HomePage (Yanzhan Yang's GitHub HomePage) : https://yangyanzhan.github.io .
+// For this specific algothmic problem, visit my Youtube Video :  .
+// It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
+
+Node *lca(Node *root, int v1, int v2) {
+    if (root->data < v1 && root->data < v2) {
+        return lca(root->right, v1, v2);
+    }
+    if (root->data > v1 && root->data > v2) {
+        return lca(root->left, v1, v2);
+    }
+    return root;
+}
