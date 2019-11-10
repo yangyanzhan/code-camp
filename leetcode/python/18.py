@@ -3,6 +3,7 @@
 __author__ = "yangyanzhan"
 __email__ = "yangyanzhan@gmail.com"
 __url__ = "https://github.com/yangyanzhan/code-camp"
+__blog__ = "https://yangyanzhan.github.io"
 
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
