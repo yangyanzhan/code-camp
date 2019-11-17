@@ -106,3 +106,4 @@ venv.bak/
 # custom
 run.py
 a.out
+.DS_Store
