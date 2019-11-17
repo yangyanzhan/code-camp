@@ -1,6 +1,6 @@
 # code-camp
 
-## Yanzhan's HomePage
+## Code Camp
 
 **Hi, I'm Yanzhan ![](resources/avatar.jpeg). I'm interested in all kinds of algorithmic problems. Also, I'm fascinated with the C++ & Raku language. If you want to learn more about programming problems, C++ and Raku, please visit my [Youtube Channel :video_camera:](https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber), [Twitter Account :iphone:](https://twitter.com/YangYanzhan) or [GitHub Repo :memo:](https://github.com/yangyanzhan/code-camp).**
 
