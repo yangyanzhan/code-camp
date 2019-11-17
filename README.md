@@ -37,11 +37,15 @@ So come with me, follow me at Youtube, Twitter or GitHub. Let's **"see"** the ar
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/hackerrank/c%2B%2B)
 
+[blogs in C++](https://yangyanzhan.github.io/hackerrank/)
+
 ## Exercism.
 
 [solutions in Raku](https://github.com/yangyanzhan/code-camp/tree/master/exercism/raku)
 
 [videos in Raku](https://www.youtube.com/playlist?list=PLauAmRFUiNdsy3AD7YXmSBUiJsWVeO_3q)
+
+[blogs in Raku](https://yangyanzhan.github.io/exercism/raku/)
 
 ## LeetCode.
 
