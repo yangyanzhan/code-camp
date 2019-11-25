@@ -18,5 +18,13 @@ sub MAIN($action, $filename = "", $judge = "codesignal") {
         my $title = $match[0].Str.comb(/<-[\-]>+/).join(" ");
         my $cmd = "git add . && git commit -m \"add Yanzhan\'s cpp solution for the $title problem on { $judge.lc }\"";
         shell $cmd;
+    } elsif $action eq "info" {
+        my $proc = shell "git status --porcelain", :out;
+        my $str = $proc.out.slurp: :close;
+        my $match = $str ~~ /(<-[\/]>+)\.cpp/;
+        my $path = "{ $judge.lc }/c++/{ $match[0].Str }.cpp";
+        my $cmd = "printf '$path' | pbcopy";
+        say $path;
+        shell $cmd;
     }
 }
