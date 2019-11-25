@@ -10,7 +10,11 @@ sub MAIN($action, $filename = "", $judge = "codesignal") {
         $template ~~ s:g/\{\{judge\}\}/$judge/;
         $template ~~ s:g/\{\{filename\}\}/$filename/;
 
-        spurt "./$judge/c++/$filename.cpp", $template;
+        my $path = "./$judge/c++/$filename.cpp";
+        spurt $path, $template;
+        my $cmd = "printf '$path' | pbcopy";
+        say $path;
+        shell $cmd;
     } elsif $action eq "submit" {
         my $proc = shell "git status --porcelain", :out;
         my $str = $proc.out.slurp: :close;
