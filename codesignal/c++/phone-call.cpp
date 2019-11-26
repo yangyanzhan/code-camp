@@ -4,7 +4,9 @@
 // Blog URL for this problem: https://yangyanzhan.github.io/codesignal/phone-call.html .
 
 int phoneCall(int min1, int min2_10, int min11, int s) {
-    if (s <= min1) {
+    if (s < min1) {
+        return 0;
+    } else if (s == min1) {
         return 1;
     } else if (s <= min1 + 9 * min2_10) {
         return 1 + (s - min1) / min2_10;

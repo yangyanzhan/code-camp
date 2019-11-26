@@ -8,5 +8,6 @@ int largestNumber(int n) {
     while (n-- > 0) {
         res = res * 10 + 9;
     }
+    return res;
 }
 
