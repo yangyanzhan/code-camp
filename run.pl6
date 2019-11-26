@@ -11,6 +11,10 @@ sub MAIN($action, $filename = "", $judge = "codesignal") {
         $template ~~ s:g/\{\{filename\}\}/$filename/;
 
         my $path = "./$judge/c++/$filename.cpp";
+        if $path.IO.e {
+            say "solution already exists";
+            return ;
+        }
         spurt $path, $template;
         my $cmd = "printf '$path' | pbcopy";
         say $path;
