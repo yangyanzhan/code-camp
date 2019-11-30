@@ -4,9 +4,12 @@
 // Blog URL for this problem: https://yangyanzhan.github.io/codesignal/alpha-7.html .
 
 std::string alpha7(std::string s) {
-    long long r;
-    for (auto c : s)
-        r = r * 26 + c - 97;
-    for (s = ""; s = char(48 + r % 7) + s, r /= 7;);
-    return s;
+    long num = 0;
+    for (auto ch: s)
+        num = 26 * num + ch - 97;
+    std::string t = "";
+    do {
+        t = (char)(num % 7 + 48) + t;
+    } while (num /= 7);
+    return t;
 }
