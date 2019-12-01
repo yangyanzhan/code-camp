@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yangyanzhan.github.io/codesignal/rectangle-rotation.html .
 
 int rectangleRotation(int a, int b) {
-    int n1 = (int)floor(b / 2 / 1.414) * 2 + 1;
-    int n2 = (int)floor(((b - 1.414) / 2) / 1.414) * 2 + 2;
-    int n3 = (int)floor(a / 2 / 1.414) * 2 + 1;
-    int n4 = (int)floor(((a - 1.414) / 2) / 1.414) * 2 + 2;
-    return n1 * n3 + n2 * n4;
+    int n1 = (int)floor(a / 2 / 1.414) * 2 + 1;
+    int n2 = (int)floor(b / 2 / 1.414) * 2 + 1;
+    int n3 = ((int)floor(((a - 1.414) / 2) / 1.414) + 1) * 2;
+    int n4 = ((int)floor(((b - 1.414) / 2) / 1.414) + 1) * 2;
+    return n1 * n2 + n3 * n4;
 }
 
