@@ -4,3 +4,4 @@
 * count black cells
 * rectangle rotation
 * crossword formation
+* cover debts
