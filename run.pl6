@@ -1,4 +1,4 @@
-sub MAIN($action, $filename = "", $judge = "codesignal") {
+sub MAIN($action, $filename = "", $judge = "codewars") {
     if $action eq "fetch" {
         if $filename eq "" {
             say "error";
