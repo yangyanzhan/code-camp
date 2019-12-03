@@ -30,7 +30,7 @@ sub MAIN($action, $filename = "", $judge = "codesignal") {
         my $proc = shell "git status --porcelain", :out;
         my $str = $proc.out.slurp: :close;
         my $match = $str ~~ /(<-[\/]>+)\.cpp/;
-        my $path = "{ $judge.lc }/c++/{ $match[0].Str }.cpp";
+        my $path = "./{ $judge.lc }/c++/{ $match[0].Str }.cpp";
         my $cmd = "printf '$path' | pbcopy";
         say $path;
         shell $cmd;
