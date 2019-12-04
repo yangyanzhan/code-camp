@@ -33,6 +33,38 @@ and there is no digit 4 in a and b.
 
 ---
 
+## LeetCode.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/leetcode/c%2B%2B)
+
+[solutions in Python](https://github.com/yangyanzhan/code-camp/tree/master/leetcode/python)
+
+[blogs in C++](https://yangyanzhan.github.io/leetcode/)
+
+## LintCode.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/lintcode/c%2B%2B)
+
+[blogs in C++](https://yangyanzhan.github.io/lintcode/)
+
+## CodeForces.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codeforces/c%2B%2B)
+
+[blogs in C++](https://yangyanzhan.github.io/codeforces/)
+
+## CodeSignal.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codesignal/c%2B%2B)
+
+[blogs in C++](https://yangyanzhan.github.io/codesignal/)
+
+## CodeWars.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codewars/c%2B%2B)
+
+[blogs in C++](https://yangyanzhan.github.io/codewars/)
+
 ## HackerRank.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/hackerrank/c%2B%2B)
@@ -41,23 +73,13 @@ and there is no digit 4 in a and b.
 
 ## Exercism.
 
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/exercism/c%2B%2B)
+
 [solutions in Raku](https://github.com/yangyanzhan/code-camp/tree/master/exercism/raku)
 
 [videos in Raku](https://www.youtube.com/playlist?list=PLauAmRFUiNdsy3AD7YXmSBUiJsWVeO_3q)
 
 [blogs in Raku](https://yangyanzhan.github.io/exercism/raku/)
-
-## LeetCode.
-
-[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/leetcode/c%2B%2B)
-
-[solutions in Python](https://github.com/yangyanzhan/code-camp/tree/master/leetcode/python)
-
-## CodeSignal.
-
-[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codesignal/c%2B%2B)
-
-[blogs in C++](https://yangyanzhan.github.io/codesignal/)
 
 ## Google Code Jam.
 
@@ -66,6 +88,8 @@ and there is no digit 4 in a and b.
 ## Rosetta Code.
 
 [solutions in Raku](https://github.com/yangyanzhan/code-camp/tree/master/rosetta/raku)
+
+[videos in Raku](https://www.youtube.com/watch?v=LKSMZIB8hhw&list=PLauAmRFUiNdsCK1JCxH72Ttg-IXjR7yQi)
 
 ---
 
