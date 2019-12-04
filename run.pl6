@@ -2,7 +2,7 @@
 # ---
 # "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"
 
-sub MAIN($action, $filename = "", $judge = "codesignal") {
+sub MAIN($action, $filename = "", $judge = "leetcode") {
     if $action eq "fetch" {
         if $filename eq "" {
             say "error";
@@ -38,5 +38,7 @@ sub MAIN($action, $filename = "", $judge = "codesignal") {
         my $cmd = "printf '$path' | pbcopy";
         say $path;
         shell $cmd;
+    } else {
+        say "unknown action";
     }
 }
