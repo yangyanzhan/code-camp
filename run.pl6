@@ -1,3 +1,5 @@
+# These are online judge websites we want to use:
+# ---
 # "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"
 
 sub MAIN($action, $filename = "", $judge = "codesignal") {
