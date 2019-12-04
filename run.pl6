@@ -2,7 +2,7 @@
 # ---
 # "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"
 
-sub MAIN($action, $filename = "", $judge = "leetcode") {
+sub MAIN($action, $filename = "", $judge = "lintcode") {
     if $action eq "fetch" {
         if $filename eq "" {
             say "error";
