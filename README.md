@@ -39,37 +39,37 @@ So come with me, follow me at Youtube, Twitter or GitHub. Let's **"see"** the ar
 
 [solutions in Python](https://github.com/yangyanzhan/code-camp/tree/master/leetcode/python)
 
-[blogs in C++](https://yangyanzhan.github.io/leetcode/)
+[blogs in C++](https://yanzhan.site/leetcode/)
 
 ## LintCode.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/lintcode/c%2B%2B)
 
-[blogs in C++](https://yangyanzhan.github.io/lintcode/)
+[blogs in C++](https://yanzhan.site/lintcode/)
 
 ## CodeForces.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codeforces/c%2B%2B)
 
-[blogs in C++](https://yangyanzhan.github.io/codeforces/)
+[blogs in C++](https://yanzhan.site/codeforces/)
 
 ## CodeSignal.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codesignal/c%2B%2B)
 
-[blogs in C++](https://yangyanzhan.github.io/codesignal/)
+[blogs in C++](https://yanzhan.site/codesignal/)
 
 ## CodeWars.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codewars/c%2B%2B)
 
-[blogs in C++](https://yangyanzhan.github.io/codewars/)
+[blogs in C++](https://yanzhan.site/codewars/)
 
 ## HackerRank.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/hackerrank/c%2B%2B)
 
-[blogs in C++](https://yangyanzhan.github.io/hackerrank/)
+[blogs in C++](https://yanzhan.site/hackerrank/)
 
 ## Exercism.
 
@@ -79,7 +79,7 @@ So come with me, follow me at Youtube, Twitter or GitHub. Let's **"see"** the ar
 
 [videos in Raku](https://www.youtube.com/playlist?list=PLauAmRFUiNdsy3AD7YXmSBUiJsWVeO_3q)
 
-[blogs in Raku](https://yangyanzhan.github.io/exercism/raku/)
+[blogs in Raku](https://yanzhan.site/exercism/raku/)
 
 ## Google Code Jam.
 
