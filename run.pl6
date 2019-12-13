@@ -6,7 +6,12 @@
 my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"];
 
 sub MAIN($action, $filename = "") {
-    my $judge = @judges[4];
+    my $judge-idx = ".config".IO.slurp.Int;
+    if $judge-idx < 0 || $judge-idx >= @judges.elems {
+        say ".config error";
+        return ;
+    }
+    my $judge = @judges[$judge-idx];
     if $action eq "fetch" {
         if $filename eq "" {
             say "error";
