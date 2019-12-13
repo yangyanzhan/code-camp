@@ -2,10 +2,11 @@
 # ---
 # "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"
 
+#                  0           1            2             3           4             5            6
 my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"];
 
 sub MAIN($action, $filename = "") {
-    my $judge = @judges[3];
+    my $judge = @judges[4];
     if $action eq "fetch" {
         if $filename eq "" {
             say "error";
