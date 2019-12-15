@@ -26,7 +26,7 @@ int hamming::compute(string in1, string in2) {
         throw domain_error("size of the two arguments is not eaual");
     }
     int res = 0;
-    for (int i = 0; i < in1.size(); i++) {
+    for (int i = 0; i < (int)in1.size(); i++) {
         res += in1[i] == in2[i] ? 0 : 1;
     }
     return res;
