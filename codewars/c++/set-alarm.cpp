@@ -4,6 +4,6 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/set-alarm.html .
 
 bool set_alarm(const bool &employed, const bool &vacation) {
-  return employed && !vacation;
+    return employed && !vacation;
 }
 
