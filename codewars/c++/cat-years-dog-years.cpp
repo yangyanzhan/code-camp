@@ -12,11 +12,11 @@ std::vector<int> humanYearsCatYearsDogYears(int humanYears) {
     if (h >= 2) {
         d += 9;
     }
-    d += max(0, h - 2) * 4;
+    d += max(0, h - 2) * 5;
     int c = 15;
     if (h >= 2) {
         c += 9;
     }
-    c += max(0, h - 2) * 5;
-    return {h, d, c};
+    c += max(0, h - 2) * 4;
+    return {h, c, d};
 }
