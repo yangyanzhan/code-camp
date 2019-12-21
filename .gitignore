@@ -107,4 +107,5 @@ venv.bak/
 run.py
 a.out
 .DS_Store
-.config
+my-config.pm6
+.precomp

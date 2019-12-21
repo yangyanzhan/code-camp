@@ -5,8 +5,12 @@
 #                  0           1            2             3           4             5            6
 my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"];
 
+use lib '.';
+use my-config;
+
 sub MAIN($action, $filename = "") {
-    my $judge-idx = ".config".IO.slurp.Int;
+    # my $judge-idx = ".config".IO.slurp.Int;
+    my $judge-idx = get-judge-idx();
     if $judge-idx < 0 || $judge-idx >= @judges.elems {
         say ".config error";
         return ;
