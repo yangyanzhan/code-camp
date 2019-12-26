@@ -4,6 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/enclose-in-brackets.html .
 
 std::string encloseInBrackets(std::string inputString) {
+    using namespace std;
     return "(" + inputString + ")";
 }
 
