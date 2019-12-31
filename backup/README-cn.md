@@ -87,6 +87,10 @@ and there is no digit 4 in a and b.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codeforces/c%2B%2B)
 
+## 注：
+
+当前阶段主要精力集中在解决LeetCode和CodeSignal上的问题。其他平台的题目会在未来提供解答。LintCode和CodeForces的解答可能会遥遥无期了，时间不足。
+
 ---
 
 ## 为什么我要创建这个仓库？

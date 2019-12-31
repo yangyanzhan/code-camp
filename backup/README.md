@@ -87,6 +87,10 @@ So come with me, follow me at Youtube, Twitter or GitHub. Let's **"see"** the ar
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codeforces/c%2B%2B)
 
+## Note:
+
+I'm still focused on LeetCode & CodeSignal. Solutions to other online judges will be provided in the future. Solutions to LintCode & CodeForces are especially delayed, because I don't have enought time to solve puzzles on these platform.
+
 ---
 
 ## Why do I make this repo?
