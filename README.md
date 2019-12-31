@@ -69,23 +69,11 @@ So come with me, follow me at Youtube, Twitter or GitHub. Let's **"see"** the ar
 
 [blogs in Raku](https://yanzhan.site/exercism/raku/)
 
-## Google Code Jam.
-
-[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/google-code-jam/c%2B%2B)
-
 ## Rosetta Code.
 
 [solutions in Raku](https://github.com/yangyanzhan/code-camp/tree/master/rosetta/raku)
 
 [videos in Raku](https://www.youtube.com/watch?v=LKSMZIB8hhw&list=PLauAmRFUiNdsCK1JCxH72Ttg-IXjR7yQi)
-
-## LintCode.
-
-[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/lintcode/c%2B%2B)
-
-## CodeForces.
-
-[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codeforces/c%2B%2B)
 
 ---
 
