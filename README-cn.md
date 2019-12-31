@@ -83,13 +83,9 @@ and there is no digit 4 in a and b.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/lintcode/c%2B%2B)
 
-[blogs in C++](https://yanzhan.site/lintcode/)
-
 ## CodeForces.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codeforces/c%2B%2B)
-
-[blogs in C++](https://yanzhan.site/codeforces/)
 
 ---
 

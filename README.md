@@ -83,13 +83,9 @@ So come with me, follow me at Youtube, Twitter or GitHub. Let's **"see"** the ar
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/lintcode/c%2B%2B)
 
-[blogs in C++](https://yanzhan.site/lintcode/)
-
 ## CodeForces.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/codeforces/c%2B%2B)
-
-[blogs in C++](https://yanzhan.site/codeforces/)
 
 ---
 
