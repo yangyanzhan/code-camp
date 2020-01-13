@@ -1,7 +1,7 @@
 # These are online judge websites we want to use:
 # ---
 # "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"
-# Now I'm focused on leetcode and codesignal.
+# Now I'm focused on leetcode and codesignal!
 
 #                  0           1            2             3           4             5            6
 my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"];
