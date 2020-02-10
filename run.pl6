@@ -52,6 +52,17 @@ sub MAIN($action, $filename = "") {
         my $cmd = "printf '$path' | pbcopy";
         say $path;
         shell $cmd;
+    } elsif $action eq "format" {
+        my $proc = shell "pbpaste", :out;
+        my $str = $proc.out.slurp: :close;
+        my @items = split("\n", $str).grep( *.chars > 0 );
+        $str = @items.join("\n\n");
+        my $path = "tmp.txt";
+        spurt $path, $str;
+        my $cmd = "cat { $path } | pbcopy";
+        shell $cmd;
+        $cmd = "rm { $path }";
+        shell $cmd;
     } else {
         say "unknown action";
     }
