@@ -15,15 +15,6 @@
 
 class Solution {
     map<int, vector<TreeNode *>> cache;
-    bool is_power_of_2(int num) {
-        while (num > 1) {
-            if (num % 2 != 0) {
-                return false;
-            }
-            num /= 2;
-        }
-        return true;
-    }
 public:
     vector<TreeNode *> allPossibleFBT(int N) {
         if (cache.find(N) != cache.end()) {
