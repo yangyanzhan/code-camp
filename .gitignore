@@ -107,5 +107,6 @@ venv.bak/
 run.py
 a.out
 .DS_Store
-my-config.pm6
 .precomp
+my-config.pm6
+my-config.rakumod
