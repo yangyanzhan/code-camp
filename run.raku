@@ -1,10 +1,10 @@
 # These are online judge websites we want to use:
 # ---
-# "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"
+# "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism", "interviewbit"
 # Now I'm focused on leetcode!
 
-#                  0           1            2             3           4             5            6
-my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism"];
+#                  0           1            2             3           4             5            6            7
+my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism", "interviewbit"];
 
 use lib '.';
 use my-config;

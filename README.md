@@ -59,6 +59,10 @@ So come with me, follow me at Youtube, Twitter or GitHub. Let's **"see"** the ar
 
 [blogs in C++](https://yanzhan.site/hackerrank/)
 
+## InterviewBit.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/interviewbit/c%2B%2B)
+
 ## Exercism.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/exercism/c%2B%2B)

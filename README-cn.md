@@ -59,6 +59,10 @@ and there is no digit 4 in a and b.
 
 [blogs in C++](https://yanzhan.site/hackerrank/)
 
+## InterviewBit.
+
+[solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/interviewbit/c%2B%2B)
+
 ## Exercism.
 
 [solutions in C++](https://github.com/yangyanzhan/code-camp/tree/master/exercism/c%2B%2B)
