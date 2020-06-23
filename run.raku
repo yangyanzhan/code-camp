@@ -112,6 +112,8 @@ sub MAIN($action, $filename = "") {
     } elsif $action eq "build" {
         my $cmd = "cd build && rm -rf * && cd ..";
         shell $cmd;
+        my @sitemap-lines = ['<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
         my @roots = [["leetcode", "leetcode/c++"], ["codesignal", "codesignal/c++"], ["codewars", "codewars/c++"], ["hackerrank", "hackerrank/c++"]];
         for @roots -> @root {
             my $name = @root[0];
@@ -122,11 +124,16 @@ sub MAIN($action, $filename = "") {
             for dir($path).grep( { $_.contains(".cpp") } ) -> $file {
                 my $filename = $file.substr($path.chars + 1, $file.chars - $path.chars - 4 - 1);
                 @lines.push("<li><a href='/{$name}/{$filename}.html' target='_blank'>{$filename.split("-").join(" ")}</a></li>");
+                @sitemap-lines.push('<url>');
+                @sitemap-lines.push("<loc>https://yanzhan.site/{$name}/{$filename}.html</loc>");
+                @sitemap-lines.push('</url>');
                 gen-cpp($file, $filename, $name, $path);
             }
             @lines.append("</ul></body>");
             spurt "build/{$name}/index.html", @lines.join("\n");
         }
+        @sitemap-lines.push('</urlset>');
+        spurt "build/sitemap.xml", @sitemap-lines.join("\n");
         $cmd = "cp -r ./pre-build/* ./build";
         shell $cmd;
     } else {
