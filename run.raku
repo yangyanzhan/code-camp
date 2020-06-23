@@ -136,6 +136,8 @@ sub MAIN($action, $filename = "") {
         spurt "build/sitemap.xml", @sitemap-lines.join("\n");
         $cmd = "cp -r ./pre-build/* ./build";
         shell $cmd;
+        $cmd = "cp -r build/* ../yangyanzhan.github.io";
+        shell $cmd;
     } else {
         say "unknown action";
     }
