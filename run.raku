@@ -65,6 +65,10 @@ sub MAIN($action, $filename = "") {
         $cmd = "rm { $path }";
         shell $cmd;
     } elsif $action eq "build" {
+        my $cmd = "cd build && rm -rf * && cd ..";
+        shell $cmd;
+        $cmd = "cp -r ./pre-build/* ./build";
+        shell $cmd;
     } else {
         say "unknown action";
     }
