@@ -10,6 +10,51 @@ use lib '.';
 use my-config;
 use Text::Markdown;
 
+sub gen-cpp($file, $filename, $judge-name, $judge-path) {
+    my $content = $file.slurp.trim;
+    # my $md = Text::Markdown.new($content);
+    # $content = $md.to_html;
+    my $cnt = 0;
+    my @parts1 = $content.split("\n");
+    my @parts-tmp;
+    for 0..^@parts1.elems -> $i {
+        my $part = @parts1[$i].trim;
+        if $part.chars == 0 {
+            $cnt++;
+        } elsif $part.chars >= 2 && $part.substr(0, 2) eq "//" {
+            my $item = $part.substr(2).trim;
+            @parts-tmp.push: $item;
+            $cnt++;
+        } else {
+            last;
+        }
+    }
+    my @parts2 = @parts1[$cnt..*];
+    @parts1 = @parts-tmp;
+    my $title = $filename.split("-").join(" ");
+    my @solution-lines = ["<head><title>{$title}</title></head>", '<body>', '<link rel="stylesheet" href="/third-party/highlight/default.css">', '<script src="/third-party/highlight/highlight.js"></script>', '<script>hljs.initHighlightingOnLoad();</script>', "<h2>Yanzhan's solution for \"{$title}\"</h2>", '<ul>', @parts1.map( { "<li>{$_}</li>" } ).join("\n"), '</ul>', '<pre><code class="c++">', @parts2.join("\n"), '</code></pre>', '<!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            (i[r] =
+                i[r] ||
+                function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }),
+            (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+        ga("create", "UA-73731579-2", "auto");
+        ga("send", "pageview");
+    </script>', '</body>'
+];
+    $content = @solution-lines.join("\n");
+    spurt "build/{$judge-name}/{$filename}.html", $content;
+}
+
 sub MAIN($action, $filename = "") {
     # my $judge-idx = ".config".IO.slurp.Int;
     my $judge-idx = get-judge-idx();
@@ -77,29 +122,7 @@ sub MAIN($action, $filename = "") {
             for dir($path).grep( { $_.contains(".cpp") } ) -> $file {
                 my $filename = $file.substr($path.chars + 1, $file.chars - $path.chars - 4 - 1);
                 @lines.push("<li><a href='/{$name}/{$filename}.html' target='_blank'>{$filename.split("-").join(" ")}</a></li>");
-                my $content = $file.slurp.trim;
-                # my $md = Text::Markdown.new($content);
-                # $content = $md.to_html;
-                my $cnt = 0;
-                my @parts1 = $content.split("\n");
-                my @parts-tmp;
-                for 0..^@parts1.elems -> $i {
-                    my $part = @parts1[$i].trim;
-                    if $part.chars == 0 {
-                        $cnt++;
-                    } elsif $part.chars >= 2 && $part.substr(0, 2) eq "//" {
-                        my $item = $part.substr(2).trim;
-                        @parts-tmp.push: $item;
-                        $cnt++;
-                    } else {
-                        last;
-                    }
-                }
-                my @parts2 = @parts1[$cnt..*];
-                @parts1 = @parts-tmp;
-                my @solution-lines = ['<link rel="stylesheet" href="/third-party/highlight/default.css">', '<script src="/third-party/highlight/highlight.js"></script>', '<script>hljs.initHighlightingOnLoad();</script>', "<h2>Yanzhan's solution for \"{$filename.split("-").join(" ")}\"</h2>", '<ul>', @parts1.map( { "<li>{$_}</li>" } ).join("\n"), '</ul>', '<pre><code class="c++">', @parts2.join("\n"), '</code></pre>'];
-                $content = @solution-lines.join("\n");
-                spurt "build/{$name}/{$filename}.html", $content;
+                gen-cpp($file, $filename, $name, $path);
             }
             @lines.append("</ul></body>");
             spurt "build/{$name}/index.html", @lines.join("\n");
