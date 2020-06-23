@@ -114,7 +114,7 @@ sub MAIN($action, $filename = "") {
         shell $cmd;
         my @sitemap-lines = ['<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
-        my @roots = [["leetcode", "leetcode/c++"], ["codesignal", "codesignal/c++"], ["codewars", "codewars/c++"], ["hackerrank", "hackerrank/c++"]];
+        my @roots = [["leetcode", "leetcode/c++"], ["codesignal", "codesignal/c++"], ["codewars", "codewars/c++"], ["hackerrank", "hackerrank/c++"], ["interviewbit", "interviewbit/c++"]];
         for @roots -> @root {
             my $name = @root[0];
             my $path = @root[1];
