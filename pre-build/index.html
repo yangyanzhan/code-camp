@@ -1,0 +1,100 @@
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Yanzhan's HomePage - The Tao of Raku</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            (i[r] =
+                i[r] ||
+                function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }),
+            (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+        ga("create", "UA-73731579-2", "auto");
+        ga("send", "pageview");
+    </script>
+    <h2>
+        Yanzhan’s HomePage
+    </h2>
+    <h2>
+        Algorithmic Problems - An Introduction
+    </h2>
+    <ul>
+        <li>You may think computer programming and problem solving is very difficult, think again. Here’s an example
+            from Google Code Jam 2019 Qualification Round:</li>
+    </ul>
+    <blockquote>
+        <p>GCJ 2019 Qualification Round</p>
+        <div>
+            <pre><code>Given a number n, suppose there is at least one digit 4 in this number.
+
+How can you split number n into two numbers a and b, so that a + b = n
+and there is no digit 4 in a and b.
+</code></pre>
+        </div>
+    </blockquote>
+    <ul>
+        <li>
+            <p>
+                This may seem difficult at first glance. Maybe one can iterate through 1 to n - 1, and check each
+                possible pairs until the pair with desired properties is found. However, this solution requires
+                <strong>O(n)</strong> <img class="emoji" title=":-1:" alt=":-1:"
+                    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20" />
+                time complexity which is too slow
+                for this problem. Actually, there’s a <strong>O(1)</strong>
+                <img class="emoji" title=":+1:" alt=":+1:"
+                    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" />
+                solution for this problem. Can you think of the correct
+                solution?
+            </p>
+        </li>
+        <li>
+            It turns out that the <strong>O(1)</strong> <img class="emoji" title=":+1:" alt=":+1:"
+                src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" />
+            solution is
+            quite simple and intuitive. Just follow these steps:
+            <ul>
+                <li>Replace all the digit 4 with digit 3, so this is number a.</li>
+                <li>And replace all the digit 4 with digit 1, then we get number b. It’s just that simple!</li>
+            </ul>
+        </li>
+        <li>
+            Algorithmic problems sometimes may seem daunting and unapproachable. However, once you have understood
+            the
+            underlying logic for the solution. It will become clear and simple, just like the above example.
+            So just feel free to solve algorithmic problems. It’s a wonderful experience.
+        </li>
+    </ul>
+    <p>As <a href="https://en.wikipedia.org/wiki/Donald_Knuth" target="_blank">Donald Knuth</a> has once said:</p>
+    <blockquote>
+        <p>An algorithm must be seen to be believed.</p>
+    </blockquote>
+    <p>So come with me, follow me at <a
+            href="https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber"
+            target="_blank">Youtube</a>,
+        <a href="https://twitter.com/YangYanzhan" target="_blank">Twitter</a> or <a
+            href="https://github.com/yangyanzhan/code-camp" target="_blank">GitHub</a>. Let’s
+        <strong>“see”</strong> the art of
+        algorithm
+        together!!</p>
+    <hr />
+    <footer>
+        <p>Copyright © 2019-2099 Yanzhan Yang.</p>
+    </footer>
+</body>
+
+</html>
