@@ -71,14 +71,37 @@ sub MAIN($action, $filename = "") {
         for @roots -> @root {
             my $name = @root[0];
             my $path = @root[1];
+            $cmd = "mkdir -p build/{$name}";
+            shell $cmd;
             my @lines = ["<head><title>{$name} solutions</title></head><body>", "<h2>{$name} solutions by Yanzhan</h2>", "<ul>"];
             for dir($path).grep( { $_.contains(".cpp") } ) -> $file {
                 my $filename = $file.substr($path.chars + 1, $file.chars - $path.chars - 4 - 1);
                 @lines.push("<li><a href='/{$name}/{$filename}.html' target='_blank'>{$filename.split("-").join(" ")}</a></li>");
+                my $content = $file.slurp.trim;
+                # my $md = Text::Markdown.new($content);
+                # $content = $md.to_html;
+                my $cnt = 0;
+                my @parts1 = $content.split("\n");
+                my @parts-tmp;
+                for 0..^@parts1.elems -> $i {
+                    my $part = @parts1[$i].trim;
+                    if $part.chars == 0 {
+                        $cnt++;
+                    } elsif $part.chars >= 2 && $part.substr(0, 2) eq "//" {
+                        my $item = $part.substr(2).trim;
+                        @parts-tmp.push: $item;
+                        $cnt++;
+                    } else {
+                        last;
+                    }
+                }
+                my @parts2 = @parts1[$cnt..*];
+                @parts1 = @parts-tmp;
+                my @solution-lines = ['<link rel="stylesheet" href="/third-party/highlight/default.css">', '<script src="/third-party/highlight/highlight.js"></script>', '<script>hljs.initHighlightingOnLoad();</script>', "<h2>Yanzhan's solution for \"{$filename.split("-").join(" ")}\"</h2>", '<ul>', @parts1.map( { "<li>{$_}</li>" } ).join("\n"), '</ul>', '<pre><code class="c++">', @parts2.join("\n"), '</code></pre>'];
+                $content = @solution-lines.join("\n");
+                spurt "build/{$name}/{$filename}.html", $content;
             }
             @lines.append("</ul></body>");
-            $cmd = "mkdir -p build/{$name}";
-            shell $cmd;
             spurt "build/{$name}/index.html", @lines.join("\n");
         }
         $cmd = "cp -r ./pre-build/* ./build";
