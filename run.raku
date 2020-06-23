@@ -71,12 +71,12 @@ sub MAIN($action, $filename = "") {
         for @roots -> @root {
             my $name = @root[0];
             my $path = @root[1];
-            my @lines = ["<h2>{$name} solutions by Yanzhan</h2>", "<ul>"];
+            my @lines = ["<head><title>{$name} solutions</title></head><body>", "<h2>{$name} solutions by Yanzhan</h2>", "<ul>"];
             for dir($path).grep( { $_.contains(".cpp") } ) -> $file {
                 my $filename = $file.substr($path.chars + 1, $file.chars - $path.chars - 4 - 1);
                 @lines.push("<li><a href='/{$name}/{$filename}.html' target='_blank'>{$filename.split("-").join(" ")}</a></li>");
             }
-            @lines.push("</ul>");
+            @lines.append("</ul></body>");
             $cmd = "mkdir -p build/{$name}";
             shell $cmd;
             spurt "build/{$name}/index.html", @lines.join("\n");
