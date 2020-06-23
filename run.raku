@@ -8,6 +8,7 @@ my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "h
 
 use lib '.';
 use my-config;
+use Text::Markdown;
 
 sub MAIN($action, $filename = "") {
     # my $judge-idx = ".config".IO.slurp.Int;
@@ -63,6 +64,7 @@ sub MAIN($action, $filename = "") {
         shell $cmd;
         $cmd = "rm { $path }";
         shell $cmd;
+    } elsif $action eq "build" {
     } else {
         say "unknown action";
     }
