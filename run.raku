@@ -32,7 +32,8 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
     my @parts2 = @parts1[$cnt..*];
     @parts1 = @parts-tmp;
     my $title = $filename.split("-").join(" ");
-    my @solution-lines = ["<head><title>{$title}</title></head>", '<body>', '<link rel="stylesheet" href="/third-party/highlight/default.css">', '<script src="/third-party/highlight/highlight.js"></script>', '<script>hljs.initHighlightingOnLoad();</script>', "<h2>Yanzhan's solution for \"{$title}\"</h2>", '<ul>', @parts1.map( { "<li>{$_}</li>" } ).join("\n"), '</ul>', '<pre><code class="c++">', @parts2.join("\n"), '</code></pre>', '<!-- Google Analytics -->
+    my @solution-lines = ["<head><title>{$title}</title></head>", '<body>', '<link rel="stylesheet" href="/third-party/highlight/default.css">', '<script src="/third-party/highlight/highlight.js"></script>', '<script>hljs.initHighlightingOnLoad();</script>', "<h2>Yanzhan's solution for \"{$title}\"</h2>", '<ul>', @parts1.map( { "<li>{$_}</li>" } ).join("\n"), '</ul>', '<pre class="cpp-hidden"><code class="c++">', @parts2.join("\n"), '</code></pre>', 
+'<!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
             i["GoogleAnalyticsObject"] = r;
@@ -49,7 +50,10 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
         })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
         ga("create", "UA-73731579-2", "auto");
         ga("send", "pageview");
-    </script>', '</body>'
+    </script>', '
+    <link rel="stylesheet" href="/style.css">
+    <script src="/main.js"></script>
+    ', '</body>'
 ];
     $content = @solution-lines.join("\n");
     spurt "build/{$judge-name}/{$filename}.html", $content;
@@ -120,7 +124,7 @@ sub MAIN($action, $filename = "") {
             my $path = @root[1];
             $cmd = "mkdir -p build/{$name}";
             shell $cmd;
-            my @lines = ["<head><title>{$name} solutions</title></head><body>", "<h2>{$name} solutions by Yanzhan</h2>", "<ul>"];
+            my @lines = ["<head><title>{$name} solutions</title><link rel=\"stylesheet\" href=\"/style.css\"><script src=\"/main.js\"></script></head><body>", "<h2>{$name} solutions by Yanzhan</h2>", "<ul>"];
             for dir($path).grep( { $_.contains(".cpp") } ) -> $file {
                 my $filename = $file.substr($path.chars + 1, $file.chars - $path.chars - 4 - 1);
                 @lines.push("<li><a href='/{$name}/{$filename}.html' target='_blank'>{$filename.split("-").join(" ")}</a></li>");

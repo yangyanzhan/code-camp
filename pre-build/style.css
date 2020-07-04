@@ -1,0 +1,40 @@
+:not([class*="cpp-code"]):not(h2):not(a) {
+    color: #82b74b;
+    background-color: #3e4444;
+    font-size: x-large;
+}
+
+.cpp-code {
+    font-size: xx-large;
+}
+
+body {
+    padding: 10px;
+}
+
+h2 {
+    color: #d64161;
+    font-size: xx-large;;
+}
+
+a {
+    color: #80ced6;
+}
+
+.cpp-hidden {
+    display: none;
+}
+
+.cpp-show {
+    display: block;
+    animation: fade_in_show 0.5s
+}
+
+@keyframes fade_in_show {
+     0% {
+          opacity: 0;
+     }
+     100% {
+          opacity: 1;
+     }
+}
