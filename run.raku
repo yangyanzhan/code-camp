@@ -23,7 +23,29 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
             $cnt++;
         } elsif $part.chars >= 2 && $part.substr(0, 2) eq "//" {
             my $item = $part.substr(2).trim;
-            @parts-tmp.push: $item;
+            my $k1 = "(Yanzhan Yang's Youtube Channel) : https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber";
+            my $v1 = "<a href=\"https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber\" target=_blank>[Yanzhan Yang's Youtube Channel]</a>";
+            my $k2 = "(Yanzhan Yang's Twitter) : https://twitter.com/YangYanzhan";
+            my $v2 = "<a href=\"https://twitter.com/YangYanzhan\" target=_blank>[Yanzhan Yang's Twitter]</a>";
+            my $k3 = "(Yanzhan Yang's GitHub HomePage) : https://yanzhan.site";
+            my $v3 = "<a href=\"https://github.com/yangyanzhan/code-camp\" target=_blank>[Yanzhan Yang's GitHub Project]</a>";
+            # my $k4 = "Blog URL for this problem: (.*) .\$";
+            # # my $v4 = "<a href=\"$0\" target=_blank>$0</a>";
+            # my $v4 = "";
+            $item ~~ s/"{$k1}"/$v1/;
+            $item ~~ s/"{$k2}"/$v2/;
+            $item ~~ s/"{$k3}"/$v3/;
+            # $item ~~ s/"{$k4}"/$v4/;
+            if $item.contains("Blog URL for this problem") {
+                $item = "";
+            }
+            if $item.contains("For this specific algothmic problem, visit my Youtube Video") && !$item.contains("http") {
+                $item = "";
+            }
+            $item = $item.trim;
+            if $item.chars > 0 {
+                @parts-tmp.push: $item;
+            }
             $cnt++;
         } else {
             last;
