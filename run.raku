@@ -33,27 +33,9 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
     @parts1 = @parts-tmp;
     my $title = $filename.split("-").join(" ");
     my @solution-lines = ["<head><title>{$title}</title></head>", '<body>', '<link rel="stylesheet" href="/third-party/highlight/default.css">', '<script src="/third-party/highlight/highlight.js"></script>', '<script>hljs.initHighlightingOnLoad();</script>', "<h2>Yanzhan's solution for \"{$title}\"</h2>", '<ul>', @parts1.map( { "<li>{$_}</li>" } ).join("\n"), '</ul>', '<pre class="cpp-hidden"><code class="c++">', @parts2.join("\n"), '</code></pre>', 
-'<!-- Google Analytics -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i["GoogleAnalyticsObject"] = r;
-            (i[r] =
-                i[r] ||
-                function () {
-                    (i[r].q = i[r].q || []).push(arguments);
-                }),
-            (i[r].l = 1 * new Date());
-            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m);
-        })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
-        ga("create", "UA-73731579-2", "auto");
-        ga("send", "pageview");
-    </script>', '
-    <link rel="stylesheet" href="/style.css">
-    <script src="/main.js"></script>
-    ', '</body>'
+    '<link rel="stylesheet" href="/style.css">',
+    '<script src="/main.js"></script>',
+    '</body>'
 ];
     $content = @solution-lines.join("\n");
     spurt "build/{$judge-name}/{$filename}.html", $content;
