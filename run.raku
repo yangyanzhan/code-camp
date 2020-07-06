@@ -14,12 +14,12 @@ use my-config;
 my $judge;
 
 sub generate-judge() {
-  my $judge-idx = get-judge-idx();
-  if $judge-idx < 0 || $judge-idx >= @judges.elems {
-      say "error: unknown judge.";
-      exit 1;
-  }
-  $judge = @judges[$judge-idx];
+    my $judge-idx = get-judge-idx();
+    if $judge-idx < 0 || $judge-idx >= @judges.elems {
+        say "error: unknown judge.";
+        exit 1;
+    }
+    $judge = @judges[$judge-idx];
 }
 
 my $is-third-party-solution = @third-party-solutions.first($judge, :k).defined;
@@ -33,110 +33,110 @@ my $cpp-language = "c++";
 my $raku-language = "raku";
 
 my %language-highlight-classes = [
-  "{$cpp-language}" => "c++",
-  "{$raku-language}" => "raku",
+    "{$cpp-language}" => "c++",
+    "{$raku-language}" => "raku",
 ];
 
 my %language-comment-signs = [
-  "{$cpp-language}" => "//",
-  "{$raku-language}" => "#",
+    "{$cpp-language}" => "//",
+    "{$raku-language}" => "#",
 ];
 
 my @sitemap-lines = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\" xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"];
 
 sub my-fetch($filename) {
-  if $filename eq "" {
-      say "error: filename is empty.";
-      return ;
-  }
+    if $filename eq "" {
+        say "error: filename is empty.";
+        return ;
+    }
 
-  my $template = "./tools/cpp-template.cpp".IO.slurp;
+    my $template = "./tools/cpp-template.cpp".IO.slurp;
 
-  $template ~~ s:g/\{\{judge\}\}/$judge/;
-  $template ~~ s:g/\{\{filename\}\}/$filename/;
+    $template ~~ s:g/\{\{judge\}\}/$judge/;
+    $template ~~ s:g/\{\{filename\}\}/$filename/;
 
-  my $path = "./$judge/c++/$filename.cpp";
-  if $path.IO.e {
-      say "error: solution already exists.";
-      exit 1;
-  }
-  spurt $path, $template;
-  my $cmd = "printf '$path' | pbcopy";
-  say $path;
-  shell $cmd;
+    my $path = "./$judge/c++/$filename.cpp";
+    if $path.IO.e {
+        say "error: solution already exists.";
+        exit 1;
+    }
+    spurt $path, $template;
+    my $cmd = "printf '$path' | pbcopy";
+    say $path;
+    shell $cmd;
 }
 
 sub my-submit() {
-  my $proc = shell "git status --porcelain", :out;
-  my $str = $proc.out.slurp: :close;
-  my $match = $str ~~ /(<-[\/]>+)\.cpp/;
-  my $title = $match[0].Str.comb(/<-[\-]>+/).join(" ");
-  my $cmd = "git add . && git commit -m \"add Yanzhan\'s cpp solution for the $title problem on { $judge.lc }\"";
-  shell $cmd;
+    my $proc = shell "git status --porcelain", :out;
+    my $str = $proc.out.slurp: :close;
+    my $match = $str ~~ /(<-[\/]>+)\.cpp/;
+    my $title = $match[0].Str.comb(/<-[\-]>+/).join(" ");
+    my $cmd = "git add . && git commit -m \"add Yanzhan\'s cpp solution for the $title problem on { $judge.lc }\"";
+    shell $cmd;
 }
 
 sub my-info() {
-  my $proc = shell "git status --porcelain", :out;
-  my $str = $proc.out.slurp: :close;
-  my $match = $str ~~ /(<-[\/]>+)\.cpp/;
-  my $path = "./{ $judge.lc }/c++/{ $match[0].Str }.cpp";
-  my $cmd = "printf '$path' | pbcopy";
-  say $path;
-  shell $cmd;
+    my $proc = shell "git status --porcelain", :out;
+    my $str = $proc.out.slurp: :close;
+    my $match = $str ~~ /(<-[\/]>+)\.cpp/;
+    my $path = "./{ $judge.lc }/c++/{ $match[0].Str }.cpp";
+    my $cmd = "printf '$path' | pbcopy";
+    say $path;
+    shell $cmd;
 }
 
 sub my-build() {
-  # clear workspace
-  my $cmd = "cd build && rm -rf * && cd ..";
-  shell $cmd;
+    # clear workspace
+    my $cmd = "cd build && rm -rf * && cd ..";
+    shell $cmd;
 
-  # roots of solutions
-  my @roots = [["leetcode", "leetcode/c++", $cpp-extension], ["codesignal", "codesignal/c++", $cpp-extension], ["codewars", "codewars/c++", $cpp-extension], ["hackerrank", "hackerrank/c++", $cpp-extension], ["interviewbit", "interviewbit/c++", $cpp-extension], ["exercism", "exercism/raku", $raku-extension], ["rosetta", "rosetta/raku", $raku-extension]];
-  for @roots -> @root {
-      my $name = @root[0];
-      my $path = @root[1];
-      my $extension = @root[2];
-      my $is-third-party-solution = @third-party-solutions.first($name, :k).defined;
-      # setup root
-      $cmd = "mkdir -p build/{$name}";
-      shell $cmd;
-      # generate the index of the root page
-      my @lines = ["<head><title>{$name} solutions</title><link rel=\"stylesheet\" href=\"/style.css\"><script src=\"/main.js\"></script></head><body>"];
-      if ($is-third-party-solution) {
-        @lines.push("<h2>{$name} solutions by {$contributor-disclaimer}</h2>");
-      } else {
-        @lines.push("<h2>{$name} solutions by Yanzhan</h2>");
-      }
-      @lines.push("<ul>");
-      for dir($path).grep( { $_.contains($extension) } ) -> $file {
-          my $filename = $file.substr($path.chars + 1, $file.chars - $path.chars - $extension.chars - 1);
-          # add to index page
-          @lines.push("<li><a href='/{$name}/{$filename}.html' target='_blank'>{$filename.split("-").join(" ")}</a></li>");
-          # add to sitemap
-          @sitemap-lines.push('<url>');
-          @sitemap-lines.push("<loc>https://yanzhan.site/{$name}/{$filename}.html</loc>");
-          @sitemap-lines.push('</url>');
-          # generate landing page
-          if ($extension eq $cpp-extension) {
-            gen-solution($file, $filename, $name, $path, $cpp-language);
-          } elsif ($extension eq $raku-extension) {
-            gen-solution($file, $filename, $name, $path, $raku-language);
-          }
-      }
-      # complete and save index page
-      @lines.append("</ul></body>");
-      spurt "build/{$name}/index.html", @lines.join("\n");
-  }
-  # complete and save sitemap
-  @sitemap-lines.push('</urlset>');
-  spurt "build/sitemap.xml", @sitemap-lines.join("\n");
-  # copy pre build pages
-  $cmd = "cp -r ./pre-build/* ./build";
-  shell $cmd;
-  # copy workspace to my github repo for distribution
-  $cmd = "cp -r build/* ../yangyanzhan.github.io";
-  shell $cmd;
+    # roots of solutions
+    my @roots = [["leetcode", "leetcode/c++", $cpp-extension], ["codesignal", "codesignal/c++", $cpp-extension], ["codewars", "codewars/c++", $cpp-extension], ["hackerrank", "hackerrank/c++", $cpp-extension], ["interviewbit", "interviewbit/c++", $cpp-extension], ["exercism", "exercism/raku", $raku-extension], ["rosetta", "rosetta/raku", $raku-extension]];
+    for @roots -> @root {
+        my $name = @root[0];
+        my $path = @root[1];
+        my $extension = @root[2];
+        my $is-third-party-solution = @third-party-solutions.first($name, :k).defined;
+        # setup root
+        $cmd = "mkdir -p build/{$name}";
+        shell $cmd;
+        # generate the index of the root page
+        my @lines = ["<head><title>{$name} solutions</title><link rel=\"stylesheet\" href=\"/style.css\"><script src=\"/main.js\"></script></head><body>"];
+        if ($is-third-party-solution) {
+            @lines.push("<h2>{$name} solutions by {$contributor-disclaimer}</h2>");
+        } else {
+            @lines.push("<h2>{$name} solutions by Yanzhan</h2>");
+        }
+        @lines.push("<ul>");
+        for dir($path).grep( { $_.contains($extension) } ) -> $file {
+            my $filename = $file.substr($path.chars + 1, $file.chars - $path.chars - $extension.chars - 1);
+            # add to index page
+            @lines.push("<li><a href='/{$name}/{$filename}.html' target='_blank'>{$filename.split("-").join(" ")}</a></li>");
+            # add to sitemap
+            @sitemap-lines.push('<url>');
+            @sitemap-lines.push("<loc>https://yanzhan.site/{$name}/{$filename}.html</loc>");
+            @sitemap-lines.push('</url>');
+            # generate landing page
+            if ($extension eq $cpp-extension) {
+                gen-solution($file, $filename, $name, $path, $cpp-language);
+            } elsif ($extension eq $raku-extension) {
+                gen-solution($file, $filename, $name, $path, $raku-language);
+            }
+        }
+        # complete and save index page
+        @lines.append("</ul></body>");
+        spurt "build/{$name}/index.html", @lines.join("\n");
+    }
+    # complete and save sitemap
+    @sitemap-lines.push('</urlset>');
+    spurt "build/sitemap.xml", @sitemap-lines.join("\n");
+    # copy pre build pages
+    $cmd = "cp -r ./pre-build/* ./build";
+    shell $cmd;
+    # copy workspace to my github repo for distribution
+    $cmd = "cp -r build/* ../yangyanzhan.github.io";
+    shell $cmd;
 }
 
 sub MAIN($action, $filename = "") {
@@ -186,18 +186,18 @@ sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
             }
             # handle youtube url
             if $item.contains("For this specific algothmic problem, visit my Youtube Video") {
-              if !$item.contains("http") {
-                $item = "";
-              } else {
-                $item ~~ s:s/ \.$//;
-                $item = $item.trim;
-                $item ~~ s:s/(http\S*)$/<a href=\"$0\" target=_blank>[{$0}]<\/a> ./;
-                $video-url = $0;
-              }
+                if !$item.contains("http") {
+                    $item = "";
+                } else {
+                    $item ~~ s:s/ \.$//;
+                    $item = $item.trim;
+                    $item ~~ s:s/(http\S*)$/<a href=\"$0\" target=_blank>[{$0}]<\/a> ./;
+                    $video-url = $0;
+                }
             }
             # handle url in disclaimer
             if $item.contains("Disclaimer") {
-              $item ~~ s:s/(http\S*)/<a href=\"$0\" target=_blank>[{$0}]<\/a>/;
+                $item ~~ s:s/(http\S*)/<a href=\"$0\" target=_blank>[{$0}]<\/a>/;
             }
             # clean item and add item to comment lines
             $item = $item.trim;
@@ -218,22 +218,23 @@ sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
     # generate disclaimer
     my $disclaimer's = "Yanzhan's solution";
     if $is-third-party-solution {
-      $disclaimer's = $contributor-disclaimer's;
+        $disclaimer's = $contributor-disclaimer's;
     }
     # generate video lines
     my $video-lines = "
-      <div>
-      </div>
+        <div>
+        </div>
     ";
     if $video-url.defined {
-      my $k = "https://youtu.be/";
-      my $v = "https://www.youtube.com/embed/";
-      $video-url ~~ s/$k/$v/;
-      $video-lines = "
-        <div class=\"video-wrapper code-hidden\">
-          <iframe class=\"video-item\" src=\"{$video-url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
-        </div>
-      ";
+        my $k = "https://youtu.be/";
+        my $v = "https://www.youtube.com/embed/";
+        $video-url ~~ s/$k/$v/;
+        $video-lines = "
+            <div class=\"video-wrapper code-hidden\">
+                <iframe class=\"video-item\" src=\"{$video-url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>
+                </iframe>
+            </div>
+        ";
     }
     # generate solution lines
     my @solution-lines = [];
