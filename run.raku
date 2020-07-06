@@ -24,6 +24,8 @@ sub generate-judge() {
     $judge = @judges[$judge-idx];
 }
 
+generate-judge();
+
 my $is-third-party-solution = @third-party-solutions.first($judge, :k).defined;
 
 my $cpp-extension = ".cpp";
@@ -60,9 +62,9 @@ sub my-fetch($filename) {
 
     my $template = "./tools/cpp-template.cpp".IO.slurp;
     if $language eq $raku-language {
-        $template = "./tools/raku-template.cpp".IO.slurp;
+        $template = "./tools/raku-template.raku".IO.slurp;
         if $is-third-party-solution {
-            $template = "./tools/rosetta-raku-template.cpp".IO.slurp;
+            $template = "./tools/rosetta-raku-template.raku".IO.slurp;
         }
     }
 
