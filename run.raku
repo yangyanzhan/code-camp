@@ -146,6 +146,7 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
     my $cnt = 0;
     my @parts1 = $content.split("\n");
     my @parts-tmp;
+    my $video-url;
     for 0..^@parts1.elems -> $i {
         my $part = @parts1[$i].trim;
         if $part.chars == 0 {
@@ -171,6 +172,7 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
                 $item ~~ s:s/ \.$//;
                 $item = $item.trim;
                 $item ~~ s:s/(http\S*)$/<a href=\"$0\" target=_blank>[{$0}]<\/a> ./;
+                $video-url = $0;
               }
             }
             if $item.contains("Disclaimer") {
@@ -192,8 +194,21 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
     if $is-third-party-solution {
       $disclaimer's = $contributor-disclaimer's;
     }
-    my @solution-lines = ["<head><title>{$title}</title></head>", "<body>", "<link rel=\"stylesheet\" href=\"/third-party/highlight/solarized-dark.css\">", "<script src=\"/third-party/highlight/highlight.js\"></script>", "<script>hljs.initHighlightingOnLoad();</script>", "<h2>{$disclaimer's} for \"{$title}\"</h2>", "<ul>", @parts1.map( { "<li>{$_}</li>" } ).join("\n"), "</ul>", "<pre class=\"code-hidden\"><code class=\"c++\">", @parts2.join("\n"), "</code></pre>",
-      "<link rel=\"stylesheet\" href=\"/style.css\">",
+    my $video-lines = "
+      <div>
+      </div>
+    ";
+    if $video-url.defined {
+      my $k = "https://youtu.be/";
+      my $v = "https://www.youtube.com/embed/";
+      $video-url ~~ s/$k/$v/;
+      $video-lines = "
+        <div class=\"video-wrapper code-hidden\">
+          <iframe class=\"video-item\" src=\"{$video-url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+        </div>
+      ";
+    }
+    my @solution-lines = ["<head><title>{$title}</title>", "<link rel=\"stylesheet\" href=\"/style.css\">", "</head>", "<body>", "<link rel=\"stylesheet\" href=\"/third-party/highlight/solarized-dark.css\">", "<script src=\"/third-party/highlight/highlight.js\"></script>", "<script>hljs.initHighlightingOnLoad();</script>", "<h2>{$disclaimer's} for \"{$title}\"</h2>", "<ul>", @parts1.map( { "<li>{$_}</li>" } ).join("\n"), "</ul>", $video-lines, "<pre class=\"code-hidden\"><code class=\"c++\">", @parts2.join("\n"), "</code></pre>",
       "<script src=\"/main.js\"></script>",
       "</body>"
     ];
@@ -207,6 +222,7 @@ sub gen-raku($file, $filename, $judge-name, $judge-path) {
     my $cnt = 0;
     my @parts1 = $content.split("\n");
     my @parts-tmp;
+    my $video-url;
     for 0..^@parts1.elems -> $i {
         my $part = @parts1[$i].trim;
         if $part.chars == 0 {
@@ -232,6 +248,7 @@ sub gen-raku($file, $filename, $judge-name, $judge-path) {
                 $item ~~ s:s/ \.$//;
                 $item = $item.trim;
                 $item ~~ s:s/(http\S*)$/<a href=\"$0\" target=_blank>[{$0}]<\/a> ./;
+                $video-url = $0;
               }
             }
             if $item.contains("Disclaimer") {
@@ -253,8 +270,21 @@ sub gen-raku($file, $filename, $judge-name, $judge-path) {
     if $is-third-party-solution {
       $disclaimer's = $contributor-disclaimer's;
     }
-    my @solution-lines = ["<head><title>{$title}</title></head>", "<body>", "<link rel=\"stylesheet\" href=\"/third-party/highlight/solarized-dark.css\">", "<script src=\"/third-party/highlight/highlight.js\"></script>", "<script>hljs.initHighlightingOnLoad();</script>", "<h2>{$disclaimer's} for \"{$title}\"</h2>", "<ul>", @parts1.map( { "<li>{$_}</li>" } ).join("\n"), "</ul>", "<pre class=\"code-hidden\"><code class=\"perl\">", @parts2.join("\n"), "</code></pre>",
-      "<link rel=\"stylesheet\" href=\"/style.css\">",
+    my $video-lines = "
+      <div>
+      </div>
+    ";
+    if $video-url.defined {
+      my $k = "https://youtu.be/";
+      my $v = "https://www.youtube.com/embed/";
+      $video-url ~~ s/$k/$v/;
+      $video-lines = "
+        <div class=\"video-wrapper code-hidden\">
+          <iframe class=\"video-item\" src=\"{$video-url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+        </div>
+      ";
+    }
+    my @solution-lines = ["<head><title>{$title}</title>", "<link rel=\"stylesheet\" href=\"/style.css\">", "</head>", "<body>", "<link rel=\"stylesheet\" href=\"/third-party/highlight/solarized-dark.css\">", "<script src=\"/third-party/highlight/highlight.js\"></script>", "<script>hljs.initHighlightingOnLoad();</script>", "<h2>{$disclaimer's} for \"{$title}\"</h2>", "<ul>", @parts1.map( { "<li>{$_}</li>" } ).join("\n"), "</ul>", $video-lines, "<pre class=\"code-hidden\"><code class=\"perl\">", @parts2.join("\n"), "</code></pre>",
       "<script src=\"/main.js\"></script>",
       "</body>"
     ];

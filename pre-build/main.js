@@ -1,13 +1,18 @@
 window.onload = function() {
     document.querySelectorAll("code").forEach(function(elem) {
-        elem.classList.add("cpp-code");
+        elem.classList.add("highlight-code");
     });
     document.querySelectorAll("code *").forEach(function(elem) {
-        elem.classList.add("cpp-code");
+        elem.classList.add("highlight-code");
+    });
+    document.querySelectorAll(".video-wrapper").forEach(function(elem) {
+        elem.style.width = (window.innerWidth * 0.8) + "px";
+        elem.style.height = (window.innerWidth * 0.8 * 0.56) + "px";
     });
     setTimeout(function() {
-        document.querySelectorAll(".cpp-hidden").forEach(function(elem) {
-            elem.classList = ["cpp-show"];
+        document.querySelectorAll(".code-hidden").forEach(function(elem) {
+            elem.classList.remove("code-hidden");
+            elem.classList.add("code-show");
         });
     }, 300);
     setTimeout(function() {
