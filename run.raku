@@ -8,6 +8,8 @@ my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "h
 
 my @third-party-solutions = ["rosetta"];
 
+my @raku-solutions = ["exercism", "rosetta"];
+
 use lib '.';
 use my-config;
 
@@ -51,12 +53,26 @@ sub my-fetch($filename) {
         return ;
     }
 
+    my $language = $cpp-language;
+    if @raku-solutions.first($judge, :k).defined {
+        $language = $raku-language;
+    }
+
     my $template = "./tools/cpp-template.cpp".IO.slurp;
+    if $language eq $raku-language {
+        $template = "./tools/raku-template.cpp".IO.slurp;
+        if $is-third-party-solution {
+            $template = "./tools/rosetta-raku-template.cpp".IO.slurp;
+        }
+    }
 
     $template ~~ s:g/\{\{judge\}\}/$judge/;
     $template ~~ s:g/\{\{filename\}\}/$filename/;
 
     my $path = "./$judge/c++/$filename.cpp";
+    if $language eq $raku-language {
+        $path = "./$judge/raku/$filename.raku";
+    }
     if $path.IO.e {
         say "error: solution already exists.";
         exit 1;
@@ -71,8 +87,15 @@ sub my-submit() {
     my $proc = shell "git status --porcelain", :out;
     my $str = $proc.out.slurp: :close;
     my $match = $str ~~ /(<-[\/]>+)\.cpp/;
+    if !$match {
+        $match = $str ~~ /(<-[\/]>+)\.raku/;
+    }
+    if !$match {
+        say "error: language not known.";
+        exit 1;
+    }
     my $title = $match[0].Str.comb(/<-[\-]>+/).join(" ");
-    my $cmd = "git add . && git commit -m \"add Yanzhan\'s cpp solution for the $title problem on { $judge.lc }\"";
+    my $cmd = "git add . && git commit -m \"add Yanzhan\'s solution for the $title problem on { $judge.lc }\"";
     shell $cmd;
 }
 
@@ -80,7 +103,18 @@ sub my-info() {
     my $proc = shell "git status --porcelain", :out;
     my $str = $proc.out.slurp: :close;
     my $match = $str ~~ /(<-[\/]>+)\.cpp/;
-    my $path = "./{ $judge.lc }/c++/{ $match[0].Str }.cpp";
+    my $path;
+    if $match {
+        $path = "./{ $judge.lc }/c++/{ $match[0].Str }.cpp";
+    } else {
+        $match = $str ~~ /(<-[\/]>+)\.raku/;
+        if $match {
+            $path = "./{ $judge.lc }/raku/{ $match[0].Str }.raku";
+        } else {
+            say "error: language not known.";
+            exit 1;
+        }
+    }
     my $cmd = "printf '$path' | pbcopy";
     say $path;
     shell $cmd;
