@@ -98,6 +98,9 @@ sub my-submit() {
     }
     my $title = $match[0].Str.comb(/<-[\-]>+/).join(" ");
     my $cmd = "git add . && git commit -m \"add Yanzhan\'s solution for the $title problem on { $judge.lc }\"";
+    if $is-third-party-solution {
+        $cmd = "git add . && git commit -m \"add other contributors' solution for the $title problem on { $judge.lc }\"";
+    }
     shell $cmd;
 }
 
