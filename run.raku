@@ -29,6 +29,19 @@ my $raku-extension = ".raku";
 my $contributor-disclaimer = "Other Raku Contributors";
 my $contributor-disclaimer's = "Other Raku Contributors' solution";
 
+my $cpp-language = "c++";
+my $raku-language = "raku";
+
+my %language-highlight-classes = [
+  "{$cpp-language}" => "c++",
+  "{$raku-language}" => "raku",
+];
+
+my %language-comment-signs = [
+  "{$cpp-language}" => "//",
+  "{$raku-language}" => "#",
+];
+
 my @sitemap-lines = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\" xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"];
 
@@ -106,9 +119,9 @@ sub my-build() {
           @sitemap-lines.push('</url>');
           # generate landing page
           if ($extension eq $cpp-extension) {
-            gen-cpp($file, $filename, $name, $path);
+            gen-solution($file, $filename, $name, $path, $cpp-language);
           } elsif ($extension eq $raku-extension) {
-            gen-raku($file, $filename, $name, $path);
+            gen-solution($file, $filename, $name, $path, $raku-language);
           }
       }
       # complete and save index page
@@ -140,19 +153,24 @@ sub MAIN($action, $filename = "") {
     }
 }
 
-sub gen-cpp($file, $filename, $judge-name, $judge-path) {
+sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
+    # setup variables
+    my $comment-sign = %language-comment-signs{$language};
+    my $highlight-class = %language-highlight-classes{$language};
     my $is-third-party-solution = @third-party-solutions.first($judge-name, :k).defined;
     my $content = $file.slurp.trim;
     my $cnt = 0;
     my @parts1 = $content.split("\n");
     my @parts-tmp;
     my $video-url;
+    # handle comment lines
     for 0..^@parts1.elems -> $i {
         my $part = @parts1[$i].trim;
         if $part.chars == 0 {
             $cnt++;
-        } elsif $part.chars >= 2 && $part.substr(0, 2) eq "//" {
-            my $item = $part.substr(2).trim;
+        } elsif $part.chars >= $comment-sign.chars && $part.substr(0, $comment-sign.chars) eq $comment-sign {
+            my $item = $part.substr($comment-sign.chars).trim;
+            # handle social network urls
             my $k1 = "(Yanzhan Yang's Youtube Channel) : https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber";
             my $v1 = "<a href=\"https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber\" target=_blank>[Yanzhan Yang's Youtube Channel]</a>";
             my $k2 = "(Yanzhan Yang's Twitter) : https://twitter.com/YangYanzhan";
@@ -162,9 +180,11 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
             $item ~~ s/"{$k1}"/$v1/;
             $item ~~ s/"{$k2}"/$v2/;
             $item ~~ s/"{$k3}"/$v3/;
+            # remove github solution url
             if $item.contains("Blog URL for this problem") {
                 $item = "";
             }
+            # handle youtube url
             if $item.contains("For this specific algothmic problem, visit my Youtube Video") {
               if !$item.contains("http") {
                 $item = "";
@@ -175,9 +195,11 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
                 $video-url = $0;
               }
             }
+            # handle url in disclaimer
             if $item.contains("Disclaimer") {
               $item ~~ s:s/(http\S*)/<a href=\"$0\" target=_blank>[{$0}]<\/a>/;
             }
+            # clean item and add item to comment lines
             $item = $item.trim;
             if $item.chars > 0 {
                 @parts-tmp.push: $item;
@@ -187,13 +209,18 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
             last;
         }
     }
+    # generate code lines
     my @parts2 = @parts1[$cnt..*];
+    # generate comment lines
     @parts1 = @parts-tmp;
+    # generate title
     my $title = $filename.split("-").join(" ");
+    # generate disclaimer
     my $disclaimer's = "Yanzhan's solution";
     if $is-third-party-solution {
       $disclaimer's = $contributor-disclaimer's;
     }
+    # generate video lines
     my $video-lines = "
       <div>
       </div>
@@ -208,86 +235,25 @@ sub gen-cpp($file, $filename, $judge-name, $judge-path) {
         </div>
       ";
     }
-    my @solution-lines = ["<head><title>{$title}</title>", "<link rel=\"stylesheet\" href=\"/style.css\">", "</head>", "<body>", "<link rel=\"stylesheet\" href=\"/third-party/highlight/solarized-dark.css\">", "<script src=\"/third-party/highlight/highlight.js\"></script>", "<script>hljs.initHighlightingOnLoad();</script>", "<h2>{$disclaimer's} for \"{$title}\"</h2>", "<ul>", @parts1.map( { "<li>{$_}</li>" } ).join("\n"), "</ul>", $video-lines, "<pre class=\"code-hidden\"><code class=\"c++\">", @parts2.join("\n"), "</code></pre>",
-      "<script src=\"/main.js\"></script>",
-      "</body>"
-    ];
-    $content = @solution-lines.join("\n");
-    spurt "build/{$judge-name}/{$filename}.html", $content;
-}
-
-sub gen-raku($file, $filename, $judge-name, $judge-path) {
-    my $is-third-party-solution = @third-party-solutions.first($judge-name, :k).defined;
-    my $content = $file.slurp.trim;
-    my $cnt = 0;
-    my @parts1 = $content.split("\n");
-    my @parts-tmp;
-    my $video-url;
-    for 0..^@parts1.elems -> $i {
-        my $part = @parts1[$i].trim;
-        if $part.chars == 0 {
-            $cnt++;
-        } elsif $part.chars >= 1 && $part.substr(0, 1) eq "#" {
-            my $item = $part.substr(1).trim;
-            my $k1 = "(Yanzhan Yang's Youtube Channel) : https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber";
-            my $v1 = "<a href=\"https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber\" target=_blank>[Yanzhan Yang's Youtube Channel]</a>";
-            my $k2 = "(Yanzhan Yang's Twitter) : https://twitter.com/YangYanzhan";
-            my $v2 = "<a href=\"https://twitter.com/YangYanzhan\" target=_blank>[Yanzhan Yang's Twitter]</a>";
-            my $k3 = "(Yanzhan Yang's GitHub HomePage) : https://yanzhan.site";
-            my $v3 = "<a href=\"https://github.com/yangyanzhan/code-camp\" target=_blank>[Yanzhan Yang's GitHub Project]</a>";
-            $item ~~ s/"{$k1}"/$v1/;
-            $item ~~ s/"{$k2}"/$v2/;
-            $item ~~ s/"{$k3}"/$v3/;
-            if $item.contains("Blog URL for this problem") {
-                $item = "";
-            }
-            if $item.contains("For this specific algothmic problem, visit my Youtube Video") {
-              if !$item.contains("http") {
-                $item = "";
-              } else {
-                $item ~~ s:s/ \.$//;
-                $item = $item.trim;
-                $item ~~ s:s/(http\S*)$/<a href=\"$0\" target=_blank>[{$0}]<\/a> ./;
-                $video-url = $0;
-              }
-            }
-            if $item.contains("Disclaimer") {
-              $item ~~ s:s/(http\S*)/<a href=\"$0\" target=_blank>[{$0}]<\/a>/;
-            }
-            $item = $item.trim;
-            if $item.chars > 0 {
-                @parts-tmp.push: $item;
-            }
-            $cnt++;
-        } else {
-            last;
-        }
-    }
-    my @parts2 = @parts1[$cnt..*];
-    @parts1 = @parts-tmp;
-    my $title = $filename.split("-").join(" ");
-    my $disclaimer's = "Yanzhan's solution";
-    if $is-third-party-solution {
-      $disclaimer's = $contributor-disclaimer's;
-    }
-    my $video-lines = "
-      <div>
-      </div>
-    ";
-    if $video-url.defined {
-      my $k = "https://youtu.be/";
-      my $v = "https://www.youtube.com/embed/";
-      $video-url ~~ s/$k/$v/;
-      $video-lines = "
-        <div class=\"video-wrapper code-hidden\">
-          <iframe class=\"video-item\" src=\"{$video-url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
-        </div>
-      ";
-    }
-    my @solution-lines = ["<head><title>{$title}</title>", "<link rel=\"stylesheet\" href=\"/style.css\">", "</head>", "<body>", "<link rel=\"stylesheet\" href=\"/third-party/highlight/solarized-dark.css\">", "<script src=\"/third-party/highlight/highlight.js\"></script>", "<script>hljs.initHighlightingOnLoad();</script>", "<h2>{$disclaimer's} for \"{$title}\"</h2>", "<ul>", @parts1.map( { "<li>{$_}</li>" } ).join("\n"), "</ul>", $video-lines, "<pre class=\"code-hidden\"><code class=\"perl\">", @parts2.join("\n"), "</code></pre>",
-      "<script src=\"/main.js\"></script>",
-      "</body>"
-    ];
+    # generate solution lines
+    my @solution-lines = [];
+    @solution-lines.push: "<head><title>{$title}</title>";
+    @solution-lines.push: "<link rel=\"stylesheet\" href=\"/style.css\">";
+    @solution-lines.push: "</head>", "<body>";
+    @solution-lines.push: "<link rel=\"stylesheet\" href=\"/third-party/highlight/solarized-dark.css\">";
+    @solution-lines.push: "<script src=\"/third-party/highlight/highlight.js\"></script>";
+    @solution-lines.push: "<script>hljs.initHighlightingOnLoad();</script>";
+    @solution-lines.push: "<h2>{$disclaimer's} for \"{$title}\"</h2>";
+    @solution-lines.push: "<ul>";
+    @solution-lines.push: @parts1.map( { "<li>{$_}</li>" } ).join("\n");
+    @solution-lines.push: "</ul>";
+    @solution-lines.push: $video-lines;
+    @solution-lines.push: "<pre class=\"code-hidden\"><code class=\"{$highlight-class}\">";
+    @solution-lines.push: @parts2.join("\n");
+    @solution-lines.push: "</code></pre>";
+    @solution-lines.push: "<script src=\"/main.js\"></script>";
+    @solution-lines.push: "</body>";
+    # save solution to html file
     $content = @solution-lines.join("\n");
     spurt "build/{$judge-name}/{$filename}.html", $content;
 }
