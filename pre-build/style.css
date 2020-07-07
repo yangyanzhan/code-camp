@@ -1,4 +1,4 @@
-:not([class*="highlight-code"]):not(h2):not(a) {
+:not([class*="highlight-code"]):not(h2):not(a):not(.no-highlight-background) {
     color: #82b74b;
     background-color: #3e4444;
     font-size: x-large;
@@ -21,11 +21,11 @@ a {
     color: #80ced6;
 }
 
-.code-hidden {
+.yanzhan-hidden {
     display: none;
 }
 
-.code-show {
+.yanzhan-show {
     display: block;
     animation: fade_in_show 0.5s
 }
@@ -49,3 +49,18 @@ a {
     width: 100%;
     height: 100%;
 }
+
+.no-highlight-background {
+    padding: 5px;
+    color: #839496;
+    background: #002b36;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+

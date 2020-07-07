@@ -38,7 +38,7 @@ my $raku-language = "raku";
 
 my %language-highlight-classes = [
     "{$cpp-language}" => "c++",
-    "{$raku-language}" => "raku",
+    "{$raku-language}" => "",
 ];
 
 my %language-comment-signs = [
@@ -269,12 +269,22 @@ sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
         my $v = "https://www.youtube.com/embed/";
         $video-url ~~ s/$k/$v/;
         $video-lines = "
-            <div class=\"video-wrapper code-hidden\">
+            <div class=\"video-wrapper yanzhan-hidden\">
                 <iframe class=\"video-item\" src=\"{$video-url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>
                 </iframe>
             </div>
         ";
     }
+    for 0..^@parts2.elems -> $i {
+        my $k = "<";
+        my $v = "&lt;";
+        @parts2[$i] ~~ s/$k/$v/;
+    }
+    # generate footers;
+    my @footers = [
+        "<a href=\"/index.html\" target=_blank>[Go Back To HomePage]</a>",
+        "<a href=\"/{$judge-name}\" target=_blank>[Go Back To Solution List Page]</a>",
+    ];
     # generate solution lines
     my @solution-lines = [];
     @solution-lines.push: "<head><title>{$title}</title>";
@@ -288,9 +298,16 @@ sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
     @solution-lines.push: @parts1.map( { "<li>{$_}</li>" } ).join("\n");
     @solution-lines.push: "</ul>";
     @solution-lines.push: $video-lines;
-    @solution-lines.push: "<pre class=\"code-hidden\"><code class=\"{$highlight-class}\">";
-    @solution-lines.push: @parts2.join("\n");
-    @solution-lines.push: "</code></pre>";
+    if $highlight-class.chars > 0 {
+        @solution-lines.push: "<pre class=\"yanzhan-hidden\"><code class=\"{$highlight-class}\">" ~ @parts2.grep({$_.trim.chars > 0}).join("\n");
+        @solution-lines.push: "</code></pre>";
+    } else {
+        @solution-lines.push: "<pre class=\"yanzhan-hidden no-highlight-background\">" ~ @parts2.grep({$_.trim.chars > 0}).join("\n");
+        @solution-lines.push: "</pre>";
+    }
+    @solution-lines.push: "<ul class=\"yanzhan-hidden\">";
+    @solution-lines.push: @footers.map( { "<li>{$_}</li>" } ).join("\n");
+    @solution-lines.push: "</ul>";
     @solution-lines.push: "<script src=\"/main.js\"></script>";
     @solution-lines.push: "</body>";
     # save solution to html file

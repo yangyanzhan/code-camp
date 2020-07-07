@@ -10,9 +10,9 @@ window.onload = function() {
         elem.style.height = (window.innerWidth * 0.8 * 0.56) + "px";
     });
     setTimeout(function() {
-        document.querySelectorAll(".code-hidden").forEach(function(elem) {
-            elem.classList.remove("code-hidden");
-            elem.classList.add("code-show");
+        document.querySelectorAll(".yanzhan-hidden").forEach(function(elem) {
+            elem.classList.remove("yanzhan-hidden");
+            elem.classList.add("yanzhan-show");
         });
     }, 300);
     setTimeout(function() {
