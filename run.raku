@@ -46,6 +46,8 @@ my %language-comment-signs = [
     "{$raku-language}" => "#",
 ];
 
+my $github-page-directory = "yangyanzhan.github.io";
+
 my @sitemap-lines = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\" xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"];
 
@@ -173,8 +175,11 @@ sub my-build() {
     # copy pre build pages
     $cmd = "cp -r ./pre-build/* ./build";
     shell $cmd;
+    # clear github repo
+    $cmd = "set -x && ls ../{$github-page-directory} | xargs -I % sh -x -c 'rm -rf ../{$github-page-directory}/%'";
+    shell $cmd;
     # copy workspace to my github repo for distribution
-    $cmd = "cp -r build/* ../yangyanzhan.github.io";
+    $cmd = "cp -r build/* ../{$github-page-directory}";
     shell $cmd;
 }
 
