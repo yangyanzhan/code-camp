@@ -4,13 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/self-dividing-numbers.html .
 
 class Solution {
-public:
+  public:
     vector<int> selfDividingNumbers(int left, int right) {
         vector<int> res;
         for (int num = left; num <= right; num++) {
             auto item = to_string(num);
             bool valid = true;
-            for (auto &ch: item) {
+            for (auto &ch : item) {
                 int digit = ch - '0';
                 if (digit != 0 && num % digit == 0) {
                 } else {
@@ -25,4 +25,3 @@ public:
         return res;
     }
 };
-

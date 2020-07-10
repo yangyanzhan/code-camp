@@ -8,7 +8,7 @@ int timedReading(int maxLength, std::string text) {
     int res = 0;
     string word = "";
     text += ".";
-    for (auto ch: text) {
+    for (auto ch : text) {
         ch = tolower(ch);
         if (ch < 'a' || ch > 'z') {
             if (word.size() > 0 && word.size() <= maxLength) {
@@ -21,4 +21,3 @@ int timedReading(int maxLength, std::string text) {
     }
     return res;
 }
-

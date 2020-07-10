@@ -4,12 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/repetition-encryption.html .
 
 int repetitionEncryption(std::string letter) {
-  std::transform(letter.begin(), letter.end(), letter.begin(), [](char ch){return tolower(ch);});
-  std::regex pattern("(^|[^a-zA-Z])([a-zA-Z]+)[^a-zA-Z]+\\2([^a-zA-Z]|$)");
+    std::transform(letter.begin(), letter.end(), letter.begin(),
+                   [](char ch) { return tolower(ch); });
+    std::regex pattern("(^|[^a-zA-Z])([a-zA-Z]+)[^a-zA-Z]+\\2([^a-zA-Z]|$)");
 
-  return std::distance(
-    std::sregex_iterator(letter.begin(), letter.end(), pattern),
-    std::sregex_iterator()
-  );
+    return std::distance(
+        std::sregex_iterator(letter.begin(), letter.end(), pattern),
+        std::sregex_iterator());
 }
-

@@ -5,7 +5,7 @@
 
 int connectingTowns(int n, vector<int> routes) {
     int res = 1;
-    for (auto route: routes) {
+    for (auto route : routes) {
         res *= (route % 1234567);
         res %= 1234567;
     }

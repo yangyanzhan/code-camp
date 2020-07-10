@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/increasing-decreasing-string.html .
 
 class Solution {
-public:
+  public:
     string sortString(string s) {
         vector<int> counts(26);
-        for (auto ch: s) {
+        for (auto ch : s) {
             counts[ch - 'a']++;
         }
         string res;
@@ -40,4 +40,3 @@ public:
         return res;
     }
 };
-

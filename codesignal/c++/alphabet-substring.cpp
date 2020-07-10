@@ -8,4 +8,3 @@ bool alphabetSubstring(std::string s) {
     string alphabet = "abcdefghijklmnopqrstuvwxyz";
     return alphabet.find(s) != string::npos;
 }
-

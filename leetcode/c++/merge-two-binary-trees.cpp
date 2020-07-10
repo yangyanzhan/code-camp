@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
+  public:
+    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2) {
         if (t1 == nullptr) {
             return t2;
         }
@@ -28,4 +28,3 @@ public:
         return t1;
     }
 };
-

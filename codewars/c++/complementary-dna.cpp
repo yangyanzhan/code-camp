@@ -3,17 +3,16 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/complementary-dna.html .
 
-#include <vector>
 #include <string>
+#include <vector>
 
-std::string DNAStrand(const std::string& dna) {
+std::string DNAStrand(const std::string &dna) {
     using namespace std;
     string res = dna;
     vector<string> cache{"ATGC", "TACG"};
-    for (auto &ch: res) {
+    for (auto &ch : res) {
         int idx = cache[0].find(ch);
         ch = cache[1][idx];
     }
     return res;
 }
-

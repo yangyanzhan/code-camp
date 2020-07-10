@@ -27,4 +27,3 @@ void Solution::arrange(vector<int> &A) {
         }
     }
 }
-

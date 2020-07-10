@@ -8,7 +8,7 @@ int firstMultiple2(std::vector<int> divisors, int start) {
     int n = start;
     while (true) {
         bool valid = false;
-        for (auto num: divisors) {
+        for (auto num : divisors) {
             if (n % num == 0) {
                 valid = true;
             }
@@ -20,4 +20,3 @@ int firstMultiple2(std::vector<int> divisors, int start) {
     }
     return -1;
 }
-

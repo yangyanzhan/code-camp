@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/sum-of-squares.html .
 
-int sumOfSquares(int n) {
-    return n * (n + 1) * (2 * n + 1) / 6;
-}
-
+int sumOfSquares(int n) { return n * (n + 1) * (2 * n + 1) / 6; }

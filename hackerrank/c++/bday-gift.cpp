@@ -6,7 +6,7 @@
 // remember to add "<< fixed << setprecision(1)" to the output stream
 double solve(vector<int> balls) {
     double sum = 0;
-    for (auto ball: balls) {
+    for (auto ball : balls) {
         sum += ball;
     }
     return sum / 2;

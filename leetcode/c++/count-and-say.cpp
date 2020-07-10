@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/count-and-say.html .
 
 class Solution {
-public:
+  public:
     string countAndSay(int n) {
         string res = "1";
         for (int i = 1; i < n; i++) {
@@ -17,7 +17,7 @@ public:
         string res;
         char pre = '\0';
         int count = 0;
-        for (auto &ch: item) {
+        for (auto &ch : item) {
             if (ch == pre) {
                 count++;
             } else {
@@ -34,4 +34,3 @@ public:
         return res;
     }
 };
-

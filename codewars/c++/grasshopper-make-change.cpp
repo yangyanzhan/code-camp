@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/grasshopper-make-change.html .
 
 class Solution {
-public:
+  public:
     static float money;
     static float candy;
     static float chips;
@@ -16,5 +16,5 @@ float Solution::money = 10;
 float Solution::candy = 1.42;
 float Solution::chips = 2.40;
 float Solution::soda = 1;
-float Solution::change = Solution::money - Solution::candy - Solution::chips - Solution::soda;
-
+float Solution::change =
+    Solution::money - Solution::candy - Solution::chips - Solution::soda;

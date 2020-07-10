@@ -11,4 +11,3 @@ int Solution::numSetBits(unsigned int A) {
     }
     return res;
 }
-

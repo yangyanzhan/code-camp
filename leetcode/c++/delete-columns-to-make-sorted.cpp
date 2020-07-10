@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/delete-columns-to-make-sorted.html .
 
 class Solution {
-public:
-    int minDeletionSize(vector<string>& A) {
+  public:
+    int minDeletionSize(vector<string> &A) {
         int m = A.size(), n = A[0].size();
         int res = 0;
         for (int j = 0; j < n; j++) {
@@ -23,4 +23,3 @@ public:
         return res;
     }
 };
-

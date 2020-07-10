@@ -6,7 +6,7 @@
 std::string longestDigitsPrefix(std::string inputString) {
     using namespace std;
     string res = "";
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         if ('0' <= ch && ch <= '9') {
             res += ch;
         } else {

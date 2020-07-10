@@ -6,9 +6,9 @@
 class RecentCounter {
     int pre = 0;
     vector<int> times;
-public:
-    RecentCounter() {
-    }
+
+  public:
+    RecentCounter() {}
 
     int ping(int t) {
         times.push_back(t);
@@ -28,4 +28,3 @@ public:
  * RecentCounter* obj = new RecentCounter();
  * int param_1 = obj->ping(t);
  */
-

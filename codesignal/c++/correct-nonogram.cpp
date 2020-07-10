@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/correct-nonogram.html .
 
-bool correctNonogram(int size, std::vector<std::vector<std::string>> nonogramField) {
+bool correctNonogram(int size,
+                     std::vector<std::vector<std::string>> nonogramField) {
     using namespace std;
     int m = nonogramField.size(), n = nonogramField[0].size();
     for (int i = m - size; i < m; i++) {
@@ -78,4 +79,3 @@ bool correctNonogram(int size, std::vector<std::vector<std::string>> nonogramFie
     }
     return true;
 }
-

@@ -9,7 +9,7 @@ std::string lookAndSaySequenceNextElement(std::string element) {
     char pre = ' ';
     int count = 0;
     string res = "";
-    for (auto ch: element) {
+    for (auto ch : element) {
         if (ch == pre) {
             count++;
         } else {
@@ -22,4 +22,3 @@ std::string lookAndSaySequenceNextElement(std::string element) {
     }
     return res;
 }
-

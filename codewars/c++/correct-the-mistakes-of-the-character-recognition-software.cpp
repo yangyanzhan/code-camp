@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/correct-the-mistakes-of-the-character-recognition-software.html .
 
-#include <string>
 #include <regex>
+#include <string>
 
 std::string correct(std::string str) {
     using namespace std;
@@ -13,7 +13,7 @@ std::string correct(std::string str) {
     cache["5"] = "S";
     cache["0"] = "O";
     cache["1"] = "I";
-    for (auto pair: cache) {
+    for (auto pair : cache) {
         string from = pair.first, to = pair.second;
         regex reg(from);
         while (regex_search(s, reg)) {

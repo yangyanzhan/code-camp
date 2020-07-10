@@ -23,4 +23,3 @@ int happyPanda(std::vector<int> coins, std::vector<std::vector<int>> candies) {
     }
     return res;
 }
-

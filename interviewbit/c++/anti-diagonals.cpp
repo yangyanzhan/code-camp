@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/anti-diagonals.html .
 
-vector<vector<int> > Solution::diagonal(vector<vector<int> > &A) {
+vector<vector<int>> Solution::diagonal(vector<vector<int>> &A) {
     int n = A.size();
     vector<vector<int>> res;
     for (int k = 0; k < n; k++) {
@@ -16,10 +16,9 @@ vector<vector<int> > Solution::diagonal(vector<vector<int> > &A) {
     for (int k = 1; k < n; k++) {
         vector<int> row;
         for (int i = k; i < n; i++) {
-            row.push_back(A[i][n + k  - 1 - i]);
+            row.push_back(A[i][n + k - 1 - i]);
         }
         res.push_back(row);
     }
     return res;
 }
-

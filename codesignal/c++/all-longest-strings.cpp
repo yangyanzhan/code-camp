@@ -3,9 +3,10 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/all-longest-strings.html .
 
-std::vector<std::string> allLongestStrings(std::vector<std::string> inputArray) {
+std::vector<std::string>
+allLongestStrings(std::vector<std::string> inputArray) {
     std::vector<std::string> res;
-    for (auto item: inputArray) {
+    for (auto item : inputArray) {
         if (res.empty()) {
             res.push_back(item);
         } else {

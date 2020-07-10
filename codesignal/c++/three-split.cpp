@@ -5,7 +5,7 @@
 
 int threeSplit(std::vector<int> nums) {
     long long sum = 0;
-    for (auto num: nums) {
+    for (auto num : nums) {
         sum += num;
     }
     sum /= 3;
@@ -27,4 +27,3 @@ int threeSplit(std::vector<int> nums) {
     }
     return res;
 }
-

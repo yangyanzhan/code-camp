@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix.html .
 
 class Solution {
-public:
-    int minFlips(vector<vector<int>>& mat) {
+  public:
+    int minFlips(vector<vector<int>> &mat) {
         int m = mat.size(), n = mat[0].size();
         int v = 0;
         for (int i = 0; i < m; i++) {
@@ -22,11 +22,12 @@ public:
         while (vs.size() != 0) {
             res++;
             vector<int> new_vs;
-            for (auto v: vs) {
+            for (auto v : vs) {
                 for (int i = 0; i < m; i++) {
                     for (int j = 0; j < n; j++) {
                         int v1 = v;
-                        for (auto dir: vector<vector<int>>{{0, 0}, {-1, 0}, {1, 0}, {0, -1}, {0, 1}}) {
+                        for (auto dir : vector<vector<int>>{
+                                 {0, 0}, {-1, 0}, {1, 0}, {0, -1}, {0, 1}}) {
                             int i1 = i + dir[0], j1 = j + dir[1];
                             if (0 <= i1 && i1 < m && 0 <= j1 && j1 < n) {
                                 v1 ^= 1 << (i1 * n + j1);
@@ -48,4 +49,3 @@ public:
         return -1;
     }
 };
-

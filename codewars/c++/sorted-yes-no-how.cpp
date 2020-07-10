@@ -22,4 +22,3 @@ std::string is_sorted_and_how(std::vector<int> array) {
     }
     return dir == 1 ? "yes, ascending" : "yes, descending";
 }
-

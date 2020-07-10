@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/count-negative-numbers-in-a-sorted-matrix.html .
 
 class Solution {
-public:
+  public:
     int countNegatives(vector<vector<int>> &grid) {
         int m = grid.size(), n = grid[0].size();
         int res = 0;

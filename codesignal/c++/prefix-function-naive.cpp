@@ -17,4 +17,3 @@ std::vector<int> prefixFunctionNaive(std::string s) {
     }
     return res;
 }
-

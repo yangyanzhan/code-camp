@@ -13,4 +13,3 @@ std::string deleteWhitespaces(std::string inputStr) {
     }
     return inputStr;
 }
-

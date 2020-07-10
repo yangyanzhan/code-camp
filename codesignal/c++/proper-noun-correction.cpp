@@ -15,4 +15,3 @@ std::string properNounCorrection(std::string noun) {
     }
     return res;
 }
-

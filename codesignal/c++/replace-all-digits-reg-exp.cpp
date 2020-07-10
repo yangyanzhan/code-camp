@@ -8,7 +8,7 @@
 std::string replaceAllDigitsRegExp(std::string input) {
     using namespace std;
     string output;
-    regex_replace(back_inserter(output), input.begin(), input.end(), regex("\\d"), "#");
+    regex_replace(back_inserter(output), input.begin(), input.end(),
+                  regex("\\d"), "#");
     return output;
 }
-

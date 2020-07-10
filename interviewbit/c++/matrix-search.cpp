@@ -4,14 +4,16 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/matrix-search.html .
 
 class Position {
-public:
+  public:
     int x;
     int y;
-    Position(int x, int y): x(x), y(y) {}
+    Position(int x, int y) : x(x), y(y) {}
     bool operator<(const Position &pos) const {
-        if (x < pos.x) return true;
+        if (x < pos.x)
+            return true;
         if (x == pos.x) {
-            if (y < pos.y) return true;
+            if (y < pos.y)
+                return true;
         }
         return false;
     }
@@ -31,7 +33,8 @@ int Solution::searchMatrix(vector<vector<int>> &A, int B) {
         int k = ((x2 - x1) * n + y2 - y1) / 2 + x1 * n + y1;
         int x = k / n, y = k % n;
         // cout << x1 << " " << y1 << " - " << x << " " << y << " - " << x2 << " " << y2 << endl;
-        if (A[x][y] == B) return 1;
+        if (A[x][y] == B)
+            return 1;
         if (A[x][y] < B) {
             y++;
             if (y >= n) {
@@ -50,4 +53,3 @@ int Solution::searchMatrix(vector<vector<int>> &A, int B) {
     }
     return 0;
 }
-

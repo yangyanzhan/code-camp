@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/unique-email-addresses.html .
 
 class Solution {
-public:
+  public:
     int numUniqueEmails(vector<string> &emails) {
         set<string> cache;
-        for (auto email: emails) {
+        for (auto email : emails) {
             auto part1 = email.substr(0, email.find("@"));
             auto part2 = email.substr(email.find("@"));
             if (part1.find("+") != string::npos) {
@@ -22,4 +22,3 @@ public:
         return cache.size();
     }
 };
-

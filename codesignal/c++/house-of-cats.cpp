@@ -15,4 +15,3 @@ std::vector<int> houseOfCats(int legs) {
     }
     return res;
 }
-

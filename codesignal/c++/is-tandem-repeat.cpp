@@ -11,4 +11,3 @@ bool isTandemRepeat(std::string inputString) {
     }
     return false;
 }
-

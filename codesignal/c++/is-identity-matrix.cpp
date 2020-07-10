@@ -21,4 +21,3 @@ bool isIdentityMatrix(std::vector<std::vector<int>> matrix) {
     }
     return true;
 }
-

@@ -4,11 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/subtract-the-product-and-sum-of-digits-of-an-integer.html .
 
 class Solution {
-public:
+  public:
     int subtractProductAndSum(int n) {
         auto item = to_string(n);
         int prod = 1, sum = 0;
-        for (auto &ch: item) {
+        for (auto &ch : item) {
             int num = ch - '0';
             prod *= num;
             sum += num;
@@ -16,4 +16,3 @@ public:
         return prod - sum;
     }
 };
-

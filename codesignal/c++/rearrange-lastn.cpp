@@ -31,4 +31,3 @@ ListNode<int> *rearrangeLastN(ListNode<int> *l, int n) {
     tail->next = l;
     return head;
 }
-

@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/mod-256-without-the-mod-operator.html .
 
-int mod256WithoutMod(int number) {
-    return number - (number / 256) * 256;
-}
-
+int mod256WithoutMod(int number) { return number - (number / 256) * 256; }

@@ -22,4 +22,3 @@ int neighbouringElements(std::vector<std::vector<int>> nums) {
     }
     return res;
 }
-

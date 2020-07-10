@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/maximum-69-number.html .
 
 class Solution {
-public:
-    int maximum69Number (int num) {
+  public:
+    int maximum69Number(int num) {
         auto item = to_string(num);
-        for (auto &ch: item) {
+        for (auto &ch : item) {
             if (ch == '6') {
                 ch = '9';
                 break;
@@ -16,4 +16,3 @@ public:
         return stoi(item);
     }
 };
-

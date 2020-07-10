@@ -17,4 +17,3 @@ std::vector<int> dresses(std::vector<std::string> colors) {
     }
     return res;
 }
-

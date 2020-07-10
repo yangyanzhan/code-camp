@@ -3,6 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/are-equally-strong.html .
 
-bool areEquallyStrong(int yourLeft, int yourRight, int friendsLeft, int friendsRight) {
-    return max(yourLeft, yourRight) == max(friendsLeft, friendsRight) && min(yourLeft, yourRight) == min(friendsLeft, friendsRight);
+bool areEquallyStrong(int yourLeft, int yourRight, int friendsLeft,
+                      int friendsRight) {
+    return max(yourLeft, yourRight) == max(friendsLeft, friendsRight) &&
+           min(yourLeft, yourRight) == min(friendsLeft, friendsRight);
 }

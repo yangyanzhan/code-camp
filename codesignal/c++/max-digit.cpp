@@ -12,4 +12,3 @@ int maxDigit(int n) {
     }
     return res;
 }
-

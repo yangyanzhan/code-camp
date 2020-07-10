@@ -18,4 +18,3 @@ vector<vector<int>> cartesianNeighbor(int x, int y) {
     }
     return res;
 }
-

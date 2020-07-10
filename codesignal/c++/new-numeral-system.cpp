@@ -16,4 +16,3 @@ std::vector<std::string> newNumeralSystem(char number) {
     }
     return res;
 }
-

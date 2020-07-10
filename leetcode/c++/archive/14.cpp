@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
-    string longestCommonPrefix(vector<string>& strs) {
+  public:
+    string longestCommonPrefix(vector<string> &strs) {
         if (strs.size() == 0) {
             return "";
         }

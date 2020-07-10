@@ -6,11 +6,10 @@
 int sumUpDigits(std::string inputString) {
     using namespace std;
     int res = 0;
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         if ('0' <= ch && ch <= '9') {
             res += ch - '0';
         }
     }
     return res;
 }
-

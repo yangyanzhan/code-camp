@@ -19,4 +19,3 @@ int largestDistance(std::vector<int> a) {
     }
     return res;
 }
-

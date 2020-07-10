@@ -6,17 +6,16 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> top3(
-        const std::vector<std::string> &products,
-        const std::vector<int> &amounts,
-        const std::vector<int> &prices) {
+std::vector<std::string> top3(const std::vector<std::string> &products,
+                              const std::vector<int> &amounts,
+                              const std::vector<int> &prices) {
     using namespace std;
     vector<int> idxes;
     int n = products.size();
     for (int i = 0; i < n; i++) {
         idxes.push_back(i);
     }
-    sort(idxes.begin(), idxes.end(), [&] (int i, int j) {
+    sort(idxes.begin(), idxes.end(), [&](int i, int j) {
         int m1 = amounts[i] * prices[i];
         int m2 = amounts[j] * prices[j];
         if (m1 != m2) {
@@ -30,4 +29,3 @@ std::vector<std::string> top3(
     }
     return res;
 }
-

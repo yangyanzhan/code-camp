@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/maximum-nesting-depth-of-two-valid-parentheses-strings.html .
 
 class Solution {
-public:
+  public:
     vector<int> maxDepthAfterSplit(string seq) {
         int n = seq.size();
         vector<int> res(n, 0);
@@ -30,4 +30,3 @@ public:
         return res;
     }
 };
-

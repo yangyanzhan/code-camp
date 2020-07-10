@@ -10,4 +10,3 @@ int Solution::titleToNumber(string A) {
     }
     return res;
 }
-

@@ -26,7 +26,8 @@ int divide(string &A) {
 }
 
 int Solution::power(string A) {
-    if (A == "1") return 0;
+    if (A == "1")
+        return 0;
     while (A != "0" && A != "1") {
         int remain = divide(A);
         if (remain != 0) {
@@ -35,4 +36,3 @@ int Solution::power(string A) {
     }
     return A == "1";
 }
-

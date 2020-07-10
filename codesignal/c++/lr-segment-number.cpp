@@ -11,4 +11,3 @@ int lrSegmentNumber(int l, int r) {
     }
     return stoi(res);
 }
-

@@ -5,8 +5,9 @@
 
 int Solution::gcd(int A, int B) {
     int a = max(A, B), b = min(A, B);
-    if (b == 0) return a;
-    if (a % b == 0) return b;
+    if (b == 0)
+        return a;
+    if (a % b == 0)
+        return b;
     return gcd(b, a % b);
 }
-

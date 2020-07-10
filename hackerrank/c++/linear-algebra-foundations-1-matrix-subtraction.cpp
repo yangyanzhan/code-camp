@@ -3,12 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/linear-algebra-foundations-1-matrix-subtraction.html .
 
--3
--3
--3
--5
--5
--5
--3
--4
-1
+- 3 - 3 - 3 - 5 - 5 - 5 - 3 - 4 1

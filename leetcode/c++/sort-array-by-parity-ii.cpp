@@ -4,12 +4,12 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/sort-array-by-parity-ii.html .
 
 class Solution {
-public:
-    vector<int> sortArrayByParityII(vector<int>& A) {
+  public:
+    vector<int> sortArrayByParityII(vector<int> &A) {
         int n = A.size();
         vector<int> res(n, 0);
         int i = 0, j = 0;
-        for (auto num: A) {
+        for (auto num : A) {
             if (num % 2 == 0) {
                 res[2 * i++] = num;
             } else {
@@ -19,4 +19,3 @@ public:
         return res;
     }
 };
-

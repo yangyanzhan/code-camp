@@ -3,7 +3,6 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/grasshopper-messi-goals-function.html .
 
-int goals (int laLigaGoals, int copaDelReyGoals, int championsLeagueGoals) {
+int goals(int laLigaGoals, int copaDelReyGoals, int championsLeagueGoals) {
     return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 }
-

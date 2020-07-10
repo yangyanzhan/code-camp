@@ -20,4 +20,3 @@ int content_weight(int bottle_weight, string scale) {
     }
     return round(bottle_weight * ratio);
 }
-

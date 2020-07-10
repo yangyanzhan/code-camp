@@ -6,7 +6,7 @@
 bool namingRoads(std::vector<std::vector<int>> roads) {
     using namespace std;
     map<int, set<int>> cache;
-    for (auto road: roads) {
+    for (auto road : roads) {
         int a = road[0], b = road[1], n = road[2];
         if (cache.find(n - 1) != cache.end()) {
             if (cache[n - 1].find(a) != cache[n - 1].end()) {
@@ -28,4 +28,3 @@ bool namingRoads(std::vector<std::vector<int>> roads) {
     }
     return true;
 }
-

@@ -18,4 +18,3 @@ string balancedNum(unsigned long long int number) {
     }
     return s1 == s2 ? "Balanced" : "Not Balanced";
 }
-

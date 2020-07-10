@@ -12,8 +12,10 @@ int Solution::divide(int dividend, int divisor) {
     if ((d1 < 0 && d2 > 0) || (d1 > 0 && d2 < 0)) {
         sign = -1;
     }
-    if (d1 < 0) d1 = -d1;
-    if (d2 < 0) d2 = -d2;
+    if (d1 < 0)
+        d1 = -d1;
+    if (d2 < 0)
+        d2 = -d2;
     vector<int> bits(32, 0);
     for (int i = 0; i < 32; i++) {
         int p = 32 - 1 - i;
@@ -33,4 +35,3 @@ int Solution::divide(int dividend, int divisor) {
     }
     return res;
 }
-

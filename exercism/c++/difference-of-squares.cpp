@@ -6,10 +6,10 @@
 // difference_of_squares.h
 
 class difference_of_squares {
-    public:
-        static long long square_of_sum(long long n);
-        static long long sum_of_squares(long long n);
-        static long long difference(long long n);
+  public:
+    static long long square_of_sum(long long n);
+    static long long sum_of_squares(long long n);
+    static long long difference(long long n);
 };
 
 // difference_of_squares.cpp
@@ -28,4 +28,3 @@ long long difference_of_squares::sum_of_squares(long long n) {
 long long difference_of_squares::difference(long long n) {
     return square_of_sum(n) - sum_of_squares(n);
 }
-

@@ -16,7 +16,7 @@ int polygonPerimeter(std::vector<std::vector<bool>> matrix) {
             if (!matrix[i][j]) {
                 continue;
             }
-            for (auto dir: dirs) {
+            for (auto dir : dirs) {
                 int i1 = i + dir[0], j1 = j + dir[1];
                 if (i1 < 0 || i1 >= m || j1 < 0 || j1 >= n) {
                     res++;
@@ -28,4 +28,3 @@ int polygonPerimeter(std::vector<std::vector<bool>> matrix) {
     }
     return res;
 }
-

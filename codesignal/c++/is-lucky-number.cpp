@@ -6,7 +6,7 @@
 bool isLuckyNumber(int n) {
     using namespace std;
     string item = to_string(n);
-    for (auto &ch: item) {
+    for (auto &ch : item) {
         if (ch == '4' || ch == '7') {
         } else {
             return false;
@@ -14,4 +14,3 @@ bool isLuckyNumber(int n) {
     }
     return true;
 }
-

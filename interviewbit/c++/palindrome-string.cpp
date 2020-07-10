@@ -5,13 +5,14 @@
 
 int Solution::isPalindrome(string A) {
     string raw;
-    for (char ch: A) {
-        if (isalnum(ch)) raw += tolower(ch);
+    for (char ch : A) {
+        if (isalnum(ch))
+            raw += tolower(ch);
     }
     int n = raw.length();
     for (int i = 0; i < n / 2; i++) {
-        if (raw[i] != raw[n - 1 - i]) return 0;
+        if (raw[i] != raw[n - 1 - i])
+            return 0;
     }
     return 1;
 }
-

@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/minesweeper.html .
 
-std::vector<std::vector<int>> minesweeper(std::vector<std::vector<bool>> matrix) {
+std::vector<std::vector<int>>
+minesweeper(std::vector<std::vector<bool>> matrix) {
     using namespace std;
     vector<vector<int>> res;
     int m = matrix.size(), n = matrix[0].size();

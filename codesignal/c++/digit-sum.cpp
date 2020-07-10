@@ -12,4 +12,3 @@ int digitSum(int n) {
     res += n;
     return res;
 }
-

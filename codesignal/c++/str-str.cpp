@@ -8,7 +8,7 @@ int strstr(std::string s, std::string x) {
         typedef unsigned long long hash_t;
         const hash_t a = 0x5851F42D4C957F2DuLL;
         hash_t p = 0, h = 0, z = 1;
-        for (const auto& c : x) {
+        for (const auto &c : x) {
             p = p * a + c;
         }
         int i = 0;
@@ -25,4 +25,3 @@ int strstr(std::string s, std::string x) {
     }
     return -1;
 }
-

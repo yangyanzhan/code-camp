@@ -3,10 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/sherlock-and-moving-tiles.html .
 
-vector<double> movingTiles(double l, double s1, double s2, vector<double> queries) {
+vector<double> movingTiles(double l, double s1, double s2,
+                           vector<double> queries) {
     double diff = abs(s1 - s2) / sqrt(2);
     vector<double> res;
-    for (auto query: queries) {
+    for (auto query : queries) {
         res.push_back((l - sqrt(query)) / diff);
     }
     return res;

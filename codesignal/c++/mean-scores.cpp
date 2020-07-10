@@ -13,4 +13,3 @@ std::vector<int> meanScores(std::vector<int> scores) {
     }
     return res;
 }
-

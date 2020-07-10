@@ -5,7 +5,8 @@
 
 class Solution {
     map<int, int> cache;
-public:
+
+  public:
     int getKth(int lo, int hi, int k) {
         vector<tuple<int, int>> tuples;
         for (int num = lo; num <= hi; num++) {
@@ -34,4 +35,3 @@ public:
         return p;
     }
 };
-

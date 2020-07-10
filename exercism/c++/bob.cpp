@@ -10,8 +10,8 @@
 using namespace std;
 
 class bob {
-    public:
-        static string hey(string in);
+  public:
+    static string hey(string in);
 };
 
 // bob.cpp
@@ -37,4 +37,3 @@ string bob::hey(string in) {
     }
     return "Whatever.";
 }
-

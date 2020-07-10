@@ -5,7 +5,6 @@
 
 map<pair<string, string>, bool> cache;
 
-
 bool isScramble1(const string s1, const string s2) {
     if (s1.length() != s2.length()) {
         return false;
@@ -18,10 +17,10 @@ bool isScramble1(const string s1, const string s2) {
         return cache[p];
     }
     vector<int> counts(256, 0);
-    for (char c1: s1) {
+    for (char c1 : s1) {
         counts[c1]++;
     }
-    for (char c2: s2) {
+    for (char c2 : s2) {
         counts[c2]--;
     }
     bool scramble = true;

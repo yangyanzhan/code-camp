@@ -17,10 +17,11 @@ int Solution::minDistance(string word1, string word2) {
             if (word1[i - 1] == word2[j - 1]) {
                 cache[i][j] = cache[i - 1][j - 1];
             } else {
-                cache[i][j] = min(cache[i - 1][j - 1], min(cache[i - 1][j], cache[i][j - 1])) + 1;
+                cache[i][j] = min(cache[i - 1][j - 1],
+                                  min(cache[i - 1][j], cache[i][j - 1])) +
+                              1;
             }
         }
     }
     return cache[m][n];
 }
-

@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/get-character-from-ascii-value.html .
 
-char get_char(int i) {
-    return '\0' + i;
-}
+char get_char(int i) { return '\0' + i; }

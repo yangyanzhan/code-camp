@@ -6,7 +6,7 @@
 int maxSubarray(std::vector<int> inputArray) {
     using namespace std;
     int res = 0, pre = 0;
-    for (auto &num: inputArray) {
+    for (auto &num : inputArray) {
         if (pre <= 0) {
             res = max(res, num);
             pre = num;
@@ -17,4 +17,3 @@ int maxSubarray(std::vector<int> inputArray) {
     }
     return res;
 }
-

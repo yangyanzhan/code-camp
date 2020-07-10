@@ -15,4 +15,3 @@ std::string integerToStringOfFixedWidth(int number, int width) {
         return res;
     }
 }
-

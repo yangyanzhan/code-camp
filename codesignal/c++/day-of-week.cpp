@@ -24,7 +24,8 @@ int dayOfWeek(std::string birthdayDate) {
     while (true) {
         new_year += offset;
         if (offset == 4) {
-            if (new_year % 400 == 0 || (new_year % 100 != 0 && new_year % 4 == 0)) {
+            if (new_year % 400 == 0 ||
+                (new_year % 100 != 0 && new_year % 4 == 0)) {
             } else {
                 continue;
             }
@@ -36,4 +37,3 @@ int dayOfWeek(std::string birthdayDate) {
     }
     return new_year - year;
 }
-

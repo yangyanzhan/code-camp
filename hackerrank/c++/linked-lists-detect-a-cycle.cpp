@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/linked-lists-detect-a-cycle.html .
 
-bool has_cycle(Node* head) {
+bool has_cycle(Node *head) {
     auto slow = head, fast = head;
     while (fast && fast->next) {
         fast = fast->next->next;

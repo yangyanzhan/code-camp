@@ -3,15 +3,17 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/median-of-array.html .
 
-double Solution::findMedianSortedArrays(const vector<int> &A, const vector<int> &B) {
+double Solution::findMedianSortedArrays(const vector<int> &A,
+                                        const vector<int> &B) {
     int m = A.size(), n = B.size();
-    if (m > n) return findMedianSortedArrays(B, A);
+    if (m > n)
+        return findMedianSortedArrays(B, A);
     int imin, imax, i, j;
     imin = 0;
     imax = m;
     while (imin <= imax) {
-        i = (imin + imax)/2;
-        j = (m+n+1)/2 - i;
+        i = (imin + imax) / 2;
+        j = (m + n + 1) / 2 - i;
         if (j > 0 && i < m && B[j - 1] > A[i]) {
             imin = i + 1;
         } else if (i > 0 && j < n && A[i - 1] > B[j]) {
@@ -26,7 +28,7 @@ double Solution::findMedianSortedArrays(const vector<int> &A, const vector<int> 
             } else {
                 median1 = max(A[i - 1], B[j - 1]);
             }
-            if ((m+n) % 2 == 1) {
+            if ((m + n) % 2 == 1) {
                 return 1.0 * median1;
             }
             if (i == m) {

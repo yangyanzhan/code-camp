@@ -14,14 +14,14 @@
  */
 
 class Solution {
-public:
-    TreeNode* balanceBST(TreeNode* root) {
+  public:
+    TreeNode *balanceBST(TreeNode *root) {
         vector<int> nums = flatten(root);
         sort(nums.begin(), nums.end());
         return construct(nums, 0, nums.size() - 1);
     }
 
-    TreeNode* construct(vector<int>& nums, int start, int end) {
+    TreeNode *construct(vector<int> &nums, int start, int end) {
         if (start > end) {
             return nullptr;
         }
@@ -34,7 +34,7 @@ public:
         return head;
     }
 
-    vector<int> flatten(TreeNode* root) {
+    vector<int> flatten(TreeNode *root) {
         if (root == nullptr) {
             return vector<int>();
         }
@@ -45,4 +45,3 @@ public:
         return res;
     }
 };
-

@@ -3,11 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/speed-control.html .
 
-#include <cmath>
 #include <algorithm>
+#include <cmath>
 
 class GpsSpeed {
-public:
+  public:
     static int gps(int s, std::vector<double> &x) {
         using namespace std;
         int res = 0;
@@ -18,4 +18,3 @@ public:
         return res;
     }
 };
-

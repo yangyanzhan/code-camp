@@ -6,20 +6,21 @@
 // nucleotide_count.h
 
 #include <map>
-#include <string>
 #include <stdexcept>
+#include <string>
 
 using namespace std;
 
 namespace nucleotide_count {
-    class counter {
-        string word;
-        public:
-            counter(string word);
-            map<char, int> nucleotide_counts() const;
-            int count(char ch) const;
-    };
+class counter {
+    string word;
+
+  public:
+    counter(string word);
+    map<char, int> nucleotide_counts() const;
+    int count(char ch) const;
 };
+}; // namespace nucleotide_count
 
 // nucleotide_count.cpp
 
@@ -27,26 +28,23 @@ namespace nucleotide_count {
 #include <stdexcept>
 
 namespace nucleotide_count {
-    counter::counter(string word) {
-        this->word = word;
-    }
-    map<char, int> counter::nucleotide_counts() const {
-        map<char, int> cache{{'A', 0}, {'C', 0}, {'T', 0}, {'G', 0}};
-        string actg("ACTG");
-        for (char ch : word) {
-            if (actg.find(ch) == string::npos) {
-                throw invalid_argument("not in actg");
-            }
-            cache[ch] += 1;
-        }
-        return cache;
-    }
-    int counter::count(char ch) const {
-        string actg("ACTG");
+counter::counter(string word) { this->word = word; }
+map<char, int> counter::nucleotide_counts() const {
+    map<char, int> cache{{'A', 0}, {'C', 0}, {'T', 0}, {'G', 0}};
+    string actg("ACTG");
+    for (char ch : word) {
         if (actg.find(ch) == string::npos) {
             throw invalid_argument("not in actg");
         }
-        return nucleotide_counts()[ch];
+        cache[ch] += 1;
     }
-};
-
+    return cache;
+}
+int counter::count(char ch) const {
+    string actg("ACTG");
+    if (actg.find(ch) == string::npos) {
+        throw invalid_argument("not in actg");
+    }
+    return nucleotide_counts()[ch];
+}
+}; // namespace nucleotide_count

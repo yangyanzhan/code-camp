@@ -16,4 +16,3 @@ std::string fromDecimal(int b, int n) {
     }
     return res;
 }
-

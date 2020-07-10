@@ -19,4 +19,3 @@ int fibonacciIndex(int n) {
     }
     return idx;
 }
-

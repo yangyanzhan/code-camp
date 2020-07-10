@@ -35,4 +35,3 @@ std::string rps(const std::string &p1, const std::string &p2) {
     }
     return "Draw!";
 }
-

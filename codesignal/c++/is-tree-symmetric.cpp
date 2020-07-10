@@ -25,7 +25,4 @@ bool isMirror(Tree<int> *t, Tree<int> *s) {
     return isMirror(t->left, s->right) && isMirror(t->right, s->left);
 }
 
-bool isTreeSymmetric(Tree<int> *t) {
-    return isMirror(t, t);
-}
-
+bool isTreeSymmetric(Tree<int> *t) { return isMirror(t, t); }

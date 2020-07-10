@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/sum-of-the-angles.html .
 
-int sumOfTheAngles(int n) {
-    return n * 180 - 360;
-}
-
+int sumOfTheAngles(int n) { return n * 180 - 360; }

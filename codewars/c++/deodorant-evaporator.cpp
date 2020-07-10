@@ -9,8 +9,8 @@ using namespace std;
 
 class Evaporator {
   public:
-    static int evaporator(double content, double evap_per_day, double threshold) {
+    static int evaporator(double content, double evap_per_day,
+                          double threshold) {
         return ceil(log(threshold / 100.0) / log(1 - evap_per_day / 100));
     }
 };
-

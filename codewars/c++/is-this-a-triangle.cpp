@@ -4,12 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/is-this-a-triangle.html .
 
 namespace Triangle {
-  bool isTriangle(int a, int b, int c) {
-      long long a1 = a, b1 = b, c1 = c;
-      if (a1 <= 0 || b1 <= 0 || c1 <= 0) {
-          return false;
-      }
-      return (a1 + b1 > c1) && (a1 + c1 > b1) && (b1 + c1 > a1);
-  }
-};
-
+bool isTriangle(int a, int b, int c) {
+    long long a1 = a, b1 = b, c1 = c;
+    if (a1 <= 0 || b1 <= 0 || c1 <= 0) {
+        return false;
+    }
+    return (a1 + b1 > c1) && (a1 + c1 > b1) && (b1 + c1 > a1);
+}
+}; // namespace Triangle

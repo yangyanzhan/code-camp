@@ -7,4 +7,3 @@ bool triangleExistence(std::vector<int> sides) {
     int a = sides[0], b = sides[1], c = sides[2];
     return ((a + b) > c) && ((a + c) > b) && ((b + c) > a);
 }
-

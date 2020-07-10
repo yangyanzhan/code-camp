@@ -16,4 +16,3 @@ int sumOfDivisors(int n) {
     }
     return res;
 }
-

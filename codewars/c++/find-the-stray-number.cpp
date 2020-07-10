@@ -5,9 +5,8 @@
 
 int stray(std::vector<int> numbers) {
     int res = 0;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         res ^= num;
     }
     return res;
 };
-

@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/height-checker.html .
 
 class Solution {
-public:
+  public:
     int heightChecker(vector<int> &heights) {
         vector<int> new_heights{heights.begin(), heights.end()};
         sort(new_heights.begin(), new_heights.end());
@@ -17,4 +17,3 @@ public:
         return res;
     }
 };
-

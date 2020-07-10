@@ -14,4 +14,3 @@ std::string disemvowel(std::string str) {
     }
     return str;
 }
-

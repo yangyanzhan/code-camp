@@ -3,12 +3,12 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     string convert(string s, int numRows) {
         if (numRows == 1) {
             return s;
         }
-        
+
         int n = s.size();
         string res(n, '0');
         int resIdx = 0;

@@ -9,4 +9,3 @@ int countSumOfTwoRepresentations3(int n, int l, int r) {
     int n2 = min(n / 2, r);
     return max(n2 - n1 + 1, 0);
 }
-

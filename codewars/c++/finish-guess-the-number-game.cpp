@@ -6,9 +6,8 @@
 #include <stdexcept>
 
 class Guesser {
-public:
-    Guesser(int number, int lives)
-      : number(number), lives(lives) { }
+  public:
+    Guesser(int number, int lives) : number(number), lives(lives) {}
 
     bool guess(int n) {
         if (lives > 0) {
@@ -21,7 +20,7 @@ public:
         }
         throw std::exception();
     }
-private:
+
+  private:
     int number, lives;
 };
-

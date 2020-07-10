@@ -6,7 +6,7 @@
 int evenNumbersBeforeFixed(std::vector<int> sequence, int fixedElement) {
     using namespace std;
     int count = 0;
-    for (auto item: sequence) {
+    for (auto item : sequence) {
         if (item == fixedElement) {
             return count;
         }
@@ -16,4 +16,3 @@ int evenNumbersBeforeFixed(std::vector<int> sequence, int fixedElement) {
     }
     return -1;
 }
-

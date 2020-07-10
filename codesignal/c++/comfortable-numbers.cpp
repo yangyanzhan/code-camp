@@ -28,4 +28,3 @@ int comfortableNumbers(int L, int R) {
     }
     return res;
 }
-

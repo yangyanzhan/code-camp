@@ -11,41 +11,38 @@
 using namespace std;
 
 namespace phone_number {
-    class phone_number {
-        string phone;
-        public:
-            phone_number(string raw);
-            string number() const;
-            string area_code() const;
-            operator std::string() const {
-                return "(" + phone.substr(0, 3) + ") " + phone.substr(3, 3) + "-" + phone.substr(6);
-            }
-    };
+class phone_number {
+    string phone;
+
+  public:
+    phone_number(string raw);
+    string number() const;
+    string area_code() const;
+    operator std::string() const {
+        return "(" + phone.substr(0, 3) + ") " + phone.substr(3, 3) + "-" +
+               phone.substr(6);
+    }
 };
+}; // namespace phone_number
 
 // phone_number.cpp
 
 #include "phone_number.h"
 
 namespace phone_number {
-    phone_number::phone_number(string raw) {
-        regex reg("[^\\d]");
-        phone = regex_replace(raw, reg, "");
-        if (phone.size() != 10) {
-            if (phone.size() == 11 && phone[0] == '1') {
-                phone = phone.substr(1);
-            } else {
-                phone = "0000000000";
-            }
+phone_number::phone_number(string raw) {
+    regex reg("[^\\d]");
+    phone = regex_replace(raw, reg, "");
+    if (phone.size() != 10) {
+        if (phone.size() == 11 && phone[0] == '1') {
+            phone = phone.substr(1);
+        } else {
+            phone = "0000000000";
         }
-    }
-    
-    string phone_number::number() const {
-        return phone;
-    }
-    
-    string phone_number::area_code() const {
-        return phone.substr(0, 3);
     }
 }
 
+string phone_number::number() const { return phone; }
+
+string phone_number::area_code() const { return phone.substr(0, 3); }
+} // namespace phone_number

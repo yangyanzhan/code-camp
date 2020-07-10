@@ -40,4 +40,3 @@ bool sudoku(std::vector<std::vector<int>> grid) {
     }
     return true;
 }
-

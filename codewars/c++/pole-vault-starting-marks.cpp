@@ -6,7 +6,6 @@
 #include <cmath>
 
 double startingMark(double bodyHeight) {
-  constexpr double coef = (10.67 - 9.45)/(1.83 - 1.52);
-  return round((9.45 + (bodyHeight - 1.52) * coef) * 100.0) / 100.0;
+    constexpr double coef = (10.67 - 9.45) / (1.83 - 1.52);
+    return round((9.45 + (bodyHeight - 1.52) * coef) * 100.0) / 100.0;
 }
-

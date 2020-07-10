@@ -41,4 +41,3 @@ bool reverseToSort(std::vector<int> inputArray) {
     }
     return true;
 }
-

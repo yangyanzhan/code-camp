@@ -20,4 +20,3 @@ string pattern(int n) {
     }
     return res;
 }
-

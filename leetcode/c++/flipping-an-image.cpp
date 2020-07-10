@@ -4,9 +4,9 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/flipping-an-image.html .
 
 class Solution {
-public:
-    vector<vector<int>> flipAndInvertImage(vector<vector<int>>& A) {
-        for (auto &row: A) {
+  public:
+    vector<vector<int>> flipAndInvertImage(vector<vector<int>> &A) {
+        for (auto &row : A) {
             int n = row.size();
             for (int i = 0; i < n / 2; i++) {
                 swap(row[i], row[n - 1 - i]);
@@ -18,4 +18,3 @@ public:
         return A;
     }
 };
-

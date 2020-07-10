@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/star-rotation.html .
 
-std::vector<std::vector<int>> getRowIndex1(std::vector<std::vector<int>> matrix, int width, std::vector<int> center) {
+std::vector<std::vector<int>> getRowIndex1(std::vector<std::vector<int>> matrix,
+                                           int width, std::vector<int> center) {
     using namespace std;
     int w = width / 2;
     vector<vector<int>> res(width);
@@ -14,7 +15,8 @@ std::vector<std::vector<int>> getRowIndex1(std::vector<std::vector<int>> matrix,
     return res;
 }
 
-std::vector<std::vector<int>> getRowIndex2(std::vector<std::vector<int>> matrix, int width, std::vector<int> center) {
+std::vector<std::vector<int>> getRowIndex2(std::vector<std::vector<int>> matrix,
+                                           int width, std::vector<int> center) {
     using namespace std;
     int w = width / 2;
     vector<vector<int>> res(width);
@@ -25,7 +27,8 @@ std::vector<std::vector<int>> getRowIndex2(std::vector<std::vector<int>> matrix,
     return res;
 }
 
-std::vector<std::vector<int>> getRowIndex3(std::vector<std::vector<int>> matrix, int width, std::vector<int> center) {
+std::vector<std::vector<int>> getRowIndex3(std::vector<std::vector<int>> matrix,
+                                           int width, std::vector<int> center) {
     using namespace std;
     int w = width / 2;
     vector<vector<int>> res(width);
@@ -36,7 +39,8 @@ std::vector<std::vector<int>> getRowIndex3(std::vector<std::vector<int>> matrix,
     return res;
 }
 
-std::vector<std::vector<int>> getRowIndex4(std::vector<std::vector<int>> matrix, int width, std::vector<int> center) {
+std::vector<std::vector<int>> getRowIndex4(std::vector<std::vector<int>> matrix,
+                                           int width, std::vector<int> center) {
     using namespace std;
     int w = width / 2;
     vector<vector<int>> res(width);
@@ -47,7 +51,8 @@ std::vector<std::vector<int>> getRowIndex4(std::vector<std::vector<int>> matrix,
     return res;
 }
 
-std::vector<std::vector<int>> rotate(std::vector<std::vector<int>> matrix, int width, std::vector<int> center) {
+std::vector<std::vector<int>> rotate(std::vector<std::vector<int>> matrix,
+                                     int width, std::vector<int> center) {
     using namespace std;
     vector<vector<vector<int>>> rowIndexs(4);
     rowIndexs[0] = getRowIndex1(matrix, width, center);
@@ -67,7 +72,8 @@ std::vector<std::vector<int>> rotate(std::vector<std::vector<int>> matrix, int w
         vector<vector<int>> rowIndex = rowIndexs[k];
         vector<int> row = rows[4 - 1 - k];
         for (int i = 0; i < width; i++) {
-            matrix[rowIndex[width - 1 - i][0]][rowIndex[width - 1 - i][1]] = row[i];
+            matrix[rowIndex[width - 1 - i][0]][rowIndex[width - 1 - i][1]] =
+                row[i];
         }
     }
     for (int k = 1; k < 4; k++) {
@@ -80,7 +86,9 @@ std::vector<std::vector<int>> rotate(std::vector<std::vector<int>> matrix, int w
     return matrix;
 }
 
-std::vector<std::vector<int>> starRotation(std::vector<std::vector<int>> matrix, int width, std::vector<int> center, int t) {
+std::vector<std::vector<int>> starRotation(std::vector<std::vector<int>> matrix,
+                                           int width, std::vector<int> center,
+                                           int t) {
     using namespace std;
     t = t % 8;
     for (int i = 0; i < t; i++) {
@@ -88,4 +96,3 @@ std::vector<std::vector<int>> starRotation(std::vector<std::vector<int>> matrix,
     }
     return matrix;
 }
-

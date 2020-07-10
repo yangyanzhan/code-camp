@@ -13,4 +13,3 @@ int Solution::removeElement(vector<int> &A, int B) {
     A.resize(j);
     return A.size();
 }
-

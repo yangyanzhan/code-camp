@@ -53,4 +53,3 @@ bool isButterfly(std::vector<std::vector<bool>> adj) {
     }
     return visited.size() == 5;
 }
-

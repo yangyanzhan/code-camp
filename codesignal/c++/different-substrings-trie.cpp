@@ -13,4 +13,3 @@ int differentSubstringsTrie(std::string inputString) {
     }
     return cache.size();
 }
-

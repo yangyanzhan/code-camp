@@ -7,7 +7,8 @@ int note_to_int(std::string note) {
     using namespace std;
     int end = note.back() - '0';
     string item = note.substr(0, note.size() - 1);
-    vector<string> items = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
+    vector<string> items = {"C",  "C#", "D",  "D#", "E",  "F",
+                            "F#", "G",  "G#", "A",  "A#", "B"};
     int start = 0;
     for (int i = 0; i < items.size(); i++) {
         if (items[i] == item) {
@@ -28,4 +29,3 @@ std::string majorOrMinor(std::vector<std::string> scale) {
     }
     return list == "TTSTTTS" ? "major" : "minor";
 }
-

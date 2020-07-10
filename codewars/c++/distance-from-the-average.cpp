@@ -9,13 +9,12 @@ std::vector<double> distancesFromAverage(std::vector<int> input) {
     using namespace std;
     vector<double> res;
     double sum = 0;
-    for (auto num: input) {
+    for (auto num : input) {
         sum += num;
     }
     double mean = sum / input.size();
-    for (auto num: input) {
+    for (auto num : input) {
         res.push_back(round((mean - num) * 100) / 100);
     }
     return res;
 }
-

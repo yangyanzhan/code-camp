@@ -12,4 +12,3 @@ std::vector<int> easyAssignmentProblem(std::vector<std::vector<int>> skills) {
     }
     return {2, 1};
 }
-

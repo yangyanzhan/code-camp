@@ -8,7 +8,7 @@ std::string lineEncoding(std::string s) {
     char pre = '\0', count = 0;
     s += " ";
     string res = "";
-    for (auto ch: s) {
+    for (auto ch : s) {
         if (ch != pre) {
             if (count == 1) {
                 res += pre;
@@ -23,4 +23,3 @@ std::string lineEncoding(std::string s) {
     }
     return res;
 }
-

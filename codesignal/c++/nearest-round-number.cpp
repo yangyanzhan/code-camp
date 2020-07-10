@@ -9,4 +9,3 @@ int nearestRoundNumber(int value) {
     }
     return (value / 10 + 1) * 10;
 }
-

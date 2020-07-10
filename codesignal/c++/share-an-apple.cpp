@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/share-an-apple.html .
 
-bool shareAnApple(int a, int b) {
-    return a - 1 == b + 1;
-}
-
+bool shareAnApple(int a, int b) { return a - 1 == b + 1; }

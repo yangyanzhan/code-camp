@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/count-number-of-teams.html .
 
 class Solution {
-public:
-    int numTeams(vector<int>& rating) {
+  public:
+    int numTeams(vector<int> &rating) {
         int res = 0, n = rating.size();
         for (int i = 0; i < n; i++) {
             int l = 0, r = 0;
@@ -24,4 +24,3 @@ public:
         return res;
     }
 };
-

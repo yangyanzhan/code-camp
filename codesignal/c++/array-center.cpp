@@ -8,17 +8,16 @@ std::vector<int> arrayCenter(std::vector<int> a) {
     int n = a.size();
     float mean = 0;
     int min = numeric_limits<int>::max();
-    for (auto num: a) {
+    for (auto num : a) {
         mean += num;
         min = std::min(min, num);
     }
     mean /= n;
     vector<int> res;
-    for (auto num: a) {
+    for (auto num : a) {
         if (abs(num - mean) < min) {
             res.push_back(num);
         }
     }
     return res;
 }
-

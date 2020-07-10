@@ -7,4 +7,3 @@ int maxMultiple(int divisor, int bound) {
     using namespace std;
     return (bound / divisor) * divisor;
 }
-

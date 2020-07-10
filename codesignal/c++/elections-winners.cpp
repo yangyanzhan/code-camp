@@ -7,7 +7,7 @@ int electionsWinners(std::vector<int> votes, int k) {
     using namespace std;
     int largest = *max_element(votes.begin(), votes.end());
     int res = 0, largest_count = 0;
-    for (auto vote: votes) {
+    for (auto vote : votes) {
         if (vote == largest) {
             largest_count++;
         } else if (vote + k > largest) {
@@ -21,4 +21,3 @@ int electionsWinners(std::vector<int> votes, int k) {
     }
     return res;
 }
-

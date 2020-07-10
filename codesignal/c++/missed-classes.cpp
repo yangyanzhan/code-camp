@@ -3,14 +3,15 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/missed-classes.html .
 
-int missedClasses(int year, std::vector<int> daysOfTheWeek, std::vector<std::string> holidays) {
+int missedClasses(int year, std::vector<int> daysOfTheWeek,
+                  std::vector<std::string> holidays) {
     using namespace std;
     set<int> cache;
-    for (auto num: daysOfTheWeek) {
+    for (auto num : daysOfTheWeek) {
         cache.insert(num % 7);
     }
     int res = 0;
-    for (auto holiday: holidays) {
+    for (auto holiday : holidays) {
         string time = to_string(year) + "-" + holiday + " 00:00:00";
         tm date;
         stringstream ss(time);
@@ -27,4 +28,3 @@ int missedClasses(int year, std::vector<int> daysOfTheWeek, std::vector<std::str
     }
     return res;
 }
-

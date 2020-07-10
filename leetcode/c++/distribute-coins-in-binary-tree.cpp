@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    int distributeCoins(TreeNode* root) {
+  public:
+    int distributeCoins(TreeNode *root) {
         if (root == nullptr) {
             return 0;
         }
@@ -36,4 +36,3 @@ public:
         return res;
     }
 };
-

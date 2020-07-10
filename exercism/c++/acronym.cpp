@@ -10,9 +10,9 @@
 
 namespace acronym {
 
-    std::string acronym(std::string words);
+std::string acronym(std::string words);
 
-}  // namespace acronym
+} // namespace acronym
 
 #endif // ACRONYM_H
 
@@ -20,16 +20,16 @@ namespace acronym {
 
 namespace acronym {
 
-    std::string acronym(std::string words) {
-        words += " ";
-        std::string res = "";
-        int pre = 0, now = 0;
-        while ((now = words.find(" ", pre)) != (int)std::string::npos) {
-            std::string word = words.substr(pre, now - pre);
-            pre = now + 1;
-            res += toupper(word[0]);
-        }
-        return res;
+std::string acronym(std::string words) {
+    words += " ";
+    std::string res = "";
+    int pre = 0, now = 0;
+    while ((now = words.find(" ", pre)) != (int)std::string::npos) {
+        std::string word = words.substr(pre, now - pre);
+        pre = now + 1;
+        res += toupper(word[0]);
     }
+    return res;
+}
 
-}  // namespace acronym
+} // namespace acronym

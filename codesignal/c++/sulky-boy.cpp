@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/sulky-boy.html .
 
-bool sulkyBoy(bool statement) {
-    return !statement;
-}
-
+bool sulkyBoy(bool statement) { return !statement; }

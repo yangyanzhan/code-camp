@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/cube-volumn.html .
 
-int cubeVolume(int n) {
-    return n * n * n;
-}
-
+int cubeVolume(int n) { return n * n * n; }

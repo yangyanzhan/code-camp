@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/merge-sort-counting-inversions.html .
 
-long countInversions(vector<int>::iterator it1, vector<int>::iterator it2, int n) {
+long countInversions(vector<int>::iterator it1, vector<int>::iterator it2,
+                     int n) {
     if (n <= 1) {
         return 0;
     }
@@ -29,8 +30,7 @@ long countInversions(vector<int>::iterator it1, vector<int>::iterator it2, int n
     while (j < n2) {
         *(it2 + k++) = *(it1 + n1 + j++);
     }
-    copy(it2, it2 + n, it1)
-    return res;
+    copy(it2, it2 + n, it1) return res;
 }
 
 long countInversions(vector<int> &arr) {

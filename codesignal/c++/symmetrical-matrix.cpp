@@ -14,4 +14,3 @@ bool symmetricalMatrix(int n, std::vector<std::vector<int>> inputMatrix) {
     }
     return true;
 }
-

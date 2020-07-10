@@ -7,7 +7,8 @@ std::string iqAddress(int n) {
     using namespace std;
     string res;
     char word[100];
-    if (n == 0) return res;
+    if (n == 0)
+        return res;
     while (n > 1) {
         double residue = n - 10.5 * floor(n / 10.5);
         sprintf(word, "%.1f", residue);

@@ -7,7 +7,8 @@ bool detectBreakbeat(std::string pattern) {
     using namespace std;
     regex reg("[^ ]+");
     vector<string> items;
-    for (auto it = sregex_iterator(pattern.begin(), pattern.end(), reg); it != sregex_iterator(); it++) {
+    for (auto it = sregex_iterator(pattern.begin(), pattern.end(), reg);
+         it != sregex_iterator(); it++) {
         items.push_back(it->str());
     }
     int n = items.size();
@@ -31,4 +32,3 @@ bool detectBreakbeat(std::string pattern) {
     }
     return false;
 }
-

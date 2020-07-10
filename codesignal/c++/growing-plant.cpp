@@ -14,4 +14,3 @@ int growingPlant(int upSpeed, int downSpeed, int desiredHeight) {
     }
     return n + 2;
 }
-

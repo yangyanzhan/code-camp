@@ -14,11 +14,12 @@
  */
 
 class Solution {
-public:
-    TreeNode* constructMaximumBinaryTree(vector<int>& nums) {
+  public:
+    TreeNode *constructMaximumBinaryTree(vector<int> &nums) {
         return constructMaximumBinaryTree(nums, 0, nums.size() - 1);
     }
-    TreeNode* constructMaximumBinaryTree(vector<int>& nums, int start, int end) {
+    TreeNode *constructMaximumBinaryTree(vector<int> &nums, int start,
+                                         int end) {
         if (start > end) {
             return nullptr;
         }
@@ -37,4 +38,3 @@ public:
         return root;
     }
 };
-

@@ -6,4 +6,3 @@
 bool isEarlier(std::vector<int> time1, std::vector<int> time2) {
     return time1 < time2;
 }
-

@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/tower-breakers.html .
 
-int towerBreakers(int n, int m) {
-    return m == 1 || n % 2 == 0 ? 2 : 1;
-}
+int towerBreakers(int n, int m) { return m == 1 || n % 2 == 0 ? 2 : 1; }

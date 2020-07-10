@@ -3,16 +3,16 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/analyze-ip-addresses.html .
 
+#include <algorithm>
+#include <dirent.h>
+#include <fstream>
 #include <iostream>
 #include <jsoncpp/json/json.h>
-#include <fstream>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <dirent.h>
 #include <regex>
 #include <set>
-#include <algorithm>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
 #include <vector>
 
 using namespace std;
@@ -48,11 +48,12 @@ int main() {
     regex reg("(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)");
     vector<string> files;
     list_dir("/root", files);
-    for (auto file: files) {
+    for (auto file : files) {
         ifstream in(file);
         string line;
         while (in >> line) {
-            for (auto it = sregex_iterator(line.begin(), line.end(), reg); it != sregex_iterator(); it++) {
+            for (auto it = sregex_iterator(line.begin(), line.end(), reg);
+                 it != sregex_iterator(); it++) {
                 if (it->size() != 5) {
                     continue;
                 }
@@ -81,9 +82,8 @@ int main() {
             }
         }
     }
-    for (auto ip: ips) {
+    for (auto ip : ips) {
         cout << ip << endl;
     }
     return 0;
 }
-

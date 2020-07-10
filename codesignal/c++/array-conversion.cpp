@@ -23,4 +23,3 @@ int arrayConversion(std::vector<int> inputArray) {
     }
     return inputArray[0];
 }
-

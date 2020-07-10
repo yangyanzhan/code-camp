@@ -24,18 +24,17 @@ public:
 */
 
 class Solution {
-public:
-    vector<int> preorder(Node* root) {
+  public:
+    vector<int> preorder(Node *root) {
         vector<int> res;
         if (root == nullptr) {
             return res;
         }
         res.push_back(root->val);
-        for (auto child: root->children) {
+        for (auto child : root->children) {
             auto sub = preorder(child);
             res.insert(res.end(), sub.begin(), sub.end());
         }
         return res;
     }
 };
-

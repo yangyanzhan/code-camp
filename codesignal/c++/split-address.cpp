@@ -21,4 +21,3 @@ std::vector<std::string> splitAddress(std::string address) {
     }
     return res;
 }
-

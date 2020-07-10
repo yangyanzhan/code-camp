@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-in-range.html .
 
-bool isInRange(int a, int b, int c) {
-    return a <= b && b <= c;
-}
-
+bool isInRange(int a, int b, int c) { return a <= b && b <= c; }

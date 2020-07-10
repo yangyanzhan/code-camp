@@ -7,7 +7,8 @@ int Solution::diffPossible(vector<int> &A, int B) {
     int i = 0, j = 0, n = A.size();
     while (i < n && j < n) {
         int diff = A[j] - A[i];
-        if (diff == B && i != j) return 1;
+        if (diff == B && i != j)
+            return 1;
         if (diff > B) {
             i++;
         } else {
@@ -16,4 +17,3 @@ int Solution::diffPossible(vector<int> &A, int B) {
     }
     return 0;
 }
-

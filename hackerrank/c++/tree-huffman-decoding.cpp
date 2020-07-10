@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/tree-huffman-decoding.html .
 
-void decode_huff(node * root, string s) {
+void decode_huff(node *root, string s) {
     auto curr = root;
     int i = 0;
     vector<char> res;
@@ -14,8 +14,8 @@ void decode_huff(node * root, string s) {
                 curr = curr->left;
                 i++;
             } else {
-                 res.push_back(curr->data);
-                 curr = root;
+                res.push_back(curr->data);
+                curr = root;
             }
         } else {
             if (curr->right) {

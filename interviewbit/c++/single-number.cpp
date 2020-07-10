@@ -5,9 +5,8 @@
 
 int Solution::singleNumber(const vector<int> &A) {
     int res = 0;
-    for (int num: A) {
+    for (int num : A) {
         res ^= num;
     }
     return res;
 }
-

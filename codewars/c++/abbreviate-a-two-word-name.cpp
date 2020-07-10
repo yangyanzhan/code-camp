@@ -10,7 +10,8 @@ std::string abbrevName(std::string name) {
     using namespace std;
     stringstream ss;
     regex reg("[^ ]+");
-    for (auto it = sregex_iterator(name.begin(), name.end(), reg); it != sregex_iterator(); it++) {
+    for (auto it = sregex_iterator(name.begin(), name.end(), reg);
+         it != sregex_iterator(); it++) {
         ss << string(1, toupper(it->str()[0])) << ".";
     }
     string res = ss.str();

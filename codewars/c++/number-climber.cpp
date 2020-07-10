@@ -15,4 +15,3 @@ std::vector<int> climb(int n) {
     reverse(res.begin(), res.end());
     return res;
 }
-

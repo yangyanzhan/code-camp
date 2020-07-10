@@ -3,12 +3,12 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/random-case.html .
 
-#include <string>
 #include <cstdlib>
+#include <string>
 
 std::string randomCase(std::string x) {
     using namespace std;
-    for (auto &ch: x) {
+    for (auto &ch : x) {
         if ((rand() % 2) == 0) {
             ch = toupper(ch);
         } else {
@@ -17,4 +17,3 @@ std::string randomCase(std::string x) {
     }
     return x;
 }
-

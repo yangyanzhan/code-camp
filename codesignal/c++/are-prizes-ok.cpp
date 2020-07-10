@@ -6,4 +6,3 @@
 bool arePrizesOK(int first, int second, int third) {
     return first >= second && second >= third;
 }
-

@@ -5,10 +5,10 @@
 
 bool isGeometricProgression(std::vector<int> sequence) {
     for (int i = 2; i < sequence.size(); i++) {
-        if ((long long)sequence[i - 1] * sequence[i - 1] != (long long)sequence[i - 2] * sequence[i]) {
+        if ((long long)sequence[i - 1] * sequence[i - 1] !=
+            (long long)sequence[i - 2] * sequence[i]) {
             return false;
         }
     }
     return true;
 }
-

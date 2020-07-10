@@ -5,7 +5,7 @@
 
 bool sameClan(int a, int b, std::vector<int> &divisors) {
     using namespace std;
-    for (int d: divisors) {
+    for (int d : divisors) {
         if (!((a % d == 0 && b % d == 0) || (a % d != 0 && b % d != 0))) {
             return false;
         }
@@ -18,7 +18,7 @@ int numberOfClans(std::vector<int> divisors, int k) {
     vector<int> clans;
     for (int num = 1; num <= k; num++) {
         bool found = false;
-        for (int clan: clans) {
+        for (int clan : clans) {
             if (sameClan(num, clan, divisors)) {
                 found = true;
                 break;
@@ -30,4 +30,3 @@ int numberOfClans(std::vector<int> divisors, int k) {
     }
     return clans.size();
 }
-

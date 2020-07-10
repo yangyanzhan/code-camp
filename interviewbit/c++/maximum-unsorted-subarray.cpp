@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/maximum-unsorted-subarray.html .
 
 vector<int> Solution::subUnsort(vector<int> &A) {
-    int n = A.size(), begin = -1 , end = -1;
+    int n = A.size(), begin = -1, end = -1;
     for (int i = 0; i < n; i++) {
         if (A[i] > A[i + 1]) {
             begin = i;
@@ -36,4 +36,3 @@ vector<int> Solution::subUnsort(vector<int> &A) {
     }
     return vector<int>{begin, end};
 }
-

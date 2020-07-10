@@ -16,4 +16,3 @@ string jumpingNumber(int number) {
     }
     return "Jumping!!";
 }
-

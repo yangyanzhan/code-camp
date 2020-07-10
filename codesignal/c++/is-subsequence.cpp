@@ -4,11 +4,12 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-subsequence.html .
 
 bool isSubsequence(std::string t, std::string s) {
-  std::string pattern = "";
-  for (char ch : s) {
-    pattern += string("[") + (string("[]^").find(ch) != string::npos ? "\\" : "") + string(1, ch) + "].*";
-  }
-  std::regex regex(pattern);
-  return std::regex_search(t, regex);
+    std::string pattern = "";
+    for (char ch : s) {
+        pattern += string("[") +
+                   (string("[]^").find(ch) != string::npos ? "\\" : "") +
+                   string(1, ch) + "].*";
+    }
+    std::regex regex(pattern);
+    return std::regex_search(t, regex);
 }
-

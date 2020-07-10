@@ -4,13 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/count-the-digit.html .
 
 class CountDig {
-public:
+  public:
     static int nbDig(int n, int d) {
         using namespace std;
         int res = 0;
         for (int i = 0; i <= n; i++) {
             string item = to_string(i * i);
-            for (auto &ch: item) {
+            for (auto &ch : item) {
                 if (ch - '0' == d) {
                     res++;
                 }
@@ -19,4 +19,3 @@ public:
         return res;
     }
 };
-

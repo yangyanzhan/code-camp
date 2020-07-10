@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/linear-algebra-foundations-3-matrix-multiplication.html .
 
-18
-21
-29
-34
+18 21 29 34

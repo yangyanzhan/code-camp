@@ -14,4 +14,3 @@ int visitsOnCircularRoad(int n, std::vector<int> visitsOrder) {
     }
     return res;
 }
-

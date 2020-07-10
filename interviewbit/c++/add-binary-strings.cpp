@@ -10,7 +10,8 @@ string Solution::addBinary(string A, string B) {
         int digit = A[i] - '0' + B[j] - '0' + carry;
         ss << (digit % 2);
         carry = digit / 2;
-        i--; j--;
+        i--;
+        j--;
     }
     while (i >= 0) {
         int digit = A[i] - '0' + carry;
@@ -31,4 +32,3 @@ string Solution::addBinary(string A, string B) {
     reverse(res.begin(), res.end());
     return res;
 }
-

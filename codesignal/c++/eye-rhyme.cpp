@@ -4,9 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/eye-rhyme.html .
 
 bool eyeRhyme(std::string pairOfLines) {
-  std::regex pattern("^.*(.{3})\\t.*(.{3})$");
-  std::smatch match;
-  std::regex_search(pairOfLines, match, pattern);
-  return match.str(1) == match.str(2);
+    std::regex pattern("^.*(.{3})\\t.*(.{3})$");
+    std::smatch match;
+    std::regex_search(pairOfLines, match, pattern);
+    return match.str(1) == match.str(2);
 }
-

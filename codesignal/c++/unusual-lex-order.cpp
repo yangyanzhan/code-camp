@@ -5,7 +5,7 @@
 
 std::vector<std::string> unusualLexOrder(std::vector<std::string> words) {
     using namespace std;
-    sort(words.begin(), words.end(), [] (auto item1, auto item2) {
+    sort(words.begin(), words.end(), [](auto item1, auto item2) {
         string s1 = item1, s2 = item2;
         reverse(s1.begin(), s1.end());
         reverse(s2.begin(), s2.end());
@@ -13,4 +13,3 @@ std::vector<std::string> unusualLexOrder(std::vector<std::string> words) {
     });
     return words;
 }
-

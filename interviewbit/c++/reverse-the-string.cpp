@@ -30,4 +30,3 @@ string Solution::solve(string A) {
     }
     return A;
 }
-

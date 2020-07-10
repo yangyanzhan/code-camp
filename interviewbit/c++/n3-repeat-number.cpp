@@ -37,4 +37,3 @@ int Solution::repeatedNumber(const vector<int> &A) {
     }
     return -1;
 }
-

@@ -24,4 +24,3 @@ int lastDigit(int a, int b) {
     }
     return num;
 }
-

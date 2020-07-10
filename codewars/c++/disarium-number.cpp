@@ -22,4 +22,3 @@ string disariumNumber(int number) {
     }
     return sum == number ? "Disarium !!" : "Not !!";
 }
-

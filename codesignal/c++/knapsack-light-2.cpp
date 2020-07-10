@@ -19,4 +19,3 @@ std::string knapsackLight2(int weight1, int weight2, int maxW) {
     }
     return "none";
 }
-

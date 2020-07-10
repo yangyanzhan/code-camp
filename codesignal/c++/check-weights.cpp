@@ -6,7 +6,7 @@
 int checkWeights(std::vector<std::vector<int>> boxes, int packageWeight) {
     using namespace std;
     int weight = 0;
-    for (vector<int> &box: boxes) {
+    for (vector<int> &box : boxes) {
         int a = box[0], b = box[1];
         weight += (a + b) * (b - a + 1) / 2;
     }

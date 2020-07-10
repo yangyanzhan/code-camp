@@ -17,8 +17,8 @@ int Solution::strStr(const string haystack, const string needle) {
                 break;
             }
         }
-        if (found) return i;
+        if (found)
+            return i;
     }
     return -1;
 }
-

@@ -19,4 +19,3 @@ std::vector<std::vector<int>> rotateImage(std::vector<std::vector<int>> nums) {
     }
     return nums;
 }
-

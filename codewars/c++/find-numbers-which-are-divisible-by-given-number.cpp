@@ -6,7 +6,7 @@
 std::vector<int> divisible_by(std::vector<int> numbers, int divisor) {
     using namespace std;
     vector<int> res;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         if (num % divisor == 0) {
             res.push_back(num);
         }

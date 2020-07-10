@@ -5,7 +5,7 @@
 
 string nimGame(vector<int> pile) {
     int res = 0;
-    for (auto num: pile) {
+    for (auto num : pile) {
         res = res ^ num;
     }
     return res == 0 ? "Second" : "First";

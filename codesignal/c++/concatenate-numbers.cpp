@@ -7,4 +7,3 @@ int concatenateNumbers(int a, int b) {
     using namespace std;
     return stoi(to_string(a) + to_string(b));
 }
-

@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/twice-as-old.html .
 
-int twice_as_old(int dad, int son) {
-    return abs(dad - 2 * son);
-}
-
+int twice_as_old(int dad, int son) { return abs(dad - 2 * son); }

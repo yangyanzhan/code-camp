@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/sort-array-by-parity.html .
 
 class Solution {
-public:
-    vector<int> sortArrayByParity(vector<int>& A) {
+  public:
+    vector<int> sortArrayByParity(vector<int> &A) {
         vector<int> evens, odds;
-        for (auto num: A) {
+        for (auto num : A) {
             if (num % 2 == 0) {
                 evens.push_back(num);
             } else {
@@ -20,4 +20,3 @@ public:
         return evens;
     }
 };
-

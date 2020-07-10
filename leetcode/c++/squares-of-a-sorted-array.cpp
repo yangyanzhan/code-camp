@@ -4,14 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/squares-of-a-sorted-array.html .
 
 class Solution {
-public:
-    vector<int> sortedSquares(vector<int>& A) {
+  public:
+    vector<int> sortedSquares(vector<int> &A) {
         vector<int> res;
-        for (auto num: A) {
+        for (auto num : A) {
             res.push_back(num * num);
         }
         sort(res.begin(), res.end());
         return res;
     }
 };
-

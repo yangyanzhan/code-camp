@@ -10,4 +10,3 @@ int rectangleRotation(int a, int b) {
     int n4 = ((int)floor(((b - 1.414) / 2) / 1.414) + 1) * 2;
     return n1 * n2 + n3 * n4;
 }
-

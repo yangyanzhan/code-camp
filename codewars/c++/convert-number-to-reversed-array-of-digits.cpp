@@ -16,4 +16,3 @@ std::vector<int> digitize(unsigned long n) {
     }
     return res;
 }
-

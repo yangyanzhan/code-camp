@@ -11,7 +11,7 @@
 //   ListNode *next;
 // };
 
-ListNode<int> * removeKFromList(ListNode<int> *l, int k) {
+ListNode<int> *removeKFromList(ListNode<int> *l, int k) {
     using namespace std;
     ListNode<int> *head = new ListNode<int>();
     head->next = l;
@@ -29,4 +29,3 @@ ListNode<int> * removeKFromList(ListNode<int> *l, int k) {
     }
     return head->next;
 }
-

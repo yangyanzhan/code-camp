@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/equal-pair-of-bits.html .
 
-int equalPairOfBits(int n, int m) {
-  return ~(n ^ m) & ((n ^ m) + 1);
-}
-
+int equalPairOfBits(int n, int m) { return ~(n ^ m) & ((n ^ m) + 1); }

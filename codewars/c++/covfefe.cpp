@@ -20,4 +20,3 @@ std::string covfefe(std::string s) {
     }
     return s;
 }
-

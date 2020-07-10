@@ -4,11 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/valid-parentheses.html .
 
 class Solution {
-public:
+  public:
     bool isValid(string s) {
         using namespace std;
         vector<char> cache;
-        for (auto ch: s) {
+        for (auto ch : s) {
             if (ch == ']') {
                 if (cache.empty() || cache.back() != '[') {
                     return false;
@@ -31,4 +31,3 @@ public:
         return cache.empty();
     }
 };
-

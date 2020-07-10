@@ -4,6 +4,5 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/swap-adjacent-words.html .
 
 std::string swapAdjacentWords(std::string s) {
-  return std::regex_replace(s, std::regex("(\\w+) (\\w+)"), "$2 $1");
+    return std::regex_replace(s, std::regex("(\\w+) (\\w+)"), "$2 $1");
 }
-

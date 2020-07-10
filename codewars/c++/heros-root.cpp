@@ -20,4 +20,3 @@ class IntSqRoot {
         return res;
     }
 };
-

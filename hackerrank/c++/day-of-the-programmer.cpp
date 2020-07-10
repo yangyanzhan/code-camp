@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/hackerrank/day-of-the-programmer.html .
 
 string dayOfProgrammer(int year) {
-    vector<int> days_of_month = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    vector<int> days_of_month = {0,  31, 28, 31, 30, 31, 30,
+                                 31, 31, 30, 31, 30, 31};
     int remains = 256;
     int month = 0, day = 0;
     bool is_lunar;

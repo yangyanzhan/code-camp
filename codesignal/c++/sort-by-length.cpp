@@ -9,7 +9,7 @@ std::vector<std::string> sortByLength(std::vector<std::string> inputArray) {
     for (int i = 0; i < inputArray.size(); i++) {
         cache.push_back(make_tuple(inputArray[i], i));
     }
-    sort(cache.begin(), cache.end(), [] (auto item1, auto item2) {
+    sort(cache.begin(), cache.end(), [](auto item1, auto item2) {
         string s1 = get<0>(item1);
         string s2 = get<0>(item2);
         if (s1.size() != s2.size()) {
@@ -18,9 +18,8 @@ std::vector<std::string> sortByLength(std::vector<std::string> inputArray) {
         return get<1>(item1) < get<1>(item2);
     });
     vector<string> res;
-    for (auto pair: cache) {
+    for (auto pair : cache) {
         res.push_back(get<0>(pair));
     }
     return res;
 }
-

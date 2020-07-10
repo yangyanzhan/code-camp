@@ -11,7 +11,7 @@ char add_letters(std::vector<char> letters) {
         return 'z';
     }
     char res = 0;
-    for (auto ch: letters) {
+    for (auto ch : letters) {
         res += ch - 'a' + 1;
         if (res > 26) {
             res %= 26;
@@ -19,4 +19,3 @@ char add_letters(std::vector<char> letters) {
     }
     return 'a' + res - 1;
 }
-

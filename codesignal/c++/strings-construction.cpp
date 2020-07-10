@@ -27,4 +27,3 @@ int stringsConstruction(std::string A, std::string B) {
     }
     return best;
 }
-

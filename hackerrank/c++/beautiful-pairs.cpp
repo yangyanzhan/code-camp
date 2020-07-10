@@ -5,14 +5,14 @@
 
 int beautifulPairs(vector<int> A, vector<int> B) {
     map<int, int> cache;
-    for (auto num: A) {
+    for (auto num : A) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
     int res = 0;
-    for (auto num: B) {
+    for (auto num : B) {
         if (cache.find(num) != cache.end()) {
             if (cache[num] > 0) {
                 res++;

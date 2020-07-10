@@ -26,4 +26,3 @@ int equationSolutions(int l, int r) {
     }
     return res;
 }
-

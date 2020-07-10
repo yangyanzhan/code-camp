@@ -6,7 +6,7 @@
 #include <cmath>
 
 class Opstrings {
-public:
+  public:
     static std::vector<std::string> split(const std::string &s) {
         using namespace std;
         int n = sqrt(s.size());
@@ -20,29 +20,27 @@ public:
         using namespace std;
         vector<string> cache = split(s);
         string res;
-        for (auto item: cache) {
+        for (auto item : cache) {
             reverse(item.begin(), item.end());
             res += item;
             res += "\n";
         }
         return res.substr(0, res.size() - 1);
     }
-	static std::string horMirror(const std::string &s) {
+    static std::string horMirror(const std::string &s) {
         using namespace std;
         vector<string> cache = split(s);
         reverse(cache.begin(), cache.end());
         string res;
-        for (auto item: cache) {
+        for (auto item : cache) {
             res += item;
             res += "\n";
         }
         return res.substr(0, res.size() - 1);
     }
-    template<typename Func>
+    template <typename Func>
     static std::string oper(Func f, const std::string &s) {
         using namespace std;
         return f(s);
     }
 };
-
-

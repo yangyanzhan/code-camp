@@ -20,11 +20,12 @@ bool is_binary(Tree<int> *tree, int mini, int maxi) {
     if (tree->value <= mini || tree->value >= maxi) {
         return false;
     }
-    return is_binary(tree->left, mini, tree->value) && is_binary(tree->right, tree->value, maxi);
+    return is_binary(tree->left, mini, tree->value) &&
+           is_binary(tree->right, tree->value, maxi);
 }
 
 bool isBinarySearchTree(Tree<int> *tree) {
     using namespace std;
-    return is_binary(tree, numeric_limits<int>::min(), numeric_limits<int>::max());
+    return is_binary(tree, numeric_limits<int>::min(),
+                     numeric_limits<int>::max());
 }
-

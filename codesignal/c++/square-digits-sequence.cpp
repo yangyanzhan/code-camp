@@ -25,4 +25,3 @@ int squareDigitsSequence(int n) {
     }
     return nums.size() + 1;
 }
-

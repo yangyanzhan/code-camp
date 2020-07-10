@@ -25,4 +25,3 @@ std::vector<int> videoPart(std::string part, std::string total) {
     int a = ttosec(part), b = ttosec(total), g = gcd(a, b);
     return {a / g, b / g};
 }
-

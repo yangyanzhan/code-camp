@@ -10,7 +10,7 @@ std::vector<int> digitDifferenceSort(std::vector<int> a) {
     for (int i = 0; i < n; i++) {
         pairs.push_back({a[i], i});
     }
-    function<int(int)> dd = [] (int num) {
+    function<int(int)> dd = [](int num) {
         if (num == 0) {
             return 0;
         }
@@ -23,7 +23,7 @@ std::vector<int> digitDifferenceSort(std::vector<int> a) {
         }
         return max_d - min_d;
     };
-    sort(pairs.begin(), pairs.end(), [&] (auto item1, auto item2) {
+    sort(pairs.begin(), pairs.end(), [&](auto item1, auto item2) {
         int num1 = item1[0], idx1 = item1[1];
         int num2 = item2[0], idx2 = item2[1];
         int dd1 = dd(num1), dd2 = dd(num2);
@@ -38,4 +38,3 @@ std::vector<int> digitDifferenceSort(std::vector<int> a) {
     }
     return res;
 }
-

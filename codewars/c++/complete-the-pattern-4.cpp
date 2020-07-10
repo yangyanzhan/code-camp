@@ -22,4 +22,3 @@ std::string pattern(int n) {
     }
     return pattern;
 }
-

@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/are-isomorphic.html .
 
-bool areIsomorphic(std::vector<std::vector<int>> array1, std::vector<std::vector<int>> array2) {
+bool areIsomorphic(std::vector<std::vector<int>> array1,
+                   std::vector<std::vector<int>> array2) {
     using namespace std;
     if (array1.size() != array2.size()) {
         return false;
@@ -15,4 +16,3 @@ bool areIsomorphic(std::vector<std::vector<int>> array1, std::vector<std::vector
     }
     return true;
 }
-

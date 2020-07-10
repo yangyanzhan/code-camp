@@ -4,15 +4,16 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/replace-every-nth.html .
 
 class Kata {
-public:
-    std::string replaceNth(std::string text, int n, char oldValue, char newValue) {
+  public:
+    std::string replaceNth(std::string text, int n, char oldValue,
+                           char newValue) {
         using namespace std;
         string res = text;
         if (n <= 0) {
             return res;
         }
         int count = 0;
-        for (auto &ch: res) {
+        for (auto &ch : res) {
             if (ch == oldValue) {
                 count++;
                 if (count % n == 0) {
@@ -23,4 +24,3 @@ public:
         return res;
     }
 };
-

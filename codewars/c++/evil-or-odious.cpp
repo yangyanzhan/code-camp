@@ -14,4 +14,3 @@ std::string evil(int n) {
     }
     return n1 % 2 == 0 ? "It's Evil!" : "It's Odious!";
 }
-

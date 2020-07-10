@@ -10,7 +10,7 @@
 using namespace std;
 
 class hamming {
-    public:
+  public:
     static int compute(string in1, string in2);
 };
 

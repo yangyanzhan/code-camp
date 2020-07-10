@@ -31,4 +31,3 @@ std::vector<int> primeFactors2(int n) {
     }
     return res;
 }
-

@@ -3,10 +3,10 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/sum-of-differences-in-array.html .
 
-#include <vector>
 #include <algorithm>
+#include <vector>
 
-int sumOfDifferences(const std::vector<int>& arr){
+int sumOfDifferences(const std::vector<int> &arr) {
     using namespace std;
     vector<int> tmp(arr.begin(), arr.end());
     sort(tmp.begin(), tmp.end());
@@ -16,4 +16,3 @@ int sumOfDifferences(const std::vector<int>& arr){
     }
     return res;
 }
-

@@ -29,4 +29,3 @@ std::vector<int> weakNumbers(int n) {
     }
     return vector<int>{best, count};
 }
-

@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/spiral-matrix-iii.html .
 
 class Solution {
-public:
+  public:
     vector<vector<int>> spiralMatrixIII(int R, int C, int r0, int c0) {
         vector<vector<int>> res;
         int i = r0, j = c0;
@@ -32,4 +32,3 @@ public:
         return res;
     }
 };
-

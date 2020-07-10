@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/how-many-numbers-are-smaller-than-the-current-number.html .
 
 class Solution {
-public:
+  public:
     vector<int> smallerNumbersThanCurrent(vector<int> &nums) {
         vector<vector<int>> cache;
         for (int i = 0; i < nums.size(); i++) {
@@ -14,7 +14,7 @@ public:
         sort(cache.begin(), cache.end());
         vector<int> res(nums.size(), -1);
         int count = 0, inc = 0, curr = cache[0][0];
-        for (auto &item: cache) {
+        for (auto &item : cache) {
             int num = item[0], idx = item[1];
             if (num == curr) {
                 inc++;
@@ -33,4 +33,3 @@ public:
         return res;
     }
 };
-

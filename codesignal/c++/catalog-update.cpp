@@ -3,9 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/catalog-update.html .
 
-std::vector<std::vector<std::string>> catalogUpdate(std::vector<std::vector<std::string>> catalog, std::vector<std::vector<std::string>> updates) {
+std::vector<std::vector<std::string>>
+catalogUpdate(std::vector<std::vector<std::string>> catalog,
+              std::vector<std::vector<std::string>> updates) {
     using namespace std;
-    for (auto update: updates) {
+    for (auto update : updates) {
         string cate = update[0], item = update[1];
         bool found = false;
         int pos = -1;
@@ -44,4 +46,3 @@ std::vector<std::vector<std::string>> catalogUpdate(std::vector<std::vector<std:
     }
     return catalog;
 }
-

@@ -12,4 +12,3 @@ int digitDistanceNumber(int n) {
     }
     return stoi(item2);
 }
-

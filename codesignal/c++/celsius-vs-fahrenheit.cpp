@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/celsius-vs-fahrenheit.html .
 
-int celsiusVsFahrenheit(std::vector<int> yourTemps, std::vector<int> friendsTemps) {
+int celsiusVsFahrenheit(std::vector<int> yourTemps,
+                        std::vector<int> friendsTemps) {
     int res = 0;
     for (int i = 0; i < yourTemps.size(); i++) {
         int c1 = yourTemps[i];
@@ -15,4 +16,3 @@ int celsiusVsFahrenheit(std::vector<int> yourTemps, std::vector<int> friendsTemp
     }
     return res;
 }
-

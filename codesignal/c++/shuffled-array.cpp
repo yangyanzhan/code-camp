@@ -19,4 +19,3 @@ std::vector<int> shuffledArray(std::vector<int> shuffled) {
     sort(shuffled.begin(), shuffled.end());
     return shuffled;
 }
-

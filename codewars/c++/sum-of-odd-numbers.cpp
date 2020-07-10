@@ -10,4 +10,3 @@ long long rowSumOddNumbers(unsigned n) {
     long long b = a + 2 * ((long long)n - 1);
     return (a + b) * n / 2;
 }
-

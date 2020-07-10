@@ -7,4 +7,3 @@ std::string fullName(std::string first, std::string last) {
     using namespace std;
     return first + " " + last;
 }
-

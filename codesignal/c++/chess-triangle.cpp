@@ -6,15 +6,15 @@
 int chessTriangle(int n, int m) {
     using namespace std;
     vector<vector<int>> steps;
-    for (auto dx: vector<int>{-2, -1, 1, 2}) {
-        for (auto dy: vector<int>{-2, -1, 1, 2}) {
+    for (auto dx : vector<int>{-2, -1, 1, 2}) {
+        for (auto dy : vector<int>{-2, -1, 1, 2}) {
             if (abs(dx) + abs(dy) != 3) {
                 continue;
             }
             // rook
             vector<int> step1 = {dx, dy};
-            for (auto ddx: vector<int>{-2, -1, 1, 2}) {
-                for (auto ddy: vector<int>{-abs(ddx), abs(ddx)}) {
+            for (auto ddx : vector<int>{-2, -1, 1, 2}) {
+                for (auto ddy : vector<int>{-abs(ddx), abs(ddx)}) {
                     if (ddx == dx || ddy == dy) {
                         step1.push_back(ddx);
                         step1.push_back(ddy);
@@ -42,7 +42,7 @@ int chessTriangle(int n, int m) {
     int res = 0;
     for (int x = 0; x < m; x++) {
         for (int y = 0; y < n; y++) {
-            for (auto step: steps) {
+            for (auto step : steps) {
                 int x1 = x + step[0], y1 = y + step[1];
                 if (x1 < 0 || x1 >= m || y1 < 0 || y1 >= n) {
                     continue;

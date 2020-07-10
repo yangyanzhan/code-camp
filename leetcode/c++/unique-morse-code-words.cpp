@@ -4,13 +4,17 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/unique-morse-code-words.html .
 
 class Solution {
-public:
-    int uniqueMorseRepresentations(vector<string>& words) {
-        vector<string> symbols = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+  public:
+    int uniqueMorseRepresentations(vector<string> &words) {
+        vector<string> symbols = {
+            ".-",   "-...", "-.-.", "-..",  ".",    "..-.", "--.",
+            "....", "..",   ".---", "-.-",  ".-..", "--",   "-.",
+            "---",  ".--.", "--.-", ".-.",  "...",  "-",    "..-",
+            "...-", ".--",  "-..-", "-.--", "--.."};
         set<string> cache;
-        for (auto &word: words) {
+        for (auto &word : words) {
             string item;
-            for (auto &ch: word) {
+            for (auto &ch : word) {
                 item += symbols[ch - 'a'];
             }
             cache.insert(item);
@@ -18,4 +22,3 @@ public:
         return cache.size();
     }
 };
-

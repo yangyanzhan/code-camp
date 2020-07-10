@@ -4,14 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/kids-with-the-greatest-number-of-candies.html .
 
 class Solution {
-public:
-    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+  public:
+    vector<bool> kidsWithCandies(vector<int> &candies, int extraCandies) {
         int max_candy = *max_element(candies.begin(), candies.end());
         vector<bool> res;
-        for (auto candy: candies) {
+        for (auto candy : candies) {
             res.push_back((candy + extraCandies) >= max_candy);
         }
         return res;
     }
 };
-

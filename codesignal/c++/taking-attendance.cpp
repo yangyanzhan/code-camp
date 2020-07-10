@@ -6,12 +6,12 @@
 int takingAttendance(std::vector<std::string> classList) {
     using namespace std;
     int res = 5 * classList.size();
-    for (auto name: classList) {
+    for (auto name : classList) {
         regex reg("[^aeiouyAEIOUY]+");
-        for (auto it = sregex_iterator(name.begin(), name.end(), reg); it != sregex_iterator(); it++) {
+        for (auto it = sregex_iterator(name.begin(), name.end(), reg);
+             it != sregex_iterator(); it++) {
             res += pow(2, it->str().size() - 1);
         }
     }
     return res;
 }
-

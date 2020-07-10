@@ -13,4 +13,3 @@ std::vector<int> switchLights(std::vector<int> nums) {
     }
     return nums;
 }
-

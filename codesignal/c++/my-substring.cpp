@@ -6,4 +6,3 @@
 std::string mySubstring(std::string inputString, int l, int r) {
     return inputString.substr(l, r - l + 1);
 }
-

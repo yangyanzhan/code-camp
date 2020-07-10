@@ -6,16 +6,15 @@
 std::vector<std::string> domainType(std::vector<std::string> domains) {
     using namespace std;
     map<string, string> cache{{"org", "organization"},
-        {"com", "commercial"},
-        {"net", "network"},
-        {"info", "information"}};
+                              {"com", "commercial"},
+                              {"net", "network"},
+                              {"info", "information"}};
     regex reg("\\.([^\\.]+)$");
     smatch matches;
     vector<string> res;
-    for (auto domain: domains) {
+    for (auto domain : domains) {
         regex_search(domain, matches, reg);
         res.push_back(cache[matches[1].str()]);
     }
     return res;
 }
-

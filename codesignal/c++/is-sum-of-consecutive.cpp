@@ -11,4 +11,3 @@ bool isSumOfConsecutive(int n) {
     }
     return res != n;
 }
-

@@ -12,4 +12,3 @@ std::vector<int> replaceMiddle(std::vector<int> arr) {
     }
     return arr;
 }
-

@@ -9,8 +9,8 @@ using namespace std;
 
 int maxTriSum(vector<int> numbers) {
     sort(numbers.begin(), numbers.end());
-    numbers.resize(distance(numbers.begin(), unique(numbers.begin(), numbers.end())));
+    numbers.resize(
+        distance(numbers.begin(), unique(numbers.begin(), numbers.end())));
     int n = numbers.size();
     return numbers[n - 3] + numbers[n - 2] + numbers[n - 1];
 }
-

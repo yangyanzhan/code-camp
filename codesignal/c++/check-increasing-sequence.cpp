@@ -14,4 +14,3 @@ bool checkIncreasingSequence(std::vector<int> seq) {
     }
     return true;
 }
-

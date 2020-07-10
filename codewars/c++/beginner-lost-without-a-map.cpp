@@ -6,7 +6,7 @@
 std::vector<int> maps(const std::vector<int> &values) {
     using namespace std;
     vector<int> res(values.begin(), values.end());
-    for (auto &v: res) {
+    for (auto &v : res) {
         v *= 2;
     }
     return res;

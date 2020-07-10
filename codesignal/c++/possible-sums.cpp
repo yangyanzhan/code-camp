@@ -21,7 +21,7 @@ std::set<int> sums(std::vector<int> coins, std::vector<int> quantity) {
     }
     int q = quantity[0];
     for (int i = 0; i <= q; i++) {
-        for (auto num: remain_sums) {
+        for (auto num : remain_sums) {
             res.insert(num + i * coins[0]);
         }
     }
@@ -32,4 +32,3 @@ int possibleSums(std::vector<int> coins, std::vector<int> quantity) {
     using namespace std;
     return sums(coins, quantity).size() - 1;
 }
-

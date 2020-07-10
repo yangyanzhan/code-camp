@@ -5,7 +5,8 @@
 
 class Solution {
     map<vector<long long>, vector<long long>> cache;
-public:
+
+  public:
     int divide(int dividend, int divisor) {
         return divide((long long)dividend, (long long)divisor);
     }
@@ -14,7 +15,10 @@ public:
         if (dividend == 0) {
             return 0;
         }
-        int sign = ((dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0)) ? 1 : -1;
+        int sign =
+            ((dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0))
+                ? 1
+                : -1;
         if (dividend < 0) {
             dividend = 0 - dividend;
         }
@@ -64,4 +68,3 @@ public:
         return {res, remains};
     }
 };
-

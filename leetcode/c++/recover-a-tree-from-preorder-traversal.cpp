@@ -14,11 +14,12 @@
  */
 
 class Solution {
-public:
+  public:
     TreeNode *recoverFromPreorder(string S) {
         vector<vector<int>> tokens;
         regex reg("(-*)(\\d+)");
-        for (auto it = sregex_iterator(S.begin(), S.end(), reg); it != sregex_iterator(); it++) {
+        for (auto it = sregex_iterator(S.begin(), S.end(), reg);
+             it != sregex_iterator(); it++) {
             int count = it->str(1).size();
             int num = stoi(it->str(2));
             tokens.push_back({num, count});
@@ -50,4 +51,3 @@ public:
         return head;
     }
 };
-

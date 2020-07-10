@@ -6,14 +6,14 @@
 bool palindromeRearranging(std::string inputString) {
     using namespace std;
     map<char, int> cache;
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         if (cache.find(ch) == cache.end()) {
             cache[ch] = 0;
         }
         cache[ch]++;
     }
     int count = 0;
-    for (auto pair: cache) {
+    for (auto pair : cache) {
         if (pair.second % 2 != 0) {
             count++;
         }

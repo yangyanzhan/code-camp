@@ -26,4 +26,3 @@ std::vector<int> gravitation(std::vector<std::string> rows) {
     }
     return res;
 }
-

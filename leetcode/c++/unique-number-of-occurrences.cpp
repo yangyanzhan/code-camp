@@ -4,20 +4,19 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/unique-number-of-occurrences.html .
 
 class Solution {
-public:
+  public:
     bool uniqueOccurrences(vector<int> &arr) {
         map<int, int> cache;
-        for (auto num: arr) {
+        for (auto num : arr) {
             if (cache.find(num) == cache.end()) {
                 cache[num] = 0;
             }
             cache[num]++;
         }
         set<int> counts;
-        for (auto pair: cache) {
+        for (auto pair : cache) {
             counts.insert(pair.second);
         }
         return counts.size() == cache.size();
     }
 };
-

@@ -5,7 +5,7 @@
 
 vector<string> solve(vector<int> arr, vector<vector<int>> queries) {
     vector<string> res;
-    for (auto query: queries) {
+    for (auto query : queries) {
         int x = query[0], y = query[1];
         if (x > y) {
             res.push_back("Odd");

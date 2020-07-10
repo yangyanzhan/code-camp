@@ -3,10 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/roads-building.html .
 
-std::vector<std::vector<int>> roadsBuilding(int cities, std::vector<std::vector<int>> roads) {
+std::vector<std::vector<int>>
+roadsBuilding(int cities, std::vector<std::vector<int>> roads) {
     using namespace std;
     set<vector<int>> cache;
-    for (auto &road: roads) {
+    for (auto &road : roads) {
         if (road[0] > road[1]) {
             swap(road[0], road[1]);
         }
@@ -23,4 +24,3 @@ std::vector<std::vector<int>> roadsBuilding(int cities, std::vector<std::vector<
     }
     return res;
 }
-

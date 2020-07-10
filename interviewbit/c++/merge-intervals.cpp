@@ -12,12 +12,14 @@
  *     Interval(int s, int e) : start(s), end(e) {}
  * };
  */
-vector<Interval> Solution::insert(vector<Interval> &intervals, Interval newInterval) {
+vector<Interval> Solution::insert(vector<Interval> &intervals,
+                                  Interval newInterval) {
     vector<Interval> res;
     vector<Interval>::iterator it = intervals.begin();
     while (it != intervals.end()) {
         Interval interval = *it;
-        int x1 = newInterval.start, y1 = newInterval.end, x2 = interval.start, y2 = interval.end;
+        int x1 = newInterval.start, y1 = newInterval.end, x2 = interval.start,
+            y2 = interval.end;
         if (y1 < x2) {
             res.push_back(newInterval);
             break;
@@ -39,4 +41,3 @@ vector<Interval> Solution::insert(vector<Interval> &intervals, Interval newInter
     }
     return res;
 }
-

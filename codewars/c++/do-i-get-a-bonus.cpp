@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/do-i-get-a-bonus.html .
 
-#include<string>
+#include <string>
 using namespace std;
 
 string bonus_time(int salary, bool bonus) {

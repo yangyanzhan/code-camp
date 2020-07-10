@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/first-digit.html .
 
 char firstDigit(std::string inputString) {
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         if ('0' <= ch && ch <= '9') {
             return ch;
         }

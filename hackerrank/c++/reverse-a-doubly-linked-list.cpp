@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/reverse-a-doubly-linked-list.html .
 
-DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
+DoublyLinkedListNode *reverse(DoublyLinkedListNode *head) {
     auto curr = head;
     while (curr->next) {
         auto next = curr->next;

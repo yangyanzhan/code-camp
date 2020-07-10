@@ -18,4 +18,3 @@ std::string twoSort(std::vector<std::string> s) {
     }
     return res;
 }
-

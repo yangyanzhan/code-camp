@@ -17,4 +17,3 @@ void Solution::sortColors(vector<int> &A) {
         }
     }
 }
-

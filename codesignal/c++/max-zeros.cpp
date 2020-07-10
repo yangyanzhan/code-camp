@@ -28,4 +28,3 @@ int maxZeros(int n) {
     }
     return res;
 }
-

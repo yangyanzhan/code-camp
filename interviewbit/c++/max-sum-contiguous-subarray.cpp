@@ -5,7 +5,7 @@
 
 int Solution::maxSubArray(const vector<int> &A) {
     int sum = 0, res = A[0];
-    for (int num: A) {
+    for (int num : A) {
         if (sum < 0) {
             sum = 0;
         }
@@ -14,4 +14,3 @@ int Solution::maxSubArray(const vector<int> &A) {
     }
     return res;
 }
-

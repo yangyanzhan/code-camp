@@ -46,4 +46,3 @@ std::vector<int> fibonacciSum(int n) {
     }
     return res;
 }
-

@@ -15,4 +15,3 @@ std::string htmlEndTagByStartTag(std::string startTag) {
     res.insert(1, "/");
     return res;
 }
-

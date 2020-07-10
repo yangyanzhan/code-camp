@@ -10,4 +10,3 @@ int simpleMultiplication(int a) {
         return a * 9;
     }
 }
-

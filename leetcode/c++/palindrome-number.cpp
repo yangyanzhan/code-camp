@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/palindrome-number.html .
 
 class Solution {
-public:
+  public:
     bool isPalindrome(int x) {
         auto item = to_string(x);
         int n = item.size();
@@ -16,4 +16,3 @@ public:
         return true;
     }
 };
-

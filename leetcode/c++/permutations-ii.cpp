@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/permutations-ii.html .
 
 class Solution {
-public:
+  public:
     vector<vector<int>> permuteUnique(vector<int> &nums) {
         set<vector<int>> perms;
         vector<vector<int>> items;
@@ -13,7 +13,7 @@ public:
         }
         do {
             vector<int> perm;
-            for (auto &item: items) {
+            for (auto &item : items) {
                 perm.push_back(item[1]);
             }
             perms.insert(perm);
@@ -22,4 +22,3 @@ public:
         return res;
     }
 };
-

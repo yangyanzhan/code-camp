@@ -6,4 +6,3 @@
 bool checkForFactor(int base, int factor) {
     return factor != 0 && base % factor == 0;
 }
-

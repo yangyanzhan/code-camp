@@ -4,13 +4,12 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/fizz-buzz-multithreaded.html .
 
 class FizzBuzz {
-private:
+  private:
     int n;
     atomic<int> num_atom = 1;
-public:
-    FizzBuzz(int n) {
-        this->n = n;
-    }
+
+  public:
+    FizzBuzz(int n) { this->n = n; }
 
     // printFizz() outputs "fizz".
     void fizz(function<void()> printFizz) {
@@ -41,7 +40,7 @@ public:
     }
 
     // printFizzBuzz() outputs "fizzbuzz".
-	void fizzbuzz(function<void()> printFizzBuzz) {
+    void fizzbuzz(function<void()> printFizzBuzz) {
         while (true) {
             int num = num_atom.load();
             if (num > n) {
@@ -68,4 +67,3 @@ public:
         }
     }
 };
-

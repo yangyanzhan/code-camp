@@ -6,7 +6,7 @@
 int uniqueDigitProducts(std::vector<int> a) {
     using namespace std;
     set<int> cache;
-    for (auto num: a) {
+    for (auto num : a) {
         int product = 1;
         while (num >= 10) {
             product *= num % 10;
@@ -17,4 +17,3 @@ int uniqueDigitProducts(std::vector<int> a) {
     }
     return cache.size();
 }
-

@@ -18,4 +18,3 @@ bool isCorrectSentence(std::string inputString) {
     }
     return true;
 }
-

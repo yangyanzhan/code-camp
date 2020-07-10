@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/insert-a-node-into-a-sorted-doubly-linked-list.html .
 
-DoublyLinkedListNode* sortedInsert(DoublyLinkedListNode* head, int data) {
+DoublyLinkedListNode *sortedInsert(DoublyLinkedListNode *head, int data) {
     auto new_node = new DoublyLinkedListNode(data);
     auto curr = head;
     while (curr->next && curr->next->data < data) {

@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/sum-without-highest-and-lowest-number.html .
 
-#include <vector>
 #include <limits>
+#include <vector>
 
 using namespace std;
 
@@ -13,12 +13,12 @@ int sum(vector<int> numbers) {
     if (n <= 1) {
         return 0;
     }
-    int minn = numeric_limits<int>::max(), maxn = numeric_limits<int>::min(), res = 0;
-    for (auto num: numbers) {
+    int minn = numeric_limits<int>::max(), maxn = numeric_limits<int>::min(),
+        res = 0;
+    for (auto num : numbers) {
         minn = min(minn, num);
         maxn = max(maxn, num);
         res += num;
     }
     return res - minn - maxn;
 }
-

@@ -7,4 +7,3 @@ bool isSum(int value) {
     long long n = floor(sqrt(2 * value));
     return (n * (n + 1) / 2) == value;
 }
-

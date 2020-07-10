@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/return-twelve.html .
 
-int returnTwelve(int number) {
-    return number > 12 ? number : 12;
-}
-
+int returnTwelve(int number) { return number > 12 ? number : 12; }

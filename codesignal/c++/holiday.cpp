@@ -5,7 +5,8 @@
 
 int holiday(int x, std::string weekDay, std::string month, int yearNumber) {
     using namespace std;
-    vector<string> wdays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    vector<string> wdays = {"Sunday",   "Monday", "Tuesday", "Wednesday",
+                            "Thursday", "Friday", "Saturday"};
     int t_wday;
     for (int i = 0; i < 7; i++) {
         if (weekDay == wdays[i]) {
@@ -14,7 +15,9 @@ int holiday(int x, std::string weekDay, std::string month, int yearNumber) {
         }
     }
     int t_month;
-    vector<string> months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    vector<string> months = {"January",   "February", "March",    "April",
+                             "May",       "June",     "July",     "August",
+                             "September", "October",  "November", "December"};
     for (int i = 0; i < 12; i++) {
         if (month == months[i]) {
             t_month = i;
@@ -23,7 +26,8 @@ int holiday(int x, std::string weekDay, std::string month, int yearNumber) {
     }
     tm date;
     stringstream ss;
-    ss << yearNumber << "-" << setw(2) << setfill('0') << (t_month + 1) << "-01 00:00:00";
+    ss << yearNumber << "-" << setw(2) << setfill('0') << (t_month + 1)
+       << "-01 00:00:00";
     ss >> get_time(&date, "%Y-%m-%d %H:%M:%S");
     int res = 1, count = 0;
     while (true) {
@@ -44,4 +48,3 @@ int holiday(int x, std::string weekDay, std::string month, int yearNumber) {
     }
     return res;
 }
-

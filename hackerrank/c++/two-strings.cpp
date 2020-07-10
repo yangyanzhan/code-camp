@@ -11,6 +11,7 @@ string twoStrings(string s1, string s2) {
     for (char ch : s2) {
         set2.insert(ch);
     }
-    set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(set3, set3.begin()));
+    set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(),
+                     inserter(set3, set3.begin()));
     return set3.size() > 0 ? "YES" : "NO";
 }

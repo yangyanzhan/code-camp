@@ -3,12 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/linear-algebra-foundations-4-matrix-multiplication.html .
 
-30
-36
-45
-45
-54
-67
-15
-18
-22
+30 36 45 45 54 67 15 18 22

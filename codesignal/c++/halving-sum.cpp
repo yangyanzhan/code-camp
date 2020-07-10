@@ -11,4 +11,3 @@ int halvingSum(int n) {
     }
     return res;
 }
-

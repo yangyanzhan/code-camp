@@ -17,4 +17,3 @@ int countDistantPairs(std::string inputString, int distance) {
     }
     return res;
 }
-

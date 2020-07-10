@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/check-data.html .
 
-bool checkData(std::string inputString) {
-    return inputString.size() == 3;
-}
-
+bool checkData(std::string inputString) { return inputString.size() == 3; }

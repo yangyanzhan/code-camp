@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+  public:
+    vector<int> twoSum(vector<int> &nums, int target) {
         vector<tuple<int, int>> items;
         for (int i = 0; i < nums.size(); i++) {
             items.push_back(make_tuple(nums[i], i));

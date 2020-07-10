@@ -5,14 +5,14 @@
 
 int migratoryBirds(vector<int> arr) {
     map<int, int> cache;
-    for (auto num: arr) {
+    for (auto num : arr) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
     int max_count = 0, max_bird = 0;
-    for (auto it: cache) {
+    for (auto it : cache) {
         if (it.second > max_count) {
             max_count = it.second;
             max_bird = it.first;

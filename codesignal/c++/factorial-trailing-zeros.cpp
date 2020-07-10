@@ -11,4 +11,3 @@ int factorialTrailingZeros(int n) {
     }
     return res;
 }
-

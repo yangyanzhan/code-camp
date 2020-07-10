@@ -9,7 +9,7 @@
 using namespace std;
 
 int getCount(const string &inputStr) {
-  regex reg("[aeiouAEIOU]");
-  return distance(sregex_iterator(inputStr.begin(), inputStr.end(), reg), sregex_iterator());
+    regex reg("[aeiouAEIOU]");
+    return distance(sregex_iterator(inputStr.begin(), inputStr.end(), reg),
+                    sregex_iterator());
 }
-

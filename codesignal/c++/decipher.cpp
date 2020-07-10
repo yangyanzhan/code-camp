@@ -33,4 +33,3 @@ std::string decipher(std::string cipher) {
     decipher(cipher, res);
     return res;
 }
-

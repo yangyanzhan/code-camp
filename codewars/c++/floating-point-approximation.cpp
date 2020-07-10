@@ -5,7 +5,4 @@
 
 #include <cmath>
 
-double quadratic(double a, double b, double c) {
-    return -c / b;
-}
-
+double quadratic(double a, double b, double c) { return -c / b; }

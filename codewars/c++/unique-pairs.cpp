@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/unique-pairs.html .
 
-int projectPartners(int n) {
-    return (long long)n * (n - 1) / 2;
-}
-
+int projectPartners(int n) { return (long long)n * (n - 1) / 2; }

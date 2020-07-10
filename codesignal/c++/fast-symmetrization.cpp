@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/fast-symmetrization.html .
 
-std::vector<std::vector<char>> fastSymmetrization(std::vector<std::vector<char>> a) {
+std::vector<std::vector<char>>
+fastSymmetrization(std::vector<std::vector<char>> a) {
     using namespace std;
     int m = a.size(), n = a[0].size();
     for (int i = 0; i < m; i++) {
@@ -38,4 +39,3 @@ std::vector<std::vector<char>> fastSymmetrization(std::vector<std::vector<char>>
     }
     return a;
 }
-

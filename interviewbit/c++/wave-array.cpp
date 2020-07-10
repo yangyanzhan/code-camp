@@ -12,4 +12,3 @@ vector<int> Solution::wave(vector<int> &A) {
     }
     return A;
 }
-

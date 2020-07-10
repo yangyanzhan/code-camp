@@ -3,21 +3,20 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/two-to-one.html .
 
-#include <set>
 #include <algorithm>
+#include <set>
 
 class TwoToOne {
-public:
+  public:
     static std::string longest(const std::string &s1, const std::string &s2) {
         using namespace std;
         set<char> cache;
-        for (auto ch: s1) {
+        for (auto ch : s1) {
             cache.insert(ch);
         }
-        for (auto ch: s2) {
+        for (auto ch : s2) {
             cache.insert(ch);
         }
         return string(cache.begin(), cache.end());
     }
 };
-

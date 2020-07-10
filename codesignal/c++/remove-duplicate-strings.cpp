@@ -3,11 +3,12 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/remove-duplicate-strings.html .
 
-std::vector<std::string> removeDuplicateStrings(std::vector<std::string> inputArray) {
+std::vector<std::string>
+removeDuplicateStrings(std::vector<std::string> inputArray) {
     using namespace std;
     vector<string> res;
     string pre = "";
-    for (auto now: inputArray) {
+    for (auto now : inputArray) {
         if (now != pre) {
             res.push_back(now);
             pre = now;
@@ -15,4 +16,3 @@ std::vector<std::string> removeDuplicateStrings(std::vector<std::string> inputAr
     }
     return res;
 }
-

@@ -11,8 +11,8 @@
  * };
  */
 class Solution {
-public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+  public:
+    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         ListNode *head = nullptr, *curr = nullptr;
         while (l1 && l2) {
             ListNode *p;

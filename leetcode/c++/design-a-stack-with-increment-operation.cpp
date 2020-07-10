@@ -6,10 +6,9 @@
 class CustomStack {
     vector<int> stack;
     int max_size;
-public:
-    CustomStack(int maxSize) {
-        max_size = maxSize;
-    }
+
+  public:
+    CustomStack(int maxSize) { max_size = maxSize; }
 
     void push(int x) {
         if (stack.size() < max_size) {
@@ -42,4 +41,3 @@ public:
  * int param_2 = obj->pop();
  * obj->increment(k,val);
  */
-

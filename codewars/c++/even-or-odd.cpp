@@ -4,6 +4,6 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/even-or-odd.html .
 
 std::string even_or_odd(int number) {
-  using namespace std;
-  return number % 2 == 0 ? "Even" : "Odd";
+    using namespace std;
+    return number % 2 == 0 ? "Even" : "Odd";
 }

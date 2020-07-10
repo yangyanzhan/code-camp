@@ -9,11 +9,10 @@ bool checkFactorial(int n) {
     for (long long i = 2; i <= 20; i++) {
         facts.push_back(facts[facts.size() - 1] * i);
     }
-    for (auto fact: facts) {
+    for (auto fact : facts) {
         if (n == fact) {
             return true;
         }
     }
     return false;
 }
-

@@ -9,7 +9,8 @@ int find_short(std::string str) {
     using namespace std;
     regex reg("[a-zA-Z]+");
     int min_len = numeric_limits<int>::max();
-    for (auto it = sregex_iterator(str.begin(), str.end(), reg); it != sregex_iterator(); it++) {
+    for (auto it = sregex_iterator(str.begin(), str.end(), reg);
+         it != sregex_iterator(); it++) {
         string item = it->str();
         int len = item.size();
         min_len = min(min_len, len);

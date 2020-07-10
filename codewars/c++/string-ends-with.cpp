@@ -9,4 +9,3 @@ bool solution(std::string const &str, std::string const &ending) {
     }
     return str.substr(str.size() - ending.size(), ending.size()) == ending;
 }
-

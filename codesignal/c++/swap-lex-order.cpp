@@ -11,7 +11,7 @@ std::string swapLexOrder(std::string str, std::vector<std::vector<int>> pairs) {
         mapping[i] = set<int>();
     }
     set<int> to_swap;
-    for (auto pair: pairs) {
+    for (auto pair : pairs) {
         mapping[pair[0] - 1].insert(pair[1] - 1);
         mapping[pair[1] - 1].insert(pair[0] - 1);
         to_swap.insert(pair[0] - 1);
@@ -22,8 +22,8 @@ std::string swapLexOrder(std::string str, std::vector<std::vector<int>> pairs) {
         set<int> group{idx};
         while (true) {
             set<int> new_group(group.begin(), group.end());
-            for (auto idx: group) {
-                for (auto mapped: mapping[idx]) {
+            for (auto idx : group) {
+                for (auto mapped : mapping[idx]) {
                     new_group.insert(mapped);
                 }
             }
@@ -33,17 +33,16 @@ std::string swapLexOrder(std::string str, std::vector<std::vector<int>> pairs) {
             group = new_group;
         }
         string item;
-        for (auto idx: group) {
+        for (auto idx : group) {
             item += str[idx];
         }
         sort(item.begin(), item.end());
         reverse(item.begin(), item.end());
         int count = 0;
-        for (auto idx: group) {
+        for (auto idx : group) {
             str[idx] = item[count++];
             to_swap.erase(idx);
         }
     }
     return str;
 }
-

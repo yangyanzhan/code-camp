@@ -6,7 +6,7 @@
 int differentDigitsNumberSearch(std::vector<int> inputArray) {
     using namespace std;
     int res = -1;
-    for (auto num: inputArray) {
+    for (auto num : inputArray) {
         string item1 = to_string(num);
         set<char> item2(item1.begin(), item1.end());
         if (item1.size() == item2.size()) {
@@ -16,4 +16,3 @@ int differentDigitsNumberSearch(std::vector<int> inputArray) {
     }
     return res;
 }
-

@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-infinite-process.html .
 
-bool isInfiniteProcess(int a, int b) {
-    return !(a <= b && (b - a) % 2 == 0);
-}
-
+bool isInfiniteProcess(int a, int b) { return !(a <= b && (b - a) % 2 == 0); }

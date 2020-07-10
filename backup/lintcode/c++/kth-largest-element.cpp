@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/lintcode/nth-largest-element.html .
 
 class Solution {
-public:
+  public:
     /**
      * @param n: An integer
      * @param nums: An array
@@ -21,10 +21,10 @@ public:
 
             while (i < j) {
                 do
-                    i ++;
+                    i++;
                 while (nums[i] < key);
                 do
-                    j --;
+                    j--;
                 while (nums[j] > key);
                 if (i < j)
                     swap(nums[i], nums[j]);
@@ -38,4 +38,3 @@ public:
         return nums[n];
     }
 };
-

@@ -9,4 +9,3 @@ std::string number_to_string(int num) {
     using namespace std;
     return to_string(num);
 }
-

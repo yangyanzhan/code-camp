@@ -6,15 +6,15 @@
 #include <set>
 #include <vector>
 
-std::vector<int> remove_values(std::vector<int> integers, std::vector<int> values) {
+std::vector<int> remove_values(std::vector<int> integers,
+                               std::vector<int> values) {
     using namespace std;
     set<int> cache(values.begin(), values.end());
     vector<int> res;
-    for (auto num: integers) {
+    for (auto num : integers) {
         if (cache.find(num) == cache.end()) {
             res.push_back(num);
         }
     }
     return res;
 }
-

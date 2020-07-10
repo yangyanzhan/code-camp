@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    TreeNode* bstFromPreorder(vector<int>& preorder) {
+  public:
+    TreeNode *bstFromPreorder(vector<int> &preorder) {
         if (preorder.size() == 0) {
             return nullptr;
         }
@@ -39,4 +39,3 @@ public:
         return head;
     }
 };
-

@@ -44,9 +44,8 @@ int exerciseElaboration(int p, int n) {
     }
     vector<int> num2 = mul(num, num);
     int res = 0;
-    for (auto d: num2) {
+    for (auto d : num2) {
         res += d;
     }
     return res;
 }
-

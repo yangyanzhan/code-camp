@@ -6,7 +6,7 @@
 std::string reverseInParentheses(std::string inputString) {
     using namespace std;
     vector<string> stack;
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         if (ch != ')') {
             string item{ch};
             stack.push_back(item);
@@ -25,7 +25,7 @@ std::string reverseInParentheses(std::string inputString) {
         }
     }
     string res = "";
-    for (auto item: stack) {
+    for (auto item : stack) {
         res += item;
     }
     return res;

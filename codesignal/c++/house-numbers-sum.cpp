@@ -6,7 +6,7 @@
 int houseNumbersSum(std::vector<int> inputArray) {
     using namespace std;
     int res = 0;
-    for (auto num: inputArray) {
+    for (auto num : inputArray) {
         if (num == 0) {
             break;
         }
@@ -14,4 +14,3 @@ int houseNumbersSum(std::vector<int> inputArray) {
     }
     return res;
 }
-

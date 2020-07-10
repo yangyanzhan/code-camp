@@ -4,11 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/remove-outermost-parentheses.html .
 
 class Solution {
-public:
+  public:
     string removeOuterParentheses(string S) {
         int count = 0;
         string res;
-        for (auto ch: S) {
+        for (auto ch : S) {
             if (ch == '(') {
                 if (count > 0) {
                     res += ch;
@@ -24,4 +24,3 @@ public:
         return res;
     }
 };
-

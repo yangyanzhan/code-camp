@@ -6,13 +6,13 @@
 bool isBeautifulString(std::string inputString) {
     using namespace std;
     map<char, int> cache;
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         if (cache.find(ch) == cache.end()) {
             cache[ch] = 0;
         }
         cache[ch]++;
     }
-    for (auto pair: cache) {
+    for (auto pair : cache) {
         char ch = pair.first;
         int count = pair.second;
         if (ch == 'a') {

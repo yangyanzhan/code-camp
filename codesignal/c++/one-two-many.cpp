@@ -13,4 +13,3 @@ std::string oneTwoMany(int n) {
     }
     return res;
 }
-

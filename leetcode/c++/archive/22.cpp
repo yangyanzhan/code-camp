@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     map<int, vector<string>> mapping;
     vector<string> generateParenthesis(int n) {
         if (n == 0) {

@@ -14,4 +14,3 @@ int rangeBitCount(int a, int b) {
     }
     return res;
 }
-

@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/financial-crisis.html .
 
-std::vector<std::vector<std::vector<bool>>> financialCrisis(std::vector<std::vector<bool>> roadRegister) {
+std::vector<std::vector<std::vector<bool>>>
+financialCrisis(std::vector<std::vector<bool>> roadRegister) {
     using namespace std;
     int n = roadRegister.size();
     vector<vector<vector<bool>>> res;
@@ -26,4 +27,3 @@ std::vector<std::vector<std::vector<bool>>> financialCrisis(std::vector<std::vec
     }
     return res;
 }
-

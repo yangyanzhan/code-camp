@@ -5,7 +5,7 @@
 
 vector<int> gradingStudents(vector<int> grades) {
     vector<int> res;
-    for (auto grade: grades) {
+    for (auto grade : grades) {
         if (grade < 38) {
         } else if (grade % 5 != 0) {
             int target = (grade / 5 + 1) * 5;

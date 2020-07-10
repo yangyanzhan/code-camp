@@ -14,4 +14,3 @@ std::vector<int> supercalifragilisticexpialidocious(char s) {
     }
     return res;
 }
-

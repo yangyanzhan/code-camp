@@ -9,7 +9,8 @@ int runnersMeetings(std::vector<int> startPosition, std::vector<int> speed) {
     map<string, int> meets;
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
-            int s1 = startPosition[i], s2 = startPosition[j], v1 = speed[i], v2 = speed[j];
+            int s1 = startPosition[i], s2 = startPosition[j], v1 = speed[i],
+                v2 = speed[j];
             string key;
             if (s1 == s2) {
                 key = "0";
@@ -44,4 +45,3 @@ int runnersMeetings(std::vector<int> startPosition, std::vector<int> speed) {
     }
     return (int)sqrt(res * 2) + 1;
 }
-

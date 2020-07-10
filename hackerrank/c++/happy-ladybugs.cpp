@@ -5,13 +5,13 @@
 
 string happyLadybugs(string colors) {
     map<char, int> cache;
-    for (auto color: colors) {
+    for (auto color : colors) {
         if (cache.find(color) == cache.end()) {
             cache[color] = 0;
         }
         cache[color]++;
     }
-    for (auto it: cache) {
+    for (auto it : cache) {
         if (it.first != '_' && it.second == 1) {
             return "NO";
         }
@@ -19,7 +19,7 @@ string happyLadybugs(string colors) {
     if (cache.find('_') == cache.end()) {
         char pre = '_';
         int count = 0;
-        for (auto color: colors) {
+        for (auto color : colors) {
             if (color == pre) {
                 count++;
             } else {
@@ -34,4 +34,3 @@ string happyLadybugs(string colors) {
     }
     return "YES";
 }
-

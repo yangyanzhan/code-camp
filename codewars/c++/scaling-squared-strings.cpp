@@ -6,18 +6,19 @@
 #include <regex>
 
 class ScalingSqStrings {
-public:
+  public:
     static std::string scale(const std::string &str, int k, int n) {
         using namespace std;
         vector<string> items;
         regex reg("[^\\n]+");
-        for (auto it = sregex_iterator(str.begin(), str.end(), reg); it != sregex_iterator(); it++) {
+        for (auto it = sregex_iterator(str.begin(), str.end(), reg);
+             it != sregex_iterator(); it++) {
             items.push_back(it->str());
         }
         string res;
-        for (auto item: items) {
+        for (auto item : items) {
             string new_item;
-            for (auto ch: item) {
+            for (auto ch : item) {
                 for (int i = 0; i < k; i++) {
                     new_item += ch;
                 }
@@ -29,4 +30,3 @@ public:
         return res.substr(0, res.size() - 1);
     }
 };
-

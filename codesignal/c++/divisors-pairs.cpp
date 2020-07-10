@@ -16,4 +16,3 @@ int divisorsPairs(std::vector<int> sequence) {
     }
     return res;
 }
-

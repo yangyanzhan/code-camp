@@ -6,7 +6,7 @@
 #include <algorithm>
 
 class Solution {
-public:
+  public:
     int reverse(int x) {
         using namespace std;
         long long sign = x >= 0 ? 1 : -1;
@@ -18,11 +18,11 @@ public:
             y = 10 * y + digit;
             remains /= 10;
             res = sign * y;
-            if (res < numeric_limits<int>::min() || res > numeric_limits<int>::max()) {
+            if (res < numeric_limits<int>::min() ||
+                res > numeric_limits<int>::max()) {
                 return 0;
             }
         }
         return res;
     }
 };
-

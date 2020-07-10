@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/generate-a-string-with-characters-that-have-odd-counts.html .
 
 class Solution {
-public:
+  public:
     string generateTheString(int n) {
         string res;
         for (int i = 0; i < n / 2 * 2; i++) {
@@ -18,4 +18,3 @@ public:
         return res;
     }
 };
-

@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-uppercase.html .
 
-bool isUppercase(char symbol) {
-    return 'A' <= symbol && symbol <= 'Z';
-}
-
+bool isUppercase(char symbol) { return 'A' <= symbol && symbol <= 'Z'; }

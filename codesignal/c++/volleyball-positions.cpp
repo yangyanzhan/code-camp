@@ -8,10 +8,11 @@ int Q(int x) {
     return (f < 0 ? f + 6 : f);
 }
 
-std::vector<std::vector<std::string>> volleyballPositions(std::vector<std::vector<std::string>> f, int k) {
+std::vector<std::vector<std::string>>
+volleyballPositions(std::vector<std::vector<std::string>> f, int k) {
 
-    std::vector<std::string> p =
-    {f[3][2], f[1][2], f[0][1], f[1][0], f[3][0], f[2][1]};
+    std::vector<std::string> p = {f[3][2], f[1][2], f[0][1],
+                                  f[1][0], f[3][0], f[2][1]};
 
     f[3][2] = p[Q(-k)];
     f[1][2] = p[Q(-k + 1)];
@@ -22,5 +23,3 @@ std::vector<std::vector<std::string>> volleyballPositions(std::vector<std::vecto
 
     return f;
 }
-
-

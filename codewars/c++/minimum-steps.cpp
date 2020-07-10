@@ -15,4 +15,3 @@ int minimumSteps(vector<int> numbers, int input) {
     }
     return res;
 }
-

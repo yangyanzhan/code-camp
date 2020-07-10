@@ -13,9 +13,7 @@ int gcd(int a, int b) {
     return gcd(b, a % b);
 }
 
-int lcm(int a, int b) {
-    return a / gcd(a, b) * b;
-}
+int lcm(int a, int b) { return a / gcd(a, b) * b; }
 
 vector<int> solve(vector<int> nums) {
     vector<int> res{nums[0]};
@@ -27,4 +25,3 @@ vector<int> solve(vector<int> nums) {
     res.push_back(nums.back());
     return res;
 }
-

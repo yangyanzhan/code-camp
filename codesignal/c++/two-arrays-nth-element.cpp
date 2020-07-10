@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/two-arrays-nth-element.html .
 
-int twoArraysNthElement(std::vector<int> array1, std::vector<int> array2, int n) {
+int twoArraysNthElement(std::vector<int> array1, std::vector<int> array2,
+                        int n) {
     using namespace std;
     int i1 = 0, i2 = 0, i = -1, n1 = array1.size(), n2 = array2.size(), res;
     while (i1 < n1 && i2 < n2 && i < n) {
@@ -31,4 +32,3 @@ int twoArraysNthElement(std::vector<int> array1, std::vector<int> array2, int n)
     }
     return res;
 }
-

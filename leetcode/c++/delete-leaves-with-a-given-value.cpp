@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    TreeNode* removeLeafNodes(TreeNode* root, int target) {
+  public:
+    TreeNode *removeLeafNodes(TreeNode *root, int target) {
         if (root == nullptr) {
             return nullptr;
         }
@@ -29,4 +29,3 @@ public:
         return root;
     }
 };
-

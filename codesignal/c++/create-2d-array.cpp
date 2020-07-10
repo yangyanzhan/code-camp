@@ -6,7 +6,7 @@
 std::vector<std::vector<int>> create2DArray(std::vector<int> lengths) {
     using namespace std;
     vector<vector<int>> res;
-    for (auto len: lengths) {
+    for (auto len : lengths) {
         vector<int> row(len);
         for (int i = 0; i < len; i++) {
             row[i] = i;
@@ -15,4 +15,3 @@ std::vector<std::vector<int>> create2DArray(std::vector<int> lengths) {
     }
     return res;
 }
-

@@ -15,7 +15,7 @@ int newYearCelebrations(std::string takeOffTime, std::vector<int> minutes) {
         res++;
     }
     int pre = 0;
-    for (auto minute: minutes) {
+    for (auto minute : minutes) {
         for (int i = 1; i <= minute - pre; i++) {
             now++;
             if (now % day == 0) {
@@ -39,4 +39,3 @@ int newYearCelebrations(std::string takeOffTime, std::vector<int> minutes) {
     }
     return res;
 }
-

@@ -10,4 +10,3 @@ int piecesOfDistinctLengths(int strawLength) {
     }
     return n;
 }
-

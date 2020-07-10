@@ -20,4 +20,3 @@ std::vector<int> subtractionByRegrouping(int minuend, int subtrahend) {
     }
     return res;
 }
-

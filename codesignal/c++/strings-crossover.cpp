@@ -24,4 +24,3 @@ int stringsCrossover(std::vector<std::string> inputArray, std::string result) {
     }
     return res;
 }
-

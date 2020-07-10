@@ -21,4 +21,3 @@ double clockHandAngle(std::string time) {
     double res = abs(a - b) * 360;
     return min(res, 360 - res);
 }
-

@@ -5,16 +5,15 @@
 
 std::string programTranslation(std::string solution,
                                std::vector<std::string> args) {
-  std::string argumentVariants = "";
-  for (size_t i = 0; i < args.size(); i++) {
-    argumentVariants += args[i];
-    if (i < args.size() - 1) {
-      argumentVariants += "|";
+    std::string argumentVariants = "";
+    for (size_t i = 0; i < args.size(); i++) {
+        argumentVariants += args[i];
+        if (i < args.size() - 1) {
+            argumentVariants += "|";
+        }
     }
-  }
 
-  std::regex regex("([^\\w\\d$])(" + argumentVariants + ")(?=[^\\w\\d])");
-  std::string fmt = "$1$$$2";
-  return std::regex_replace(solution, regex, fmt);
+    std::regex regex("([^\\w\\d$])(" + argumentVariants + ")(?=[^\\w\\d])");
+    std::string fmt = "$1$$$2";
+    return std::regex_replace(solution, regex, fmt);
 }
-

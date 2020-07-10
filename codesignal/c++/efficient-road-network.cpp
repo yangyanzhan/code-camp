@@ -6,7 +6,7 @@
 bool efficientRoadNetwork(int n, std::vector<std::vector<int>> roads) {
     using namespace std;
     map<int, set<int>> graph;
-    for (auto road: roads) {
+    for (auto road : roads) {
         int a = road[0], b = road[1];
         if (graph.find(a) == graph.end()) {
             graph[a] = set<int>();
@@ -20,10 +20,10 @@ bool efficientRoadNetwork(int n, std::vector<std::vector<int>> roads) {
     for (int i = 0; i < n; i++) {
         set<int> visited{i};
         if (graph.find(i) != graph.end()) {
-            for (int i1: graph[i]) {
+            for (int i1 : graph[i]) {
                 visited.insert(i1);
                 if (graph.find(i1) != graph.end()) {
-                    for (int i2: graph[i1]) {
+                    for (int i2 : graph[i1]) {
                         visited.insert(i2);
                     }
                 }
@@ -35,4 +35,3 @@ bool efficientRoadNetwork(int n, std::vector<std::vector<int>> roads) {
     }
     return true;
 }
-

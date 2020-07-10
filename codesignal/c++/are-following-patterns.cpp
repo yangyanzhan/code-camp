@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/are-following-patterns.html .
 
-bool areFollowingPatterns(std::vector<std::string> strings, std::vector<std::string> patterns) {
+bool areFollowingPatterns(std::vector<std::string> strings,
+                          std::vector<std::string> patterns) {
     using namespace std;
     map<string, string> cache1;
     map<string, string> cache2;
@@ -24,4 +25,3 @@ bool areFollowingPatterns(std::vector<std::string> strings, std::vector<std::str
     }
     return true;
 }
-

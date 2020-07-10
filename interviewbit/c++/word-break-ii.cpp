@@ -5,7 +5,7 @@
 
 map<string, vector<string>> cache;
 
-vector<string> wordBreak1(string s, unordered_set<string>& wordDict) {
+vector<string> wordBreak1(string s, unordered_set<string> &wordDict) {
     if (cache.find(s) != cache.end()) {
         return cache[s];
     }
@@ -18,7 +18,7 @@ vector<string> wordBreak1(string s, unordered_set<string>& wordDict) {
         string head = s.substr(0, len);
         if (wordDict.find(head) != wordDict.end()) {
             vector<string> nextWords = wordBreak1(s.substr(len), wordDict);
-            for (string nextWord: nextWords) {
+            for (string nextWord : nextWords) {
                 words.push_back(head + " " + nextWord);
             }
         }
@@ -29,7 +29,7 @@ vector<string> wordBreak1(string s, unordered_set<string>& wordDict) {
 
 vector<string> Solution::wordBreak(string A, vector<string> &B) {
     unordered_set<string> words;
-    for (string word: B) {
+    for (string word : B) {
         words.insert(word);
     }
     cache.clear();
@@ -37,4 +37,3 @@ vector<string> Solution::wordBreak(string A, vector<string> &B) {
     sort(res.begin(), res.end());
     return res;
 }
-

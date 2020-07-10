@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/max-multiple.html .
 
-int maxMultiple(int divisor, int bound) {
-    return divisor * (bound / divisor);
-}
-
+int maxMultiple(int divisor, int bound) { return divisor * (bound / divisor); }

@@ -12,6 +12,6 @@ bool isUnstablePair(std::string filename1, std::string filename2) {
     for (int i = 0; i < filename2.length(); i++) {
         f2 += tolower(filename2[i]);
     }
-    return (filename1 <= filename2 && f1 >= f2) || (filename1 >= filename2 && f1 <= f2);
+    return (filename1 <= filename2 && f1 >= f2) ||
+           (filename1 >= filename2 && f1 <= f2);
 }
-

@@ -15,4 +15,3 @@ int fibonacciNumber(int n) {
     }
     return nums[n];
 }
-

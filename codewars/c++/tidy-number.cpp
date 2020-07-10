@@ -16,4 +16,3 @@ bool tidyNumber(int number) {
     }
     return true;
 }
-

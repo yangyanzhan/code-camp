@@ -25,10 +25,12 @@ int Solution::search(const vector<int> &A, int B) {
     }
     while (begin <= end) {
         int middle = (begin + end) / 2;
-        if (A[middle] == B) return middle;
-        if (A[middle] < B) begin = middle + 1;
-        else end = middle - 1;
+        if (A[middle] == B)
+            return middle;
+        if (A[middle] < B)
+            begin = middle + 1;
+        else
+            end = middle - 1;
     }
     return -1;
 }
-

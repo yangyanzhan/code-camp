@@ -12,4 +12,3 @@ int countNeighbouringPairs(std::string inputString) {
     }
     return res;
 }
-

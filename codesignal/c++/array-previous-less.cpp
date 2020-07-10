@@ -21,4 +21,3 @@ std::vector<int> arrayPreviousLess(std::vector<int> items) {
     }
     return res;
 }
-

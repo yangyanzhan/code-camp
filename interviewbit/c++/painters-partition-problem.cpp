@@ -6,7 +6,8 @@
 bool feasible(const vector<int> &nums, int painters, int top) {
     long long sum = 0, i = 0, n = nums.size();
     while (i < n) {
-        if (painters <= 0) return false;
+        if (painters <= 0)
+            return false;
         if (sum + nums[i] > top) {
             sum = 0;
             painters--;
@@ -20,7 +21,7 @@ bool feasible(const vector<int> &nums, int painters, int top) {
 
 int Solution::paint(int A, int B, vector<int> &C) {
     long long sum = 0, n = C.size();
-    for (int len: C) {
+    for (int len : C) {
         sum += len;
     }
     long long begin = sum / A, end = sum, best = -1;
@@ -35,4 +36,3 @@ int Solution::paint(int A, int B, vector<int> &C) {
     }
     return ((best % 10000003) * (B % 10000003)) % 10000003;
 }
-

@@ -3,10 +3,13 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/parking-spot.html .
 
-bool parkingSpotFromLeft(std::vector<int> &carDimensions, std::vector<std::vector<int>> &parkingLot, std::vector<int> &luckySpot) {
+bool parkingSpotFromLeft(std::vector<int> &carDimensions,
+                         std::vector<std::vector<int>> &parkingLot,
+                         std::vector<int> &luckySpot) {
     using namespace std;
     int len = carDimensions[0], width = carDimensions[1];
-    int x1 = luckySpot[0], y1 = luckySpot[1], x2 = luckySpot[2], y2 = luckySpot[3];
+    int x1 = luckySpot[0], y1 = luckySpot[1], x2 = luckySpot[2],
+        y2 = luckySpot[3];
     if ((x2 - x1 + 1 < width) || (y2 - y1 + 1 < len)) {
         return false;
     }
@@ -31,7 +34,8 @@ bool parkingSpotFromLeft(std::vector<int> &carDimensions, std::vector<std::vecto
     return false;
 }
 
-std::vector<std::vector<int>> rotateMatrix(std::vector<std::vector<int>> &matrix) {
+std::vector<std::vector<int>>
+rotateMatrix(std::vector<std::vector<int>> &matrix) {
     using namespace std;
     int h = matrix.size(), w = matrix[0].size(), oh = w, ow = h;
     vector<vector<int>> rotated;
@@ -57,7 +61,9 @@ std::vector<int> rotateRect(std::vector<int> &rect, int h, int w) {
     return rotated;
 }
 
-bool parkingSpot(std::vector<int> carDimensions, std::vector<std::vector<int>> parkingLot, std::vector<int> luckySpot) {
+bool parkingSpot(std::vector<int> carDimensions,
+                 std::vector<std::vector<int>> parkingLot,
+                 std::vector<int> luckySpot) {
     using namespace std;
     for (int i = 0; i < 4; i++) {
         if (parkingSpotFromLeft(carDimensions, parkingLot, luckySpot)) {
@@ -69,4 +75,3 @@ bool parkingSpot(std::vector<int> carDimensions, std::vector<std::vector<int>> p
     }
     return false;
 }
-

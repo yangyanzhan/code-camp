@@ -31,15 +31,14 @@ class FindElements {
         }
         return find(target, root->left) || find(target, root->right);
     }
-public:
+
+  public:
     FindElements(TreeNode *root) {
         recover(root, 0);
         this->root = root;
     }
 
-    bool find(int target) {
-        return find(target, root);
-    }
+    bool find(int target) { return find(target, root); }
 };
 
 /**
@@ -47,4 +46,3 @@ public:
  * FindElements* obj = new FindElements(root);
  * bool param_1 = obj->find(target);
  */
-

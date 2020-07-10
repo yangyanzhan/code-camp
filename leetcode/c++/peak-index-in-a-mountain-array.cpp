@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/peak-index-in-a-mountain-array.html .
 
 class Solution {
-public:
-    int peakIndexInMountainArray(vector<int>& A) {
+  public:
+    int peakIndexInMountainArray(vector<int> &A) {
         int n = A.size(), pre = A[0];
         for (int i = 1; i < n; i++) {
             if (A[i] > pre) {
@@ -17,4 +17,3 @@ public:
         return -1;
     }
 };
-

@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/remove-all-adjacent-duplicates-in-string.html .
 
 class Solution {
-public:
+  public:
     string removeDuplicates(string S) {
         vector<char> chars;
-        for (auto ch: S) {
+        for (auto ch : S) {
             if (chars.size() > 0) {
                 if (chars[chars.size() - 1] == ch) {
                     chars.pop_back();
@@ -19,10 +19,9 @@ public:
             }
         }
         string res;
-        for (auto ch: chars) {
+        for (auto ch : chars) {
             res += ch;
         }
         return res;
     }
 };
-

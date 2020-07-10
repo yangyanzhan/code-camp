@@ -4,9 +4,6 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/third-angle-of-a-triangle.html .
 
 class Triangle {
-public:
-  static int otherAngle(int a, int b) {
-      return 180 - a - b;
-  }
+  public:
+    static int otherAngle(int a, int b) { return 180 - a - b; }
 };
-

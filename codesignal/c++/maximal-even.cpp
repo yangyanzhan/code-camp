@@ -6,11 +6,10 @@
 int maximalEven(std::vector<int> inputArray) {
     using namespace std;
     int res = numeric_limits<int>::min();
-    for (auto num: inputArray) {
+    for (auto num : inputArray) {
         if (num % 2 == 0) {
             res = max(res, num);
         }
     }
     return res;
 }
-

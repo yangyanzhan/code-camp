@@ -46,4 +46,3 @@ std::string reversedSumOfDigits(int p, int n) {
     }
     return res;
 }
-

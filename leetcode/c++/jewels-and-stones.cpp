@@ -4,11 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/jewels-and-stones.html .
 
 class Solution {
-public:
+  public:
     int numJewelsInStones(string J, string S) {
         int sum = 0;
-        for (auto &ch1: J) {
-            for (auto &ch2: S) {
+        for (auto &ch1 : J) {
+            for (auto &ch2 : S) {
                 if (ch1 == ch2) {
                     sum++;
                 }
@@ -17,4 +17,3 @@ public:
         return sum;
     }
 };
-

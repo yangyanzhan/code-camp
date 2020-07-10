@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/parabole.html .
 
-int parabole(int a, int b, int c, int x) {
-    return a * x * x + b * x + c;
-}
-
+int parabole(int a, int b, int c, int x) { return a * x * x + b * x + c; }

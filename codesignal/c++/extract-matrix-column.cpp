@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/extract-matrix-column.html .
 
-std::vector<int> extractMatrixColumn(std::vector<std::vector<int>> matrix, int column) {
+std::vector<int> extractMatrixColumn(std::vector<std::vector<int>> matrix,
+                                     int column) {
     using namespace std;
     vector<int> res;
     for (int i = 0; i < matrix.size(); i++) {
@@ -11,4 +12,3 @@ std::vector<int> extractMatrixColumn(std::vector<std::vector<int>> matrix, int c
     }
     return res;
 }
-

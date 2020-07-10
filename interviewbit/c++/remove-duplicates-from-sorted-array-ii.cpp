@@ -5,7 +5,8 @@
 
 int Solution::removeDuplicates(vector<int> &A) {
     int n = A.size();
-    if (n <= 2) return n;
+    if (n <= 2)
+        return n;
     int j = 2, ppre = A[0], pre = A[1];
     for (int i = 2; i < n; i++) {
         int now = A[i];
@@ -19,4 +20,3 @@ int Solution::removeDuplicates(vector<int> &A) {
     A.resize(j);
     return A.size();
 }
-

@@ -4,6 +4,6 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/are-similar-numbers.html .
 
 bool areSimilarNumbers(int a, int b, int divisor) {
-    return (a % divisor == 0 && b % divisor == 0) || (a % divisor != 0 && b % divisor != 0);
+    return (a % divisor == 0 && b % divisor == 0) ||
+           (a % divisor != 0 && b % divisor != 0);
 }
-

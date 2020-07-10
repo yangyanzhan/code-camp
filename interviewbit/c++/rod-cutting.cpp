@@ -3,9 +3,10 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/rod-cutting.html .
 
-void makeCuts(vector<vector<pair<long long, int>>> &cache, vector<int> &B, int i, int j, vector<int> &cuts) {
+void makeCuts(vector<vector<pair<long long, int>>> &cache, vector<int> &B,
+              int i, int j, vector<int> &cuts) {
     if (i + 1 >= j) {
-        return ;
+        return;
     }
     int k = cache[i][j].second;
     cuts.push_back(B[k]);
@@ -17,7 +18,8 @@ vector<int> Solution::rodCut(int A, vector<int> &B) {
     B.insert(B.begin(), 0);
     B.push_back(A);
     int n = B.size();
-    vector<vector<pair<long long, int>>> cache(n, vector<pair<long long, int>>(n));
+    vector<vector<pair<long long, int>>> cache(n,
+                                               vector<pair<long long, int>>(n));
     for (int i = 0; i < n; i++) {
         cache[i][i] = pair<long long, int>(0, i);
     }

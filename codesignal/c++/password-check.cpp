@@ -28,4 +28,3 @@ bool passwordCheck(std::string inputString) {
     }
     return true;
 }
-

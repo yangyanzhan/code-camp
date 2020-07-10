@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     int reverse(int x) {
         long long res = 0;
         long long tmp = x;
@@ -16,7 +16,8 @@ public:
             res += digit;
         }
         res *= sign;
-        if (res > numeric_limits<int32_t>::max() || res < numeric_limits<int32_t>::min()) {
+        if (res > numeric_limits<int32_t>::max() ||
+            res < numeric_limits<int32_t>::min()) {
             return 0;
         }
         return res;

@@ -11,4 +11,3 @@ int kthDigit(int n, int k) {
     }
     return item[k - 1] - '0';
 }
-

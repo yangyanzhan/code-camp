@@ -4,10 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/find-and-replace-pattern.html .
 
 class Solution {
-public:
-    vector<string> findAndReplacePattern(vector<string>& words, string pattern) {
+  public:
+    vector<string> findAndReplacePattern(vector<string> &words,
+                                         string pattern) {
         vector<string> res;
-        for (auto word: words) {
+        for (auto word : words) {
             int n = pattern.size();
             if (word.size() != n) {
                 continue;
@@ -42,4 +43,3 @@ public:
         return res;
     }
 };
-

@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    int sumEvenGrandparent(TreeNode* root) {
+  public:
+    int sumEvenGrandparent(TreeNode *root) {
         if (!root) {
             return 0;
         }
@@ -45,4 +45,3 @@ public:
         return s;
     }
 };
-

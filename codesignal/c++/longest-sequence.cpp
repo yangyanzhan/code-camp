@@ -31,4 +31,3 @@ int longestSequence(std::vector<int> nums) {
     }
     return res;
 }
-

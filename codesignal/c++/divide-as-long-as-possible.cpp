@@ -9,4 +9,3 @@ int divideAsLongAsPossible(int n, int d) {
     }
     return n;
 }
-

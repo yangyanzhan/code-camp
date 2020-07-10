@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/score-after-flipping-matrix.html .
 
 class Solution {
-public:
-    int matrixScore(vector<vector<int>>& A) {
+  public:
+    int matrixScore(vector<vector<int>> &A) {
         int m = A.size(), n = A[0].size();
         for (int i = 0; i < m; i++) {
             if (A[i][0] == 0) {
@@ -31,4 +31,3 @@ public:
         return res;
     }
 };
-

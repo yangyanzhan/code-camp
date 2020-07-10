@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-digit.html .
 
-bool isDigit(char symbol) {
-    return '0' <= symbol && symbol <= '9';
-}
-
+bool isDigit(char symbol) { return '0' <= symbol && symbol <= '9'; }

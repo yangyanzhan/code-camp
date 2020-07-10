@@ -3,9 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/pointer-swap.html .
 
-void swap(void* &left, void* &right) {
-    void* temp = left;
+void swap(void *&left, void *&right) {
+    void *temp = left;
     left = right;
     right = temp;
 }
-

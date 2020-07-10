@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    TreeNode* pruneTree(TreeNode* root) {
+  public:
+    TreeNode *pruneTree(TreeNode *root) {
         if (root == nullptr) {
             return nullptr;
         }
@@ -29,4 +29,3 @@ public:
         return root;
     }
 };
-

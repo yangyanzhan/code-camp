@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/longest-substring-without-repeating-characters.html .
 
 class Solution {
-public:
+  public:
     int lengthOfLongestSubstring(string s) {
         int start = 0, max_len = 0;
         unordered_map<char, int> cache;
@@ -25,4 +25,3 @@ public:
         return max_len;
     }
 };
-

@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/get-nth-even-number.html .
 
-int nthEven(int n) {
-    return  2 * (n - 1);
-}
-
+int nthEven(int n) { return 2 * (n - 1); }

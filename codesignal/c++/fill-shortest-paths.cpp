@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/fill-shortest-paths.html .
 
-std::vector<std::vector<char>> fillShortestPaths(std::vector<std::vector<char>> plan) {
+std::vector<std::vector<char>>
+fillShortestPaths(std::vector<std::vector<char>> plan) {
     using namespace std;
     int m = plan.size(), n = plan[0].size();
     int x = -1, y = -1;
@@ -51,4 +52,3 @@ std::vector<std::vector<char>> fillShortestPaths(std::vector<std::vector<char>> 
     }
     return plan;
 }
-

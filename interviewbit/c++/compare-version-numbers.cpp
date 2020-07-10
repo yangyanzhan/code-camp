@@ -95,4 +95,3 @@ int Solution::compareVersion(string A, string B) {
         return 0;
     }
 }
-

@@ -5,9 +5,8 @@
 
 int arrayElementsProduct(std::vector<int> inputArray) {
     int res = 1;
-    for (auto num: inputArray) {
+    for (auto num : inputArray) {
         res *= num;
     }
     return res;
 }
-

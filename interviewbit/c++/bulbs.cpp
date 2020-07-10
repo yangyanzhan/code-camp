@@ -5,7 +5,7 @@
 
 int Solution::bulbs(vector<int> &A) {
     int res = 0, state = 0;
-    for (int a: A) {
+    for (int a : A) {
         if (a == state) {
             res++;
             state = 1 - state;

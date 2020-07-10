@@ -6,11 +6,10 @@
 char lastDigitRegExp(std::string inputString) {
     using namespace std;
     reverse(inputString.begin(), inputString.end());
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         if ('0' <= ch && ch <= '9') {
             return ch;
         }
     }
     return '\0';
 }
-

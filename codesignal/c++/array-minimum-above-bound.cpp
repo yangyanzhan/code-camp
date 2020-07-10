@@ -6,11 +6,10 @@
 int arrayMinimumAboveBound(std::vector<int> inputArray, int bound) {
     using namespace std;
     int res = numeric_limits<int>::max();
-    for (auto num: inputArray) {
+    for (auto num : inputArray) {
         if (num > bound) {
             res = min(res, num);
         }
     }
     return res;
 }
-

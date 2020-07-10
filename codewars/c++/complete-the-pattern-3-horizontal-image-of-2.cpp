@@ -3,9 +3,9 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/complete-the-pattern-3-horizontal-image-of-2.html .
 
-class Pattern{
-public:
-  static string pattern(int n);
+class Pattern {
+  public:
+    static string pattern(int n);
 };
 
 string Pattern::pattern(int n) {
@@ -26,4 +26,3 @@ string Pattern::pattern(int n) {
     }
     return res;
 }
-

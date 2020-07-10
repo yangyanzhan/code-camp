@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     vector<string> letterCombinations(string digits) {
         vector<string> solutions;
         if (digits.size() == 0) {
@@ -21,7 +21,8 @@ public:
                                              {'0', {" "}}};
         vector<string> sub_solutions = {""};
         if (digits.size() >= 2) {
-            sub_solutions = letterCombinations(digits.substr(1, digits.size() - 1));
+            sub_solutions =
+                letterCombinations(digits.substr(1, digits.size() - 1));
         }
         char ch = digits[0];
         if (ch == '1') {

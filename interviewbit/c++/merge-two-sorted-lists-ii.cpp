@@ -19,6 +19,4 @@ void Solution::merge(vector<int> &A, vector<int> &B) {
             A.push_back(b);
         }
     }
-
 }
-

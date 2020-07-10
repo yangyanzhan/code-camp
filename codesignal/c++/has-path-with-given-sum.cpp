@@ -22,4 +22,3 @@ bool hasPathWithGivenSum(Tree<int> *t, int s) {
     s -= t->value;
     return hasPathWithGivenSum(t->left, s) || hasPathWithGivenSum(t->right, s);
 }
-

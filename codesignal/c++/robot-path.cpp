@@ -6,7 +6,7 @@
 std::vector<int> robotPath(std::string instructions, int bound) {
     using namespace std;
     int x = 0, y = 0;
-    for (auto ch: instructions) {
+    for (auto ch : instructions) {
         if (ch == 'L') {
             x--;
         } else if (ch == 'R') {
@@ -21,4 +21,3 @@ std::vector<int> robotPath(std::string instructions, int bound) {
     }
     return {x, y};
 }
-

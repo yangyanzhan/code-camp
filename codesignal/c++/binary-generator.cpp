@@ -6,10 +6,10 @@
 std::vector<std::string> binaryGenerator(std::string s) {
     using namespace std;
     vector<string> res;
-    for (auto ch: s) {
+    for (auto ch : s) {
         if (ch == '1') {
             if (res.size() > 0) {
-                for (auto &item: res) {
+                for (auto &item : res) {
                     item += ch;
                 }
             } else {
@@ -17,7 +17,7 @@ std::vector<std::string> binaryGenerator(std::string s) {
             }
         } else {
             if (res.size() > 0) {
-                for (auto &item: res) {
+                for (auto &item : res) {
                     item += '0';
                 }
                 int n = res.size();
@@ -34,4 +34,3 @@ std::vector<std::string> binaryGenerator(std::string s) {
     sort(res.begin(), res.end());
     return res;
 }
-

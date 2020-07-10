@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/lintcode/trailing-zeros.html .
 
 class Solution {
-public:
+  public:
     /*
      * @param n: A long integer
      * @return: An integer, denote the number of trailing zeros in n!

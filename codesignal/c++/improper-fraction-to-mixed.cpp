@@ -8,4 +8,3 @@ std::vector<int> improperFractionToMixed(std::vector<int> a) {
     int n1 = a[0], n2 = a[1];
     return {n1 / n2, n1 % n2, n2};
 }
-

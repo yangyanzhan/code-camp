@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
-    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+  public:
+    vector<vector<int>> fourSum(vector<int> &nums, int target) {
         vector<vector<int>> solutions;
         set<vector<int>> cache;
         int n = nums.size();

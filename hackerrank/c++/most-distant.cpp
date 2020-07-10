@@ -10,7 +10,7 @@ double dist(double x1, double y1, double x2, double y2) {
 double solve(vector<vector<int>> coordinates) {
     int x1, x2, y1, y2;
     bool has_x = false, has_y = false;
-    for (auto coordinate: coordinates) {
+    for (auto coordinate : coordinates) {
         int x = coordinate[0], y = coordinate[1];
         if (y == 0) {
             if (!has_x) {

@@ -11,14 +11,14 @@
 using namespace std;
 
 class word_count {
-    public:
-        static map<string, int> words(string sentence);
+  public:
+    static map<string, int> words(string sentence);
 };
 
 // word_count.cpp
 
-#include <regex>
 #include <iostream>
+#include <regex>
 
 #include "word_count.h"
 
@@ -36,4 +36,3 @@ map<string, int> word_count::words(string sentence) {
     }
     return cache;
 }
-

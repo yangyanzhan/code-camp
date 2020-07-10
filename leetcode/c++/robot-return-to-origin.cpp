@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/robot-return-to-origin.html .
 
 class Solution {
-public:
+  public:
     bool judgeCircle(string moves) {
         int x = 0, y = 0;
-        for (auto move: moves) {
+        for (auto move : moves) {
             if (move == 'L') {
                 x--;
             } else if (move == 'R') {
@@ -21,4 +21,3 @@ public:
         return x == 0 && y == 0;
     }
 };
-

@@ -28,4 +28,3 @@ int combs(std::string comb1, std::string comb2) {
     }
     return best;
 }
-

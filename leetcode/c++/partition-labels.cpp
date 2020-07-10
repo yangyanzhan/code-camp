@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/partition-labels.html .
 
 class Solution {
-public:
+  public:
     vector<int> partitionLabels(string S) {
         vector<int> res;
         do {
@@ -36,4 +36,3 @@ public:
         return end + 1;
     }
 };
-

@@ -6,10 +6,12 @@
 class Solution {
     int res = 0;
     int sum = 0;
-public:
-    int maxScoreWords(vector<string> &words, vector<char> &letters, vector<int> &score) {
+
+  public:
+    int maxScoreWords(vector<string> &words, vector<char> &letters,
+                      vector<int> &score) {
         map<char, int> cache;
-        for (auto letter: letters) {
+        for (auto letter : letters) {
             if (cache.find(letter) == cache.end()) {
                 cache[letter] = 0;
             }
@@ -19,7 +21,8 @@ public:
         return res;
     }
 
-    void dfs(vector<string> &words, map<char, int> letters, vector<int> &score, int depth) {
+    void dfs(vector<string> &words, map<char, int> letters, vector<int> &score,
+             int depth) {
         int n = words.size();
         if (depth > n || letters.size() == 0) {
             res = max(res, sum);
@@ -28,7 +31,7 @@ public:
         bool valid = true;
         int total = 0;
         map<char, int> tmp(letters.begin(), letters.end());
-        for (auto &ch: words[depth - 1]) {
+        for (auto &ch : words[depth - 1]) {
             if (tmp.find(ch) == tmp.end()) {
                 valid = false;
                 break;
@@ -48,4 +51,3 @@ public:
         dfs(words, letters, score, depth + 1);
     }
 };
-

@@ -8,9 +8,8 @@
 int sum(std::vector<int> nums) {
     using namespace std;
     int res = 0;
-    for (auto n: nums) {
+    for (auto n : nums) {
         res += n;
     }
     return res;
 }
-

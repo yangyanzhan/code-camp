@@ -5,7 +5,7 @@
 
 std::string whatIsLove(int n) {
     using namespace std;
-    vector<string> names = {"", "what", "is", "love", "baby", "don't", "hurt", "me", "don't", "hurt", "me", "no"};
+    vector<string> names = {"",     "what", "is",    "love", "baby", "don't",
+                            "hurt", "me",   "don't", "hurt", "me",   "no"};
     return names[n % 12];
 }
-

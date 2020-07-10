@@ -15,4 +15,3 @@ int calculationsWithCoins(int a, int b, int c) {
     cache.insert(a + b + c);
     return cache.size();
 }
-

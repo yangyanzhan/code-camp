@@ -26,4 +26,3 @@ std::vector<int> maxSumSegments(std::vector<int> inputArray) {
     }
     return res;
 }
-

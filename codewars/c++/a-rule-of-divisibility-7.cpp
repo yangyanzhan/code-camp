@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/a-rule-of-divisibility-7.html .
 
 class DivSeven {
-public:
-    static std::pair <long long, long long> seven(long long m) {
+  public:
+    static std::pair<long long, long long> seven(long long m) {
         int c = 0;
         while (m >= 100) {
             int a = m / 10, b = m % 10;
@@ -15,4 +15,3 @@ public:
         return {m, c};
     }
 };
-

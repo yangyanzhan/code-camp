@@ -10,7 +10,7 @@ int countZero(std::string s) {
     int res = 0;
     string item1 = "abdegopq069DOPQR";
     string item2 = "%&B8";
-    for (auto ch: s) {
+    for (auto ch : s) {
         if (item1.find(ch) != string::npos) {
             res++;
         }
@@ -19,7 +19,7 @@ int countZero(std::string s) {
         }
     }
     regex reg("\\(\\)");
-    res += distance(sregex_iterator(s.begin(), s.end(), reg), sregex_iterator());
+    res +=
+        distance(sregex_iterator(s.begin(), s.end(), reg), sregex_iterator());
     return res;
 }
-

@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/function-3-multiplying-two-numbers.html .
 
-long long multiply(long long a, long long b) {
-    return a * b;
-}
+long long multiply(long long a, long long b) { return a * b; }

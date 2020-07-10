@@ -8,4 +8,3 @@ std::string insertDashes(std::string inputString) {
     regex reg("([a-zA-Z])(?=[a-zA-Z])");
     return regex_replace(inputString, reg, "$0-");
 }
-

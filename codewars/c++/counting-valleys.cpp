@@ -8,7 +8,7 @@
 int countValleys(const std::string &s) {
     using namespace std;
     int res = 0, h = 0;
-    for (auto ch: s) {
+    for (auto ch : s) {
         int nh = h;
         if (ch == 'U') {
             nh++;
@@ -22,4 +22,3 @@ int countValleys(const std::string &s) {
     }
     return res;
 }
-

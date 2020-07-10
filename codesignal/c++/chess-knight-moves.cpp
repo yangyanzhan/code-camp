@@ -7,8 +7,8 @@ int chessKnightMoves(std::string cell) {
     using namespace std;
     int x = cell[0] - 'a', y = cell[1] - '1';
     int res = 0;
-    for (int dx: vector<int>{-2, -1, 1, 2}) {
-        for (int ddy: vector<int>{-1, 1}) {
+    for (int dx : vector<int>{-2, -1, 1, 2}) {
+        for (int ddy : vector<int>{-1, 1}) {
             int dy = (3 - abs(dx)) * ddy;
             int x1 = x + dx, y1 = y + dy;
             if (x1 < 0 || x1 >= 8 || y1 < 0 || y1 >= 8) {
@@ -19,4 +19,3 @@ int chessKnightMoves(std::string cell) {
     }
     return res;
 }
-

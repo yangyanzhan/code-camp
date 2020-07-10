@@ -3,13 +3,13 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/alphabet-symmetry.html .
 
-#include <vector>
 #include <string>
+#include <vector>
 
 std::vector<int> solve(std::vector<std::string> arr) {
     using namespace std;
     vector<int> res;
-    for (auto item: arr) {
+    for (auto item : arr) {
         int count = 0;
         for (int i = 0; i < item.size(); i++) {
             if (tolower(item[i]) - 'a' == i) {
@@ -20,4 +20,3 @@ std::vector<int> solve(std::vector<std::string> arr) {
     }
     return res;
 };
-

@@ -88,4 +88,3 @@ std::string pawnRace(std::string white, std::string black, char toMove) {
     int bx = black[0] - 'a', by = black[1] - '1';
     return pawn_race(wx, wy, bx, by, toMove);
 }
-

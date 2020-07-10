@@ -19,4 +19,3 @@ std::vector<int> makeArrayConsecutive(std::vector<int> sequence) {
     }
     return res;
 }
-

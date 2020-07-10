@@ -8,12 +8,12 @@
 string to_alternating_case(const string &str) {
     using namespace std;
     string res = str;
-    for (auto &ch: res) {
+    for (auto &ch : res) {
         if (islower(ch)) {
             ch = toupper(ch);
         } else {
             ch = tolower(ch);
         }
     }
-	return res;
+    return res;
 }

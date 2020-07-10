@@ -5,15 +5,15 @@
 
 using namespace std;
 
-class SequenceSum{
-  int count;
-  public:
-  SequenceSum (int);
-  string showSequence();
+class SequenceSum {
+    int count;
 
+  public:
+    SequenceSum(int);
+    string showSequence();
 };
 
-string SequenceSum::showSequence(){
+string SequenceSum::showSequence() {
     stringstream ss;
     if (count < 0) {
         ss << count << "<0";
@@ -31,6 +31,4 @@ string SequenceSum::showSequence(){
     return ss.str();
 }
 
-SequenceSum::SequenceSum (int c) {
-  count = c;
-}
+SequenceSum::SequenceSum(int c) { count = c; }

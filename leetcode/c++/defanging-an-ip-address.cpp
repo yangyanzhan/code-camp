@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/defanging-an-ip-address.html .
 
 class Solution {
-public:
+  public:
     string defangIPaddr(string address) {
         regex reg("(\\d)\\.(\\d)");
         while (regex_search(address, reg)) {
@@ -13,4 +13,3 @@ public:
         return address;
     }
 };
-

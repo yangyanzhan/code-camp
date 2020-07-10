@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/string-to-integer.html .
 
 class Solution {
-public:
+  public:
     int myAtoi(string str) {
         long long sign = 1;
         long long abs_value = 0;
@@ -12,7 +12,7 @@ public:
         int minimum = numeric_limits<int>::min();
         int maximum = numeric_limits<int>::max();
         bool seen_num = false;
-        for (auto &ch: str) {
+        for (auto &ch : str) {
             if (isdigit(ch)) {
                 seen_num = true;
                 int digit = ch - '0';
@@ -42,4 +42,3 @@ public:
         return res;
     }
 };
-

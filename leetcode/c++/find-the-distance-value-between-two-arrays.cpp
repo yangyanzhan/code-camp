@@ -4,12 +4,12 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/find-the-distance-value-between-two-arrays.html .
 
 class Solution {
-public:
-    int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {
+  public:
+    int findTheDistanceValue(vector<int> &arr1, vector<int> &arr2, int d) {
         int res = 0;
-        for (auto num1: arr1) {
+        for (auto num1 : arr1) {
             bool valid = true;
-            for (auto num2: arr2) {
+            for (auto num2 : arr2) {
                 if (abs(num1 - num2) <= d) {
                     valid = false;
                     break;
@@ -22,4 +22,3 @@ public:
         return res;
     }
 };
-

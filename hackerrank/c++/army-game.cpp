@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/army-game.html .
 
-int gameWithCells(int n, int m) {
-    return ((n + 1) / 2) * ((m + 1) / 2);
-}
+int gameWithCells(int n, int m) { return ((n + 1) / 2) * ((m + 1) / 2); }

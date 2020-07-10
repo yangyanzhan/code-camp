@@ -3,9 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/primitive-problem.html .
 
-int multi_mod(int x, int y, int divisor) {
-    return (long)x * y % divisor;
-}
+int multi_mod(int x, int y, int divisor) { return (long)x * y % divisor; }
 
 int pow_mod(int x, int y, int divisor) {
     int res = 1;
@@ -46,7 +44,7 @@ vector<int> get_prime_factors(int n) {
 
 bool is_primitive_root(int p, vector<int> &prime_factors, int n) {
     int s = p - 1;
-    for (auto prime_factor: prime_factors) {
+    for (auto prime_factor : prime_factors) {
         if (pow_mod(n, s / prime_factor, p) == 1) {
             return false;
         }
@@ -56,7 +54,7 @@ bool is_primitive_root(int p, vector<int> &prime_factors, int n) {
 
 int compute_all(int n, vector<int> &prime_factors) {
     int res = n;
-    for (auto prime_factor: prime_factors) {
+    for (auto prime_factor : prime_factors) {
         res = res / prime_factor * (prime_factor - 1);
     }
     return res;
@@ -81,4 +79,3 @@ int main() {
 
     return 0;
 }
-

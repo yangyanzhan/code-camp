@@ -17,4 +17,3 @@ std::string caesarBoxCipherEncoding(std::string inputString) {
     }
     return res;
 }
-

@@ -20,4 +20,3 @@ bool valid(std::string string1, std::string string2) {
 bool isSubstitutionCipher(std::string string1, std::string string2) {
     return valid(string1, string2) && valid(string2, string1);
 }
-

@@ -3,12 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/linear-algebra-foundations-1.html .
 
-5
-7
-9
-9
-11
-13
-5
-6
-8
+5 7 9 9 11 13 5 6 8

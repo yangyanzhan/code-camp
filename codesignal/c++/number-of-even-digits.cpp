@@ -17,4 +17,3 @@ int numberOfEvenDigits(int n) {
     }
     return res;
 }
-

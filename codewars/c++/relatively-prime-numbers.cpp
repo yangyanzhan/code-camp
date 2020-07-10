@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/relatively-prime-numbers.html .
 
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -15,18 +15,15 @@ int gcdv(int a, int b) {
     return gcdv(b, a % b);
 }
 
-int gcd(int a, int b) {
-    return gcdv(max(a, b), min(a, b));
-}
+int gcd(int a, int b) { return gcdv(max(a, b), min(a, b)); }
 
 std::vector<int> relativelyPrime(int n, std::vector<int> list) {
     using namespace std;
     vector<int> res;
-    for (auto num: list) {
+    for (auto num : list) {
         if (gcd(n, num) == 1) {
             res.push_back(num);
         }
     }
     return res;
 }
-

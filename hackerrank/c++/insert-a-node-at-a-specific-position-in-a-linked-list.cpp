@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/insert-a-node-at-a-specific-position-in-a-linked-list.html .
 
-SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data, int position) {
+SinglyLinkedListNode *insertNodeAtPosition(SinglyLinkedListNode *head, int data,
+                                           int position) {
     auto new_node = new SinglyLinkedListNode(data);
     if (position == 0) {
         new_node->next = head;

@@ -5,7 +5,7 @@
 
 #include <string>
 
-bool isPalindrom (const std::string &str) {
+bool isPalindrom(const std::string &str) {
     using namespace std;
     int n = str.size();
     for (int i = 0; i < n / 2; i++) {

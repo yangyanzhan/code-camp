@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/drawing-books.html .
 
-int pageCount(int n, int p) {
-    return min(p / 2, n / 2 - p / 2);
-}
+int pageCount(int n, int p) { return min(p / 2, n / 2 - p / 2); }

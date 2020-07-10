@@ -5,7 +5,7 @@
 
 int designerPdfViewer(vector<int> h, string word) {
     int max_h = 0;
-    for (auto ch: word) {
+    for (auto ch : word) {
         max_h = max(max_h, h[ch - 'a']);
     }
     return max_h * word.size();

@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/projection-area-of-3d-shapes.html .
 
 class Solution {
-public:
+  public:
     int projectionArea(vector<vector<int>> &grid) {
         int res = 0;
         int m = grid.size();
@@ -28,4 +28,3 @@ public:
         return res;
     }
 };
-

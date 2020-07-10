@@ -13,4 +13,3 @@ std::string myCoffee(int number) {
     }
     return "";
 }
-

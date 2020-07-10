@@ -29,4 +29,3 @@ char firstNotRepeatingCharacter(std::string s) {
     }
     return res;
 }
-

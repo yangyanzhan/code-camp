@@ -5,7 +5,8 @@
 
 class Solution {
     map<int, int> cache;
-public:
+
+  public:
     int climbStairs(int n) {
         if (n < 0) {
             return 0;
@@ -21,4 +22,3 @@ public:
         return res;
     }
 };
-

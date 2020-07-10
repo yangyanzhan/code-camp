@@ -10,4 +10,3 @@ bool hasUniqueChars(std::string s) {
     set<char> cache{s.begin(), s.end()};
     return cache.size() == s.size();
 }
-

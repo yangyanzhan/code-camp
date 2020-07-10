@@ -4,6 +4,5 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/replace-all-digits-regexp.html .
 
 std::string replaceAllDigitsRegExp(std::string input) {
-  return std::regex_replace(input, regex("\\d"), "#");
+    return std::regex_replace(input, regex("\\d"), "#");
 }
-

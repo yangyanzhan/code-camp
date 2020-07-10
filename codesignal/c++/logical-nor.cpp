@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/logical-nor.html .
 
-bool logicalNor(bool a, bool b) {
-    return !a && !b;
-}
-
+bool logicalNor(bool a, bool b) { return !a && !b; }

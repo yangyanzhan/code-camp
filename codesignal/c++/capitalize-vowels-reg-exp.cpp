@@ -8,7 +8,8 @@
 std::string capitalizeVowelsRegExp(std::string input) {
     using namespace std;
     regex reg("[aeiouy]+", regex_constants::icase);
-    for (auto it = sregex_iterator(input.begin(), input.end(), reg); it != sregex_iterator(); it++) {
+    for (auto it = sregex_iterator(input.begin(), input.end(), reg);
+         it != sregex_iterator(); it++) {
         for (int i = 0; i < it->str().size(); i++) {
             int pos = i + it->position(0);
             input[pos] = toupper(input[pos]);
@@ -16,4 +17,3 @@ std::string capitalizeVowelsRegExp(std::string input) {
     }
     return input;
 }
-

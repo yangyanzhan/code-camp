@@ -3,17 +3,18 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-crypt-solution.html .
 
-bool isCryptSolution(std::vector<std::string> crypt, std::vector<std::vector<char>> solution) {
+bool isCryptSolution(std::vector<std::string> crypt,
+                     std::vector<std::vector<char>> solution) {
     using namespace std;
     map<char, char> cache;
-    for (auto pair: solution) {
+    for (auto pair : solution) {
         cache[pair[0]] = pair[1];
         if (!('0' <= pair[1] && pair[1] <= '9')) {
             return false;
         }
     }
-    for (auto &word: crypt) {
-        for (auto &ch: word) {
+    for (auto &word : crypt) {
+        for (auto &ch : word) {
             if (cache.find(ch) == cache.end()) {
                 return false;
             }
@@ -28,4 +29,3 @@ bool isCryptSolution(std::vector<std::string> crypt, std::vector<std::vector<cha
     auto c = stoll(crypt[2]);
     return c == a + b;
 }
-

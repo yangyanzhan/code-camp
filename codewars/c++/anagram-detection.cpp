@@ -3,21 +3,20 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/anagram-detection.html .
 
-#include <string>
 #include <algorithm>
+#include <string>
 
 bool isAnagram(std::string test, std::string original) {
     using namespace std;
     string a = test;
-    for (auto &ch: a) {
+    for (auto &ch : a) {
         ch = tolower(ch);
     }
     string b = original;
-    for (auto &ch: b) {
+    for (auto &ch : b) {
         ch = tolower(ch);
     }
     sort(a.begin(), a.end());
     sort(b.begin(), b.end());
     return a == b;
 }
-

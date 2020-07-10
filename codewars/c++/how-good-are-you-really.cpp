@@ -8,10 +8,9 @@
 bool betterThanAverage(std::vector<int> classPoints, int yourPoints) {
     using namespace std;
     int mean = 0, n = classPoints.size();
-    for (auto num: classPoints) {
+    for (auto num : classPoints) {
         mean += num;
     }
     mean /= n;
     return yourPoints > mean;
 }
-

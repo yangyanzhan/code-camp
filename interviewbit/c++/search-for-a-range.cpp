@@ -38,4 +38,3 @@ int find2(const vector<int> &A, int B) {
 vector<int> Solution::searchRange(const vector<int> &A, int B) {
     return vector<int>{find1(A, B), find2(A, B)};
 }
-

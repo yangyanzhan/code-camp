@@ -35,7 +35,8 @@ class Solution {
         root->left = nullptr;
         return res;
     }
-public:
+
+  public:
     TreeNode *increasingBST(TreeNode *root) {
         if (root == nullptr) {
             return nullptr;
@@ -43,4 +44,3 @@ public:
         return dfs(root)[0];
     }
 };
-

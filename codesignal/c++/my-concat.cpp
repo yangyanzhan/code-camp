@@ -11,4 +11,3 @@ std::string myConcat(std::vector<std::string> strings, std::string separator) {
     }
     return res;
 }
-

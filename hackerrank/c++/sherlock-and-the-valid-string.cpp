@@ -38,5 +38,8 @@ string isValid(string s) {
             }
         }
     }
-    return (cnt2 == 0 || num2 == 1 || (cnt1 == 1 && abs(num1 - num2) == 1) || num2 - num1 == 1) ? "YES" : "NO";
+    return (cnt2 == 0 || num2 == 1 || (cnt1 == 1 && abs(num1 - num2) == 1) ||
+            num2 - num1 == 1)
+               ? "YES"
+               : "NO";
 }

@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/split-a-string-in-balanced-strings.html .
 
 class Solution {
-public:
+  public:
     int balancedStringSplit(string s) {
         int res = 0, lc = 0, rc = 0;
         while (s.size() > 0) {
@@ -31,4 +31,3 @@ public:
         return res;
     }
 };
-

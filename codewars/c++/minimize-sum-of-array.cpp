@@ -16,4 +16,3 @@ int minSum(vector<int> passed) {
     }
     return res;
 }
-

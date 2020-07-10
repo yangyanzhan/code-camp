@@ -6,4 +6,3 @@
 int percentageGreen(int green, int total) {
     return (green + 0.0) / total * 100;
 }
-

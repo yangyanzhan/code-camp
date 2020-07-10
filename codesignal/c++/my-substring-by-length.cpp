@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/my-substring-by-length.html .
 
-std::string mySubstringByLength(std::string inputString, int start, int length) {
+std::string mySubstringByLength(std::string inputString, int start,
+                                int length) {
     using namespace std;
     return inputString.substr(start, length);
 }
-

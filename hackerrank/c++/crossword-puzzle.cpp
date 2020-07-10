@@ -36,7 +36,8 @@ bool crosswordPuzzle(vector<string> &crossword, vector<string> words) {
             bool valid = true;
             vector<char> old;
             for (int k = 0; k < word.size(); k++) {
-                if (!(crossword[j + k][i] == '-' || crossword[j + k][i] == word[k])) {
+                if (!(crossword[j + k][i] == '-' ||
+                      crossword[j + k][i] == word[k])) {
                     valid = false;
                     break;
                 }

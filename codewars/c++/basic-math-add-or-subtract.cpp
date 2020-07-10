@@ -25,4 +25,3 @@ std::string calculate(std::string str) {
     }
     return str;
 }
-

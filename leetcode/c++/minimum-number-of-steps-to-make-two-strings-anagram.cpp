@@ -4,26 +4,25 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/minimum-number-of-steps-to-make-two-strings-anagram.html .
 
 class Solution {
-public:
+  public:
     int minSteps(string s, string t) {
         map<char, int> cache;
-        for (auto ch: s) {
+        for (auto ch : s) {
             if (cache.find(ch) == cache.end()) {
                 cache[ch] = 0;
             }
             cache[ch]++;
         }
-        for (auto ch: t) {
+        for (auto ch : t) {
             if (cache.find(ch) == cache.end()) {
                 cache[ch] = 0;
             }
             cache[ch]--;
         }
         int res = 0;
-        for (auto pair: cache) {
+        for (auto pair : cache) {
             res += abs(pair.second);
         }
         return res / 2;
     }
 };
-

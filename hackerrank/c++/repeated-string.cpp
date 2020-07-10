@@ -6,7 +6,7 @@
 long count_a(string s) {
     long res = 0;
     long idx = 0;
-    while((idx = s.find("a", idx)) != string::npos){
+    while ((idx = s.find("a", idx)) != string::npos) {
         res++;
         idx++;
     }

@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codeforces/string-task.html .
 
-#include <string>
 #include <iostream>
+#include <string>
 
 int main() {
     using namespace std;
@@ -12,7 +12,7 @@ int main() {
     cin >> item;
     string vowels = "aeiouyAEIOUY";
     string res;
-    for (auto ch: item) {
+    for (auto ch : item) {
         if (vowels.find(ch) == string::npos) {
             res += ".";
             res += tolower(ch);
@@ -21,4 +21,3 @@ int main() {
     cout << res << endl;
     return 0;
 }
-

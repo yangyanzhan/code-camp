@@ -4,5 +4,5 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/swap-adjacent-bits.html .
 
 int swapAdjacentBits(int n) {
-  return ((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1);
+    return ((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1);
 }

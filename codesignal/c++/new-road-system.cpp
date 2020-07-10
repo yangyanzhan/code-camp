@@ -25,4 +25,3 @@ bool newRoadSystem(std::vector<std::vector<bool>> roadRegister) {
     }
     return true;
 }
-

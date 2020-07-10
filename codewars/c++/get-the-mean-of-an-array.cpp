@@ -3,10 +3,10 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/get-the-mean-of-an-array.html .
 
-int get_average(std::vector <int> marks) {
+int get_average(std::vector<int> marks) {
     using namespace std;
     int n = marks.size(), res = 0;
-    for (auto num: marks) {
+    for (auto num : marks) {
         res += num;
     }
     return res / n;

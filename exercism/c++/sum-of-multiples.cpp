@@ -10,7 +10,7 @@
 using std::vector;
 
 class sum_of_multiples {
-    public:
+  public:
     static int to(vector<int> factors, int ceiling);
 };
 
@@ -21,12 +21,10 @@ class sum_of_multiples {
 int sum_of_multiples::to(vector<int> factors, int ceiling) {
     int sum = 0;
     for (int num = 1; num < ceiling; num++) {
-        if (any_of(factors.begin(), factors.end(), [&num] (int factor) {
-            return num % factor == 0;
-        })) {
+        if (any_of(factors.begin(), factors.end(),
+                   [&num](int factor) { return num % factor == 0; })) {
             sum += num;
         }
     }
     return sum;
 }
-

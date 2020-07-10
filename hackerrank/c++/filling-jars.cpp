@@ -5,7 +5,7 @@
 
 unsigned long long solve(int n, vector<vector<int>> operations) {
     unsigned long long total = 0;
-    for (auto operation: operations) {
+    for (auto operation : operations) {
         unsigned long long a = operation[0], b = operation[1], c = operation[2];
         total += (b - a + 1) * c;
     }

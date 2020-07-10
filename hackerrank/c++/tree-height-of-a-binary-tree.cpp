@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/tree-height-of-a-binary-tree.html .
 
-int height(Node* root) {
+int height(Node *root) {
     if (!root) {
         return -1;
     }

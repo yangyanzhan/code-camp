@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/candies.html .
 
-int candies(int n, int m) {
-    return n * (m / n);
-}
-
+int candies(int n, int m) { return n * (m / n); }

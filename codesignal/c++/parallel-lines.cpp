@@ -8,4 +8,3 @@ bool parallelLines(std::vector<int> line1, std::vector<int> line2) {
     int a2 = line2[0], b2 = line2[1], c2 = line2[2];
     return a1 * b2 == a2 * b1;
 }
-

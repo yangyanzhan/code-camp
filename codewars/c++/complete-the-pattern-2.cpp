@@ -5,8 +5,8 @@
 
 #include <string>
 
-class Pattern{
-public:
+class Pattern {
+  public:
     static string pattern(int n) {
         using namespace std;
         if (n < 1) {
@@ -26,4 +26,3 @@ public:
         return res;
     }
 };
-

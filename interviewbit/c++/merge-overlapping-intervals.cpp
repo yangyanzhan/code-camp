@@ -13,9 +13,7 @@
  * };
  */
 
-bool cmp(Interval i1, Interval i2) {
-    return i1.start < i2.start;
-}
+bool cmp(Interval i1, Interval i2) { return i1.start < i2.start; }
 
 vector<Interval> Solution::merge(vector<Interval> &A) {
     vector<Interval> res;
@@ -36,4 +34,3 @@ vector<Interval> Solution::merge(vector<Interval> &A) {
     res.push_back(i);
     return res;
 }
-

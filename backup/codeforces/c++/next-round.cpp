@@ -3,9 +3,9 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codeforces/next-round.html .
 
-#include <vector>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -41,4 +41,3 @@ int main() {
     cout << (res + 1) << endl;
     return 0;
 }
-

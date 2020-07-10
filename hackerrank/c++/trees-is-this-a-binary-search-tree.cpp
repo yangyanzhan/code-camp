@@ -4,13 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/hackerrank/trees-is-this-a-binary-search-tree.html .
 
 bool checkBST(Node *root, int min, int max) {
-    if (!root) return true;
+    if (!root)
+        return true;
     if (!(min < root->data && root->data < max)) {
         return false;
     }
-    return checkBST(root->left, min, root->data) && checkBST(root->right, root->data, max);
+    return checkBST(root->left, min, root->data) &&
+           checkBST(root->right, root->data, max);
 }
 
-bool checkBST(Node *root) {
-    return checkBST(root, -1, 10001);
-}
+bool checkBST(Node *root) { return checkBST(root, -1, 10001); }

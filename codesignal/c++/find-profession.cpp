@@ -15,4 +15,3 @@ std::string findProfession(int level, int pos) {
     }
     return count % 2 == 0 ? "Engineer" : "Doctor";
 }
-

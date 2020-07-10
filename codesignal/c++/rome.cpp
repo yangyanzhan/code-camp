@@ -6,7 +6,8 @@
 std::string rome(int n) {
     using namespace std;
     vector<int> bases = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-    vector<string> names = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    vector<string> names = {"M",  "CM", "D",  "CD", "C",  "XC", "L",
+                            "XL", "X",  "IX", "V",  "IV", "I"};
     string res;
     int i = 0;
     while (n) {
@@ -20,4 +21,3 @@ std::string rome(int n) {
     }
     return res;
 }
-

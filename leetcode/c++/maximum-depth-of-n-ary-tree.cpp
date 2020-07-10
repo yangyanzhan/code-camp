@@ -24,17 +24,16 @@ public:
 */
 
 class Solution {
-public:
-    int maxDepth(Node* root) {
+  public:
+    int maxDepth(Node *root) {
         int depth = 0;
         if (root == nullptr) {
             return depth;
         }
-        for (auto child: root->children) {
+        for (auto child : root->children) {
             depth = max(depth, maxDepth(child));
         }
         depth++;
         return depth;
     }
 };
-

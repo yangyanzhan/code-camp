@@ -10,4 +10,3 @@ int sumOfCubes(int n) {
     }
     return res;
 }
-

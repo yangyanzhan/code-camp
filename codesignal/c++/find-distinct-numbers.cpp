@@ -6,7 +6,7 @@
 std::vector<int> findDistinctNumbers(std::vector<int> a) {
     using namespace std;
     vector<int> res;
-    for (auto num: a) {
+    for (auto num : a) {
         if (find(res.begin(), res.end(), num) == res.end()) {
             res.push_back(num);
         }

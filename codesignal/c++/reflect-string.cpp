@@ -5,9 +5,8 @@
 
 std::string reflectString(std::string inputString) {
     using namespace std;
-    for (auto &ch: inputString) {
+    for (auto &ch : inputString) {
         ch = (25 - (ch - 'a')) + 'a';
     }
     return inputString;
 }
-

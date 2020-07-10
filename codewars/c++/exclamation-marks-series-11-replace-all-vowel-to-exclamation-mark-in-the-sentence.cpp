@@ -8,7 +8,7 @@ using namespace std;
 string replace(const string &s) {
     string res = s;
     string vowels = "aeiou";
-    for (auto &ch: res) {
+    for (auto &ch : res) {
         if (vowels.find(tolower(ch)) != string::npos) {
             ch = '!';
         }

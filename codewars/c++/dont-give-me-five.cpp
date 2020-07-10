@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/dont-give-me-five.html .
 
-#include <string>
 #include <iostream>
+#include <string>
 
 int dontGiveMeFive(int start, int end) {
     using namespace std;
@@ -17,4 +17,3 @@ int dontGiveMeFive(int start, int end) {
     }
     return (end - start + 1) - n5;
 }
-

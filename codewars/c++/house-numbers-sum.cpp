@@ -6,7 +6,7 @@
 int house_numbers_sum(const std::vector<int> &arr) {
     using namespace std;
     int sum = 0;
-    for (auto num: arr) {
+    for (auto num : arr) {
         if (num == 0) {
             break;
         }
@@ -14,4 +14,3 @@ int house_numbers_sum(const std::vector<int> &arr) {
     }
     return sum;
 }
-

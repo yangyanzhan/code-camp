@@ -35,7 +35,8 @@ class Solution {
         int cnt = count(l);
         return cnt - 1 + (cnt - (num - (cnt - 1))) + 1;
     }
-public:
+
+  public:
     vector<int> pathInZigZagTree(int label) {
         if (label == 1) {
             return {1};
@@ -54,4 +55,3 @@ public:
         return res;
     }
 };
-

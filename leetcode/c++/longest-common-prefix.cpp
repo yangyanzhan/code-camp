@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/longest-common-prefix.html .
 
 class Solution {
-public:
+  public:
     string longestCommonPrefix(vector<string> &strs) {
         if (strs.size() == 0) {
             return "";
@@ -13,7 +13,7 @@ public:
             return strs[0];
         }
         int max_count = numeric_limits<int>::max();
-        for (auto &str: strs) {
+        for (auto &str : strs) {
             max_count = min(max_count, (int)str.size());
         }
         if (max_count == 0) {
@@ -37,4 +37,3 @@ public:
         return strs[0].substr(0, c);
     }
 };
-

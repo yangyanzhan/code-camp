@@ -6,8 +6,8 @@
 // leap.h
 
 class leap {
-    public:
-        static bool is_leap_year(int year);
+  public:
+    static bool is_leap_year(int year);
 };
 
 // leap.cpp
@@ -17,4 +17,3 @@ class leap {
 bool leap::is_leap_year(int year) {
     return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
 }
-

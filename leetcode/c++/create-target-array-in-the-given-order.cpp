@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/create-target-array-in-the-given-order.html .
 
 class Solution {
-public:
-    vector<int> createTargetArray(vector<int>& nums, vector<int>& index) {
+  public:
+    vector<int> createTargetArray(vector<int> &nums, vector<int> &index) {
         vector<int> res;
         for (int i = 0; i < index.size(); i++) {
             res.insert(res.begin() + index[i], nums[i]);
@@ -13,4 +13,3 @@ public:
         return res;
     }
 };
-

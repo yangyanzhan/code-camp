@@ -12,12 +12,13 @@ bool isMonotonous(std::vector<int> sequence) {
         return sequence[0] != sequence[1];
     }
     for (int i = 2; i < sequence.size(); i++) {
-        if (sequence[i - 2] < sequence[i - 1] && sequence[i - 1] < sequence[i]) {
-        } else if (sequence[i - 2] > sequence[i - 1] && sequence[i - 1] > sequence[i]) {
+        if (sequence[i - 2] < sequence[i - 1] &&
+            sequence[i - 1] < sequence[i]) {
+        } else if (sequence[i - 2] > sequence[i - 1] &&
+                   sequence[i - 1] > sequence[i]) {
         } else {
             return false;
         }
     }
     return true;
 }
-

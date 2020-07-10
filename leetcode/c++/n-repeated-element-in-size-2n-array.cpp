@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/n-repeated-element-in-size-2n-array.html .
 
 class Solution {
-public:
-    int repeatedNTimes(vector<int>& A) {
+  public:
+    int repeatedNTimes(vector<int> &A) {
         map<int, int> cache;
-        for (auto num: A) {
+        for (auto num : A) {
             if (cache.find(num) == cache.end()) {
                 cache[num] = 0;
             }
@@ -19,4 +19,3 @@ public:
         return -1;
     }
 };
-

@@ -7,4 +7,3 @@ std::string encloseInBrackets(std::string inputString) {
     using namespace std;
     return "(" + inputString + ")";
 }
-

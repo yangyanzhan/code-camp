@@ -15,6 +15,7 @@ bool isMAC48Address(std::string inputString) {
         return false;
     }
     regex reg2("([0-9A-F][0-9A-F]-)");
-    return distance(sregex_iterator(inputString.begin(), inputString.end(), reg2), sregex_iterator()) == 6;
+    return distance(
+               sregex_iterator(inputString.begin(), inputString.end(), reg2),
+               sregex_iterator()) == 6;
 }
-

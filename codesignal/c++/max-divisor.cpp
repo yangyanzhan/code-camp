@@ -12,4 +12,3 @@ int maxDivisor(int left, int right, int divisor) {
     }
     return res >= left ? res : -1;
 }
-

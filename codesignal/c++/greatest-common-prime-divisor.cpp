@@ -41,4 +41,3 @@ int greatestCommonPrimeDivisor(int a, int b) {
     auto factors = get_factors(g);
     return factors.back();
 }
-

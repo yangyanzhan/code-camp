@@ -6,10 +6,11 @@
 using namespace std;
 
 int tv_remote(const string &word) {
-    vector<string> cache = {"abcde123", "fghij456", "klmno789", "pqrst.@0", "uvwxyz_/"};
+    vector<string> cache = {"abcde123", "fghij456", "klmno789", "pqrst.@0",
+                            "uvwxyz_/"};
     int res = 0;
     int x = 0, y = 0;
-    for (auto &ch: word) {
+    for (auto &ch : word) {
         int x1 = -1, y1;
         for (int i = 0; i < cache.size(); i++) {
             for (int j = 0; j < cache[i].size(); j++) {
@@ -29,4 +30,3 @@ int tv_remote(const string &word) {
     }
     return res;
 }
-

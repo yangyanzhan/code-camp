@@ -12,4 +12,3 @@ int applesDistribution(int apples, int boxCapacity, int maxResidue) {
     }
     return res;
 }
-

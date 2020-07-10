@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     int myAtoi(string str) {
         int n = str.size();
         // check for sign

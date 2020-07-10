@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/greet-person.html .
 
-std::string greetPerson(std::string name) {
-    return "Hello, " + name;
-}
-
+std::string greetPerson(std::string name) { return "Hello, " + name; }

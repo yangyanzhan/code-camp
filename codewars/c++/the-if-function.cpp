@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/the-if-function.html .
 
-void _if(bool value, std::function<void(void)> func1, std::function<void(void)> func2) {
+void _if(bool value, std::function<void(void)> func1,
+         std::function<void(void)> func2) {
     using namespace std;
     if (value) {
         func1();

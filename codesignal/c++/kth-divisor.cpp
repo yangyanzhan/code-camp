@@ -15,4 +15,3 @@ int kthDivisor(int n, int k) {
     }
     return -1;
 }
-

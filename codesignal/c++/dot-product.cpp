@@ -11,4 +11,3 @@ int dotProduct(std::vector<int> v1, std::vector<int> v2) {
     }
     return res;
 }
-

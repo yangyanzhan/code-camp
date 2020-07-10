@@ -14,4 +14,3 @@ vector<int> extraPerfect(int number) {
     }
     return res;
 }
-

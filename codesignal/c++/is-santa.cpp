@@ -7,7 +7,7 @@
 
 std::string isSanta(std::string s) {
     using namespace std;
-    for (auto &ch: s) {
+    for (auto &ch : s) {
         ch = tolower(ch);
     }
     regex reg("hohoho");
@@ -16,4 +16,3 @@ std::string isSanta(std::string s) {
     }
     return "Hey, someone! Merry Christmas and have a nice day!";
 }
-

@@ -19,4 +19,3 @@ int eulersTotientFunction(int n) {
     }
     return res;
 }
-

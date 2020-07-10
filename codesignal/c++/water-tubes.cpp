@@ -18,4 +18,3 @@ int waterTubes(std::vector<int> water, std::vector<int> flowPerMinute) {
     }
     return res;
 }
-

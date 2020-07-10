@@ -8,7 +8,7 @@
 std::string fakeBin(std::string str) {
     using namespace std;
     string res = str;
-    for (auto &ch: res) {
+    for (auto &ch : res) {
         if (ch < '5') {
             ch = '0';
         } else {
@@ -17,4 +17,3 @@ std::string fakeBin(std::string str) {
     }
     return res;
 }
-

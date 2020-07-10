@@ -5,7 +5,8 @@
 
 class Solution {
     vector<int> cache = vector<int>(31, 0);
-public:
+
+  public:
     int fib(int N) {
         if (N == 0) {
             return 0;
@@ -19,4 +20,3 @@ public:
         return cache[N];
     }
 };
-

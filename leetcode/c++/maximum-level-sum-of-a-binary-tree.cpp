@@ -14,7 +14,7 @@
  */
 
 class Solution {
-public:
+  public:
     int maxLevelSum(TreeNode *root) {
         int res = 1, maxi = root->val, level = 1;
         vector<TreeNode *> nodes{root};
@@ -22,7 +22,7 @@ public:
             level++;
             vector<TreeNode *> new_nodes;
             int sum = 0;
-            for (auto ptr: nodes) {
+            for (auto ptr : nodes) {
                 if (ptr->left) {
                     sum += ptr->left->val;
                     new_nodes.push_back(ptr->left);
@@ -44,4 +44,3 @@ public:
         return res;
     }
 };
-

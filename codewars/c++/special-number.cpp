@@ -10,11 +10,10 @@ using namespace std;
 string specialNumber(int number) {
     string t = "012345";
     string item = to_string(number);
-    for (auto ch: item) {
+    for (auto ch : item) {
         if (t.find(ch) == string::npos) {
             return "NOT!!";
         }
     }
     return "Special!!";
 }
-

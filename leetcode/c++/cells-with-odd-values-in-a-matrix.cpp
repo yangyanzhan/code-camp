@@ -4,13 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/cells-with-odd-values-in-a-matrix.html .
 
 class Solution {
-public:
-    int oddCells(int n, int m, vector<vector<int>>& indices) {
+  public:
+    int oddCells(int n, int m, vector<vector<int>> &indices) {
         vector<vector<int>> cache(n);
         for (int i = 0; i < n; i++) {
             cache[i] = vector<int>(m, 0);
         }
-        for (auto pair: indices) {
+        for (auto pair : indices) {
             int di = pair[0], dj = pair[1];
             for (int j = 0; j < m; j++) {
                 cache[di][j]++;
@@ -30,4 +30,3 @@ public:
         return res;
     }
 };
-

@@ -17,7 +17,7 @@ int Solution::candy(vector<int> &ratings) {
         }
     }
     int sum = 0;
-    for (int item: candies) {
+    for (int item : candies) {
         sum += item;
     }
     return sum;

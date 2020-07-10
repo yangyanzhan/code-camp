@@ -10,4 +10,3 @@ int arrayPacking(std::vector<int> a) {
     }
     return res;
 }
-

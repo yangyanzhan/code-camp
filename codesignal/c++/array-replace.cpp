@@ -3,9 +3,10 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/array-replace.html .
 
-std::vector<int> arrayReplace(std::vector<int> inputArray, int elemToReplace, int substitutionElem) {
+std::vector<int> arrayReplace(std::vector<int> inputArray, int elemToReplace,
+                              int substitutionElem) {
     using namespace std;
-    for (auto &item: inputArray) {
+    for (auto &item : inputArray) {
         if (item == elemToReplace) {
             item = substitutionElem;
         }

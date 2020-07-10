@@ -17,4 +17,3 @@ int hidezero(int val) {
     }
     return 0;
 }
-

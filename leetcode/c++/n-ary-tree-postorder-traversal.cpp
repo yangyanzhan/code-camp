@@ -24,13 +24,13 @@ public:
 */
 
 class Solution {
-public:
+  public:
     vector<int> postorder(Node *root) {
         vector<int> res;
         if (root == nullptr) {
             return res;
         }
-        for (auto child: root->children) {
+        for (auto child : root->children) {
             auto sub = postorder(child);
             res.insert(res.end(), sub.begin(), sub.end());
         }
@@ -38,4 +38,3 @@ public:
         return res;
     }
 };
-

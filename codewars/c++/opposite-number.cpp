@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/opposite-number.html .
 
-int opposite(int number) {
-    return -number;
-}
-
+int opposite(int number) { return -number; }

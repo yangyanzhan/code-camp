@@ -17,4 +17,3 @@ int giftSafety(std::string gift) {
     }
     return res;
 }
-

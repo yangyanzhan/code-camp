@@ -3,7 +3,9 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/chess-bishop-dream.html .
 
-std::vector<int> chessBishopDream(std::vector<int> boardSize, std::vector<int> initPosition, std::vector<int> initDirection, int k) {
+std::vector<int> chessBishopDream(std::vector<int> boardSize,
+                                  std::vector<int> initPosition,
+                                  std::vector<int> initDirection, int k) {
     using namespace std;
     int m = boardSize[0], n = boardSize[1];
     if (m == 1 && n == 1) {
@@ -38,4 +40,3 @@ std::vector<int> chessBishopDream(std::vector<int> boardSize, std::vector<int> i
     }
     return {x, y};
 }
-

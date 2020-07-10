@@ -6,7 +6,7 @@
 #include <string>
 
 bool is_uppercase(const std::string &s) {
-    for (auto ch: s) {
+    for (auto ch : s) {
         if (toupper(ch) != ch) {
             return false;
         }

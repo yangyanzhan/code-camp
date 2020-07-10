@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/game-of-stones.html .
 
-string gameOfStones(int n) {
-    return (n % 7 < 2) ? "Second" : "First";
-}
+string gameOfStones(int n) { return (n % 7 < 2) ? "Second" : "First"; }

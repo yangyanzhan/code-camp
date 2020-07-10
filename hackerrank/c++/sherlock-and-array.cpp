@@ -5,11 +5,11 @@
 
 string balancedSums(vector<int> arr) {
     int sum = 0;
-    for (auto num: arr) {
+    for (auto num : arr) {
         sum += num;
     }
     int pre = 0;
-    for (auto num: arr) {
+    for (auto num : arr) {
         sum -= num;
         if (sum == pre) {
             return "YES";

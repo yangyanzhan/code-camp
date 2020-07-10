@@ -4,11 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/di-string-match.html .
 
 class Solution {
-public:
+  public:
     vector<int> diStringMatch(string S) {
         int n = S.size(), mini = 0, maxi = n;
         vector<int> res;
-        for (auto ch: S) {
+        for (auto ch : S) {
             if (ch == 'I') {
                 res.push_back(mini++);
             } else {
@@ -19,4 +19,3 @@ public:
         return res;
     }
 };
-

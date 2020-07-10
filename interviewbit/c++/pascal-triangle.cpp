@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/pascal-triangle.html .
 
-vector<vector<int> > Solution::solve(int A) {
+vector<vector<int>> Solution::solve(int A) {
     vector<vector<int>> res;
     vector<int> pre = {1};
     vector<int> now = {1, 1};

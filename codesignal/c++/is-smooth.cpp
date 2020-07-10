@@ -6,11 +6,10 @@
 bool isSmooth(std::vector<int> arr) {
     int n = arr.size();
     int middle = 0;
-    if(n % 2 == 0){
+    if (n % 2 == 0) {
         middle = arr[n / 2 - 1] + arr[n / 2];
-    }else{
+    } else {
         middle = arr[n / 2];
     }
     return arr[0] == middle && middle == arr[n - 1];
 }
-

@@ -5,7 +5,7 @@
 
 int countLettersAndDigits(std::string input) {
     int res = 0;
-    for (auto ch: input) {
+    for (auto ch : input) {
         ch = tolower(ch);
         if ('a' <= ch && ch <= 'z') {
             res++;
@@ -16,4 +16,3 @@ int countLettersAndDigits(std::string input) {
     }
     return res;
 }
-

@@ -15,4 +15,3 @@ int graphEdges(std::vector<std::vector<bool>> matrix) {
     }
     return res;
 }
-

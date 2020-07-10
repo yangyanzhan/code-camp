@@ -4,16 +4,16 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/relative-sort-array.html .
 
 class Solution {
-public:
-    vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
+  public:
+    vector<int> relativeSortArray(vector<int> &arr1, vector<int> &arr2) {
         set<int> cache2;
-        for (auto num: arr2) {
+        for (auto num : arr2) {
             cache2.insert(num);
         }
         vector<int> res1;
         vector<int> res2;
         map<int, int> cache1;
-        for (auto num: arr1) {
+        for (auto num : arr1) {
             if (cache2.find(num) == cache2.end()) {
                 res2.push_back(num);
             } else {
@@ -23,7 +23,7 @@ public:
                 cache1[num]++;
             }
         }
-        for (auto num: arr2) {
+        for (auto num : arr2) {
             for (int i = 0; i < cache1[num]; i++) {
                 res1.push_back(num);
             }
@@ -33,4 +33,3 @@ public:
         return res1;
     }
 };
-

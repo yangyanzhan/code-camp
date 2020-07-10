@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/lintcode/digit-counts.html .
 
 class Solution {
-public:
+  public:
     /**
      * @param k: An integer
      * @param n: An integer
@@ -50,4 +50,3 @@ public:
         return result;
     }
 };
-

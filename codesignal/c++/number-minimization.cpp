@@ -19,4 +19,3 @@ int numberMinimization(int n, int d) {
     } while (next_permutation(item.begin(), item.end()));
     return res;
 }
-

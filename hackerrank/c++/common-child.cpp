@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/common-child.html .
 
-int commonChild(string &s1, string &s2, int n1, int n2, vector<vector<int>> &cache) {
+int commonChild(string &s1, string &s2, int n1, int n2,
+                vector<vector<int>> &cache) {
     if (cache[n1 - 1][n2 - 1] != -1) {
         return cache[n1 - 1][n2 - 1];
     }

@@ -13,7 +13,8 @@ int ttosum(int t) {
     return min + sec / 10 + sec % 10;
 }
 
-std::vector<int> chessClockSumOfDigits(std::vector<std::string> initialTime, int k) {
+std::vector<int> chessClockSumOfDigits(std::vector<std::string> initialTime,
+                                       int k) {
     using namespace std;
     int a = stot(initialTime[0]), b = stot(initialTime[1]);
     int mini = numeric_limits<int>::max(), maxi = numeric_limits<int>::min();
@@ -28,4 +29,3 @@ std::vector<int> chessClockSumOfDigits(std::vector<std::string> initialTime, int
     }
     return {max(mini, 1), maxi};
 }
-

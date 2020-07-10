@@ -13,5 +13,6 @@ int sum(std::string str) {
 
 bool isLucky(int n) {
     std::string str = std::to_string(n);
-    return sum(str.substr(0, str.size() / 2)) == sum(str.substr(str.size() / 2));
+    return sum(str.substr(0, str.size() / 2)) ==
+           sum(str.substr(str.size() / 2));
 }

@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/gas-station.html .
 
-int Solution::canCompleteCircuit(const vector<int> &gas, const vector<int> &cost) {
+int Solution::canCompleteCircuit(const vector<int> &gas,
+                                 const vector<int> &cost) {
     int n = gas.size(), start = 0;
     while (start < n) {
         int g = 0, i;

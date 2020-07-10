@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/return-negative.html .
 
-int makeNegative(int num) {
-    return num > 0 ? -num : num;
-}
+int makeNegative(int num) { return num > 0 ? -num : num; }

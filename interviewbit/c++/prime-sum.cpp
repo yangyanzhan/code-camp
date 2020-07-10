@@ -20,4 +20,3 @@ vector<int> Solution::primesum(int A) {
     }
     return vector<int>();
 }
-

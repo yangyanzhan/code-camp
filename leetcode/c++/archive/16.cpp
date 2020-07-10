@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
-    int threeSumClosest(vector<int>& nums, int target) {
+  public:
+    int threeSumClosest(vector<int> &nums, int target) {
         sort(nums.begin(), nums.end());
         int n = nums.size();
         int solution = (nums[0] + nums[1] + nums[2]) - target;

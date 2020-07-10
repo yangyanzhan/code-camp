@@ -12,7 +12,4 @@ int sum(int n) {
     return res;
 }
 
-int lateRide(int n) {
-    return sum(n / 60) + sum(n % 60);
-}
-
+int lateRide(int n) { return sum(n / 60) + sum(n % 60); }

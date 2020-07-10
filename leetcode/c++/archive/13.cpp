@@ -3,10 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     int romanToInt(string s) {
         int bases[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        string romans[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        string romans[] = {"M",  "CM", "D",  "CD", "C",  "XC", "L",
+                           "XL", "X",  "IX", "V",  "IV", "I"};
         int res = 0;
         for (int i = 0; i < 13; i++) {
             int base = bases[i];

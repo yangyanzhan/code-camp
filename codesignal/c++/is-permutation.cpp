@@ -9,7 +9,7 @@ bool isPermutation(int n, std::vector<int> inputArray) {
         return false;
     }
     vector<bool> cache(n, false);
-    for (auto num: inputArray) {
+    for (auto num : inputArray) {
         if (num < 1 || num > n) {
             return false;
         }
@@ -22,4 +22,3 @@ bool isPermutation(int n, std::vector<int> inputArray) {
     }
     return true;
 }
-

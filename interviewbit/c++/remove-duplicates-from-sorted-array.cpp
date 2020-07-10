@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/remove-duplicates-from-sorted-array.html .
 
 int Solution::removeDuplicates(vector<int> &A) {
-    if (A.size() <= 0) return 0;
+    if (A.size() <= 0)
+        return 0;
     int pre = A[0], i = 1, j = 1, n = A.size();
     for (i = 1; i < n; i++) {
         int now = A[i];
@@ -17,4 +18,3 @@ int Solution::removeDuplicates(vector<int> &A) {
     A.resize(j);
     return A.size();
 }
-

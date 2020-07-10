@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/multiply.html .
 
-int multiply(int a, int b) {
-    return a * b;
-}
-
+int multiply(int a, int b) { return a * b; }

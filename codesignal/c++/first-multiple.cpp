@@ -17,7 +17,7 @@ int lcm(int a, int b) {
 
 int firstMultiple(std::vector<int> divisors, int start) {
     int l = 1;
-    for (auto num: divisors) {
+    for (auto num : divisors) {
         l = lcm(l, num);
     }
     if (l >= start) {
@@ -28,4 +28,3 @@ int firstMultiple(std::vector<int> divisors, int start) {
     }
     return (start / l + 1) * l;
 }
-

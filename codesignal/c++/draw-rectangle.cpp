@@ -3,9 +3,12 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/draw-rectangle.html .
 
-std::vector<std::vector<char>> drawRectangle(std::vector<std::vector<char>> canvas, std::vector<int> rectangle) {
+std::vector<std::vector<char>>
+drawRectangle(std::vector<std::vector<char>> canvas,
+              std::vector<int> rectangle) {
     using namespace std;
-    int x1 = rectangle[1], y1 = rectangle[0], x2 = rectangle[3], y2 = rectangle[2];
+    int x1 = rectangle[1], y1 = rectangle[0], x2 = rectangle[3],
+        y2 = rectangle[2];
     canvas[x1][y1] = '*';
     canvas[x1][y2] = '*';
     canvas[x2][y2] = '*';
@@ -20,4 +23,3 @@ std::vector<std::vector<char>> drawRectangle(std::vector<std::vector<char>> canv
     }
     return canvas;
 }
-

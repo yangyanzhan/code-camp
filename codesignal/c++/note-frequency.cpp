@@ -5,12 +5,14 @@
 
 double noteFrequency(std::string note) {
     using namespace std;
-    vector<vector<string>> notes = {{"C"}, {"C#", "Db"}, {"D"}, {"D#", "Eb"}, {"E"}, {"F"}, {"F#", "Gb"}, {"G"}, {"G#", "Ab"}, {"A"}, {"A#", "Bb"}, {"B"}};
+    vector<vector<string>> notes = {
+        {"C"}, {"C#", "Db"}, {"D"}, {"D#", "Eb"}, {"E"}, {"F"}, {"F#", "Gb"},
+        {"G"}, {"G#", "Ab"}, {"A"}, {"A#", "Bb"}, {"B"}};
     int num = note[note.size() - 1] - '0';
     note = note.substr(0, note.size() - 1);
     int idx;
     for (int i = 0; i < notes.size(); i++) {
-        for (auto note1: notes[i]) {
+        for (auto note1 : notes[i]) {
             if (note1 == note) {
                 idx = i;
                 break;
@@ -24,4 +26,3 @@ double noteFrequency(std::string note) {
         return c5 / pow(2, 5 - 1 - num + (12 - idx) / 12.0);
     }
 }
-

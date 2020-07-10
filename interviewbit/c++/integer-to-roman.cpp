@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/integer-to-roman.html .
 
 string Solution::intToRoman(int A) {
-    vector<string> words = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    vector<string> words = {"M",  "CM", "D",  "CD", "C",  "XC", "L",
+                            "XL", "X",  "IX", "V",  "IV", "I"};
     vector<int> nums = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
     int idx = 0;
     string res;
@@ -20,4 +21,3 @@ string Solution::intToRoman(int A) {
     }
     return res;
 }
-

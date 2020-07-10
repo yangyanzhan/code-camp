@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/shape-area.html .
 
-int shapeArea(int n) {
-    return n * (n - 1) * 2 + 1;
-}
+int shapeArea(int n) { return n * (n - 1) * 2 + 1; }

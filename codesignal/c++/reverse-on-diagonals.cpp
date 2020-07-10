@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/reverse-on-diagonals.html .
 
-std::vector<std::vector<int>> reverseOnDiagonals(std::vector<std::vector<int>> matrix) {
+std::vector<std::vector<int>>
+reverseOnDiagonals(std::vector<std::vector<int>> matrix) {
     using namespace std;
     int n = matrix.size();
     for (int i = 0; i < n / 2; i++) {
@@ -12,4 +13,3 @@ std::vector<std::vector<int>> reverseOnDiagonals(std::vector<std::vector<int>> m
     }
     return matrix;
 }
-

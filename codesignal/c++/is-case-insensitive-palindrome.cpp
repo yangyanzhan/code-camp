@@ -12,4 +12,3 @@ bool isCaseInsensitivePalindrome(std::string inputString) {
     }
     return true;
 }
-

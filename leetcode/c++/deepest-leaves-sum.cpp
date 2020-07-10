@@ -14,15 +14,15 @@
  */
 
 class Solution {
-public:
-    int deepestLeavesSum(TreeNode* root) {
+  public:
+    int deepestLeavesSum(TreeNode *root) {
         int res = root->val, sum = 0;
         vector<TreeNode *> nodes1{root};
         vector<TreeNode *> nodes2;
         while (true) {
             sum = 0;
             nodes2 = vector<TreeNode *>();
-            for (auto node: nodes1) {
+            for (auto node : nodes1) {
                 if (node->left) {
                     sum += node->left->val;
                     nodes2.push_back(node->left);
@@ -42,4 +42,3 @@ public:
         return res;
     }
 };
-

@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/letter-tile-possibilities.html .
 
 class Solution {
-public:
+  public:
     int numTilePossibilities(string tiles) {
         set<string> cache;
         sort(tiles.begin(), tiles.end());
@@ -19,4 +19,3 @@ public:
         return cache.size();
     }
 };
-

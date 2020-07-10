@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/create-array.html .
 
-std::vector<int> createArray(int size) {
-    return vector<int>(size, 1);
-}
-
+std::vector<int> createArray(int size) { return vector<int>(size, 1); }

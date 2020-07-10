@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/how-green-is-my-valley.html .
 
 class Valley {
-public:
+  public:
     static std::vector<int> makeValley(std::vector<int> &arr) {
         using namespace std;
         vector<int> nums{arr.begin(), arr.end()};
@@ -22,4 +22,3 @@ public:
         return res1;
     }
 };
-

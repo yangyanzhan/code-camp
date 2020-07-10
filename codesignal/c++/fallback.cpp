@@ -21,4 +21,3 @@ std::string fallBack(std::string time) {
     string res = to_string(h) + ":" + (m < 10 ? "0" : "") + to_string(m) + tag;
     return res;
 }
-

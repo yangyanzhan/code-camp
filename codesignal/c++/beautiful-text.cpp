@@ -23,4 +23,3 @@ bool beautifulText(std::string inputString, int l, int r) {
     }
     return false;
 }
-

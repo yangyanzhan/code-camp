@@ -7,11 +7,10 @@ using namespace std;
 
 int count_sheep(vector<bool> arr) {
     int res = 0;
-    for (auto item: arr) {
+    for (auto item : arr) {
         if (item) {
             res++;
         }
     }
     return res;
 }
-

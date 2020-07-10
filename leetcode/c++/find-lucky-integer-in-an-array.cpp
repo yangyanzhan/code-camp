@@ -4,17 +4,17 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/find-lucky-integer-in-an-array.html .
 
 class Solution {
-public:
-    int findLucky(vector<int>& arr) {
+  public:
+    int findLucky(vector<int> &arr) {
         map<int, int> cache;
-        for (auto num: arr) {
+        for (auto num : arr) {
             if (cache.find(num) == cache.end()) {
                 cache[num] = 0;
             }
             cache[num]++;
         }
         int res = -1;
-        for (auto pair: cache) {
+        for (auto pair : cache) {
             if (pair.first == pair.second) {
                 res = max(res, pair.first);
             }
@@ -22,4 +22,3 @@ public:
         return res;
     }
 };
-

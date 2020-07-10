@@ -5,7 +5,7 @@
 
 string pokerNim(int k, vector<int> c) {
     int res = 0;
-    for (auto num: c) {
+    for (auto num : c) {
         res ^= num;
     }
     return res == 0 ? "Second" : "First";

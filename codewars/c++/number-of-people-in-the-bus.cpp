@@ -9,9 +9,8 @@
 unsigned int number(const std::vector<std::pair<int, int>> &busStops) {
     using namespace std;
     int res = 0;
-    for (auto stop: busStops) {
+    for (auto stop : busStops) {
         res += get<0>(stop) - get<1>(stop);
     }
     return res;
 }
-

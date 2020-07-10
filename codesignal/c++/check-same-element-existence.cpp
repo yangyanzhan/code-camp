@@ -16,4 +16,3 @@ bool checkSameElementExistence(std::vector<int> arr1, std::vector<int> arr2) {
     }
     return false;
 }
-

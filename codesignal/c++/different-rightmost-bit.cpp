@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/different-rightmost-bit.html .
 
-int differentRightmostBit(int n, int m) {
-  return (n ^ m) & -(n ^ m);
-}
+int differentRightmostBit(int n, int m) { return (n ^ m) & -(n ^ m); }

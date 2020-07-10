@@ -6,13 +6,12 @@
 #include <algorithm>
 
 class Kata {
-public:
+  public:
     std::vector<std::string> sortByLength(std::vector<std::string> array) {
         using namespace std;
-        sort(array.begin(), array.end(), [] (string item1, string item2) {
+        sort(array.begin(), array.end(), [](string item1, string item2) {
             return item1.size() < item2.size();
         });
         return array;
     }
 };
-

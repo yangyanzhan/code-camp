@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/spiral-order-matrix-ii.html .
 
-vector<vector<int> > Solution::generateMatrix(int A) {
+vector<vector<int>> Solution::generateMatrix(int A) {
     int n = A, n2 = A * A;
     vector<vector<int>> res(n, vector<int>(n, 0));
     int i = 0, j = 0, incI = 0, incJ = 1;
@@ -34,4 +34,3 @@ vector<vector<int> > Solution::generateMatrix(int A) {
     }
     return res;
 }
-

@@ -5,7 +5,7 @@
 
 bool insideCircle(std::vector<int> point, std::vector<int> center, int radius) {
     using namespace std;
-    double a = point[0], b = point[1], c = center[0], d = center[1], dx = a - c, dy = b - d, r = radius;
+    double a = point[0], b = point[1], c = center[0], d = center[1], dx = a - c,
+           dy = b - d, r = radius;
     return dx * dx + dy * dy <= r * r;
 }
-

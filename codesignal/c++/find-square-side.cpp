@@ -25,4 +25,3 @@ int findSquareSide(std::vector<int> x, std::vector<int> y) {
     }
     return res;
 }
-

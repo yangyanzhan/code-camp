@@ -18,11 +18,11 @@ int Solution::findRank(string A) {
     for (int i = 0; i < n - 1; i++) {
         int smaller = 0;
         for (int j = i + 1; j < n; j++) {
-            if (A[j] < A[i]) smaller++;
+            if (A[j] < A[i])
+                smaller++;
         }
         res += smaller * fact(n - i - 1);
         res %= 1000003;
     }
     return res + 1;
 }
-

@@ -13,7 +13,8 @@ class Solution {
         }
         return res;
     }
-public:
+
+  public:
     int hammingDistance(int x, int y) {
         auto digits1 = to_binary(x);
         auto digits2 = to_binary(y);
@@ -37,4 +38,3 @@ public:
         return res;
     }
 };
-

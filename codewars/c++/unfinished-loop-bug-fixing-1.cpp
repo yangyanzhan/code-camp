@@ -4,12 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/unfinished-loop-bug-fixing-1.html .
 
 std::vector<int> createVector(const int n) {
-	std::vector<int> res;
+    std::vector<int> res;
 
-	for (int i = 1; i <= n; i++) {
-		res.push_back(i);
-	}
+    for (int i = 1; i <= n; i++) {
+        res.push_back(i);
+    }
 
-	return res;
+    return res;
 }
-

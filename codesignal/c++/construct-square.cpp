@@ -13,7 +13,7 @@ std::vector<int> format(std::string s) {
         mapping[ch]++;
     }
     vector<int> res;
-    for (auto it: mapping) {
+    for (auto it : mapping) {
         res.push_back(it.second);
     }
     sort(res.begin(), res.end());
@@ -40,9 +40,9 @@ int constructSquare(std::string s) {
                     break;
                 }
             }
-            if (equal) return res;
+            if (equal)
+                return res;
         }
     }
     return -1;
 }
-

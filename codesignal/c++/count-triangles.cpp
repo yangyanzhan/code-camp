@@ -9,7 +9,9 @@ int countTriangles(std::vector<int> x, std::vector<int> y) {
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             for (int k = j + 1; k < n; k++) {
-                if ((x[i] - x[j]) * (y[i] - y[k]) - (x[i] - x[k]) * (y[i] - y[j]) == 0) {
+                if ((x[i] - x[j]) * (y[i] - y[k]) -
+                        (x[i] - x[k]) * (y[i] - y[j]) ==
+                    0) {
                     res++;
                 }
             }
@@ -17,4 +19,3 @@ int countTriangles(std::vector<int> x, std::vector<int> y) {
     }
     return res;
 }
-

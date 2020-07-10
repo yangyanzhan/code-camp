@@ -19,9 +19,10 @@ int lcm(int a, int b) {
     return a / g * b;
 }
 
-int sum_differences_between_products_and_LCMs(const vector<vector<int>> &pairs) {
+int sum_differences_between_products_and_LCMs(
+    const vector<vector<int>> &pairs) {
     int res = 0;
-    for (auto pair: pairs) {
+    for (auto pair : pairs) {
         int a = pair[0], b = pair[1];
         if (a != 0 && b != 0) {
             int g = gcd(max(a, b), min(a, b));
@@ -30,4 +31,3 @@ int sum_differences_between_products_and_LCMs(const vector<vector<int>> &pairs) 
     }
     return res;
 }
-

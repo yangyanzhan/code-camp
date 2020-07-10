@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/length-of-last-word.html .
 
 class Solution {
-public:
+  public:
     int lengthOfLastWord(string s) {
         while (s[s.size() - 1] == ' ') {
             s = s.substr(0, s.size() - 1);
@@ -17,4 +17,3 @@ public:
         }
     }
 };
-

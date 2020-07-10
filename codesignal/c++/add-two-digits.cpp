@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/add-two-digits.html .
 
-int addTwoDigits(int n) {
-    return n % 10 + n / 10;
-}
-
+int addTwoDigits(int n) { return n % 10 + n / 10; }

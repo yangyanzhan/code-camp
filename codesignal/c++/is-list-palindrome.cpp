@@ -33,4 +33,3 @@ bool isListPalindrome(ListNode<int> *node) {
     }
     return true;
 }
-

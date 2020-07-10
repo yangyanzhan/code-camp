@@ -13,7 +13,7 @@ string prefix(int ind) {
 
 vector<string> clean(vector<string> words) {
     vector<string> res;
-    for (string word: words) {
+    for (string word : words) {
         if (word.length() <= 0) {
             continue;
         }
@@ -66,4 +66,3 @@ vector<string> Solution::prettyJSON(string A) {
     }
     return clean(res);
 }
-

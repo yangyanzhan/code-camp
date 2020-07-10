@@ -7,18 +7,17 @@
 #include <vector>
 
 class NewAverage {
-public:
-   static long long newAvg(std::vector<double> &arr, double navg) {
-       using namespace std;
-       double sum = 0;
-       for (auto num: arr) {
-           sum += num;
-       }
-       double res = navg * (arr.size() + 1) - sum;
-       if (res < 0) {
-           throw logic_error("less than zero");
-       }
-       return ceil(res);
-   }
+  public:
+    static long long newAvg(std::vector<double> &arr, double navg) {
+        using namespace std;
+        double sum = 0;
+        for (auto num : arr) {
+            sum += num;
+        }
+        double res = navg * (arr.size() + 1) - sum;
+        if (res < 0) {
+            throw logic_error("less than zero");
+        }
+        return ceil(res);
+    }
 };
-

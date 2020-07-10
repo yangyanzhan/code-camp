@@ -7,7 +7,7 @@ std::vector<int> citiesConquering(int n, std::vector<std::vector<int>> roads) {
     using namespace std;
     vector<int> res(n, -1);
     map<int, set<int>> graph;
-    for (auto road: roads) {
+    for (auto road : roads) {
         int a = road[0], b = road[1];
         if (graph.find(a) == graph.end()) {
             graph[a] = set<int>();
@@ -23,17 +23,17 @@ std::vector<int> citiesConquering(int n, std::vector<std::vector<int>> roads) {
         day++;
         pre = graph.size();
         vector<int> deleted;
-        for (auto it: graph) {
+        for (auto it : graph) {
             if (it.second.size() <= 1) {
                 res[it.first] = day;
                 deleted.push_back(it.first);
             }
         }
-        for (auto m: deleted) {
+        for (auto m : deleted) {
             if (graph.find(m) != graph.end()) {
                 graph.erase(graph.find(m));
             }
-            for (auto &it: graph) {
+            for (auto &it : graph) {
                 it.second.erase(m);
             }
         }
@@ -45,4 +45,3 @@ std::vector<int> citiesConquering(int n, std::vector<std::vector<int>> roads) {
     }
     return res;
 }
-

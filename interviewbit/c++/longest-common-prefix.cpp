@@ -5,7 +5,7 @@
 
 string Solution::longestCommonPrefix(vector<string> &A) {
     string shortest = A[0];
-    for (string word: A) {
+    for (string word : A) {
         if (word.length() < shortest.length()) {
             shortest = word;
         }
@@ -16,7 +16,7 @@ string Solution::longestCommonPrefix(vector<string> &A) {
         int middle = (begin + end) / 2;
         string part = shortest.substr(begin, middle - begin + 1);
         bool common = true;
-        for (string item: A) {
+        for (string item : A) {
             if (part != item.substr(begin, middle - begin + 1)) {
                 common = false;
                 break;
@@ -31,4 +31,3 @@ string Solution::longestCommonPrefix(vector<string> &A) {
     }
     return res;
 }
-

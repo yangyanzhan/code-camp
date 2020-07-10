@@ -27,4 +27,3 @@ int jumpingJimmy(std::vector<int> tower, int jumpHeight) {
     }
     return h;
 }
-

@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/4sum.html .
 
 class Solution {
-public:
+  public:
     vector<vector<int>> fourSum(vector<int> &nums, int target) {
         set<vector<int>> tuples;
         sort(nums.begin(), nums.end());
@@ -33,4 +33,3 @@ public:
         return res;
     }
 };
-

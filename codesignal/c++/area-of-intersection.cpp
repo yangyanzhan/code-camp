@@ -52,4 +52,3 @@ int areaOfIntersection(std::vector<int> shape1, std::vector<int> shape2) {
     }
     return res;
 }
-

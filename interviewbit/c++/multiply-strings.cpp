@@ -27,7 +27,8 @@ string add(string A, string B) {
         int digit = (A[i] - '0') + (B[j] - '0') + carry;
         ss << (digit % 10);
         carry = digit / 10;
-        i--; j--;
+        i--;
+        j--;
     }
     while (i >= 0) {
         int digit = (A[i] - '0') + carry;
@@ -56,7 +57,8 @@ string trim(string A) {
             break;
         }
     }
-    if (i == A.length()) return "0";
+    if (i == A.length())
+        return "0";
     return A.substr(i);
 }
 
@@ -75,4 +77,3 @@ string Solution::multiply(string A, string B) {
     }
     return trim(res);
 }
-

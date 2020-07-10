@@ -5,14 +5,14 @@
 
 int pickingNumbers(vector<int> nums) {
     map<int, int> cache;
-    for (auto num: nums) {
+    for (auto num : nums) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
     int res = 0;
-    for (auto it: cache) {
+    for (auto it : cache) {
         int num = it.first, count = it.second;
         res = max(res, count);
         if (cache.find(num - 1) != cache.end()) {

@@ -10,4 +10,3 @@ long long towerOfHanoi(int rings) {
     }
     return res;
 }
-

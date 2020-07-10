@@ -10,4 +10,3 @@ int leastFactorial(int n) {
     }
     return k;
 }
-

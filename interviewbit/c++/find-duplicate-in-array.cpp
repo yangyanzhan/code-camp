@@ -3,9 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/find-duplicate-in-array.html .
 
-int bucket(int num, int n2) {
-    return (num - 1) / n2;
-}
+int bucket(int num, int n2) { return (num - 1) / n2; }
 
 int size(int i, int n, int n2) {
     if ((i + 1) * n2 <= n) {
@@ -39,4 +37,3 @@ int Solution::repeatedNumber(const vector<int> &A) {
     }
     return -1;
 }
-

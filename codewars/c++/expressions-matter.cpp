@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/expressions-matter.html .
 
-unsigned short int expressionsMatter (unsigned short int a , unsigned short int b , unsigned short int c) {
+unsigned short int expressionsMatter(unsigned short int a, unsigned short int b,
+                                     unsigned short int c) {
     using namespace std;
     int r1 = a * (b + c);
     int r2 = (a + b) * c;

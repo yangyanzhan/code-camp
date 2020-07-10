@@ -24,7 +24,7 @@ int mostFrequentDigitSum(int n) {
         n -= dec;
     }
     int best, bestCount = 0;
-    for (auto pair: mapping) {
+    for (auto pair : mapping) {
         int key = pair.first, count = pair.second;
         if (count >= bestCount) {
             bestCount = count;
@@ -33,4 +33,3 @@ int mostFrequentDigitSum(int n) {
     }
     return best;
 }
-

@@ -5,7 +5,7 @@
 
 int divisibleSumPairs(int n, int k, vector<int> ar) {
     vector<int> cache(k, 0);
-    for (auto num: ar) {
+    for (auto num : ar) {
         cache[num % k]++;
     }
     int res = 0;

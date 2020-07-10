@@ -4,31 +4,34 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/help-alf-find-his-spaceship.html .
 
 #include <regex>
-#include <vector>
 #include <sstream>
+#include <vector>
 
 using namespace std;
 
 class EightiesKids2 {
-public:
+  public:
     static string findSpaceship(const string &map) {
         string error = "Spaceship lost forever.";
         vector<string> matrix;
         regex reg1("[^\\n]+");
-        for (auto it = sregex_iterator(map.begin(), map.end(), reg1); it != sregex_iterator(); it++) {
+        for (auto it = sregex_iterator(map.begin(), map.end(), reg1);
+             it != sregex_iterator(); it++) {
             matrix.push_back(it->str());
         }
         regex reg2("\\n");
-        int m = distance(sregex_iterator(map.begin(), map.end(), reg2), sregex_iterator()) + 1;
+        int m = distance(sregex_iterator(map.begin(), map.end(), reg2),
+                         sregex_iterator()) +
+                1;
         for (int i = matrix.size() - 1; i >= 0; i--) {
             int j = matrix[i].find("X");
             if (j != string::npos) {
                 stringstream ss;
-                ss << "[" << j << ", " << (matrix.size() - 1 - i + (m - matrix.size())) << "]";
+                ss << "[" << j << ", "
+                   << (matrix.size() - 1 - i + (m - matrix.size())) << "]";
                 return ss.str();
             }
         }
         return error;
     }
 };
-

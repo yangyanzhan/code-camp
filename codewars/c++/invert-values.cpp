@@ -7,7 +7,7 @@
 
 std::vector<int> invert(std::vector<int> values) {
     using namespace std;
-    for (auto &num: values) {
+    for (auto &num : values) {
         num = -num;
     }
     return values;

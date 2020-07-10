@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/array-partition-i.html .
 
 class Solution {
-public:
+  public:
     int arrayPairSum(vector<int> &nums) {
         int res = 0;
         sort(nums.begin(), nums.end());
@@ -14,4 +14,3 @@ public:
         return res;
     }
 };
-

@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/pages-numbering-with-ink.html .
 
 int getDigits(int num) {
-    if (num == 0) return 1;
+    if (num == 0)
+        return 1;
     int res = 0;
     while (num > 0) {
         res++;
@@ -22,4 +23,3 @@ int pagesNumberingWithInk(int current, int numberOfDigits) {
     }
     return current - 1;
 }
-

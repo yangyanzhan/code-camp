@@ -9,9 +9,9 @@ int sumUpNumbers(std::string inputString) {
     using namespace std;
     regex reg("\\d+");
     int res = 0;
-    for (auto it = sregex_iterator(inputString.begin(), inputString.end(), reg); it != sregex_iterator(); it++) {
+    for (auto it = sregex_iterator(inputString.begin(), inputString.end(), reg);
+         it != sregex_iterator(); it++) {
         res += stoi(it->str());
     }
     return res;
 }
-

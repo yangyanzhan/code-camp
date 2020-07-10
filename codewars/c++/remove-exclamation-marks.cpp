@@ -5,7 +5,7 @@
 
 #include <string>
 
-std::string removeExclamationMarks(std::string str){
+std::string removeExclamationMarks(std::string str) {
     using namespace std;
     string res = str;
     int idx = 0;
@@ -14,4 +14,3 @@ std::string removeExclamationMarks(std::string str){
     }
     return res;
 }
-

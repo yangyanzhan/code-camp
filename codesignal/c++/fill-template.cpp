@@ -3,12 +3,13 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/fill-template.html .
 
-std::string fillTemplate(std::string in, std::vector<std::vector<std::string>> placeholders) {
+std::string fillTemplate(std::string in,
+                         std::vector<std::vector<std::string>> placeholders) {
     using namespace std;
     string res = in, pre = "";
     while (res != pre) {
         pre = res;
-        for (vector<string> item: placeholders) {
+        for (vector<string> item : placeholders) {
             string key = "{{" + item[0] + "}}";
             string value = item[1];
             int pos = 0;

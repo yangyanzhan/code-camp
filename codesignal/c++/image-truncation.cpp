@@ -3,10 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/image-truncation.html .
 
-std::vector<std::vector<int>> imageTruncation(std::vector<std::vector<int>> image, int threshold) {
+std::vector<std::vector<int>>
+imageTruncation(std::vector<std::vector<int>> image, int threshold) {
     using namespace std;
-    for (auto &row: image) {
-        for (auto &pixel: row) {
+    for (auto &row : image) {
+        for (auto &pixel : row) {
             if (pixel > threshold) {
                 pixel = threshold;
             }
@@ -14,4 +15,3 @@ std::vector<std::vector<int>> imageTruncation(std::vector<std::vector<int>> imag
     }
     return image;
 }
-

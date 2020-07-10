@@ -7,7 +7,7 @@
 #include <vector>
 
 class EasyLine {
-public:
+  public:
     static long long easyLine(int n) {
         using namespace std;
         if (n == 0) {
@@ -26,10 +26,9 @@ public:
             nums = new_nums;
         }
         double res = 0;
-        for (auto num: nums) {
+        for (auto num : nums) {
             res += num * num;
         }
         return round(log(res));
     }
 };
-

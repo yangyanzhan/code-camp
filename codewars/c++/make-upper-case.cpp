@@ -8,7 +8,7 @@
 std::string makeUpperCase(const std::string &input_str) {
     using namespace std;
     string res = input_str;
-    for (auto &ch: res) {
+    for (auto &ch : res) {
         ch = toupper(ch);
     }
     return res;

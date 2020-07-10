@@ -9,7 +9,8 @@ std::string amendTheSentence(std::string s) {
     using namespace std;
     regex reg("[A-Z]?[a-z]*");
     vector<string> items;
-    for (auto it = sregex_iterator(s.begin(), s.end(), reg); it != sregex_iterator(); it++) {
+    for (auto it = sregex_iterator(s.begin(), s.end(), reg);
+         it != sregex_iterator(); it++) {
         string item = it->str();
         if (item.size() == 0) {
             continue;
@@ -26,4 +27,3 @@ std::string amendTheSentence(std::string s) {
     }
     return res;
 }
-

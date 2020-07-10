@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/group-the-people-given-the-group-size-they-belong-to.html .
 
 class Solution {
-public:
-    vector<vector<int>> groupThePeople(vector<int>& groupSizes) {
+  public:
+    vector<vector<int>> groupThePeople(vector<int> &groupSizes) {
         map<int, vector<vector<int>>> groups;
         for (int i = 0; i < groupSizes.size(); i++) {
             int size = groupSizes[i];
@@ -13,7 +13,7 @@ public:
                 groups[size] = vector<vector<int>>();
             }
             bool found = false;
-            for (auto &group: groups[size]) {
+            for (auto &group : groups[size]) {
                 if (group.size() < size) {
                     group.push_back(i);
                     found = true;
@@ -25,12 +25,11 @@ public:
             }
         }
         vector<vector<int>> res;
-        for (auto pair: groups) {
-            for (auto group: pair.second) {
+        for (auto pair : groups) {
+            for (auto group : pair.second) {
                 res.push_back(group);
             }
         }
         return res;
     }
 };
-

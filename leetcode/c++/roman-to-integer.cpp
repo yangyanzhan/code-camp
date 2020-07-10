@@ -4,17 +4,20 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/roman-to-integer.html .
 
 class Solution {
-public:
+  public:
     int romanToInt(string s) {
         using namespace std;
-        vector<string> names = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-        vector<int> values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        vector<string> names = {"M",  "CM", "D",  "CD", "C",  "XC", "L",
+                                "XL", "X",  "IX", "V",  "IV", "I"};
+        vector<int> values = {1000, 900, 500, 400, 100, 90, 50,
+                              40,   10,  9,   5,   4,   1};
         int idx = 0;
         int res = 0;
         while (s.size() > 0) {
             auto name = names[idx];
             auto value = values[idx];
-            while (s.size() >= name.size() && s.substr(0, name.size()) == name) {
+            while (s.size() >= name.size() &&
+                   s.substr(0, name.size()) == name) {
                 s = s.substr(name.size());
                 res += value;
             }
@@ -23,4 +26,3 @@ public:
         return res;
     }
 };
-

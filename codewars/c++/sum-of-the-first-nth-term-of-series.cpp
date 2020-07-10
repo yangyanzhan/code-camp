@@ -17,4 +17,3 @@ std::string seriesSum(int n) {
     ss << fixed << setprecision(2) << sum;
     return ss.str();
 }
-

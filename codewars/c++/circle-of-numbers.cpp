@@ -4,6 +4,5 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/circle-of-numbers.html .
 
 int circleOfNumbers(int n, int firstNumber) {
-  return (firstNumber + n / 2) % n;
+    return (firstNumber + n / 2) % n;
 }
-

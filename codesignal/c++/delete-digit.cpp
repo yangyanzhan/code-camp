@@ -13,4 +13,3 @@ int deleteDigit(int n) {
     }
     return stoi(item.substr(0, item.size() - 1));
 }
-

@@ -4,8 +4,9 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/parts-of-a-list.html .
 
 class PartList {
-public:
-    static std::vector<std::pair <std::string, std::string>> partlist(std::vector<std::string> &arr) {
+  public:
+    static std::vector<std::pair<std::string, std::string>>
+    partlist(std::vector<std::string> &arr) {
         using namespace std;
         vector<pair<string, string>> res;
         int n = arr.size();
@@ -24,4 +25,3 @@ public:
         return res;
     }
 };
-

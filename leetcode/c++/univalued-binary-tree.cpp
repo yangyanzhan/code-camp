@@ -27,7 +27,8 @@ class Solution {
         }
         return root->val;
     }
-public:
+
+  public:
     bool isUnivalTree(TreeNode *root) {
         if (root == nullptr) {
             return true;
@@ -35,4 +36,3 @@ public:
         return dfs(root) != -1;
     }
 };
-

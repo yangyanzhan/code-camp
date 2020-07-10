@@ -6,7 +6,7 @@
 bool unusualDictionary(std::vector<std::string> wordList) {
     using namespace std;
     vector<string> sorted(wordList.begin(), wordList.end());
-    sort(sorted.begin(), sorted.end(), [] (auto item1, auto item2) {
+    sort(sorted.begin(), sorted.end(), [](auto item1, auto item2) {
         string h1 = "", t1 = item1;
         int idx1;
         if ((idx1 = item1.find(" ")) != string::npos) {
@@ -29,4 +29,3 @@ bool unusualDictionary(std::vector<std::string> wordList) {
     });
     return sorted == wordList;
 }
-

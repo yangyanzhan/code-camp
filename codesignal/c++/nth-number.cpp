@@ -4,11 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/nth-number.html .
 
 std::string nthNumber(std::string s, int n) {
-  std::regex regex(
-    n > 1 ? ("^(?:\\D*\\d+\\D*){" + to_string(n - 1) + "}0*(\\d+).*$") : "^[^1-9]*(\\d+).*$"
-  );
-  std::smatch match;
-  std::regex_match(s, match, regex);
-  return match[1];
+    std::regex regex(
+        n > 1 ? ("^(?:\\D*\\d+\\D*){" + to_string(n - 1) + "}0*(\\d+).*$")
+              : "^[^1-9]*(\\d+).*$");
+    std::smatch match;
+    std::regex_match(s, match, regex);
+    return match[1];
 }
-

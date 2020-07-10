@@ -6,7 +6,7 @@
 int lineUp(std::string commands) {
     using namespace std;
     int res = 0, a = 0, b = 0;
-    for (auto ch: commands) {
+    for (auto ch : commands) {
         if (ch == 'L') {
             a--;
             b++;
@@ -27,4 +27,3 @@ int lineUp(std::string commands) {
     }
     return res;
 }
-

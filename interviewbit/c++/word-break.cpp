@@ -8,12 +8,13 @@ int Solution::wordBreak(string s, vector<string> &wordDict) {
     vector<bool> cache(n + 1, true);
     for (int len = 1; len <= n; len++) {
         bool found = false;
-        for (string word: wordDict) {
+        for (string word : wordDict) {
             int wordLen = word.length();
             if (wordLen > len) {
                 continue;
             }
-            if (s.substr(len - wordLen, wordLen) == word && cache[len - wordLen]) {
+            if (s.substr(len - wordLen, wordLen) == word &&
+                cache[len - wordLen]) {
                 found = true;
                 break;
             }

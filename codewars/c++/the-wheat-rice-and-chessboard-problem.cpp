@@ -9,4 +9,3 @@ unsigned int squaresNeeded(long long n) {
     using namespace std;
     return ceil(log2(n + 1));
 }
-

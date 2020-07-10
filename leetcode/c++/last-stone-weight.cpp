@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/last-stone-weight.html .
 
 class Solution {
-public:
-    int lastStoneWeight(vector<int>& stones) {
+  public:
+    int lastStoneWeight(vector<int> &stones) {
         make_heap(stones.begin(), stones.end());
         while (stones.size() > 1) {
             int x = stones[0];
@@ -25,4 +25,3 @@ public:
         return stones[0];
     }
 };
-

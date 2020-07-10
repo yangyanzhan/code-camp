@@ -3,9 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/ten-power.html .
 
-int tens(int n) {
-    return (n % 100) / 10;
-}
+int tens(int n) { return (n % 100) / 10; }
 
 int TenPower(std::vector<int> numbers) {
     int res = 0, count = 0;

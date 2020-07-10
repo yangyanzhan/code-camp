@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/merging-cities.html .
 
-std::vector<std::vector<bool>> mergingCities(std::vector<std::vector<bool>> roadRegister) {
+std::vector<std::vector<bool>>
+mergingCities(std::vector<std::vector<bool>> roadRegister) {
     using namespace std;
     int n = roadRegister.size();
     vector<set<int>> points;
@@ -28,8 +29,8 @@ std::vector<std::vector<bool>> mergingCities(std::vector<std::vector<bool>> road
             if (i == j) {
                 connected = false;
             } else {
-                for (auto n1: points[i]) {
-                    for (auto n2: points[j]) {
+                for (auto n1 : points[i]) {
+                    for (auto n2 : points[j]) {
                         if (roadRegister[n1][n2]) {
                             connected = true;
                             break;
@@ -43,4 +44,3 @@ std::vector<std::vector<bool>> mergingCities(std::vector<std::vector<bool>> road
     }
     return res;
 }
-

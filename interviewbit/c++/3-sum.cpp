@@ -30,4 +30,3 @@ int Solution::threeSumClosest(vector<int> &A, int B) {
     }
     return best;
 }
-

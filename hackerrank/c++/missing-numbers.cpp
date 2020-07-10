@@ -5,20 +5,20 @@
 
 vector<int> missingNumbers(vector<int> arr, vector<int> brr) {
     map<int, int> cache;
-    for (auto num: brr) {
+    for (auto num : brr) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
-    for (auto num: arr) {
+    for (auto num : arr) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]--;
     }
     vector<int> res;
-    for (auto it: cache) {
+    for (auto it : cache) {
         if (it.second > 0) {
             res.push_back(it.first);
         }

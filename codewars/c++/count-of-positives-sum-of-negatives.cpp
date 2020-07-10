@@ -11,7 +11,7 @@ std::vector<int> countPositivesSumNegatives(std::vector<int> input) {
         return {};
     }
     int pc = 0, ns = 0;
-    for (auto num: input) {
+    for (auto num : input) {
         if (num > 0) {
             pc++;
         } else if (num < 0) {

@@ -11,8 +11,8 @@
  * };
  */
 class Solution {
-public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
+  public:
+    ListNode *removeNthFromEnd(ListNode *head, int n) {
         ListNode *pre = nullptr;
         ListNode *p1 = head;
         ListNode *p2 = head;

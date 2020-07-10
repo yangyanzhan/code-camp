@@ -6,8 +6,9 @@
 #include <set>
 
 class Rotations {
-public:
-    static bool containAllRots(const std::string &s, std::vector<std::string> &arr) {
+  public:
+    static bool containAllRots(const std::string &s,
+                               std::vector<std::string> &arr) {
         using namespace std;
         set<string> cache1;
         int n = s.size();
@@ -23,8 +24,8 @@ public:
         }
         set<string> cache2(arr.begin(), arr.end());
         set<string> cache3;
-        set_intersection(cache1.begin(), cache1.end(), cache2.begin(), cache2.end(), inserter(cache3, cache3.begin()));
+        set_intersection(cache1.begin(), cache1.end(), cache2.begin(),
+                         cache2.end(), inserter(cache3, cache3.begin()));
         return cache3.size() == cache1.size();
     }
 };
-

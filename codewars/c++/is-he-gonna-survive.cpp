@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/is-he-gonna-survive.html .
 
-bool hero(int bullets, int dragons) {
-    return bullets >= dragons * 2;
-}
+bool hero(int bullets, int dragons) { return bullets >= dragons * 2; }

@@ -7,9 +7,8 @@
 
 int grow(std::vector<int> nums) {
     int res = 1;
-    for (auto num: nums) {
+    for (auto num : nums) {
         res *= num;
     }
     return res;
 }
-

@@ -5,14 +5,8 @@
 
 std::string how_much_i_love_you(int nb_petals) {
     using namespace std;
-    vector<string> cache = {
-        "I love you",
-        "a little",
-        "a lot",
-        "passionately",
-        "madly",
-        "not at all"
-    };
+    vector<string> cache = {"I love you",   "a little", "a lot",
+                            "passionately", "madly",    "not at all"};
     int idx = nb_petals % 6 - 1;
     if (idx < 0) {
         idx += 6;

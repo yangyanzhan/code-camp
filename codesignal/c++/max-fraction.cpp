@@ -16,4 +16,3 @@ int maxFraction(std::vector<int> numerators, std::vector<int> denominators) {
     }
     return res;
 }
-

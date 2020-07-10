@@ -40,4 +40,3 @@ ListNode<int> *mergeTwoLinkedLists(ListNode<int> *l1, ListNode<int> *l2) {
     delete tmp;
     return head;
 }
-

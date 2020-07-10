@@ -5,8 +5,8 @@
 
 // robot_name.h
 
-#include <ctime>
 #include <cstdlib>
+#include <ctime>
 #include <set>
 #include <string>
 
@@ -14,55 +14,51 @@ using std::set;
 using std::string;
 
 namespace robot_name {
-    class robot {
-        static bool hasInitRand;
-        static set<string> names;
-        string _name;
-        string genName();
-        public:
-        robot() {
-            reset();
-        }
-        string name() const {
-            return _name;
-        }
-        void reset();
-    };
-}
+class robot {
+    static bool hasInitRand;
+    static set<string> names;
+    string _name;
+    string genName();
+
+  public:
+    robot() { reset(); }
+    string name() const { return _name; }
+    void reset();
+};
+} // namespace robot_name
 
 // robot_name.cpp
 
-#include <ctime>
 #include <cstdlib>
+#include <ctime>
 
 #include "robot_name.h"
 
 namespace robot_name {
-    bool robot::hasInitRand = false;
-    set<string> robot::names;
-    string robot::genName() {
-        if (!hasInitRand) {
-            srand(time(NULL));
-            hasInitRand = true;
-        }
-        string name;
-        for (int i = 0; i < 2; i++) {
-            name += (rand() % 26 + 'A');
-        }
-        for (int i = 0; i < 3; i++) {
-            name += (rand() % 10 + '0');
-        }
-        return name;
+bool robot::hasInitRand = false;
+set<string> robot::names;
+string robot::genName() {
+    if (!hasInitRand) {
+        srand(time(NULL));
+        hasInitRand = true;
     }
-    void robot::reset() {
-        while (true) {
-            string newName = genName();
-            if (names.find(newName) == names.end()) {
-                _name = newName;
-                names.insert(newName);
-                break;
-            }
+    string name;
+    for (int i = 0; i < 2; i++) {
+        name += (rand() % 26 + 'A');
+    }
+    for (int i = 0; i < 3; i++) {
+        name += (rand() % 10 + '0');
+    }
+    return name;
+}
+void robot::reset() {
+    while (true) {
+        string newName = genName();
+        if (names.find(newName) == names.end()) {
+            _name = newName;
+            names.insert(newName);
+            break;
         }
     }
 }
-
+} // namespace robot_name

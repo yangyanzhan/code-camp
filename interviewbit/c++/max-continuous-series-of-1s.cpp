@@ -31,4 +31,3 @@ vector<int> Solution::maxone(vector<int> &A, int B) {
     }
     return res;
 }
-

@@ -16,4 +16,3 @@ std::vector<int> powersOfTwo(int n) {
     }
     return res;
 }
-

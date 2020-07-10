@@ -5,7 +5,7 @@
 
 string getIp(vector<string> nums) {
     string res;
-    for (string num: nums) {
+    for (string num : nums) {
         if (num[0] == '0' && num.length() > 1) {
             return "";
         }
@@ -31,7 +31,8 @@ void check(vector<string> &seen, string A, vector<string> &ips) {
         seen.pop_back();
     } else {
         int top = A.length();
-        if (top > 3) top = 3;
+        if (top > 3)
+            top = 3;
         for (int i = 1; i <= top; i++) {
             seen.push_back(A.substr(0, i));
             check(seen, A.substr(i), ips);
@@ -47,4 +48,3 @@ vector<string> Solution::restoreIpAddresses(string A) {
     sort(res.begin(), res.end());
     return res;
 }
-

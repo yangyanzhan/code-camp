@@ -5,20 +5,22 @@
 
 // etl.h
 
+#include <iostream>
 #include <map>
 #include <vector>
-#include <iostream>
 
 class etl {
-    public:
-        static std::map<char, int> transform(std::map<int, std::vector<char>> oldMapping);
+  public:
+    static std::map<char, int>
+    transform(std::map<int, std::vector<char>> oldMapping);
 };
 
 // etl.cpp
 
 #include "etl.h"
 
-std::map<char, int> etl::transform(std::map<int, std::vector<char>> oldMapping) {
+std::map<char, int>
+etl::transform(std::map<int, std::vector<char>> oldMapping) {
     std::map<char, int> newMapping;
     for (auto pair : oldMapping) {
         for (char ch : pair.second) {
@@ -27,4 +29,3 @@ std::map<char, int> etl::transform(std::map<int, std::vector<char>> oldMapping) 
     }
     return newMapping;
 }
-

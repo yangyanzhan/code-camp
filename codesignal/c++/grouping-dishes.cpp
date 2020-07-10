@@ -3,10 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/grouping-dishes.html .
 
-std::vector<std::vector<std::string>> groupingDishes(std::vector<std::vector<std::string>> dishes) {
+std::vector<std::vector<std::string>>
+groupingDishes(std::vector<std::vector<std::string>> dishes) {
     using namespace std;
     map<string, set<string>> cache;
-    for (auto dish: dishes) {
+    for (auto dish : dishes) {
         string name = dish[0];
         for (int i = 1; i < dish.size(); i++) {
             string part = dish[i];
@@ -17,7 +18,7 @@ std::vector<std::vector<std::string>> groupingDishes(std::vector<std::vector<std
         }
     }
     vector<vector<string>> res;
-    for (auto pair: cache) {
+    for (auto pair : cache) {
         auto part = pair.first;
         auto names = pair.second;
         if (names.size() >= 2) {
@@ -29,4 +30,3 @@ std::vector<std::vector<std::string>> groupingDishes(std::vector<std::vector<std
     }
     return res;
 }
-

@@ -15,12 +15,10 @@ int lcm(int a, int b) {
     return a / g * b;
 }
 
-
 int divisorsSubset(std::vector<int> subset, int n) {
     int l = 1;
-    for (auto num: subset) {
+    for (auto num : subset) {
         l = lcm(l, num);
     }
     return n / l;
 }
-

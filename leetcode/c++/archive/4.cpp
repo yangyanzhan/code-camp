@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+  public:
+    double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {
         int m = nums1.size(), n = nums2.size();
         if (m > n) {
             return this->findMedianSortedArrays(nums2, nums1);

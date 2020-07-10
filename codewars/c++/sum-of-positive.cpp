@@ -5,14 +5,13 @@
 
 #include <vector>
 
-int positive_sum (const std::vector<int> arr){
+int positive_sum(const std::vector<int> arr) {
     using namespace std;
     int res = 0;
-    for (auto num: arr) {
+    for (auto num : arr) {
         if (num > 0) {
             res += num;
         }
     }
     return res;
 }
-

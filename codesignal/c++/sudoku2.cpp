@@ -156,4 +156,3 @@ bool sudoku2(std::vector<std::vector<char>> grid) {
     }
     return true;
 }
-

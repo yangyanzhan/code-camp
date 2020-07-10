@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/find-merge-point-of-two-lists.html .
 
-int findMergeNode(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
+int findMergeNode(SinglyLinkedListNode *head1, SinglyLinkedListNode *head2) {
     auto curr1 = head1, curr2 = head2;
     while (curr1 != curr2) {
         if (curr1->next) {

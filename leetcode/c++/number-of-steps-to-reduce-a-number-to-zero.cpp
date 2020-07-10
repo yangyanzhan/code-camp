@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/number-of-steps-to-reduce-a-number-to-zero.html .
 
 class Solution {
-public:
+  public:
     int numberOfSteps(int num) {
         if (num == 0) {
             return 0;
@@ -16,4 +16,3 @@ public:
         }
     }
 };
-

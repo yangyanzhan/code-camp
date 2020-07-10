@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/combo-meal.html .
 
-int profit(int b, int s, int c) {
-    return (long long)b + s - c;
-}
+int profit(int b, int s, int c) { return (long long)b + s - c; }

@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    TreeNode* searchBST(TreeNode* root, int val) {
+  public:
+    TreeNode *searchBST(TreeNode *root, int val) {
         if (root == nullptr) {
             return nullptr;
         }
@@ -29,4 +29,3 @@ public:
         }
     }
 };
-

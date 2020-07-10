@@ -20,4 +20,3 @@ bool isInformationConsistent(std::vector<std::vector<int>> evidences) {
     }
     return true;
 }
-

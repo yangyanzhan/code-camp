@@ -9,11 +9,11 @@ bool isArithmeticProgression(std::vector<int> sequence) {
         return true;
     }
     for (int i = 2; i < sequence.size(); i++) {
-        if (sequence[i] - sequence[i - 1] == sequence[i - 1] - sequence[i - 2]) {
+        if (sequence[i] - sequence[i - 1] ==
+            sequence[i - 1] - sequence[i - 2]) {
         } else {
             return false;
         }
     }
     return true;
 }
-

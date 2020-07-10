@@ -23,7 +23,8 @@ void Solution::rotate(vector<vector<int>> &A) {
             swap(A[layer][layer + i], A[n - 1 - layer - i][layer]);
         }
         for (i = 0; i < n - 1 - layer * 2; i++) {
-            swap(A[n - 1 - layer - i][layer], A[n - 1 - layer][n - 1 - layer - i]);
+            swap(A[n - 1 - layer - i][layer],
+                 A[n - 1 - layer][n - 1 - layer - i]);
         }
     }
 }

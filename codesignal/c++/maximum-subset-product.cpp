@@ -9,7 +9,7 @@ int maximumSubsetProduct(std::vector<int> a) {
         return 1;
     }
     int neg = 0, max_neg = numeric_limits<int>::min();
-    for (auto num: a) {
+    for (auto num : a) {
         if (num < 0) {
             neg++;
             max_neg = max(max_neg, num);
@@ -20,4 +20,3 @@ int maximumSubsetProduct(std::vector<int> a) {
     }
     return max_neg;
 }
-

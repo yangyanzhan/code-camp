@@ -13,4 +13,3 @@ int smallestNumber(int n) {
     }
     return res;
 }
-

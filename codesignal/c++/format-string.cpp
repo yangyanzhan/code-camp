@@ -15,4 +15,3 @@ std::string formatString(std::string input) {
     input = regex_replace(input, regex("[ ]+$"), "");
     return input;
 }
-

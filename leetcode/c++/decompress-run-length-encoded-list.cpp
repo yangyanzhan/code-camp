@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/decompress-run-length-encoded-list.html .
 
 class Solution {
-public:
+  public:
     vector<int> decompressRLElist(vector<int> &nums) {
         int n = nums.size();
         vector<int> res;
@@ -16,4 +16,3 @@ public:
         return res;
     }
 };
-

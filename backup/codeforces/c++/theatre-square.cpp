@@ -4,9 +4,9 @@
 // Blog URL for this problem: https://yanzhan.site/codeforces/theatre-square.html .
 
 #include <iostream>
- 
+
 using namespace std;
- 
+
 int main() {
     unsigned long long n, m, a;
     cin >> n >> m >> a;
@@ -15,4 +15,3 @@ int main() {
     cout << (n1 * m1) << endl;
     return 0;
 }
-

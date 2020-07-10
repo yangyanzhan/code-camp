@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/pep-eight.html .
 
-bool pepEight(int line) {
-    return line < 80;
-}
-
+bool pepEight(int line) { return line < 80; }

@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/hackerrank/strong-password.html .
 
 bool has_char(string word, string pool) {
-    for (auto ch: word) {
+    for (auto ch : word) {
         if (pool.find(ch) != string::npos) {
             return true;
         }

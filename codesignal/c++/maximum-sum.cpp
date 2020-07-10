@@ -7,7 +7,7 @@ int maximumSum(std::vector<int> a, std::vector<std::vector<int>> q) {
     using namespace std;
     int n = a.size();
     vector<int> counts(n, 0);
-    for (auto query: q) {
+    for (auto query : q) {
         for (int i = query[0]; i <= query[1]; i++) {
             counts[i]++;
         }
@@ -20,4 +20,3 @@ int maximumSum(std::vector<int> a, std::vector<std::vector<int>> q) {
     }
     return sum;
 }
-

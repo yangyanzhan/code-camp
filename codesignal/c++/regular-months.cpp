@@ -25,4 +25,3 @@ std::string regularMonths(std::string currMonth) {
     ss << put_time(&date, "%m-%Y");
     return ss.str();
 }
-

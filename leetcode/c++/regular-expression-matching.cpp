@@ -4,14 +4,14 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/regular-expression-matching.html .
 
 class Token {
-public:
+  public:
     bool repeats = false;
     bool wildcard = false;
     char content = '\0';
 };
 
 class Solution {
-public:
+  public:
     bool isMatch(string s, string p) {
         vector<Token> tokens;
         for (int i = 0; i < p.size(); i++) {
@@ -69,4 +69,3 @@ public:
         }
     }
 };
-

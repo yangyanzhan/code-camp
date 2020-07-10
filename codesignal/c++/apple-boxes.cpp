@@ -14,4 +14,3 @@ int appleBoxes(int k) {
     }
     return b - a;
 }
-

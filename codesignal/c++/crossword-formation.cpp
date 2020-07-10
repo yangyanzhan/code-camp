@@ -16,7 +16,8 @@ int count(const std::vector<std::string> &words) {
                 int pos3 = 0;
                 while ((pos3 = w3.find(ch2, pos3)) != string::npos) {
                     int gap = i2 - pos2;
-                    for (int i = 2; i + i1 < w1.size() && i + pos3 < w3.size(); i++) {
+                    for (int i = 2; i + i1 < w1.size() && i + pos3 < w3.size();
+                         i++) {
                         char ch_a = w1[i + i1], ch_b = w3[i + pos3];
                         for (int j = 0; j + gap < w4.size(); j++) {
                             if (w4[j] == ch_a && w4[j + gap] == ch_b) {
@@ -33,7 +34,6 @@ int count(const std::vector<std::string> &words) {
     return res;
 }
 
-
 int crosswordFormation(std::vector<std::string> words) {
     using namespace std;
     sort(words.begin(), words.end());
@@ -43,4 +43,3 @@ int crosswordFormation(std::vector<std::string> words) {
     } while (next_permutation(words.begin(), words.end()));
     return res;
 }
-

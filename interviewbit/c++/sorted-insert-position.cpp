@@ -7,11 +7,14 @@ int Solution::searchInsert(vector<int> &A, int B) {
     int n = A.size(), begin = 0, end = n - 1;
     while (begin < end) {
         int middle = (begin + end) / 2;
-        if (A[middle] == B) return middle;
-        if (A[middle] < B) begin = middle + 1;
-        else end = middle - 1;
+        if (A[middle] == B)
+            return middle;
+        if (A[middle] < B)
+            begin = middle + 1;
+        else
+            end = middle - 1;
     }
-    if (A[begin] < B) return begin + 1;
+    if (A[begin] < B)
+        return begin + 1;
     return begin;
 }
-

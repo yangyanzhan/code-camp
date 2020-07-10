@@ -15,4 +15,3 @@ int hailstoneSequence(int n) {
     }
     return step;
 }
-

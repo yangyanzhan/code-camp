@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/to-lower-case.html .
 
 class Solution {
-public:
+  public:
     string toLowerCase(string str) {
         for (auto &ch : str) {
             ch = tolower(ch);
@@ -12,4 +12,3 @@ public:
         return str;
     }
 };
-

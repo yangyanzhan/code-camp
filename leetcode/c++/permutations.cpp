@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/permutations.html .
 
 class Solution {
-public:
+  public:
     vector<vector<int>> permute(vector<int> &nums) {
         vector<vector<int>> res;
         sort(nums.begin(), nums.end());

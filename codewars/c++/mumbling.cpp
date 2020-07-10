@@ -4,16 +4,16 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/mumbling.html .
 
 class Accumul {
-public:
+  public:
     static std::string accum(const std::string &s) {
         using namespace std;
         string res;
         for (int i = 0; i < s.size(); i++) {
             string t1 = s.substr(i, 1), t2 = t1;
-            for (auto &ch: t1) {
+            for (auto &ch : t1) {
                 ch = toupper(ch);
             }
-            for (auto &ch: t2) {
+            for (auto &ch : t2) {
                 ch = tolower(ch);
             }
             res += t1;
@@ -25,4 +25,3 @@ public:
         return res.substr(0, res.size() - 1);
     }
 };
-

@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/reveal-cards-in-increasing-order.html .
 
 class Solution {
-public:
-    vector<int> deckRevealedIncreasing(vector<int>& deck) {
+  public:
+    vector<int> deckRevealedIncreasing(vector<int> &deck) {
         sort(deck.begin(), deck.end());
         vector<int> res;
         for (int i = deck.size() - 1; i >= 0; i--) {
@@ -22,4 +22,3 @@ public:
         return res;
     }
 };
-

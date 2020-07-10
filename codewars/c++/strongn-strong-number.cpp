@@ -20,4 +20,3 @@ string strong_num(int number) {
     }
     return number == sum ? "STRONG!!!!" : "Not Strong !!";
 }
-

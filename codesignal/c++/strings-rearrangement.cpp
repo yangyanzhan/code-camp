@@ -21,7 +21,7 @@ int dist(std::string item1, std::string item2) {
 
 bool dfs(Node *head, int seen, int expected) {
     head->visited = true;
-    for (auto out: head->outs) {
+    for (auto out : head->outs) {
         if (!out->visited) {
             if (dfs(out, seen + 1, expected)) {
                 return true;
@@ -35,10 +35,10 @@ bool dfs(Node *head, int seen, int expected) {
 bool stringsRearrangement(std::vector<std::string> inputArray) {
     using namespace std;
     vector<Node *> nodes;
-    for (auto item: inputArray) {
+    for (auto item : inputArray) {
         Node *curr = new Node();
         curr->item = item;
-        for (auto node: nodes) {
+        for (auto node : nodes) {
             if (dist(node->item, curr->item) == 1) {
                 node->outs.push_back(curr);
                 curr->outs.push_back(node);
@@ -46,7 +46,7 @@ bool stringsRearrangement(std::vector<std::string> inputArray) {
         }
         nodes.push_back(curr);
     }
-    for (auto node: nodes) {
+    for (auto node : nodes) {
         if (dfs(node, 0, nodes.size())) {
             return true;
         }

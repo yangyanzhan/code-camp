@@ -13,7 +13,7 @@
  */
 
 class Solution {
-public:
+  public:
     int getDecimalValue(ListNode *head) {
         int res = 0;
         while (head) {
@@ -23,4 +23,3 @@ public:
         return res;
     }
 };
-

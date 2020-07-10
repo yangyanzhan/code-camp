@@ -7,7 +7,7 @@ int missingNumber(std::vector<int> arr) {
     using namespace std;
     int n = arr.size();
     set<int> cache;
-    for (auto num: arr) {
+    for (auto num : arr) {
         cache.insert(num);
     }
     for (int i = 0; i <= n; i++) {
@@ -17,4 +17,3 @@ int missingNumber(std::vector<int> arr) {
     }
     return -1;
 }
-

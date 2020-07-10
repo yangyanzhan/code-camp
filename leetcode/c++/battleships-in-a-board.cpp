@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/battleships-in-a-board.html .
 
 class Solution {
-public:
+  public:
     int countBattleships(vector<vector<char>> &board) {
         int res = 0;
         int m = board.size(), n = board[0].size();
@@ -39,4 +39,3 @@ public:
         return res;
     }
 };
-

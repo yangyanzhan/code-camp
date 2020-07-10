@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/first-array.html .
 
-int firstArray(std::vector<int> inputArray) {
-    return inputArray.front();
-}
-
+int firstArray(std::vector<int> inputArray) { return inputArray.front(); }

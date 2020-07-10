@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/grasshopper-terminal-game-move-function.html .
 
-int move(int position, int roll) {
-    return position + 2 * roll;
-}
+int move(int position, int roll) { return position + 2 * roll; }

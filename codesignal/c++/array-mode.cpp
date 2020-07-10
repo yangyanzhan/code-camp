@@ -6,14 +6,14 @@
 int arrayMode(std::vector<int> sequence) {
     using namespace std;
     map<int, int> cache;
-    for (auto num: sequence) {
+    for (auto num : sequence) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
     int res = 0, count = 0;
-    for (auto pair: cache) {
+    for (auto pair : cache) {
         if (pair.second > count) {
             count = pair.second;
             res = pair.first;
@@ -21,4 +21,3 @@ int arrayMode(std::vector<int> sequence) {
     }
     return res;
 }
-

@@ -10,4 +10,3 @@ bool tennisSet(int score1, int score2) {
     }
     return n2 == 7 && n1 >= 5 && n1 < n2;
 }
-

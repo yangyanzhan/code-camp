@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/hackerrank/grid-challenge.html .
 
 string gridChallenge(vector<string> grid) {
-    for (auto &row: grid) {
+    for (auto &row : grid) {
         sort(row.begin(), row.end());
     }
     for (int j = 0; j < grid[0].size(); j++) {

@@ -9,11 +9,11 @@ std::string reverse_words(std::string str) {
     using namespace std;
     regex reg("([^ ]+)|([ ]+)");
     string res;
-    for (auto it = sregex_iterator(str.begin(), str.end(), reg); it != sregex_iterator(); it++) {
+    for (auto it = sregex_iterator(str.begin(), str.end(), reg);
+         it != sregex_iterator(); it++) {
         string item = it->str();
         reverse(item.begin(), item.end());
         res += item;
     }
     return res;
 }
-

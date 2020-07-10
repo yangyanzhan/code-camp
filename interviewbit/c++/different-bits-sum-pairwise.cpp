@@ -9,7 +9,7 @@ int Solution::cntBits(vector<int> &A) {
     for (int i = 0; i < 32; i++) {
         int f = 1 << i;
         long long n1 = 0, n2 = 0;
-        for (int num: A) {
+        for (int num : A) {
             if ((num & f) != 0) {
                 n1++;
             } else {
@@ -20,4 +20,3 @@ int Solution::cntBits(vector<int> &A) {
     }
     return res % base;
 }
-

@@ -9,11 +9,11 @@ using namespace std;
 
 vector<int> arrayLeaders(const vector<int> &numbers) {
     long long sum = 0;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         sum += num;
     }
     vector<int> res;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         sum -= num;
         if (num > sum) {
             res.push_back(num);
@@ -21,4 +21,3 @@ vector<int> arrayLeaders(const vector<int> &numbers) {
     }
     return res;
 }
-

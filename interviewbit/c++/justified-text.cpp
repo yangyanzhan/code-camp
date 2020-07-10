@@ -23,10 +23,11 @@ string merge(vector<string> &words, int B) {
         return pad(words[0], B - words[0].length());
     }
     int len = 0;
-    for (string word: words) {
+    for (string word : words) {
         len += word.length();
     }
-    int k1 = (B - len) / (words.size() - 1), k2 = (B - len) % (words.size() - 1);
+    int k1 = (B - len) / (words.size() - 1),
+        k2 = (B - len) % (words.size() - 1);
     string res;
     for (int i = 0; i < words.size() - 1; i++) {
         string addon = (i < k2) ? " " : "";
@@ -63,4 +64,3 @@ vector<string> Solution::fullJustify(vector<string> &A, int B) {
     }
     return res;
 }
-

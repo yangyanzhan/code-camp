@@ -5,8 +5,8 @@
 
 int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
     int max_sum = -1;
-    for (auto keyboard: keyboards) {
-        for (auto drive: drives) {
+    for (auto keyboard : keyboards) {
+        for (auto drive : drives) {
             long long sum = (long long)keyboard + drive;
             if (sum <= b) {
                 max_sum = max(max_sum, (int)sum);

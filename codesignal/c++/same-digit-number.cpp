@@ -12,4 +12,3 @@ bool sameDigitNumber(int n) {
     }
     return cache.size() <= 1;
 }
-

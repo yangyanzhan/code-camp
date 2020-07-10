@@ -5,7 +5,7 @@
 
 string canConstruct(vector<int> a) {
     int total = 0;
-    for (auto num: a) {
+    for (auto num : a) {
         total += num % 3;
     }
     return total % 3 == 0 ? "Yes" : "No";

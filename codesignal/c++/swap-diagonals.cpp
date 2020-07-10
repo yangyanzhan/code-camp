@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/swap-diagonals.html .
 
-std::vector<std::vector<int>> swapDiagonals(std::vector<std::vector<int>> matrix) {
+std::vector<std::vector<int>>
+swapDiagonals(std::vector<std::vector<int>> matrix) {
     using namespace std;
     int n = matrix.size();
     for (int i = 0; i < n; i++) {
@@ -11,4 +12,3 @@ std::vector<std::vector<int>> swapDiagonals(std::vector<std::vector<int>> matrix
     }
     return matrix;
 }
-

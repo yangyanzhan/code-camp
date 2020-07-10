@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
+  public:
+    vector<int> getAllElements(TreeNode *root1, TreeNode *root2) {
         auto nums1 = getAllElements(root1);
         auto nums2 = getAllElements(root2);
         vector<int> res;
@@ -39,8 +39,8 @@ public:
         }
         return res;
     }
-    
-    vector<int> getAllElements(TreeNode* root) {
+
+    vector<int> getAllElements(TreeNode *root) {
         if (root == nullptr) {
             return vector<int>();
         }
@@ -51,4 +51,3 @@ public:
         return lefts;
     }
 };
-

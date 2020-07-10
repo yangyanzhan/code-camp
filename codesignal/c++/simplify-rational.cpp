@@ -24,4 +24,3 @@ std::vector<int> simplifyRational(int numerator, int denominator) {
     }
     return {numerator / g, denominator / g};
 }
-

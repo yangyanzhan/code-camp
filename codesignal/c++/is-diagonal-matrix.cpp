@@ -13,4 +13,3 @@ bool isDiagonalMatrix(std::vector<std::vector<int>> matrix) {
     }
     return true;
 }
-

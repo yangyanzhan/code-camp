@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/exclusive-or-xor-logical-operator.html .
 
-bool xorf(bool a, bool b) {
-    return a != b;
-}
+bool xorf(bool a, bool b) { return a != b; }

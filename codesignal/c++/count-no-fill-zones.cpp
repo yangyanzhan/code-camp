@@ -70,9 +70,8 @@ int countNoFillZones(std::string words) {
     cache['9'] = 1;
     cache[' '] = 0;
     int res = 0;
-    for (auto ch: words) {
+    for (auto ch : words) {
         res += cache[ch];
     }
     return res;
 }
-

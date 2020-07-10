@@ -13,8 +13,8 @@
  */
 
 class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+  public:
+    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         int carry = 0;
         auto head = new ListNode(0), curr = head;
         while (l1 && l2) {
@@ -41,4 +41,3 @@ public:
         return res;
     }
 };
-

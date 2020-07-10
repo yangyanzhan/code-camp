@@ -10,9 +10,8 @@ double coverDebts(int s, std::vector<int> debts, std::vector<int> interests) {
     for (int i = 0; i < debts.size(); i++) {
         items.push_back(make_tuple(double(debts[i]), interests[i] / 100.0));
     }
-    sort(items.begin(), items.end(), [] (auto item1, auto item2) {
-        return get<1>(item1) > get<1>(item2);
-    });
+    sort(items.begin(), items.end(),
+         [](auto item1, auto item2) { return get<1>(item1) > get<1>(item2); });
     while (true) {
         double money = s * 0.1;
         bool empty = true;
@@ -49,4 +48,3 @@ double coverDebts(int s, std::vector<int> debts, std::vector<int> interests) {
     }
     return cost;
 }
-

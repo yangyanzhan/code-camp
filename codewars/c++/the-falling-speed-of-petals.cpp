@@ -9,4 +9,3 @@ double SakuraFall(double v) {
     }
     return 5 * 80 / v;
 }
-

@@ -7,25 +7,30 @@ vector<int> getFactors(int n) {
     vector<int> res;
     int factor = 2;
     while (factor <= n) {
-        while (n % factor != 0) factor++;
+        while (n % factor != 0)
+            factor++;
         res.push_back(factor);
-        while (n % factor == 0) n /= factor;
+        while (n % factor == 0)
+            n /= factor;
     }
     return res;
 }
 
 int gcd(int a, int b) {
-    if (b == 0) return a;
-    if (a % b == 0) return b;
+    if (b == 0)
+        return a;
+    if (a % b == 0)
+        return b;
     return gcd(b, a % b);
 }
 
 int Solution::cpFact(int A, int B) {
     int g = gcd(max(A, B), min(A, B));
-    if (g == 1) return A;
+    if (g == 1)
+        return A;
     for (int factor : getFactors(g)) {
-        while (A % factor == 0) A /= factor;
+        while (A % factor == 0)
+            A /= factor;
     }
     return A;
 }
-

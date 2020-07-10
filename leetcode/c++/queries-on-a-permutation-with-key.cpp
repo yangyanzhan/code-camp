@@ -4,14 +4,14 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/queries-on-a-permutation-with-key.html .
 
 class Solution {
-public:
-    vector<int> processQueries(vector<int>& queries, int m) {
+  public:
+    vector<int> processQueries(vector<int> &queries, int m) {
         vector<int> nums(m);
         vector<int> res;
         for (int i = 0; i < m; i++) {
             nums[i] = i + 1;
         }
-        for (auto query: queries) {
+        for (auto query : queries) {
             int idx;
             for (int i = 0; i < m; i++) {
                 if (nums[i] == query) {
@@ -28,4 +28,3 @@ public:
         return res;
     }
 };
-

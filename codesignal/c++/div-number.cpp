@@ -26,4 +26,3 @@ int divNumber(int k, int l, int r) {
     }
     return res;
 }
-

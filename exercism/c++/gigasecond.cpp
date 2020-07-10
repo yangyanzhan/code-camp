@@ -10,8 +10,8 @@
 using boost::gregorian::date;
 
 class gigasecond {
-    public:
-        static date advance(date baseDate);
+  public:
+    static date advance(date baseDate);
 };
 
 // gigasecond.cpp
@@ -24,18 +24,18 @@ bool isLeap(int year) {
 
 int daysForYM(int year, int month) {
     switch (month) {
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            return 31;
-        case 2:
-            return isLeap(year) ? 29 : 28;
-        default:
-            return 30;
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        return 31;
+    case 2:
+        return isLeap(year) ? 29 : 28;
+    default:
+        return 30;
     }
 }
 

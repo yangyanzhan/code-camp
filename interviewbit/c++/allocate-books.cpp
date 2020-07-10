@@ -22,8 +22,10 @@ bool feasible(const vector<int> &nums, int students, int top) {
 
 int Solution::books(vector<int> &A, int B) {
     int sum = 0, n = A.size();
-    if (n < B) return -1;
-    for (int i = 0; i < n; i++) sum += A[i];
+    if (n < B)
+        return -1;
+    for (int i = 0; i < n; i++)
+        sum += A[i];
     int begin = sum / n, end = sum, best = -1;
     while (begin <= end) {
         int middle = (begin + end) / 2;
@@ -36,4 +38,3 @@ int Solution::books(vector<int> &A, int B) {
     }
     return best;
 }
-

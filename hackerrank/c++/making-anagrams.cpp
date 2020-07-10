@@ -5,20 +5,20 @@
 
 int makingAnagrams(string s1, string s2) {
     map<char, int> cache;
-    for (auto ch: s1) {
+    for (auto ch : s1) {
         if (cache.find(ch) == cache.end()) {
             cache[ch] = 0;
         }
         cache[ch]++;
     }
-    for (auto ch: s2) {
+    for (auto ch : s2) {
         if (cache.find(ch) == cache.end()) {
             cache[ch] = 0;
         }
         cache[ch]--;
     }
     int res = 0;
-    for (auto it: cache) {
+    for (auto it : cache) {
         res += abs(it.second);
     }
     return res;

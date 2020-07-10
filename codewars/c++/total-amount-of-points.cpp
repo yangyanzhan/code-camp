@@ -4,13 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/total-amount-of-points.html .
 
 #include <array>
-#include <string>
 #include <regex>
+#include <string>
 
 int points(const std::array<std::string, 10> &games) {
     using namespace std;
     int res = 0;
-    for (auto game: games) {
+    for (auto game : games) {
         regex reg("(\\d+):(\\d+)");
         smatch matches;
         regex_search(game, matches, reg);

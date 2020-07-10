@@ -11,14 +11,15 @@
 using namespace std;
 
 namespace anagram {
-    class anagram {
-        string word;
-        string sortedWord;
-        public:
-            anagram(const char *c_word);
-            vector<string> matches(vector<string> words);
-    };
+class anagram {
+    string word;
+    string sortedWord;
+
+  public:
+    anagram(const char *c_word);
+    vector<string> matches(vector<string> words);
 };
+}; // namespace anagram
 
 // anagram.cpp
 
@@ -26,28 +27,29 @@ namespace anagram {
 #include <iostream>
 
 namespace anagram {
-    anagram::anagram(const char *c_word) {
-        word = string(c_word);
-        for (char &ch : word) {
-            ch = toupper(ch);
-        }
-        sortedWord = word;
-        sort(sortedWord.begin(), sortedWord.end());
+anagram::anagram(const char *c_word) {
+    word = string(c_word);
+    for (char &ch : word) {
+        ch = toupper(ch);
     }
-
-    vector<string> anagram::matches(vector<string> words) {
-        words.erase(remove_if(words.begin(), words.end(), [this](string item) {
-            string newWord = item;
-            for (char &ch : newWord) {
-                ch = toupper(ch);
-            }
-            if (word == newWord) {
-                return true;
-            }
-            sort(newWord.begin(), newWord.end());
-            return sortedWord != newWord;
-        }), words.end());
-        return words;
-    }
+    sortedWord = word;
+    sort(sortedWord.begin(), sortedWord.end());
 }
 
+vector<string> anagram::matches(vector<string> words) {
+    words.erase(remove_if(words.begin(), words.end(),
+                          [this](string item) {
+                              string newWord = item;
+                              for (char &ch : newWord) {
+                                  ch = toupper(ch);
+                              }
+                              if (word == newWord) {
+                                  return true;
+                              }
+                              sort(newWord.begin(), newWord.end());
+                              return sortedWord != newWord;
+                          }),
+                words.end());
+    return words;
+}
+} // namespace anagram

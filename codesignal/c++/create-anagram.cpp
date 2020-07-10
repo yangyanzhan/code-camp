@@ -12,8 +12,8 @@ int createAnagram(std::string s, std::string t) {
     int res = 0;
     for (int i = 0; i < 26; i++) {
         int diff = countS[i] - countT[i];
-        if (diff > 0) res += diff;
+        if (diff > 0)
+            res += diff;
     }
     return res;
 }
-

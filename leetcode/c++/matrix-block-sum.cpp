@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/matrix-block-sum.html .
 
 class Solution {
-public:
-    vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int K) {
+  public:
+    vector<vector<int>> matrixBlockSum(vector<vector<int>> &mat, int K) {
         vector<vector<int>> res;
         int m = mat.size(), n = mat[0].size(), ki = min(m, K), kj = min(n, K);
         for (int i = 0; i < m; i++) {
@@ -51,4 +51,3 @@ public:
         return res;
     }
 };
-

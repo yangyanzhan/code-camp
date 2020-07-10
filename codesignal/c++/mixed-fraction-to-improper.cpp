@@ -6,4 +6,3 @@
 std::vector<int> mixedFractionToImproper(std::vector<int> a) {
     return {a[0] * a[2] + a[1], a[2]};
 }
-

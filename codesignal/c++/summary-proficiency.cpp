@@ -6,7 +6,7 @@
 int summaryProficiency(std::vector<int> a, int n, int m) {
     using namespace std;
     int res = 0, count = 0;
-    for (auto num: a) {
+    for (auto num : a) {
         if (count >= n) {
             break;
         }
@@ -17,4 +17,3 @@ int summaryProficiency(std::vector<int> a, int n, int m) {
     }
     return res;
 }
-

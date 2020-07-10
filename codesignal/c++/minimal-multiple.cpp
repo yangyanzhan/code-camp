@@ -9,4 +9,3 @@ int minimalMultiple(int divisor, int lowerBound) {
     }
     return (lowerBound / divisor + 1) * divisor;
 }
-

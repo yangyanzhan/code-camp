@@ -9,11 +9,11 @@ using namespace std;
 
 unsigned long long minValue(vector<int> values) {
     sort(values.begin(), values.end());
-    values.resize(distance(values.begin(), unique(values.begin(), values.end())));
+    values.resize(
+        distance(values.begin(), unique(values.begin(), values.end())));
     string res = "";
-    for (auto v: values) {
+    for (auto v : values) {
         res += to_string(v);
     }
     return stoull(res);
 }
-

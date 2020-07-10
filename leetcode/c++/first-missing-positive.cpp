@@ -4,11 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/first-missing-positive.html .
 
 class Solution {
-public:
+  public:
     int firstMissingPositive(vector<int> &nums) {
-        auto it = remove_if(nums.begin(), nums.end(), [] (const int &num) {
-            return num <= 0;
-        });
+        auto it = remove_if(nums.begin(), nums.end(),
+                            [](const int &num) { return num <= 0; });
         int n = distance(nums.begin(), it);
         for (int i = 0; i < n; i++) {
             int num = abs(nums[i]);
@@ -24,4 +23,3 @@ public:
         return n + 1;
     }
 };
-

@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/hackerrank/breaking-the-records.html .
 
 vector<int> breakingRecords(vector<int> scores) {
-    int max_score = scores[0], min_score = scores[0], max_count = 0, min_count = 0;
+    int max_score = scores[0], min_score = scores[0], max_count = 0,
+        min_count = 0;
     for (int i = 1; i < scores.size(); i++) {
         int score = scores[i];
         if (score > max_score) {

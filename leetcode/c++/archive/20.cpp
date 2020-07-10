@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     bool isValid(string s) {
         vector<char> stack;
         for (char ch : s) {

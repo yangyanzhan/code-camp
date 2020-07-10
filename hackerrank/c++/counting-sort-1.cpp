@@ -5,7 +5,7 @@
 
 vector<int> countingSort(vector<int> arr) {
     vector<int> cnts(100, 0);
-    for (auto num: arr) {
+    for (auto num : arr) {
         cnts[num]++;
     }
     return cnts;

@@ -6,7 +6,8 @@
 class Solution {
     int base1 = 13;
     int base2 = 99999997;
-public:
+
+  public:
     int strStr(string haystack, string needle) {
         int n = needle.size();
         int m = haystack.size();
@@ -47,4 +48,3 @@ public:
         return total;
     }
 };
-

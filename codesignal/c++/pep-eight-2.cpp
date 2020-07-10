@@ -7,4 +7,3 @@ bool pepEight2(std::string line) {
     using namespace std;
     return line.size() <= 79;
 }
-

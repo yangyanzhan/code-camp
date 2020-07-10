@@ -11,4 +11,3 @@ int matrixTrace(std::vector<std::vector<int>> matrix) {
     }
     return res;
 }
-

@@ -14,4 +14,3 @@ long long shiftLeft(string s, string t) {
     }
     return m - i + n - i;
 }
-

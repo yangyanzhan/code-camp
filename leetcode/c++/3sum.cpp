@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/3sum.html .
 
 class Solution {
-public:
+  public:
     vector<vector<int>> threeSum(vector<int> &nums) {
         set<vector<int>> triples;
         sort(nums.begin(), nums.end());
@@ -29,4 +29,3 @@ public:
         return res;
     }
 };
-

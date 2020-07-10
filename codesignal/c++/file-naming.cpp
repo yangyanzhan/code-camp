@@ -14,7 +14,7 @@ std::vector<std::string> fileNaming(std::vector<std::string> names) {
     for (int i = 1; i < names.size(); i++) {
         string now = names[i];
         if (seen.find(now) != seen.end()) {
-            for (int idx = 1; ; idx++) {
+            for (int idx = 1;; idx++) {
                 string fixed = now + "(" + to_string(idx) + ")";
                 if (seen.find(fixed) == seen.end()) {
                     now = fixed;
@@ -27,4 +27,3 @@ std::vector<std::string> fileNaming(std::vector<std::string> names) {
     }
     return names;
 }
-

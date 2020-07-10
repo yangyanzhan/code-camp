@@ -15,8 +15,9 @@
 
 class Solution {
     int sum = 0;
-public:
-    TreeNode* bstToGst(TreeNode* root) {
+
+  public:
+    TreeNode *bstToGst(TreeNode *root) {
         if (!root) {
             return nullptr;
         }
@@ -27,4 +28,3 @@ public:
         return root;
     }
 };
-

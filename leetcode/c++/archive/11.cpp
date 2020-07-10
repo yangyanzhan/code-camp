@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
-    int maxArea(vector<int>& height) {
+  public:
+    int maxArea(vector<int> &height) {
         int start = 0;
         int end = height.size() - 1;
         int res = 0;

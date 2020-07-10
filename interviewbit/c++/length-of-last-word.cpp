@@ -16,4 +16,3 @@ int Solution::lengthOfLastWord(const string A) {
     }
     return res;
 }
-

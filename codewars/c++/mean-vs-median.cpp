@@ -15,7 +15,7 @@ std::string meanVsMedian(std::vector<int> numbers) {
         median = numbers[n / 2];
     }
     long long sum = 0;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         sum += num;
     }
     long long mean = sum / n;
@@ -26,4 +26,3 @@ std::string meanVsMedian(std::vector<int> numbers) {
     }
     return "same";
 }
-

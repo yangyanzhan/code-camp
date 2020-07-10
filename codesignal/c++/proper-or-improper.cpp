@@ -7,4 +7,3 @@ std::string properOrImproper(std::vector<int> a) {
     using namespace std;
     return (abs(a[0]) < abs(a[1])) ? "Proper" : "Improper";
 }
-

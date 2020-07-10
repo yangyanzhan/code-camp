@@ -19,4 +19,3 @@ int cyclicString(std::string s) {
     }
     return -1;
 }
-

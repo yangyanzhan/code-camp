@@ -14,4 +14,3 @@ double calcAverage(const std::vector<int> &values) {
     }
     return res / n;
 }
-

@@ -6,7 +6,7 @@
 std::string DNAtoRNA(std::string dna) {
     using namespace std;
     string res = dna;
-    for (auto &ch: res) {
+    for (auto &ch : res) {
         if (ch == 'T') {
             ch = 'U';
         }

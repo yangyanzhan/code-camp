@@ -6,7 +6,7 @@
 int scariestMask(std::vector<std::string> mask) {
     using namespace std;
     int res = 0;
-    for (auto line: mask) {
+    for (auto line : mask) {
         int n = line.size();
         for (int i = 0; i < n / 2; i++) {
             if (line[i] != line[n - 1 - i]) {
@@ -16,4 +16,3 @@ int scariestMask(std::vector<std::string> mask) {
     }
     return res;
 }
-

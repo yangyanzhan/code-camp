@@ -9,18 +9,17 @@
 std::vector<int> oddOnesOut(const std::vector<int> &numbers) {
     using namespace std;
     map<int, int> cache;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
     vector<int> res;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         if (cache[num] % 2 == 0) {
             res.push_back(num);
         }
     }
     return res;
 }
-

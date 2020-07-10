@@ -6,11 +6,10 @@
 std::string longestString(std::vector<std::string> inputArray) {
     using namespace std;
     string best = "";
-    for (auto item: inputArray) {
+    for (auto item : inputArray) {
         if (item.size() > best.size()) {
             best = item;
         }
     }
     return best;
 }
-

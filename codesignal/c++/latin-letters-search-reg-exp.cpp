@@ -12,4 +12,3 @@ bool latinLettersSearchRegExp(std::string input) {
     regex_search(input, matches, reg);
     return matches.size() > 0;
 }
-

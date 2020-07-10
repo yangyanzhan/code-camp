@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/grasshopper-summation.html .
 
-int summation(int num) {
-    return num * (num + 1) / 2;
-}
+int summation(int num) { return num * (num + 1) / 2; }

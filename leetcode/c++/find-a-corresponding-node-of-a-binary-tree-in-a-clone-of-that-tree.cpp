@@ -14,8 +14,9 @@
  */
 
 class Solution {
-public:
-    TreeNode* getTargetCopy(TreeNode* original, TreeNode* cloned, TreeNode* target) {
+  public:
+    TreeNode *getTargetCopy(TreeNode *original, TreeNode *cloned,
+                            TreeNode *target) {
         if (cloned == nullptr) {
             return nullptr;
         }
@@ -33,4 +34,3 @@ public:
         return nullptr;
     }
 };
-

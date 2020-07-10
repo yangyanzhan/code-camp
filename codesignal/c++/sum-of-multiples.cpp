@@ -10,4 +10,3 @@ int sumOfMultiples(int n, int k) {
     }
     return m * (m + 1) / 2 * k;
 }
-

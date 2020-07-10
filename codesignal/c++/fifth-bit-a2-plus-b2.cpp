@@ -8,4 +8,3 @@ int fifthBitA2PlusB2(int a, int b) {
     int s = a * a + b * b;
     return (s & 0b100000) >> 5;
 }
-

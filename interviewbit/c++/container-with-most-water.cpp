@@ -16,4 +16,3 @@ int Solution::maxArea(vector<int> &A) {
     }
     return size;
 }
-

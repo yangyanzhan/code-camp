@@ -8,4 +8,3 @@ int arrayMaximalDifference(std::vector<int> inputArray) {
     sort(inputArray.begin(), inputArray.end());
     return inputArray[inputArray.size() - 1] - inputArray[0];
 }
-

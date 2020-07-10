@@ -30,7 +30,9 @@ bool adaNumber(std::string line) {
         if (base <= 1 || base > 16) {
             return false;
         }
-        vector<string> bases = {"", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "aA", "bB", "cC", "dD", "eE", "fF"};
+        vector<string> bases = {"",   "0",  "1",  "2",  "3", "4",
+                                "5",  "6",  "7",  "8",  "9", "aA",
+                                "bB", "cC", "dD", "eE", "fF"};
         string extra_bases = "";
         for (int i = 1; i <= base; i++) {
             extra_bases += bases[i];
@@ -43,4 +45,3 @@ bool adaNumber(std::string line) {
     }
     return false;
 }
-

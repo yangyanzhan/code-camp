@@ -19,4 +19,3 @@ int Solution::jump(vector<int> &A) {
     }
     return -1;
 }
-

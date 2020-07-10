@@ -7,7 +7,7 @@ long marcsCakewalk(vector<int> calorie) {
     sort(calorie.begin(), calorie.end());
     reverse(calorie.begin(), calorie.end());
     long long res = 0, base = 1;
-    for (auto cal: calorie) {
+    for (auto cal : calorie) {
         res += base * cal;
         base *= 2;
     }

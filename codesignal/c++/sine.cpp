@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/sine.html .
 
-double sine(int theta) {
-    return sin(theta * 3.1415926 / 180);
-}
+double sine(int theta) { return sin(theta * 3.1415926 / 180); }

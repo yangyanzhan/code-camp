@@ -4,11 +4,11 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/minimum-add-to-make-parentheses-valid.html .
 
 class Solution {
-public:
+  public:
     int minAddToMakeValid(string S) {
         int res = 0;
         int left = 0;
-        for (auto ch: S) {
+        for (auto ch : S) {
             if (ch == '(') {
                 left++;
             } else if (ch == ')') {
@@ -23,4 +23,3 @@ public:
         return res;
     }
 };
-

@@ -6,9 +6,11 @@
 struct Event {
     int time;
     int action;
-    Event(int time, int action): time(time), action(action) {}
+    Event(int time, int action) : time(time), action(action) {}
     bool operator<(const Event &event) const {
-        if (time == event.time) {return action > 0;}
+        if (time == event.time) {
+            return action > 0;
+        }
         return time < event.time;
     }
 };
@@ -20,15 +22,19 @@ bool Solution::hotel(vector<int> &arrive, vector<int> &depart, int K) {
     long long maxTime = 1000000000000000000;
     while (i < n || j < n) {
         long long a = maxTime, b = maxTime;
-        if (i < n) a = arrive[i];
-        if (j < n) b = depart[j];
+        if (i < n)
+            a = arrive[i];
+        if (j < n)
+            b = depart[j];
         if (b <= a) {
-            K++; j++;
+            K++;
+            j++;
         } else {
-            K--; i++;
+            K--;
+            i++;
         }
-        if (K < 0) return false;
+        if (K < 0)
+            return false;
     }
     return true;
 }
-

@@ -22,4 +22,3 @@ int smallestMultiple(int left, int right) {
     }
     return res;
 }
-

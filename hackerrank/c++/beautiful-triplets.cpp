@@ -5,16 +5,17 @@
 
 int beautifulTriplets(int d, vector<int> arr) {
     map<int, int> cache;
-    for (auto num: arr) {
+    for (auto num : arr) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
     int res = 0;
-    for (auto it: cache) {
+    for (auto it : cache) {
         int a1 = it.first;
-        if (cache.find(a1 + d) != cache.end() && cache.find(a1 + 2 * d) != cache.end()) {
+        if (cache.find(a1 + d) != cache.end() &&
+            cache.find(a1 + 2 * d) != cache.end()) {
             res += it.second * cache[a1 + d] * cache[a1 + 2 * d];
         }
     }

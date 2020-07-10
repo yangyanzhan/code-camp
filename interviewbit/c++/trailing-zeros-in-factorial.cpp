@@ -11,4 +11,3 @@ int Solution::trailingZeroes(int A) {
     }
     return res;
 }
-

@@ -6,11 +6,11 @@
 #include <string>
 
 class Printer {
-public:
+  public:
     static std::string printerError(const std::string &s) {
         using namespace std;
         int a = 0, b = 0;
-        for (auto ch: s) {
+        for (auto ch : s) {
             if (ch < 'a' || 'm' < ch) {
                 a++;
             }
@@ -19,4 +19,3 @@ public:
         return to_string(a) + "/" + to_string(b);
     }
 };
-

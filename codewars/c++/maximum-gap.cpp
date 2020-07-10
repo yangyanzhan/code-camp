@@ -15,4 +15,3 @@ int maxGap(vector<int> numbers) {
     }
     return res;
 }
-

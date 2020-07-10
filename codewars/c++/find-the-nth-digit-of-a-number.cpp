@@ -17,4 +17,3 @@ int findDigit(int num, int nth) {
     }
     return item[item.size() - nth] - '0';
 }
-

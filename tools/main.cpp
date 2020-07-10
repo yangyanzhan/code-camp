@@ -3,29 +3,26 @@
 #include <cstdlib>
 #include <cstring>
 
-#include <set>
-#include <map>
-#include <list>
-#include <queue>
-#include <deque>
-#include <stack>
-#include <chrono>
+#include <algorithm>
 #include <bitset>
-#include <string>
-#include <vector>
-#include <limits>
-#include <numeric>
-#include <utility>
-#include <sstream>
+#include <chrono>
+#include <deque>
 #include <fstream>
+#include <functional>
 #include <iostream>
 #include <iterator>
-#include <algorithm>
-#include <functional>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <utility>
+#include <vector>
 
 using namespace std;
 
-int main() {
-    return 0;
-}
-
+int main() { return 0; }

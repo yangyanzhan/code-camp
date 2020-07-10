@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/matrix-transposition.html .
 
-std::vector<std::vector<int>> matrixTransposition(std::vector<std::vector<int>> matrix) {
+std::vector<std::vector<int>>
+matrixTransposition(std::vector<std::vector<int>> matrix) {
     using namespace std;
     vector<vector<int>> res;
     int m = matrix.size(), n = matrix[0].size();
@@ -16,4 +17,3 @@ std::vector<std::vector<int>> matrixTransposition(std::vector<std::vector<int>> 
     }
     return res;
 }
-

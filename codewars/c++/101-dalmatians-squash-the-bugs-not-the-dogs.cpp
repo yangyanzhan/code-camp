@@ -3,10 +3,15 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/101-dalmatians-squash-the-bugs-not-the-dogs.html .
 
-#include <vector>
 #include <string>
+#include <vector>
 
 std::string howManyDalmatians(int number) {
-    std::vector<std::string> dogs{"Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"};
-    return (number <= 10) ? dogs[0] : ((number <= 50) ? dogs[1] : ((number == 101) ? dogs[3] : dogs[2]));
+    std::vector<std::string> dogs{"Hardly any", "More than a handful!",
+                                  "Woah that's a lot of dogs!",
+                                  "101 DALMATIONS!!!"};
+    return (number <= 10)
+               ? dogs[0]
+               : ((number <= 50) ? dogs[1]
+                                 : ((number == 101) ? dogs[3] : dogs[2]));
 }

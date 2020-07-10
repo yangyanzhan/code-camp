@@ -16,4 +16,3 @@ int countInversionsNaive(std::vector<int> inputArray) {
     }
     return res;
 }
-

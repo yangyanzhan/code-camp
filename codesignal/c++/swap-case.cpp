@@ -5,7 +5,7 @@
 
 std::string swapCase(std::string text) {
     using namespace std;
-    for (auto &ch: text) {
+    for (auto &ch : text) {
         if (islower(ch)) {
             ch = toupper(ch);
         } else {
@@ -14,4 +14,3 @@ std::string swapCase(std::string text) {
     }
     return text;
 }
-

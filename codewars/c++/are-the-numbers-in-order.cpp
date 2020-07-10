@@ -11,4 +11,3 @@ bool isAscOrder(std::vector<int> arr) {
     }
     return true;
 }
-

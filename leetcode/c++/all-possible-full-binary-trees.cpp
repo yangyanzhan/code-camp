@@ -15,7 +15,8 @@
 
 class Solution {
     map<int, vector<TreeNode *>> cache;
-public:
+
+  public:
     vector<TreeNode *> allPossibleFBT(int N) {
         if (cache.find(N) != cache.end()) {
             return cache[N];
@@ -34,8 +35,8 @@ public:
             for (int c = 1; c <= N - 2; c++) {
                 auto lefts = allPossibleFBT(c);
                 auto rights = allPossibleFBT(N - 1 - c);
-                for (auto &left: lefts) {
-                    for (auto &right: rights) {
+                for (auto &left : lefts) {
+                    for (auto &right : rights) {
                         auto head = new TreeNode(0);
                         head->left = left;
                         head->right = right;
@@ -48,4 +49,3 @@ public:
         return res;
     }
 };
-

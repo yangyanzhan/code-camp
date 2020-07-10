@@ -11,4 +11,3 @@ std::vector<double> averages(std::vector<int> numbers) {
     }
     return res;
 }
-

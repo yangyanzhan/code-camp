@@ -16,4 +16,3 @@ int countIncreasingSequences(int n, int k) {
     }
     return a / b;
 }
-

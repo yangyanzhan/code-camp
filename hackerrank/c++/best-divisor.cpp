@@ -26,13 +26,15 @@ int main() {
         if (n % factor == 0) {
             int f1 = factor;
             int score = get_score(f1);
-            if (score > best_score || (score == best_score && f1 < best_factor)) {
+            if (score > best_score ||
+                (score == best_score && f1 < best_factor)) {
                 best_factor = f1;
                 best_score = score;
             }
             int f2 = n / factor;
             score = get_score(f2);
-            if (score > best_score || (score == best_score && f2 < best_factor)) {
+            if (score > best_score ||
+                (score == best_score && f2 < best_factor)) {
                 best_factor = f2;
                 best_score = score;
             }

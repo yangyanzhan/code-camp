@@ -11,4 +11,3 @@ int distinctDistances(std::vector<int> distances) {
     }
     return 4;
 }
-

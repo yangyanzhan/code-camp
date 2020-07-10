@@ -22,4 +22,3 @@ bool equationTemplate(std::vector<int> values) {
     } while (next_permutation(values.begin(), values.end()));
     return false;
 }
-

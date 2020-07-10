@@ -3,13 +3,13 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/perfect-city.html .
 
-bool is_int(double num) {
-    return num == floor(num);
-}
+bool is_int(double num) { return num == floor(num); }
 
-double perfectCity(std::vector<double> departure, std::vector<double> destination) {
+double perfectCity(std::vector<double> departure,
+                   std::vector<double> destination) {
     using namespace std;
-    double a1 = departure[0], b1 = departure[1], a2 = destination[0], b2 = destination[1];
+    double a1 = departure[0], b1 = departure[1], a2 = destination[0],
+           b2 = destination[1];
     if ((is_int(a1) && !is_int(a2)) || (!is_int(a1) && is_int(a2))) {
         return abs(a1 - a2) + abs(b1 - b2);
     }
@@ -27,4 +27,3 @@ double perfectCity(std::vector<double> departure, std::vector<double> destinatio
     res += abs(b1 - b2);
     return res;
 }
-

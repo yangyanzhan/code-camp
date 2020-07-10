@@ -14,4 +14,3 @@ int phoneCall(int min1, int min2_10, int min11, int s) {
         return 10 + (s - min1 - 9 * min2_10) / min11;
     }
 }
-

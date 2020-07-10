@@ -5,7 +5,7 @@
 
 int Solution::singleNumber(const vector<int> &A) {
     int one = 0, two = 0;
-    for (int num: A) {
+    for (int num : A) {
         two = two | (one & num);
         one = one ^ num;
         int common = ~(two & one);
@@ -14,4 +14,3 @@ int Solution::singleNumber(const vector<int> &A) {
     }
     return one;
 }
-

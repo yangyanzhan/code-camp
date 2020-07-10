@@ -14,7 +14,8 @@ class Solution {
         }
         return res;
     }
-public:
+
+  public:
     vector<int> countBits(int num) {
         vector<int> res;
         for (int i = 0; i <= num; i++) {
@@ -23,4 +24,3 @@ public:
         return res;
     }
 };
-

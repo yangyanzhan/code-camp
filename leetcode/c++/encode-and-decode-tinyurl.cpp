@@ -7,8 +7,8 @@ class Solution {
     int count = 0;
     map<string, string> cache;
     string prefix = "http://tinyurl.com/";
-public:
 
+  public:
     // Encodes a URL to a shortened URL.
     string encode(string longUrl) {
         count++;
@@ -26,4 +26,3 @@ public:
 // Your Solution object will be instantiated and called as such:
 // Solution solution;
 // solution.decode(solution.encode(url));
-

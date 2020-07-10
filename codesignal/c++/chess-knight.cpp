@@ -7,9 +7,9 @@ int moves(int x, int y) {
     using namespace std;
     int res = 0;
     vector<int> incs{-2, -1, 1, 2};
-    for (auto inc_x: incs) {
+    for (auto inc_x : incs) {
         int inc_y_abs = 3 - abs(inc_x);
-        for (auto inc_y: vector<int>{-inc_y_abs, inc_y_abs}) {
+        for (auto inc_y : vector<int>{-inc_y_abs, inc_y_abs}) {
             int x1 = x + inc_x, y1 = y + inc_y;
             if (0 <= x1 && x1 < 8 && 0 <= y1 && y1 < 8) {
                 res++;
@@ -22,4 +22,3 @@ int moves(int x, int y) {
 int chessKnight(std::string cell) {
     return moves(cell[0] - 'a', cell[1] - '1');
 }
-

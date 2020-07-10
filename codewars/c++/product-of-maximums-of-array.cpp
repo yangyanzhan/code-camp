@@ -15,4 +15,3 @@ int maxProduct(vector<int> numbers, int sub_size) {
     }
     return res;
 }
-

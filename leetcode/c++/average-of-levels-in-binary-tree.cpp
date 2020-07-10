@@ -16,18 +16,16 @@
  */
 
 class Solution {
-public:
-    vector<double> averageOfLevels(TreeNode* root) {
-        return avg({root});
-    }
+  public:
+    vector<double> averageOfLevels(TreeNode *root) { return avg({root}); }
 
-    vector<double> avg(vector<TreeNode*> nodes) {
+    vector<double> avg(vector<TreeNode *> nodes) {
         if (nodes.empty()) {
             return {};
         }
-        vector<TreeNode*> new_nodes;
+        vector<TreeNode *> new_nodes;
         double sum = 0;
-        for (auto &node: nodes) {
+        for (auto &node : nodes) {
             sum += node->val;
             if (node->left) {
                 new_nodes.push_back(node->left);
@@ -43,4 +41,3 @@ public:
         return res;
     }
 };
-

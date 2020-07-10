@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/count-square-submatrices-with-all-ones.html .
 
 class Solution {
-public:
-    int countSquares(vector<vector<int>>& matrix) {
+  public:
+    int countSquares(vector<vector<int>> &matrix) {
         int m = matrix.size(), n = matrix[0].size();
         vector<vector<int>> dp(m, vector<int>(n, 0));
         int res = 0;
@@ -15,7 +15,9 @@ public:
                     dp[i][j] = matrix[i][j];
                 } else {
                     if (matrix[i][j]) {
-                        dp[i][j] = min({dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]}) + 1;
+                        dp[i][j] = min({dp[i - 1][j], dp[i][j - 1],
+                                        dp[i - 1][j - 1]}) +
+                                   1;
                     }
                 }
                 res += dp[i][j];
@@ -24,4 +26,3 @@ public:
         return res;
     }
 };
-

@@ -12,4 +12,3 @@ int fixedPointsPermutation(std::vector<int> permutation) {
     }
     return res;
 }
-

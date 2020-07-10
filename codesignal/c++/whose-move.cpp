@@ -6,7 +6,7 @@
 std::string whoseMove(std::string lastPlayer, bool win) {
     using namespace std;
     vector<string> players{"white", "black"};
-    int idx = distance(players.begin(), find(players.begin(), players.end(), lastPlayer));
+    int idx = distance(players.begin(),
+                       find(players.begin(), players.end(), lastPlayer));
     return win ? lastPlayer : players[(idx + 1) % 2];
 }
-

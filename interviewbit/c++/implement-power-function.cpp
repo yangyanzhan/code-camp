@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/implement-power-function.html .
 
 int Solution::pow(int x, int n, int d) {
-    if (n == 0) return 1 % d;
+    if (n == 0)
+        return 1 % d;
     long long res = pow(x, n / 2, d);
     if (n % 2 == 0) {
         res = (res * res) % d;
@@ -14,4 +15,3 @@ int Solution::pow(int x, int n, int d) {
     }
     return (res + d) % d;
 }
-

@@ -52,9 +52,9 @@ bool is_attacked(int x, int y, int kx, int ky, int ax, int ay) {
             }
         }
     }
-    for (auto dx: vector<int>{-2, -1, 1, 2}) {
+    for (auto dx : vector<int>{-2, -1, 1, 2}) {
         int dyabs = 3 - abs(dx);
-        for (auto dy: vector<int>{-dyabs, dyabs}) {
+        for (auto dy : vector<int>{-dyabs, dyabs}) {
             int tx = dx + ax;
             int ty = dy + ay;
             if (tx == x && ty == y) {
@@ -84,11 +84,13 @@ std::vector<int> amazonCheckmate(std::string king, std::string amazon) {
                         }
                         int tx = x + dx;
                         int ty = y + dy;
-                        if (tx == ax && ty == ay && can_place2(tx, ty, kx, ky)) {
+                        if (tx == ax && ty == ay &&
+                            can_place2(tx, ty, kx, ky)) {
                             found = true;
                             break;
                         }
-                        if (can_place1(tx, ty, kx, ky, ax, ay) && !is_attacked(tx, ty, kx, ky, ax, ay)) {
+                        if (can_place1(tx, ty, kx, ky, ax, ay) &&
+                            !is_attacked(tx, ty, kx, ky, ax, ay)) {
                             found = true;
                             break;
                         }
@@ -111,11 +113,13 @@ std::vector<int> amazonCheckmate(std::string king, std::string amazon) {
                         }
                         int tx = x + dx;
                         int ty = y + dy;
-                        if (tx == ax && ty == ay && can_place2(tx, ty, kx, ky)) {
+                        if (tx == ax && ty == ay &&
+                            can_place2(tx, ty, kx, ky)) {
                             found = true;
                             break;
                         }
-                        if (can_place1(tx, ty, kx, ky, ax, ay) && !is_attacked(tx, ty, kx, ky, ax, ay)) {
+                        if (can_place1(tx, ty, kx, ky, ax, ay) &&
+                            !is_attacked(tx, ty, kx, ky, ax, ay)) {
                             found = true;
                             break;
                         }
@@ -134,4 +138,3 @@ std::vector<int> amazonCheckmate(std::string king, std::string amazon) {
     }
     return {checkmate, check, stalemate, safe};
 }
-

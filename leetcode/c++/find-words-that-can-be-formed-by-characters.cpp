@@ -4,20 +4,20 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/find-words-that-can-be-formed-by-characters.html .
 
 class Solution {
-public:
+  public:
     int countCharacters(vector<string> &words, string chars) {
         map<char, int> cache;
-        for (auto ch: chars) {
+        for (auto ch : chars) {
             if (cache.find(ch) == cache.end()) {
                 cache[ch] = 0;
             }
             cache[ch]++;
         }
         int res = 0;
-        for (auto &word: words) {
+        for (auto &word : words) {
             map<char, int> tmp = cache;
             bool valid = true;
-            for (auto ch: word) {
+            for (auto ch : word) {
                 if (tmp.find(ch) == tmp.end() || tmp[ch] == 0) {
                     valid = false;
                     break;
@@ -32,4 +32,3 @@ public:
         return res;
     }
 };
-

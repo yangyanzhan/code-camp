@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/multiply-strings.html .
 
 class Solution {
-public:
+  public:
     string multiply(string num1, string num2) {
         string res = "0";
         for (int i = 0; i < num2.size(); i++) {
@@ -51,7 +51,7 @@ public:
 
     string trim(string num) {
         string res;
-        for (auto ch: num) {
+        for (auto ch : num) {
             if (ch == '0') {
                 if (res.size() > 0) {
                     res += ch;
@@ -66,4 +66,3 @@ public:
         return res;
     }
 };
-

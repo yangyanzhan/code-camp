@@ -17,4 +17,3 @@ bool validTime(std::string time) {
     int m = stoi(matches[2].str());
     return 0 <= h && h <= 23 && 0 <= m && m <= 59;
 }
-

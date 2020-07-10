@@ -12,24 +12,22 @@ int maxHist(vector<int> &row) {
     // in increasing order of their heights.
     stack<int> result;
 
-    int top_val;     // Top of stack
+    int top_val; // Top of stack
 
     int max_area = 0; // Initialize max area in current
                       // row (or histogram)
 
-    int area = 0;    // Initialize area with current top
+    int area = 0; // Initialize area with current top
 
     // Run through all bars of given histogram (or row)
     int i = 0;
-    while (i < C)
-    {
+    while (i < C) {
         // If this bar is higher than the bar on top stack,
         // push it to stack
         if (result.empty() || row[result.top()] <= row[i])
             result.push(i++);
 
-        else
-        {
+        else {
             // If this bar is lower than top of stack, then
             // calculate area of rectangle with stack top as
             // the smallest (or minimum height) bar. 'i' is
@@ -40,20 +38,19 @@ int maxHist(vector<int> &row) {
             area = top_val * i;
 
             if (!result.empty())
-                area = top_val * (i - result.top() - 1 );
+                area = top_val * (i - result.top() - 1);
             max_area = max(area, max_area);
         }
     }
 
     // Now pop the remaining bars from stack and calculate area
     // with every popped bar as the smallest bar
-    while (!result.empty())
-    {
+    while (!result.empty()) {
         top_val = row[result.top()];
         result.pop();
         area = top_val * i;
         if (!result.empty())
-            area = top_val * (i - result.top() - 1 );
+            area = top_val * (i - result.top() - 1);
 
         max_area = max(area, max_area);
     }
@@ -61,7 +58,7 @@ int maxHist(vector<int> &row) {
 }
 
 // Returns area of the largest rectangle with all 1s in A[][]
-int Solution::maximalRectangle(vector<vector<int> > &A) {
+int Solution::maximalRectangle(vector<vector<int>> &A) {
     R = A.size();
     C = A[0].size();
     // Calculate area for first row and initialize it as
@@ -70,14 +67,13 @@ int Solution::maximalRectangle(vector<vector<int> > &A) {
 
     // iterate over row to find maximum rectangular area
     // considering each row as histogram
-    for (int i = 1; i < R; i++)
-    {
+    for (int i = 1; i < R; i++) {
 
         for (int j = 0; j < C; j++)
 
             // if A[i][j] is 1 then add A[i -1][j]
-            if (A[i][j]) A[i][j] += A[i - 1][j];
-
+            if (A[i][j])
+                A[i][j] += A[i - 1][j];
 
         // Update result if area with current row (as last row)
         // of rectangle) is more

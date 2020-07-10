@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/minimum-time-visiting-all-points.html .
 
 class Solution {
-public:
-    int minTimeToVisitAllPoints(vector<vector<int>>& points) {
+  public:
+    int minTimeToVisitAllPoints(vector<vector<int>> &points) {
         int res = 0;
         int x = points[0][0], y = points[0][1];
         for (int i = 1; i < points.size(); i++) {
@@ -19,4 +19,3 @@ public:
         return res;
     }
 };
-

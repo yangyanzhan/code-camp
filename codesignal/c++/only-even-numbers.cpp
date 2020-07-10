@@ -13,4 +13,3 @@ std::vector<int> onlyEvenNumbers(int left, int right) {
     }
     return res;
 }
-

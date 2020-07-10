@@ -4,6 +4,6 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/arithmetic-expression.html .
 
 bool arithmeticExpression(int A, int B, int C) {
-    return A + B == C || A - B == C || A * B == C || (B != 0 && A % B == 0 && A / B == C);
+    return A + B == C || A - B == C || A * B == C ||
+           (B != 0 && A % B == 0 && A / B == C);
 }
-

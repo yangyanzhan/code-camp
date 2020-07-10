@@ -13,10 +13,12 @@ int Solution::sqrt(int A) {
             res = (int)floor(middle);
             break;
         }
-        if (middle2 < A) begin = middle;
-        else end = middle;
+        if (middle2 < A)
+            begin = middle;
+        else
+            end = middle;
     }
-    if ((res + 1) * (res + 1) == A) res++;
+    if ((res + 1) * (res + 1) == A)
+        res++;
     return res;
 }
-

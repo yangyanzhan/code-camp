@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-adult.html .
 
-bool isAdult(int age, int adulthoodAge) {
-    return age >= adulthoodAge;
-}
-
+bool isAdult(int age, int adulthoodAge) { return age >= adulthoodAge; }

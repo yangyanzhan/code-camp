@@ -13,4 +13,3 @@ std::string characterParity(char symbol) {
     }
     return "odd";
 }
-

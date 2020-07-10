@@ -9,4 +9,3 @@ bool pointInLine(std::vector<int> point, std::vector<int> line) {
     int a = line[0], b = line[1], c = line[2];
     return a * x + b * y + c == 0;
 }
-

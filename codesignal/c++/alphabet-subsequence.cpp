@@ -21,4 +21,3 @@ bool alphabetSubsequence(std::string s) {
     }
     return true;
 }
-

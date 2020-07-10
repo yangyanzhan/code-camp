@@ -6,7 +6,7 @@
 std::vector<int> tasksTypes(std::vector<int> deadlines, int day) {
     using namespace std;
     int today = 0, upcoming = 0, later = 0;
-    for (auto num: deadlines) {
+    for (auto num : deadlines) {
         if (num <= day) {
             today++;
         } else if (num <= day + 7) {
@@ -17,4 +17,3 @@ std::vector<int> tasksTypes(std::vector<int> deadlines, int day) {
     }
     return {today, upcoming, later};
 }
-

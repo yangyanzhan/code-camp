@@ -12,7 +12,7 @@ std::vector<std::string> addBorder(std::vector<std::string> picture) {
     }
     header += "**";
     res.push_back(header);
-    for (auto row: picture) {
+    for (auto row : picture) {
         res.push_back("*" + row + "*");
     }
     res.push_back(header);

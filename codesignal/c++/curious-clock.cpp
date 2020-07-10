@@ -17,7 +17,7 @@ std::string curiousClock(std::string someTime, std::string leavingTime) {
     auto time1 = strtot(someTime);
     auto time2 = strtot(leavingTime);
     auto time3 = time1 - (time2 - time1);
-    
+
     char cache[100];
     tm *date = localtime(&time3);
     strftime(cache, 100, "%Y-%m-%d %H:%M", date);
@@ -25,4 +25,3 @@ std::string curiousClock(std::string someTime, std::string leavingTime) {
     string res{cache};
     return res;
 }
-

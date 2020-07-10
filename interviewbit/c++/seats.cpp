@@ -16,7 +16,9 @@ int Solution::seats(string str) {
     if (n <= 1) {
         return 0;
     }
-    int median = (n % 2 != 0) ? indices[n / 2] : ((indices[n / 2 - 1] + indices[n / 2]) / 2), res = 0;
+    int median = (n % 2 != 0) ? indices[n / 2]
+                              : ((indices[n / 2 - 1] + indices[n / 2]) / 2),
+        res = 0;
     int count = 0;
     for (int i = median - 1; i >= 0; i--) {
         if (str[i] == '.') {

@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/row-weights.html .
 
-#include <vector>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -19,4 +19,3 @@ pair<int, int> rowWeights(const vector<int> &weights) {
     }
     return {a1, a2};
 }
-

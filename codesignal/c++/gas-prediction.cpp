@@ -3,14 +3,14 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/gas-prediction.html .
 
-bool gasPrediction(std::vector<double> driveDistances, double currentGasLevel, double avgMileage) {
+bool gasPrediction(std::vector<double> driveDistances, double currentGasLevel,
+                   double avgMileage) {
     using namespace std;
     double dist = 0;
-    for (auto num: driveDistances) {
+    for (auto num : driveDistances) {
         dist += num;
     }
     dist /= 12;
     double gallon = dist / avgMileage;
     return currentGasLevel < gallon;
 }
-

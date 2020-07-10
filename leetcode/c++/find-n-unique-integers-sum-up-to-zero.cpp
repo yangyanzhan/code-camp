@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/find-n-unique-integers-sum-up-to-zero.html .
 
 class Solution {
-public:
+  public:
     vector<int> sumZero(int n) {
         vector<int> res;
         for (int i = 1; i <= n / 2; i++) {
@@ -17,4 +17,3 @@ public:
         return res;
     }
 };
-

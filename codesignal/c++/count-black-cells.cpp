@@ -14,4 +14,3 @@ int countBlackCells(int n, int m) {
     int g = gcd(max(n, m), min(n, m));
     return (n / g + m / g - 1) * g + 2 * (g - 1);
 }
-

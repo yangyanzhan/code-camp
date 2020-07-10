@@ -23,4 +23,3 @@ std::string removeDuplicateWords(const std::string &str_input) {
     res = res.substr(0, res.size() - 1);
     return res;
 }
-

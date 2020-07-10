@@ -15,4 +15,3 @@ std::string cipher26(std::string message) {
     }
     return decrypted;
 }
-

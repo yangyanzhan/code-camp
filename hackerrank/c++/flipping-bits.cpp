@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/flipping-bits.html .
 
-long flippingBits(long n) {
-    return n ^ ((1ull << 32) - 1);
-}
+long flippingBits(long n) { return n ^ ((1ull << 32) - 1); }

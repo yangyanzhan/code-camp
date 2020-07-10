@@ -5,14 +5,14 @@
 
 int equalizeArray(vector<int> arr) {
     map<int, int> cache;
-    for (auto num: arr) {
+    for (auto num : arr) {
         if (cache.find(num) == cache.end()) {
             cache[num] = 0;
         }
         cache[num]++;
     }
     int max_count = 0;
-    for (auto it: cache) {
+    for (auto it : cache) {
         max_count = max(max_count, it.second);
     }
     return arr.size() - max_count;

@@ -4,7 +4,6 @@
 // Blog URL for this problem: https://yanzhan.site/codesignal/is-sentence-correct.html .
 
 bool isSentenceCorrect(std::string sentence) {
-  std::regex regex("^[A-Z][^.?!]*[.?!]$");
-  return std::regex_match(sentence, regex);
+    std::regex regex("^[A-Z][^.?!]*[.?!]$");
+    return std::regex_match(sentence, regex);
 }
-

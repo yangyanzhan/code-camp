@@ -38,9 +38,12 @@ int isMedian(vector<vector<int>> &A, int num) {
         c2 += count2ForRow(A[i], num);
     }
     // cout << "c1c2:" << c1 << " " << c2 << endl;
-    if (c1 <= half && c2 <= half) return 0;
-    if (c1 > half) return -1;
-    if (c2 > half) return 1;
+    if (c1 <= half && c2 <= half)
+        return 0;
+    if (c1 > half)
+        return -1;
+    if (c2 > half)
+        return 1;
 }
 
 int Solution::findMedian(vector<vector<int>> &A) {
@@ -49,9 +52,12 @@ int Solution::findMedian(vector<vector<int>> &A) {
         int middle = (begin + end) / 2;
         int median = isMedian(A, middle);
         // cout << middle << " " << median << endl;
-        if (median == 0) return middle;
-        if (median < 0) end = middle - 1;
-        if (median > 0) begin = middle + 1;
+        if (median == 0)
+            return middle;
+        if (median < 0)
+            end = middle - 1;
+        if (median > 0)
+            begin = middle + 1;
         // cout << begin << " " << end << endl;
     }
 }

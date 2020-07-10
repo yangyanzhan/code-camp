@@ -5,7 +5,7 @@
 
 std::string alpha7(std::string s) {
     long num = 0;
-    for (auto ch: s)
+    for (auto ch : s)
         num = 26 * num + ch - 97;
     std::string t = "";
     do {

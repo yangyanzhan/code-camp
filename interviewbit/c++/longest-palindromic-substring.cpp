@@ -5,7 +5,8 @@
 
 string Solution::longestPalindrome(string A) {
     int n = A.length();
-    if (n <= 0) return A;
+    if (n <= 0)
+        return A;
     vector<vector<bool>> isPalin(n, vector<bool>(n, false));
     int bestI = 0, best = 1;
     for (int i = 0; i < n; i++) {
@@ -32,4 +33,3 @@ string Solution::longestPalindrome(string A) {
     }
     return A.substr(bestI, best);
 }
-

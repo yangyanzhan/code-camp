@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/minimum-height-triangle.html .
 
-int lowestTriangle(int base, int area){
-    return ceil(area * 2.0 / base);
-}
+int lowestTriangle(int base, int area) { return ceil(area * 2.0 / base); }

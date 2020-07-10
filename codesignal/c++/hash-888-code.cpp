@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/hash-888-code.html .
 
-int hash888code(int n) {
-    return n ^ (n / 2);
-}
-
+int hash888code(int n) { return n ^ (n / 2); }

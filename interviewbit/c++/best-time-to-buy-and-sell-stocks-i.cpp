@@ -5,11 +5,10 @@
 
 int Solution::maxProfit(const vector<int> &A) {
     int minPrice = INT_MAX, maxProfit = 0;
-    for (int a: A) {
+    for (int a : A) {
         minPrice = min(minPrice, a);
         int profit = a - minPrice;
         maxProfit = max(maxProfit, profit);
     }
     return maxProfit;
 }
-

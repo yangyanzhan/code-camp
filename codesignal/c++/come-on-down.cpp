@@ -6,7 +6,7 @@
 int comeOnDown(int maxPrice, std::vector<int> bids) {
     using namespace std;
     vector<int> nbids;
-    for (auto bid: bids) {
+    for (auto bid : bids) {
         if (bid <= maxPrice) {
             nbids.push_back(bid);
         }
@@ -30,4 +30,3 @@ int comeOnDown(int maxPrice, std::vector<int> bids) {
     }
     return res;
 }
-

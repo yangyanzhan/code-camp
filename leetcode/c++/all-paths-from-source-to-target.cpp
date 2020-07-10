@@ -6,15 +6,16 @@
 class Solution {
     set<int> visited = {0};
     vector<int> path = {0};
-public:
-    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
+
+  public:
+    vector<vector<int>> allPathsSourceTarget(vector<vector<int>> &graph) {
         vector<vector<int>> res;
         int n = graph.size(), last = path[path.size() - 1];
         if (last == n - 1) {
             res.push_back(path);
             return res;
         }
-        for (auto next: graph[last]) {
+        for (auto next : graph[last]) {
             if (visited.find(next) == visited.end()) {
                 visited.insert(next);
                 path.push_back(next);
@@ -27,4 +28,3 @@ public:
         return res;
     }
 };
-

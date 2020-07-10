@@ -14,4 +14,3 @@ std::string angleType(int measure) {
     }
     return "straight";
 }
-

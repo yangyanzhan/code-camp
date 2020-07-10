@@ -9,7 +9,7 @@ int bfsComponentSize(std::vector<std::vector<bool>> matrix) {
     set<int> visited;
     while (!nodes.empty()) {
         vector<int> next_level;
-        for (auto node: nodes) {
+        for (auto node : nodes) {
             visited.insert(node);
             for (int j = 0; j < matrix.size(); j++) {
                 if (matrix[node][j]) {
@@ -23,4 +23,3 @@ int bfsComponentSize(std::vector<std::vector<bool>> matrix) {
     }
     return visited.size();
 }
-

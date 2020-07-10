@@ -10,10 +10,10 @@ int gcd(int a, int b) {
     return gcd(b, a % b);
 }
 
-std::vector<int> fractionMultiplication(std::vector<int> a, std::vector<int> b) {
+std::vector<int> fractionMultiplication(std::vector<int> a,
+                                        std::vector<int> b) {
     using namespace std;
     int n1 = a[0] * b[0], n2 = a[1] * b[1];
     int g = gcd(max(n1, n2), min(n1, n2));
     return {n1 / g, n2 / g};
 }
-

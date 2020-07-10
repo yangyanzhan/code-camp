@@ -3,8 +3,10 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/array-3-pointers.html .
 
-int Solution::minimize(const vector<int> &A, const vector<int> &B, const vector<int> &C) {
-    int i = 0, j = 0, k = 0, n1 = A.size(), n2 = B.size(), n3 = C.size(), best = INT_MAX;
+int Solution::minimize(const vector<int> &A, const vector<int> &B,
+                       const vector<int> &C) {
+    int i = 0, j = 0, k = 0, n1 = A.size(), n2 = B.size(), n3 = C.size(),
+        best = INT_MAX;
     while (i < n1 && j < n2 && k < n3) {
         int a = A[i], b = B[j], c = C[k];
         int bottom = min(a, min(b, c));

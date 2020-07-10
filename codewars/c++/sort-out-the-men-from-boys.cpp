@@ -3,14 +3,14 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/sort-out-the-men-from-boys.html .
 
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
 vector<int> menFromBoys(vector<int> values) {
     vector<int> nums1, nums2;
-    for (auto value: values) {
+    for (auto value : values) {
         if (value % 2 == 0) {
             nums1.push_back(value);
         } else {
@@ -25,12 +25,11 @@ vector<int> menFromBoys(vector<int> values) {
     auto it2 = unique(nums2.begin(), nums2.end());
     nums2.resize(distance(nums2.begin(), it2));
     vector<int> res;
-    for (auto num: nums1) {
+    for (auto num : nums1) {
         res.push_back(num);
     }
-    for (auto num: nums2) {
+    for (auto num : nums2) {
         res.push_back(num);
     }
     return res;
 }
-

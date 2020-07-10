@@ -6,7 +6,7 @@
 #include <cmath>
 
 class Movie {
-public:
+  public:
     static int movie(int card, int ticket, double perc) {
         int res = 0;
         double a = 0, b = card, c = ticket;
@@ -19,4 +19,3 @@ public:
         return res;
     }
 };
-

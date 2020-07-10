@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/neighboring-cells.html .
 
-std::vector<std::vector<int>> neighboringCells(std::vector<std::vector<int>> matrix) {
+std::vector<std::vector<int>>
+neighboringCells(std::vector<std::vector<int>> matrix) {
     using namespace std;
     int m = matrix.size(), n = matrix[0].size();
     for (int i = 0; i < m; i++) {
@@ -31,4 +32,3 @@ std::vector<std::vector<int>> neighboringCells(std::vector<std::vector<int>> mat
     }
     return matrix;
 }
-

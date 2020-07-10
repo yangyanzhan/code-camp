@@ -15,4 +15,3 @@ int differentSubstrings(std::string inputString) {
     }
     return cache.size();
 }
-

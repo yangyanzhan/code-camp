@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
+  public:
+    vector<vector<int>> threeSum(vector<int> &nums) {
         sort(nums.begin(), nums.end());
         int n = nums.size();
         vector<vector<int>> solutions;

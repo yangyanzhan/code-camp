@@ -10,4 +10,3 @@ int sameElementsNaive(std::vector<int> a, std::vector<int> b) {
     cache.insert(b.begin(), b.end());
     return a.size() + b.size() - cache.size();
 }
-

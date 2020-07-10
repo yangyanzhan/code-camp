@@ -5,7 +5,7 @@
 
 std::string alphabeticShift(std::string inputString) {
     using namespace std;
-    for (auto &ch: inputString) {
+    for (auto &ch : inputString) {
         ch = (ch - 'a' + 1) % 26 + 'a';
     }
     return inputString;

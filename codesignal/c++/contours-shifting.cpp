@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/contours-shifting.html .
 
-std::vector<std::vector<int>> contoursShifting(std::vector<std::vector<int>> matrix) {
+std::vector<std::vector<int>>
+contoursShifting(std::vector<std::vector<int>> matrix) {
     using namespace std;
     vector<vector<int>> c_dirs;
     c_dirs.push_back({0, 1});
@@ -51,7 +52,7 @@ std::vector<std::vector<int>> contoursShifting(std::vector<std::vector<int>> mat
         }
         if (c % 2 == 0) {
             int x = sx, y = sy, tmp = matrix[x][y];
-            for (auto dir: c_dirs) {
+            for (auto dir : c_dirs) {
                 while (true) {
                     int dx = dir[0], dy = dir[1];
                     int x1 = x + dx, y1 = y + dy;
@@ -65,7 +66,7 @@ std::vector<std::vector<int>> contoursShifting(std::vector<std::vector<int>> mat
             }
         } else {
             int x = sx, y = sy, tmp = matrix[x][y];
-            for (auto dir: cc_dirs) {
+            for (auto dir : cc_dirs) {
                 while (true) {
                     int dx = dir[0], dy = dir[1];
                     int x1 = x + dx, y1 = y + dy;
@@ -81,4 +82,3 @@ std::vector<std::vector<int>> contoursShifting(std::vector<std::vector<int>> mat
     }
     return matrix;
 }
-

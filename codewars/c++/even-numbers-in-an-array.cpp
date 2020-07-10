@@ -22,4 +22,3 @@ std::vector<int> evenNumbers(std::vector<int> arr, int n) {
     reverse(res.begin(), res.end());
     return res;
 }
-

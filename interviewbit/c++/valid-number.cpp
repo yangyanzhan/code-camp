@@ -69,4 +69,3 @@ int Solution::isNumber(const string A) {
         return isReal(B1) && isInteger(B2);
     }
 }
-

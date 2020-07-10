@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/longest-uncorrupted-segment.html .
 
-std::vector<int> longestUncorruptedSegment(std::vector<int> sourceArray, std::vector<int> destinationArray) {
+std::vector<int> longestUncorruptedSegment(std::vector<int> sourceArray,
+                                           std::vector<int> destinationArray) {
     using namespace std;
     int best_len = 0, best_idx = 0, len = 0, idx = 0;
     for (int i = 0; i < sourceArray.size(); i++) {
@@ -15,7 +16,8 @@ std::vector<int> longestUncorruptedSegment(std::vector<int> sourceArray, std::ve
                 len++;
             }
         }
-        if (sourceArray[i] != destinationArray[i] || i == sourceArray.size() - 1) {
+        if (sourceArray[i] != destinationArray[i] ||
+            i == sourceArray.size() - 1) {
             if (len > best_len) {
                 best_len = len;
                 best_idx = idx;
@@ -25,4 +27,3 @@ std::vector<int> longestUncorruptedSegment(std::vector<int> sourceArray, std::ve
     }
     return {best_len, best_idx};
 }
-

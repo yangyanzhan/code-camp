@@ -19,4 +19,3 @@ std::vector<long> numbersWithDigitInside(long x, long d) {
     }
     return {count, sum, prod};
 }
-

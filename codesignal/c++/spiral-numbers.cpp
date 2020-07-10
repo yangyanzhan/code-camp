@@ -49,4 +49,3 @@ std::vector<std::vector<int>> spiralNumbers(int n) {
     }
     return matrix;
 }
-

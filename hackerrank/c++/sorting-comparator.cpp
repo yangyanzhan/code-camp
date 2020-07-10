@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/hackerrank/sorting-comparator.html .
 
-static int comparator(Player a, Player b)  {
+static int comparator(Player a, Player b) {
     if (a.score < b.score) {
         return -1;
     }

@@ -28,4 +28,3 @@ std::string isSmooth(unsigned long n) {
         return "humble number";
     }
 }
-

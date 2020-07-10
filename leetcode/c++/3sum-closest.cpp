@@ -4,7 +4,7 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/3sum-closest.html .
 
 class Solution {
-public:
+  public:
     int threeSumClosest(vector<int> &nums, int target) {
         int n = nums.size();
         sort(nums.begin(), nums.end());
@@ -33,4 +33,3 @@ public:
         return res;
     }
 };
-

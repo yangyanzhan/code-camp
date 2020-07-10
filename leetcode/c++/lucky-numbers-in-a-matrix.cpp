@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/lucky-numbers-in-a-matrix.html .
 
 class Solution {
-public:
-    vector<int> luckyNumbers (vector<vector<int>>& matrix) {
+  public:
+    vector<int> luckyNumbers(vector<vector<int>> &matrix) {
         vector<int> res;
         map<int, int> cache;
         int m = matrix.size(), n = matrix[0].size();
@@ -29,4 +29,3 @@ public:
         return res;
     }
 };
-

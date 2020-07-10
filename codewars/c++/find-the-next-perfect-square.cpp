@@ -12,4 +12,3 @@ long int findNextSquare(long int sq) {
     }
     return -1;
 }
-

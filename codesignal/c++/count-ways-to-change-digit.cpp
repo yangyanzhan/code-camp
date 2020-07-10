@@ -11,4 +11,3 @@ int countWaysToChangeDigit(int value) {
     }
     return res;
 }
-

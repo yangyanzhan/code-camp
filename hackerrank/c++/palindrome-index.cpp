@@ -7,7 +7,7 @@ int palindromeIndex(string s) {
     int begin = 0, end = s.size() - 1;
     while (begin < end) {
         if (s[begin] != s[end]) {
-            int ori_begin = begin, ori_end =end;
+            int ori_begin = begin, ori_end = end;
             begin++;
             while (begin < end) {
                 if (s[begin] != s[end]) {

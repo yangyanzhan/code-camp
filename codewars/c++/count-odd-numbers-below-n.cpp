@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/count-odd-numbers-below-n.html .
 
-int odd_count(int n){
-    return n / 2;
-}
-
+int odd_count(int n) { return n / 2; }

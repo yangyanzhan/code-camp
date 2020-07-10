@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/the-k-weakest-rows-in-a-matrix.html .
 
 class Solution {
-public:
-    vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
+  public:
+    vector<int> kWeakestRows(vector<vector<int>> &mat, int k) {
         int m = mat.size(), n = mat[0].size();
         vector<vector<int>> tuples;
         for (int i = 0; i < m; i++) {
@@ -26,4 +26,3 @@ public:
         return res;
     }
 };
-

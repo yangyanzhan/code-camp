@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/bishop-diagonal.html .
 
-std::vector<std::string> bishopDiagonal(std::string bishop1, std::string bishop2) {
+std::vector<std::string> bishopDiagonal(std::string bishop1,
+                                        std::string bishop2) {
     using namespace std;
     int x1 = bishop1[0] - 'a', y1 = bishop1[1] - '1';
     int x2 = bishop2[0] - 'a', y2 = bishop2[1] - '1';
@@ -35,4 +36,3 @@ std::vector<std::string> bishopDiagonal(std::string bishop1, std::string bishop2
     sort(res.begin(), res.end());
     return res;
 }
-

@@ -21,4 +21,3 @@ std::vector<int> fractionDivision(std::vector<int> a, std::vector<int> b) {
     int g = gcd(max(abs(c1), abs(c2)), min(abs(c1), abs(c2)));
     return {c1 / g, c2 / g};
 }
-

@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/count-and-say.html .
 
 string Solution::countAndSay(int n) {
-    if (n == 1) return "1";
+    if (n == 1)
+        return "1";
     string word = countAndSay(n - 1);
     int pre = word[0] - '0', count = 1, now;
     stringstream ss;
@@ -28,4 +29,3 @@ string Solution::countAndSay(int n) {
     }
     return ss.str();
 }
-

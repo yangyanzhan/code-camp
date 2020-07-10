@@ -5,7 +5,8 @@
 
 class Solution {
     int res = 0;
-public:
+
+  public:
     int uniquePathsIII(vector<vector<int>> &grid) {
         int x, y, empty = 0;
         int m = grid.size(), n = grid[0].size();
@@ -25,7 +26,7 @@ public:
     }
 
     void dfs(int x, int y, int empty, vector<vector<int>> &grid) {
-        for (auto dir: vector<vector<int>>{{0, -1}, {0, 1}, {-1, 0}, {1, 0}}) {
+        for (auto dir : vector<vector<int>>{{0, -1}, {0, 1}, {-1, 0}, {1, 0}}) {
             int x1 = x + dir[0], y1 = y + dir[1];
             if (x1 < 0 || x1 >= grid.size() || y1 < 0 || y1 >= grid[0].size()) {
                 continue;
@@ -44,4 +45,3 @@ public:
         }
     }
 };
-

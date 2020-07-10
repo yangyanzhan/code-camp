@@ -8,7 +8,7 @@
 int square_sum(const std::vector<int> &numbers) {
     using namespace std;
     int res = 0;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         res += num * num;
     }
     return res;

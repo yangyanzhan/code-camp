@@ -11,9 +11,8 @@ unsigned int Solution::reverse(unsigned int A) {
         A /= 2;
     }
     long long res = 0;
-    for (int bit: bits) {
+    for (int bit : bits) {
         res = res * 2 + bit;
     }
     return res;
 }
-

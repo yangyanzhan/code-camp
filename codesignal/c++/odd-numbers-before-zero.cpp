@@ -5,7 +5,7 @@
 
 int oddNumbersBeforeZero(std::vector<int> sequence) {
     int res = 0;
-    for (auto num: sequence) {
+    for (auto num : sequence) {
         if (num == 0) {
             break;
         }
@@ -15,4 +15,3 @@ int oddNumbersBeforeZero(std::vector<int> sequence) {
     }
     return res;
 }
-

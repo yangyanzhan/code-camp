@@ -22,4 +22,3 @@ int Solution::maximumGap(const vector<int> &A) {
     }
     return best;
 }
-

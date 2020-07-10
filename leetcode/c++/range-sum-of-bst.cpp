@@ -14,8 +14,8 @@
  */
 
 class Solution {
-public:
-    int rangeSumBST(TreeNode* root, int L, int R) {
+  public:
+    int rangeSumBST(TreeNode *root, int L, int R) {
         if (root == nullptr) {
             return 0;
         }
@@ -26,8 +26,8 @@ public:
         } else if (num > R) {
             return sum + rangeSumBST(root->left, L, R);
         } else {
-            return sum + rangeSumBST(root->left, L, R) + rangeSumBST(root->right, L, R);
+            return sum + rangeSumBST(root->left, L, R) +
+                   rangeSumBST(root->right, L, R);
         }
     }
 };
-

@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Solution {
-public:
+  public:
     string longestPalindrome(string s) {
         int n = s.size();
         if (n == 0) {

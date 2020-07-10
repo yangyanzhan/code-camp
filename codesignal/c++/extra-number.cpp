@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/extra-number.html .
 
-int extraNumber(int a, int b, int c) {
-    return a ^ b ^ c;
-}
-
+int extraNumber(int a, int b, int c) { return a ^ b ^ c; }

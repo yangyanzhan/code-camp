@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/convert-a-boolean-to-a-string.html .
 
-std::string boolean_to_string(bool b) {
-    return b ? "true" : "false";
-}
-
+std::string boolean_to_string(bool b) { return b ? "true" : "false"; }

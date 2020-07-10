@@ -17,4 +17,3 @@ std::vector<double> quadraticEquation(int a, int b, int c) {
     sort(res.begin(), res.end());
     return res;
 }
-

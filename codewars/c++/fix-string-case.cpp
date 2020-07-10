@@ -8,7 +8,7 @@
 std::string solve(const std::string &str) {
     using namespace std;
     int c1 = 0, c2 = 0;
-    for (auto &ch: str) {
+    for (auto &ch : str) {
         if (tolower(ch) == ch) {
             c1++;
         } else {
@@ -16,7 +16,7 @@ std::string solve(const std::string &str) {
         }
     }
     string res;
-    for (auto &ch: str) {
+    for (auto &ch : str) {
         if (c1 >= c2) {
             res += tolower(ch);
         } else {
@@ -25,4 +25,3 @@ std::string solve(const std::string &str) {
     }
     return res;
 }
-

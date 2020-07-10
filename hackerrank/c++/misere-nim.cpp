@@ -8,7 +8,7 @@ string misereNim(vector<int> s) {
         return s[0] > 1 ? "First" : "Second";
     }
     int res = 0, sum = 0;
-    for (auto num: s) {
+    for (auto num : s) {
         res = res ^ num;
         sum += num;
     }

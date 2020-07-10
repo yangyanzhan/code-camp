@@ -4,10 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/maximum-consecutive-gap.html .
 
 int Solution::maximumGap(const vector<int> &A) {
-    if (A.size() < 2) return 0;
+    if (A.size() < 2)
+        return 0;
     int n = A.size(), res = 0;
-    double mini = *min_element(A.begin(), A.end()), maxi = *max_element(A.begin(), A.end());
-    if (maxi == mini) return 0;
+    double mini = *min_element(A.begin(), A.end()),
+           maxi = *max_element(A.begin(), A.end());
+    if (maxi == mini)
+        return 0;
     vector<int> low(n + 1, -1), high(n + 1, -1);
     for (int num : A) {
         int idx = (int)floor((num - mini) / (maxi - mini) * n);
@@ -30,4 +33,3 @@ int Solution::maximumGap(const vector<int> &A) {
     }
     return res;
 }
-

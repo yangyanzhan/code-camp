@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/living-on-the-roads.html .
 
-std::vector<std::vector<bool>> livingOnTheRoads(std::vector<std::vector<bool>> roadRegister) {
+std::vector<std::vector<bool>>
+livingOnTheRoads(std::vector<std::vector<bool>> roadRegister) {
     using namespace std;
     int n = roadRegister.size();
     set<vector<int>> tmp;
@@ -37,4 +38,3 @@ std::vector<std::vector<bool>> livingOnTheRoads(std::vector<std::vector<bool>> r
     }
     return res;
 }
-

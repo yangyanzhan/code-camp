@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/hackerrank/smart-number.html .
 
 bool is_smart_number(int num) {
-    int val = (int) sqrt(num);
-    if((double)num / val == val)
+    int val = (int)sqrt(num);
+    if ((double)num / val == val)
         return true;
     return false;
 }

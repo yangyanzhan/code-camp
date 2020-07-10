@@ -11,8 +11,8 @@
  * };
  */
 class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+  public:
+    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         ListNode *head = new ListNode(0);
         ListNode *curr = head;
         int carry = 0;

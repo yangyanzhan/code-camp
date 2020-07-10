@@ -16,9 +16,10 @@ class Solution {
         }
         return cache[n];
     }
-public:
-    vector<int> sortByBits(vector<int>& arr) {
-        sort(arr.begin(), arr.end(), [this] (int n1, int n2) {
+
+  public:
+    vector<int> sortByBits(vector<int> &arr) {
+        sort(arr.begin(), arr.end(), [this](int n1, int n2) {
             int v1 = value(n1), v2 = value(n2);
             if (v1 != v2) {
                 return v1 < v2;
@@ -28,4 +29,3 @@ public:
         return arr;
     }
 };
-

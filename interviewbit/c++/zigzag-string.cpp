@@ -4,7 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/zigzag-string.html .
 
 string Solution::convert(string A, int B) {
-    if (B == 1) return A;
+    if (B == 1)
+        return A;
     vector<string> words(B);
     int n = A.length(), pos = 0, inc = 1;
     for (int i = 0; i < n; i++) {
@@ -18,9 +19,8 @@ string Solution::convert(string A, int B) {
         }
     }
     string res;
-    for (string word: words) {
+    for (string word : words) {
         res += word;
     }
     return res;
 }
-

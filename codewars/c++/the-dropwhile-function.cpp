@@ -3,7 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/the-dropwhile-function.html .
 
-std::vector<int> dropWhile(std::vector<int> arr, std::function<bool (int)> pred) {
+std::vector<int> dropWhile(std::vector<int> arr,
+                           std::function<bool(int)> pred) {
     using namespace std;
     for (int i = 0; i < arr.size(); i++) {
         if (!pred(arr[i])) {
@@ -12,4 +13,3 @@ std::vector<int> dropWhile(std::vector<int> arr, std::function<bool (int)> pred)
     }
     return {};
 }
-

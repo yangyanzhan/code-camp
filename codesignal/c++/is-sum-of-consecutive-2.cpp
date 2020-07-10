@@ -19,4 +19,3 @@ int isSumOfConsecutive2(int n) {
     }
     return res;
 }
-

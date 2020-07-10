@@ -5,7 +5,7 @@
 
 std::string stolenLunch(std::string note) {
     using namespace std;
-    for (auto &ch: note) {
+    for (auto &ch : note) {
         if ('0' <= ch && ch <= '9') {
             ch = 'a' + ch - '0';
         } else if ('a' <= ch && ch <= 'a' + 9) {
@@ -14,4 +14,3 @@ std::string stolenLunch(std::string note) {
     }
     return note;
 }
-

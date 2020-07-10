@@ -19,4 +19,3 @@ std::vector<int> fractionReducing(std::vector<int> fraction) {
     int a1 = max(abs(a), abs(b)), b1 = min(abs(a), abs(b)), g = gcd(a1, b1);
     return {a / g, b / g};
 }
-

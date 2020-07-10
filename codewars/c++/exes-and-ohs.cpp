@@ -3,10 +3,10 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/exes-and-ohs.html .
 
-bool XO(const std::string& str) {
+bool XO(const std::string &str) {
     using namespace std;
     int c1 = 0, c2 = 0;
-    for (auto ch: str) {
+    for (auto ch : str) {
         if (tolower(ch) == 'o') {
             c1++;
         } else if (tolower(ch) == 'x') {
@@ -15,4 +15,3 @@ bool XO(const std::string& str) {
     }
     return c1 == c2;
 }
-

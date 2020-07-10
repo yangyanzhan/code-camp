@@ -13,4 +13,3 @@ int differentValuesInMultiplicationTable2(int n, int m) {
     }
     return cache.size();
 }
-

@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/find-heavy-ball-level-novice.html .
 
-#include<vector>
+#include <vector>
 
 unsigned int findBall(Scales scales) {
     using namespace std;
@@ -32,4 +32,3 @@ unsigned int findBall(Scales scales) {
     }
     return -1;
 }
-

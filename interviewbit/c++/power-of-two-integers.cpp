@@ -21,12 +21,14 @@ map<int, int> getFactors(int n) {
 }
 
 int gcd(int a, int b) {
-    if (a % b == 0) return b;
+    if (a % b == 0)
+        return b;
     return gcd(b, a % b);
 }
 
 int Solution::isPower(int n) {
-    if (n <= 1) return true;
+    if (n <= 1)
+        return true;
     map<int, int> factors = getFactors(n);
     int g = 0;
     for (auto it : factors) {
@@ -39,4 +41,3 @@ int Solution::isPower(int n) {
     }
     return g > 1;
 }
-

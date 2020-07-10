@@ -8,23 +8,23 @@
 using namespace std;
 
 class EightiesKids5 {
-public:
+  public:
     static string bucketOf(const string &said) {
         string line = said;
-        for (auto &ch: line) {
+        for (auto &ch : line) {
             ch = tolower(ch);
         }
         bool has_water = false;
         bool has_slime = false;
         vector<string> items = {"water", "wet", "wash"};
-        for (auto item: items) {
+        for (auto item : items) {
             if (line.find(item) != string::npos) {
                 has_water = true;
                 break;
             }
         }
         items = {"i don't know", "slime"};
-        for (auto item: items) {
+        for (auto item : items) {
             if (line.find(item) != string::npos) {
                 has_slime = true;
                 break;
@@ -42,4 +42,3 @@ public:
         return "air";
     }
 };
-

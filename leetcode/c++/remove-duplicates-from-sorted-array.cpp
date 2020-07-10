@@ -4,11 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/remove-duplicates-from-sorted-array.html .
 
 class Solution {
-public:
+  public:
     int removeDuplicates(vector<int> &nums) {
         using namespace std;
         auto it = unique(nums.begin(), nums.end());
         return distance(nums.begin(), it);
     }
 };
-

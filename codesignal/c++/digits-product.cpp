@@ -23,4 +23,3 @@ int digitsProduct(int product) {
     }
     return stoi(res);
 }
-

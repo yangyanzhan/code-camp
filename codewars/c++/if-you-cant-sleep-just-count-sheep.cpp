@@ -13,4 +13,3 @@ std::string countSheep(int number) {
     }
     return res;
 }
-

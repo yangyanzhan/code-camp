@@ -12,4 +12,3 @@ std::vector<int> metroCard(int lastNumberOfDays) {
         return vector<int>{28, 30, 31};
     }
 }
-

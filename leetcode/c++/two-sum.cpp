@@ -4,14 +4,14 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/two-sum.html .
 
 class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+  public:
+    vector<int> twoSum(vector<int> &nums, int target) {
         vector<tuple<int, int>> pairs;
         for (int i = 0; i < nums.size(); i++) {
             pairs.push_back(make_tuple(nums[i], i));
         }
         sort(pairs.begin(), pairs.end());
-        for (int i = 0, j = pairs.size() - 1; i < j; ) {
+        for (int i = 0, j = pairs.size() - 1; i < j;) {
             int a = get<0>(pairs[i]), b = get<0>(pairs[j]);
             if (a + b == target) {
                 vector<int> res{get<1>(pairs[i]), get<1>(pairs[j])};

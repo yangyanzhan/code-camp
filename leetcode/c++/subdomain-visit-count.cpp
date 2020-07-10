@@ -4,16 +4,17 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/subdomain-visit-count.html .
 
 class Solution {
-public:
+  public:
     vector<string> subdomainVisits(vector<string> &cpdomains) {
         vector<string> res;
         map<string, int> cache;
-        for (auto item: cpdomains) {
+        for (auto item : cpdomains) {
             int count = stoi(item.substr(0, item.find(" ")));
             string domain = item.substr(item.find(" ") + 1) + ".";
             regex reg("([^.]+)\\.");
             vector<string> parts;
-            for (auto it = sregex_iterator(domain.begin(), domain.end(), reg); it != sregex_iterator(); it++) {
+            for (auto it = sregex_iterator(domain.begin(), domain.end(), reg);
+                 it != sregex_iterator(); it++) {
                 string part = it->str(1);
                 parts.push_back(part);
             }
@@ -30,10 +31,9 @@ public:
                 cache[sub_domain] += count;
             }
         }
-        for (auto pair: cache) {
+        for (auto pair : cache) {
             res.push_back(to_string(pair.second) + " " + pair.first);
         }
         return res;
     }
 };
-

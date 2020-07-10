@@ -5,6 +5,6 @@
 
 int arrayMinimumIndex(std::vector<int> inputArray) {
     using namespace std;
-    return distance(inputArray.begin(), min_element(inputArray.begin(), inputArray.end()));
+    return distance(inputArray.begin(),
+                    min_element(inputArray.begin(), inputArray.end()));
 }
-

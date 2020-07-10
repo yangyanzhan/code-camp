@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/century-from-year.html .
 
-int centuryFromYear(int year) {
-    return year / 100 + (year % 100 == 0 ? 0 : 1);
-}
+int centuryFromYear(int year) { return year / 100 + (year % 100 == 0 ? 0 : 1); }

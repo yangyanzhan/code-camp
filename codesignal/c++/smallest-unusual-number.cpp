@@ -10,7 +10,7 @@ int smallestUnusualNumber(std::string a) {
     }
     long long sum = 0, prod = 1;
     int n_0 = 0, n_1 = 0;
-    for (auto ch: a) {
+    for (auto ch : a) {
         int num = ch - '0';
         if (num == 0) {
             n_0++;
@@ -20,7 +20,7 @@ int smallestUnusualNumber(std::string a) {
         }
     }
     if (n_0 == 0) {
-        for (auto ch: a) {
+        for (auto ch : a) {
             int num = ch - '0';
             if (num == 1) {
                 n_1--;
@@ -40,4 +40,3 @@ int smallestUnusualNumber(std::string a) {
     }
     return 10 - (a[a.size() - 1] - '0');
 }
-

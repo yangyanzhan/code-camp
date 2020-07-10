@@ -16,4 +16,3 @@ std::string messageFromBinaryCode(std::string code) {
     }
     return res;
 }
-

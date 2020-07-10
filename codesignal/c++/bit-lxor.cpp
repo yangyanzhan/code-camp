@@ -21,4 +21,3 @@ int bitLXor(int a, int b) {
     b = b << (n - n2);
     return a ^ b;
 }
-

@@ -4,14 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/codewars/playing-with-cubes-1.html .
 
 class Cube {
-    public:
-        int GetSide() {
-            return side;
-        }
-        void SetSide(int num) {
-            side = num;
-        }
-    private:
-        int side = 0;
-};
+  public:
+    int GetSide() { return side; }
+    void SetSide(int num) { side = num; }
 
+  private:
+    int side = 0;
+};

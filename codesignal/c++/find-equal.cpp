@@ -8,4 +8,3 @@ bool findEqual(std::vector<int> sequence) {
     set<int> cache(sequence.begin(), sequence.end());
     return cache.size() < sequence.size();
 }
-

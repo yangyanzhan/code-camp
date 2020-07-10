@@ -4,16 +4,15 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/find-permutation.html .
 
 vector<int> Solution::findPerm(const string A, int B) {
-        int dec = count(A.begin(), A.end(), 'D');
-        int i = dec, j = dec + 1;
-        vector<int> res{j++};
-        for (int k = 0; k < A.length(); k++) {
-            if (A[k] == 'I') {
-                res.push_back(j++);
-            } else {
-                res.push_back(i--);
-            }
+    int dec = count(A.begin(), A.end(), 'D');
+    int i = dec, j = dec + 1;
+    vector<int> res{j++};
+    for (int k = 0; k < A.length(); k++) {
+        if (A[k] == 'I') {
+            res.push_back(j++);
+        } else {
+            res.push_back(i--);
         }
-        return res;
+    }
+    return res;
 }
-

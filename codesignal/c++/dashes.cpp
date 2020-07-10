@@ -29,4 +29,3 @@ std::vector<std::string> dashes(int n) {
     }
     return res;
 }
-

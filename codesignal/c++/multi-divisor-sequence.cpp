@@ -18,4 +18,3 @@ int multiDivisorSequence(std::vector<int> nums) {
     }
     return -1;
 }
-

@@ -20,4 +20,3 @@ int Solution::nTriang(vector<int> &A) {
     }
     return res;
 }
-

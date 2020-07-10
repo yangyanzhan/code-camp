@@ -3,14 +3,14 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 
 class Token {
-public:
+  public:
     char ch;
     bool could_rewind;
     int count;
 };
 
 class Solution {
-public:
+  public:
     bool isMatch(string str, string pattern) {
         if (pattern == "") {
             return str == "";
@@ -88,7 +88,7 @@ public:
                             token.count = 1;
                             idx++;
                         }
-                    }   
+                    }
                 }
                 if (!should_rewind) {
                     visited.push_back(token);
@@ -118,4 +118,3 @@ public:
         return true;
     }
 };
-

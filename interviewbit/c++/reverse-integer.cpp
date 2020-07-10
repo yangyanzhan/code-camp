@@ -15,4 +15,3 @@ int Solution::reverse(int A) {
         return 0;
     }
 }
-

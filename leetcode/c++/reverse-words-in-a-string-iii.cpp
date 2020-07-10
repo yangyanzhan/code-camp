@@ -4,12 +4,13 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/reverse-words-in-a-string-iii.html .
 
 class Solution {
-public:
+  public:
     string reverseWords(string s) {
         string res;
         s += " ";
         regex reg("([^ ]+)([ ]+)");
-        for (auto it = sregex_iterator(s.begin(), s.end(), reg); it != sregex_iterator(); it++) {
+        for (auto it = sregex_iterator(s.begin(), s.end(), reg);
+             it != sregex_iterator(); it++) {
             auto part1 = it->str(1);
             auto part2 = it->str(2);
             reverse(part1.begin(), part1.end());
@@ -19,4 +20,3 @@ public:
         return res;
     }
 };
-

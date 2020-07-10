@@ -6,4 +6,3 @@
 unsigned int cookingTime(unsigned int eggs) {
     return ((long long)eggs + 7) / 8 * 5;
 }
-

@@ -11,4 +11,3 @@ int quasifactorial(int n) {
     }
     return res;
 }
-

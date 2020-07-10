@@ -4,10 +4,10 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/find-numbers-with-even-number-of-digits.html .
 
 class Solution {
-public:
+  public:
     int findNumbers(vector<int> &nums) {
         int res = 0;
-        for (auto &num: nums) {
+        for (auto &num : nums) {
             if (to_string(num).size() % 2 == 0) {
                 res++;
             }
@@ -15,4 +15,3 @@ public:
         return res;
     }
 };
-

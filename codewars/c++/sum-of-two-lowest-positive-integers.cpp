@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/sum-of-two-lowest-positive-integers.html .
 
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 long sumTwoSmallestNumbers(std::vector<int> numbers) {
     using namespace std;
@@ -18,4 +18,3 @@ long sumTwoSmallestNumbers(std::vector<int> numbers) {
     }
     return cache[0] + cache[1];
 }
-

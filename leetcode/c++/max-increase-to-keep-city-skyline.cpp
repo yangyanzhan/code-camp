@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/max-increase-to-keep-city-skyline.html .
 
 class Solution {
-public:
-    int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
+  public:
+    int maxIncreaseKeepingSkyline(vector<vector<int>> &grid) {
         int m = grid.size(), n = grid[0].size();
         vector<int> max_r;
         vector<int> max_c;
@@ -32,4 +32,3 @@ public:
         return res;
     }
 };
-

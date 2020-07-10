@@ -11,7 +11,7 @@
 //   ListNode *next;
 // };
 
-ListNode<int> * reverseNodesInKGroups(ListNode<int> *l, int k) {
+ListNode<int> *reverseNodesInKGroups(ListNode<int> *l, int k) {
     ListNode<int> *head = nullptr, *tail = nullptr, *curr = l;
     while (true) {
         if (!curr) {
@@ -54,4 +54,3 @@ ListNode<int> * reverseNodesInKGroups(ListNode<int> *l, int k) {
     }
     return head;
 }
-

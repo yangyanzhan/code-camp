@@ -7,4 +7,3 @@ int myMaxOfThree(int a, int b, int c) {
     using namespace std;
     return max(a, max(b, c));
 }
-

@@ -8,12 +8,11 @@
 int arrayPlusArray(std::vector<int> a, std::vector<int> b) {
     using namespace std;
     int res = 0;
-    for (auto num: a) {
+    for (auto num : a) {
         res += num;
     }
-    for (auto num: b) {
+    for (auto num : b) {
         res += num;
     }
     return res;
 }
-

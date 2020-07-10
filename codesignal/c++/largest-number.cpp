@@ -10,4 +10,3 @@ int largestNumber(int n) {
     }
     return res;
 }
-

@@ -15,4 +15,3 @@ int crossingSum(std::vector<std::vector<int>> matrix, int a, int b) {
     sum -= matrix[a][b];
     return sum;
 }
-

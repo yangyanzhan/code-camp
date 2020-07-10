@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/replace-elements-with-greatest-element-on-right-side.html .
 
 class Solution {
-public:
-    vector<int> replaceElements(vector<int>& arr) {
+  public:
+    vector<int> replaceElements(vector<int> &arr) {
         if (arr.size() == 0) {
             return arr;
         }
@@ -23,4 +23,3 @@ public:
         return arr;
     }
 };
-

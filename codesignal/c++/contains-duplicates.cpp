@@ -6,7 +6,7 @@
 bool containsDuplicates(std::vector<int> a) {
     using namespace std;
     set<int> cache;
-    for (auto num: a) {
+    for (auto num : a) {
         if (cache.find(num) != cache.end()) {
             return true;
         }
@@ -14,4 +14,3 @@ bool containsDuplicates(std::vector<int> a) {
     }
     return false;
 }
-

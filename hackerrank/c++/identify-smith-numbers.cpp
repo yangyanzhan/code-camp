@@ -28,7 +28,7 @@ vector<int> factors(int n) {
 int solve(int n) {
     int sum1 = sum(n);
     int sum2 = 0;
-    for (auto factor: factors(n)) {
+    for (auto factor : factors(n)) {
         sum2 += sum(factor);
     }
     return sum1 == sum2 ? 1 : 0;

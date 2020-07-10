@@ -19,4 +19,3 @@ bool isPower(int n) {
     }
     return false;
 }
-

@@ -12,7 +12,7 @@ vector<int> Solution::repeatedNumber(const vector<int> &A) {
     for (int i = 0; i < n; i++) {
         int num = A[i];
         sum = sum + num;
-        sum2 = sum2 + (long long)(num) * num;
+        sum2 = sum2 + (long long)(num)*num;
     }
     long long b_a = total - sum;
     long long b_a2 = total2 - sum2;
@@ -24,4 +24,3 @@ vector<int> Solution::repeatedNumber(const vector<int> &A) {
     res.push_back(b);
     return res;
 }
-

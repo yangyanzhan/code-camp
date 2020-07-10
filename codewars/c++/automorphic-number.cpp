@@ -7,10 +7,9 @@
 
 using namespace std;
 
-string autoMorphic (int number) {
+string autoMorphic(int number) {
     auto item1 = to_string(number);
     auto item2 = to_string(number * number);
     item2 = item2.substr(item2.size() - item1.size());
     return item1 == item2 ? "Automorphic" : "Not!!";
 }
-

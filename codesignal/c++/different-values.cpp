@@ -23,4 +23,3 @@ int differentValues(std::vector<int> a, int d) {
     }
     return best;
 }
-

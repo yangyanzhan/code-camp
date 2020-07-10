@@ -4,8 +4,8 @@
 // Blog URL for this problem: https://yanzhan.site/leetcode/sort-the-matrix-diagonally.html .
 
 class Solution {
-public:
-    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {
+  public:
+    vector<vector<int>> diagonalSort(vector<vector<int>> &mat) {
         int m = mat.size(), n = mat[0].size();
         for (int i = 0; i < m; i++) {
             int i1 = i, j1 = 0;
@@ -44,4 +44,3 @@ public:
         return mat;
     }
 };
-

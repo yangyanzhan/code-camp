@@ -15,4 +15,3 @@ std::string bmi(double w, double h) {
         return "Obese";
     }
 }
-

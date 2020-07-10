@@ -9,13 +9,12 @@ using namespace std;
 
 vector<int> productArray(vector<int> numbers) {
     long long prod = 1;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         prod *= num;
     }
     vector<int> res;
-    for (auto num: numbers) {
+    for (auto num : numbers) {
         res.push_back(prod / num);
     }
     return res;
 }
-

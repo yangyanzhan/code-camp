@@ -5,7 +5,7 @@
 
 int count(int s, int t, int a, vector<int> &offsets) {
     int res = 0;
-    for (auto offset: offsets) {
+    for (auto offset : offsets) {
         int p = a + offset;
         if (s <= p && p <= t) {
             res++;
@@ -14,7 +14,8 @@ int count(int s, int t, int a, vector<int> &offsets) {
     return res;
 }
 
-void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples,
+                           vector<int> oranges) {
     cout << count(s, t, a, apples) << endl;
     cout << count(s, t, b, oranges) << endl;
 }

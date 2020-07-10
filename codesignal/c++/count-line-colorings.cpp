@@ -10,4 +10,3 @@ int countLineColorings(int points, int colors) {
     }
     return res;
 }
-

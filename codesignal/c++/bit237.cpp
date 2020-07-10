@@ -37,4 +37,3 @@ int bit237(int n) {
     n = set(n, 7);
     return n;
 }
-

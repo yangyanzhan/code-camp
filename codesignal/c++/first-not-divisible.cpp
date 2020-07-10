@@ -8,7 +8,7 @@ int firstNotDivisible(std::vector<int> divisors, int start) {
     int n = start;
     while (true) {
         bool valid = true;
-        for (auto num: divisors) {
+        for (auto num : divisors) {
             if (n % num == 0) {
                 valid = false;
                 break;
@@ -21,4 +21,3 @@ int firstNotDivisible(std::vector<int> divisors, int start) {
     }
     return n;
 }
-

@@ -3,6 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/add.html .
 
-int add(int param1, int param2) {
-    return param1 + param2;
-}
+int add(int param1, int param2) { return param1 + param2; }

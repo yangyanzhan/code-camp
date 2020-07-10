@@ -7,7 +7,7 @@ std::string caseUnification(std::string inputString) {
     using namespace std;
     int lc = 0, uc = 0;
     string lres = "", ures = "";
-    for (auto ch: inputString) {
+    for (auto ch : inputString) {
         lres += tolower(ch);
         ures += toupper(ch);
         if (ch == tolower(ch)) {
@@ -21,4 +21,3 @@ std::string caseUnification(std::string inputString) {
     }
     return ures;
 }
-

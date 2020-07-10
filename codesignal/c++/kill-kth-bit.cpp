@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/kill-kth-bit.html .
 
-int killKthBit(int n, int k) {
-    return n & ~(1 << (k - 1));
-}
-
+int killKthBit(int n, int k) { return n & ~(1 << (k - 1)); }

@@ -25,4 +25,3 @@ bool higherVersion(std::string ver1, std::string ver2) {
     vector<int> nums1 = split(ver1), nums2 = split(ver2);
     return nums1 > nums2;
 }
-

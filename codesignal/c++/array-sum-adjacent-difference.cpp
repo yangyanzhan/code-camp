@@ -11,4 +11,3 @@ int arraySumAdjacentDifference(std::vector<int> inputArray) {
     }
     return res;
 }
-

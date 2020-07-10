@@ -3,8 +3,8 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/easy-wallpaper.html .
 
-#include <cmath>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -15,6 +15,11 @@ class Wallpaper {
         if (l * w * h == 0) {
             c = 0;
         }
-        return vector<string>{"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"}[c];
+        return vector<string>{"zero",    "one",       "two",      "three",
+                              "four",    "five",      "six",      "seven",
+                              "eight",   "nine",      "ten",      "eleven",
+                              "twelve",  "thirteen",  "fourteen", "fifteen",
+                              "sixteen", "seventeen", "eighteen", "nineteen",
+                              "twenty"}[c];
     }
 };

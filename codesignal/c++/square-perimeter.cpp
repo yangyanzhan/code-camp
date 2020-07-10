@@ -3,7 +3,4 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codesignal/square-perimeter.html .
 
-int squarePerimeter(int n) {
-    return 4 * n;
-}
-
+int squarePerimeter(int n) { return 4 * n; }

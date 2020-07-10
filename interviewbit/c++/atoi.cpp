@@ -39,4 +39,3 @@ int Solution::atoi(const string A) {
     }
     return sign * res;
 }
-
