@@ -195,6 +195,11 @@ sub my-build() {
     shell $cmd;
 }
 
+sub my-format() {
+    $cmd = "find . -name \"*.cpp\" | xargs -I % sh -c 'clang-format % > %'";
+    shell $cmd;
+}
+
 sub MAIN($action, $filename = "") {
     if $action eq "fetch" {
         my-fetch($filename);
@@ -206,6 +211,8 @@ sub MAIN($action, $filename = "") {
         my-copy();
     } elsif $action eq "build" {
         my-build();
+    } elsif $action eq "format" {
+        my-format();
     } else {
         say "error: unknown action.";
     }
