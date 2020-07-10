@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/min-depth-of-binary-tree.html .
 
-int Solution::minDepth(TreeNode* A) {
+int Solution::minDepth(TreeNode *A) {
     if (!A) {
         return 0;
     }

@@ -4,13 +4,12 @@
 // Blog URL for this problem: https://yanzhan.site/interviewbit/balanced-binary-tree.html .
 
 int balanced(TreeNode *A) {
-    if (!A) return 0;
+    if (!A)
+        return 0;
     int h1 = balanced(A->left), h2 = balanced(A->right);
     if (h1 < 0 || h2 < 0 || abs(h1 - h2) > 1) {
         return -1;
     }
     return max(h1, h2) + 1;
 }
-int Solution::isBalanced(TreeNode* A) {
-    return balanced(A) >= 0;
-}
+int Solution::isBalanced(TreeNode *A) { return balanced(A) >= 0; }

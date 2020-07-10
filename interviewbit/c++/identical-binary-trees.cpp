@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/identical-binary-trees.html .
 
-int Solution::isSameTree(TreeNode* A, TreeNode* B) {
+int Solution::isSameTree(TreeNode *A, TreeNode *B) {
     if (A == NULL && B != NULL) {
         return false;
     }

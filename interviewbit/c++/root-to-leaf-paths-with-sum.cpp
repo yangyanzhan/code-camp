@@ -16,11 +16,11 @@ vector<vector<int>> Solution::pathSum(TreeNode *root, int sum) {
     vector<vector<int>> leftPaths = pathSum(root->left, sum - num);
     vector<vector<int>> rightPaths = pathSum(root->right, sum - num);
     vector<vector<int>> res;
-    for (vector<int> path: leftPaths) {
+    for (vector<int> path : leftPaths) {
         path.insert(path.begin(), num);
         res.push_back(path);
     }
-    for (vector<int> path: rightPaths) {
+    for (vector<int> path : rightPaths) {
         path.insert(path.begin(), num);
         res.push_back(path);
     }

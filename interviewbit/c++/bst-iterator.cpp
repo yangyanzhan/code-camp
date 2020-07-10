@@ -25,9 +25,7 @@ BSTIterator::BSTIterator(TreeNode *root) {
 }
 
 /** @return whether we have a next smallest number */
-bool BSTIterator::hasNext() {
-    return !cache.empty();
-}
+bool BSTIterator::hasNext() { return !cache.empty(); }
 
 /** @return the next smallest number */
 int BSTIterator::next() {
@@ -41,4 +39,3 @@ int BSTIterator::next() {
     }
     return val;
 }
-

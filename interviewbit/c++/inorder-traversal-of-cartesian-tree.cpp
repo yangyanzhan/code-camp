@@ -15,6 +15,6 @@ TreeNode *build(vector<int> &nums, int begin, int end) {
     return root;
 }
 
-TreeNode* Solution::buildTree(vector<int> &A) {
+TreeNode *Solution::buildTree(vector<int> &A) {
     return build(A, 0, A.size() - 1);
 }

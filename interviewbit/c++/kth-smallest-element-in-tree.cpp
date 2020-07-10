@@ -8,7 +8,7 @@ struct Node {
     int counts;
     Node *left;
     Node *right;
-    Node(int x): val(x), counts(0), left(NULL), right(NULL) {}
+    Node(int x) : val(x), counts(0), left(NULL), right(NULL) {}
 };
 
 Node *build(TreeNode *root) {
@@ -23,7 +23,7 @@ Node *build(TreeNode *root) {
 
 void getCounts(Node *root, int &counts) {
     if (!root) {
-        return ;
+        return;
     }
     getCounts(root->left, counts);
     root->counts = ++counts;
@@ -40,7 +40,7 @@ int find(Node *root, int k) {
     }
 }
 
-int Solution::kthsmallest(TreeNode* root, int k) {
+int Solution::kthsmallest(TreeNode *root, int k) {
     Node *node = build(root);
     int counts = 0;
     getCounts(node, counts);

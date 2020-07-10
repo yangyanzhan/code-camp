@@ -9,7 +9,7 @@ TreeNode *second;
 
 void inorder(TreeNode *root) {
     if (!root) {
-        return ;
+        return;
     }
     inorder(root->left);
     if (!pre) {

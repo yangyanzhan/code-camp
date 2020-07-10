@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/flatten-binary-tree-to-linked-list.html .
 
-TreeNode* Solution::flatten(TreeNode* A) {
+TreeNode *Solution::flatten(TreeNode *A) {
     stack<TreeNode *> nodes;
     TreeNode *curr = A;
     while (curr) {

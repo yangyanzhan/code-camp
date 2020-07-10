@@ -16,6 +16,6 @@ TreeNode *toBST(const vector<int> &nums, int begin, int end) {
     return root;
 }
 
-TreeNode* Solution::sortedArrayToBST(const vector<int> &A) {
+TreeNode *Solution::sortedArrayToBST(const vector<int> &A) {
     return toBST(A, 0, A.size() - 1);
 }

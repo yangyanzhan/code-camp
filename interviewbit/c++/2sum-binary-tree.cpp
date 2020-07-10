@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/2sum-binary-tree.html .
 
-int Solution::t2Sum(TreeNode* A, int B) {
+int Solution::t2Sum(TreeNode *A, int B) {
     stack<TreeNode *> common, reverse;
     int val1 = 0, val2 = 0;
     bool done1 = false, done2 = false;

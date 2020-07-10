@@ -18,7 +18,7 @@ bool isSame(TreeNode *A, TreeNode *B) {
     }
     return isSame(A->left, B->right) && isSame(A->right, B->left);
 }
-int Solution::isSymmetric(TreeNode* A) {
+int Solution::isSymmetric(TreeNode *A) {
     if (!A) {
         return true;
     }

@@ -23,7 +23,7 @@ bool getPath(TreeNode *root, int val, vector<int> &res) {
     return false;
 }
 
-int Solution::lca(TreeNode* A, int val1, int val2) {
+int Solution::lca(TreeNode *A, int val1, int val2) {
     vector<int> path1, path2;
     getPath(A, val1, path1);
     getPath(A, val2, path2);

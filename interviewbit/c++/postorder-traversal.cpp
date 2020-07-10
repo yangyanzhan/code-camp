@@ -12,7 +12,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-vector<int> Solution::postorderTraversal(TreeNode* A) {
+vector<int> Solution::postorderTraversal(TreeNode *A) {
     if (!A) {
         return vector<int>();
     }
@@ -22,4 +22,3 @@ vector<int> Solution::postorderTraversal(TreeNode* A) {
     first.push_back(A->val);
     return first;
 }
-

@@ -8,11 +8,13 @@ struct Node {
     vector<char> chs;
     vector<Node *> children;
     int count;
-    Node(string word): word(word), chs(vector<char>()), children(vector<Node *>()), count(0) {}
+    Node(string word)
+        : word(word), chs(vector<char>()), children(vector<Node *>()),
+          count(0) {}
     void insert(string raw) {
         count++;
         if (raw.length() <= 0) {
-            return ;
+            return;
         }
         char ch = raw[0];
         int idx;
@@ -30,13 +32,13 @@ struct Node {
 
 void traverse(Node *root, vector<string> &res) {
     if (!root) {
-        return ;
+        return;
     }
     if (root->count == 1) {
         res.push_back(root->word);
-        return ;
+        return;
     }
-    for (auto child: root->children) {
+    for (auto child : root->children) {
         traverse(child, res);
     }
 }
@@ -45,7 +47,7 @@ void sort(vector<string> &raws, vector<string> &res) {
     map<int, string> cache;
     for (int i = 0; i < raws.size(); i++) {
         string raw = raws[i];
-        for (string item: res) {
+        for (string item : res) {
             if (raw.find(item) == 0) {
                 cache[i] = item;
                 break;
@@ -59,7 +61,7 @@ void sort(vector<string> &raws, vector<string> &res) {
 
 vector<string> Solution::prefix(vector<string> &words) {
     Node *trie = new Node("");
-    for (string word: words) {
+    for (string word : words) {
         trie->insert(word);
     }
     vector<string> res;

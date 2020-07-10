@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/max-depth-of-binary-tree.html .
 
-int Solution::maxDepth(TreeNode* A) {
+int Solution::maxDepth(TreeNode *A) {
     if (!A) {
         return 0;
     }

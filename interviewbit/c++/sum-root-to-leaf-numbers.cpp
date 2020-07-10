@@ -5,7 +5,7 @@
 
 void getSum(TreeNode *A, long long sum, int &res) {
     if (A == NULL) {
-        return ;
+        return;
     }
     sum = sum * 10 + A->val;
     sum %= 1003;

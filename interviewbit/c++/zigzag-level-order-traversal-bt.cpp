@@ -5,11 +5,11 @@
 
 void getRow(TreeNode *root, int height, bool ltr, vector<int> &row) {
     if (!root) {
-        return ;
+        return;
     }
     if (height == 1) {
         row.push_back(root->val);
-        return ;
+        return;
     }
     if (ltr) {
         getRow(root->left, height - 1, ltr, row);
@@ -23,7 +23,7 @@ void getRow(TreeNode *root, int height, bool ltr, vector<int> &row) {
 vector<vector<int>> Solution::zigzagLevelOrder(TreeNode *A) {
     vector<vector<int>> res;
     bool ltr = true;
-    for (int h = 1;;h++) {
+    for (int h = 1;; h++) {
         vector<int> row;
         getRow(A, h, ltr, row);
         ltr = !ltr;

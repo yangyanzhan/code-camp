@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/preorder-traversal.html .
 
-vector<int> Solution::preorderTraversal(TreeNode* A) {
+vector<int> Solution::preorderTraversal(TreeNode *A) {
     if (!A) {
         return vector<int>();
     }
@@ -13,4 +13,3 @@ vector<int> Solution::preorderTraversal(TreeNode* A) {
     first.insert(first.end(), second.begin(), second.end());
     return first;
 }
-

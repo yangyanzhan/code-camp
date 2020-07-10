@@ -12,7 +12,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-vector<int> Solution::inorderTraversal(TreeNode* A) {
+vector<int> Solution::inorderTraversal(TreeNode *A) {
     if (!A) {
         return vector<int>();
     }
@@ -22,4 +22,3 @@ vector<int> Solution::inorderTraversal(TreeNode* A) {
     first.insert(first.end(), second.begin(), second.end());
     return first;
 }
-

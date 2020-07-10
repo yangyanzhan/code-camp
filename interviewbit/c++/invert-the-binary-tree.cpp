@@ -3,7 +3,7 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/interviewbit/invert-the-binary-tree.html .
 
-TreeNode* Solution::invertTree(TreeNode* root) {
+TreeNode *Solution::invertTree(TreeNode *root) {
     if (!root) {
         return NULL;
     }
