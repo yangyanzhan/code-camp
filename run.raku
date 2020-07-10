@@ -126,6 +126,7 @@ sub my-get-path() {
 }
 
 sub my-info() {
+    my-format();
     my $path = my-get-path();
     my $cmd = "printf '$path' | pbcopy";
     say $path;
@@ -198,8 +199,10 @@ sub my-build() {
 
 sub my-format() {
     my $path = my-get-path();
-    my $cmd = "clang-format {$path} > tmp.txt && mv tmp.txt {$path}";
-    shell $cmd;
+    if $path.chars > 0 && $path ~~ /cpp/ {
+        my $cmd = "clang-format {$path} > tmp.txt && mv tmp.txt {$path}";
+        shell $cmd;
+    }
 }
 
 sub my-format-all() {
