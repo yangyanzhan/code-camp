@@ -196,7 +196,7 @@ sub my-build() {
 }
 
 sub my-format() {
-    my $cmd = "find . -name \"*.cpp\" | xargs -I % sh -c 'clang-format % > %'";
+    my $cmd = "find . -name \"*.cpp\" | xargs -I % sh -c 'clang-format % > tmp.txt && mv tmp.txt %'";
     shell $cmd;
 }
 
