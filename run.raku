@@ -133,6 +133,7 @@ sub my-info() {
 }
 
 sub my-copy() {
+    my-format();
     my $path = my-get-path();
     my $cmd = "cat '$path' | pbcopy";
     say $path;
@@ -196,6 +197,12 @@ sub my-build() {
 }
 
 sub my-format() {
+    my $path = my-get-path();
+    my $cmd = "clang-format {$path} > tmp.txt && mv tmp.txt {$path}";
+    shell $cmd;
+}
+
+sub my-format-all() {
     my $cmd = "find . -name \"*.cpp\" | xargs -I % sh -c 'clang-format % > tmp.txt && mv tmp.txt %'";
     shell $cmd;
 }
@@ -213,6 +220,8 @@ sub MAIN($action, $filename = "") {
         my-build();
     } elsif $action eq "format" {
         my-format();
+    } elsif $action eq "format-all" {
+        my-format-all();
     } else {
         say "error: unknown action.";
     }
