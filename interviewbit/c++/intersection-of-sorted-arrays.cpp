@@ -1,0 +1,22 @@
+// Hi, I'm Yanzhan. For more algothmic problems, visit my Youtube Channel (Yanzhan Yang's Youtube Channel) : https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber or my Twitter Account (Yanzhan Yang's Twitter) : https://twitter.com/YangYanzhan or my GitHub HomePage (Yanzhan Yang's GitHub HomePage) : https://yanzhan.site .
+// For this specific algothmic problem, visit my Youtube Video :  .
+// It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
+// Blog URL for this problem: https://yanzhan.site/interviewbit/intersection-of-sorted-arrays.html .
+
+vector<int> Solution::intersect(const vector<int> &A, const vector<int> &B) {
+    vector<int> res;
+    int i = 0, j = 0, n = A.size(), m = B.size();
+    while (i < n && j < m) {
+        int n1 = A[i], n2 = B[j];
+        if (n1 == n2) {
+            res.push_back(n1);
+            i++, j++;
+        } else if (n1 < n2) {
+            i++;
+        } else {
+            j++;
+        }
+    }
+    return res;
+}
+
