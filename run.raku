@@ -106,7 +106,7 @@ sub my-submit() {
     shell $cmd;
 }
 
-sub my-info() {
+sub my-get-path() {
     my $proc = shell "git status --porcelain", :out;
     my $str = $proc.out.slurp: :close;
     my $match = $str ~~ /(<-[\/]>+)\.cpp/;
@@ -122,7 +122,19 @@ sub my-info() {
             exit 1;
         }
     }
+    return $path;
+}
+
+sub my-info() {
+    my $path = my-get-path();
     my $cmd = "printf '$path' | pbcopy";
+    say $path;
+    shell $cmd;
+}
+
+sub my-copy() {
+    my $path = my-get-path();
+    my $cmd = "cat '$path' | pbcopy";
     say $path;
     shell $cmd;
 }
@@ -190,6 +202,8 @@ sub MAIN($action, $filename = "") {
         my-submit();
     } elsif $action eq "info" {
         my-info();
+    } elsif $action eq "copy" {
+        my-copy();
     } elsif $action eq "build" {
         my-build();
     } else {
