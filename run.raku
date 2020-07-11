@@ -51,11 +51,14 @@ my $github-page-directory = "yangyanzhan.github.io";
 my @sitemap-lines = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\" xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"];
 
-sub my-fetch($filename) {
+sub my-fetch($filename-input) {
+    my $filename = $filename-input;
     if $filename eq "" {
         say "error: filename is empty.";
         return ;
     }
+
+    $filename = $filename.trim.split(" ").map({ $_.lc }).join("-");
 
     my $language = $cpp-language;
     if @raku-solutions.first($judge, :k).defined {
