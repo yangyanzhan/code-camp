@@ -1,4 +1,4 @@
-:not([class*="highlight-code"]):not(h2):not(a):not(.no-highlight-background) {
+:not([class*="highlight-code"]):not(h1):not(h2):not(a):not(.no-highlight-background) {
     color: #82b74b;
     background-color: #3e4444;
     font-size: x-large;
@@ -10,6 +10,11 @@
 
 body {
     padding: 10px;
+}
+
+h1 {
+    color: #d64161;
+    font-size: xxx-large;;
 }
 
 h2 {
