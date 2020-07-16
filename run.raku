@@ -58,6 +58,8 @@ sub my-fetch($filename-input) {
         return ;
     }
 
+    $filename ~~ s:g/\(//;
+    $filename ~~ s:g/\)//;
     $filename = $filename.trim.split(" ").map({ $_.lc }).join("-");
 
     my $language = $cpp-language;
