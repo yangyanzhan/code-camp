@@ -3,9 +3,11 @@
 // It's fascinating to solve algothmic problems, follow Yanzhan to learn more!
 // Blog URL for this problem: https://yanzhan.site/codewars/simple-fun-74-growing-plant.html .
 
+#include <cmath>
+
 int growingPlant(int upSpeed, int downSpeed, int desiredHeight) {
     if (desiredHeight <= upSpeed) {
         return 1;
     }
-    return (desiredHeight - upSpeed) / (upSpeed - downSpeed) + 1;
+    return ceil((desiredHeight - upSpeed + 0.0) / (upSpeed - downSpeed)) + 1;
 }
