@@ -3,8 +3,8 @@
 # "leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism", "interviewbit", "rosetta"
 # Now I'm focused on interviewbit and rosetta!
 
-#                  0           1            2             3           4             5            6            7             8
-my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism", "interviewbit", "rosetta"];
+#                  0           1            2             3           4             5            6            7             8           9
+my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism", "interviewbit", "rosetta", "csacademy"];
 
 my @third-party-solutions = ["rosetta"];
 
