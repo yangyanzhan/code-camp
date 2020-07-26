@@ -15,89 +15,134 @@
         Yanzhan’s HomePage
     </h1>
     <hr />
-    <h2>
-        Algorithmic Problems - An Introduction
-    </h2>
-    <ul>
-        <li>You may think computer programming and problem solving is very difficult, think again. Here’s an example
-            from Google Code Jam 2019 Qualification Round:</li>
-    </ul>
-    <blockquote>
-        <p>GCJ 2019 Qualification Round</p>
-        <div>
-            Given a number n, suppose there is at least one digit 4 in this number.
-
-            How can you split number n into two numbers a and b, so that a + b = n and there is no digit 4 in a and b.
+    <div style="display: table; width: 100%;">
+        <div style="float: left; width: 20%; padding-top: 10%; padding-left: 5%; padding-right: 5%; display: table-cell; font-size: medium; font-style: italic;">
+            <div style="font-size: medium; font-style: italic;">
+                Algorithmic Thinking
+            </div>
+            <div style="font-size: medium; font-style: italic; padding-top: 10px;">
+                Algorithm is the final frontier.
+            </div>
         </div>
-    </blockquote>
-    <ul>
-        <li>
-            <p>
-                This may seem difficult at first glance. Maybe one can iterate through 1 to n - 1, and check each
-                possible pairs until the pair with desired properties is found. However, this solution requires
-                <strong>O(n)</strong> <img class="emoji" title=":-1:" alt=":-1:"
-                    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20" />
-                time complexity which is too slow
-                for this problem. Actually, there’s a <strong>O(1)</strong>
-                <img class="emoji" title=":+1:" alt=":+1:"
+        <div style="float: right; width: 70%; display: table-cell;">
+        <h2>
+            Algorithmic Thinking - An Introduction
+        </h2>
+        <ul>
+            <li>You may think computer programming and problem solving is very difficult, think again. Here’s an example
+                from Google Code Jam 2019 Qualification Round:</li>
+        </ul>
+        <blockquote style="background: #323232; padding: 10px;">
+            <p style="background: #323232; color: #6b5b95;">GCJ 2019 Qualification Round</p>
+            <div style="background: #323232; color: #b2ad7f;">
+                Given a number n, suppose there is at least one digit 4 in this number.
+
+                How can you split number n into two numbers a and b, so that a + b = n and there is no digit 4 in a and b.
+            </div>
+        </blockquote>
+        <ul>
+            <li>
+                <p>
+                    This may seem difficult at first glance. Maybe one can iterate through 1 to n - 1, and check each
+                    possible pairs until the pair with the desired properties is found. However, this solution requires
+                    <strong style="color: #d64161;">O(n)</strong> <img class="emoji" title=":-1:" alt=":-1:"
+                        src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20" />
+                    time complexity which is too slow
+                    for this problem. Actually, there’s a <strong style="color: #b5e7a0;">O(1)</strong>
+                    <img class="emoji" title=":+1:" alt=":+1:"
+                        src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" />
+                    solution for this problem. Can you think of the correct
+                    solution?
+                </p>
+            </li>
+            <li>
+                It turns out that the <strong style="color: #b5e7a0;">O(1)</strong> <img class="emoji" title=":+1:" alt=":+1:"
                     src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" />
-                solution for this problem. Can you think of the correct
-                solution?
-            </p>
-        </li>
-        <li>
-            It turns out that the <strong>O(1)</strong> <img class="emoji" title=":+1:" alt=":+1:"
-                src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" />
-            solution is
-            quite simple and intuitive. Just follow these steps:
-            <ul>
-                <li>Replace all the digit 4 with digit 3, so this is number a.</li>
-                <li>And replace all the digit 4 with digit 1, then we get number b. It’s just that simple!</li>
-            </ul>
-        </li>
-        <li>
-            Algorithmic problems sometimes may seem daunting and unapproachable. However, once you have understood
-            the
-            underlying logic for the solution. It will become clear and simple, just like the above example.
-            So just feel free to solve algorithmic problems. It’s a wonderful experience.
-        </li>
-    </ul>
-    <p>As <a href="https://en.wikipedia.org/wiki/Donald_Knuth" target="_blank">Donald Knuth</a> has once said:</p>
-    <blockquote>
-        <p>An algorithm must be seen to be believed.</p>
-    </blockquote>
-    <p>So come with me, follow me at <a
-            href="https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber"
-            target="_blank">Youtube</a>,
-        <a href="https://twitter.com/YangYanzhan" target="_blank">Twitter</a> or <a
-            href="https://github.com/yangyanzhan/code-camp" target="_blank">GitHub</a>. Let’s
-        <strong>“see”</strong> the art of
-        algorithm
-        together!!</p>
-    <h2>You can check out solutions for all kinds of algorithmic problems on this site.</h2>
-    <h2>C++ Solutions:</h2>
-    <ul>
-        <li><a href="/leetcode/" target="_blank">LeetCode</a></li>
-        <li><a href="/codesignal/" target="_blank">CodeSignal</a></li>
-        <li><a href="/codewars/" target="_blank">CodeWars</a></li>
-        <li><a href="/hackerrank/" target="_blank">HackerRank</a></li>
-        <li><a href="/interviewbit/" target="_blank">InterviewBit</a></li>
-    </ul>
-    <h2>Raku Solutions:</h2>
-    <ul>
-        <li><a href="/exercism/" target="_blank">Exercism</a></li>
-        <li><a href="/rosetta/" target="_blank">Rosetta</a></li>
-    </ul>
+                solution is
+                quite simple and intuitive. Just follow these steps:
+                <ul>
+                    <li style="background: #323232; padding: 10px; margin-top: 10px;">Replace all the digit 4 with digit 3, so this is number a.</li>
+                    <li style="background: #323232; padding: 10px;">And replace all the digit 4 with digit 1, then we get number b. It’s just that simple!</li>
+                </ul>
+            </li>
+            <li>
+                Algorithmic problems sometimes may seem daunting and unapproachable. However, once you have understood
+                the
+                underlying logic for the solution. It will become <strong style="color: #b5e7a0;">CLEAR</strong> and <strong style="color: #b5e7a0;">SIMPLE</strong>, just like the above example.
+                So just feel free to solve algorithmic problems. It’s a <strong style="color: #b5e7a0;">WONDERFUL</strong> experience.
+            </li>
+        </ul>
+        </div>
+    </div>
     <hr />
-    <h2>
-        The Tao of Raku
-    </h2>
-    <div>
-        I'm very interested in using Raku language. You can find all kinds of video clips about Raku on my youtube channel. I'll also write blog articles about Raku tips and tricks on my homepage. If you like Raku, don't forget to follow me. :)
+    <div style="display: table; width: 100%;">
+        <div style="float: left; width: 20%; padding-top: 10%; padding-left: 5%; padding-right: 5%; display: table-cell; font-size: medium; font-style: italic;">
+            Follow Me
+        </div>
+        <div style="float: right; width: 70%; display: table-cell;">
+            <h2>
+                Follow Me to Support My Blog on Algorithmic Thinking
+            </h2>
+            <blockquote style="background: #323232; padding: 10px;">
+                <p style="background: #323232; color: #6b5b95;">As <a href="https://en.wikipedia.org/wiki/Donald_Knuth" target="_blank">Donald Knuth</a> has once said:</p>
+                <p style="background: #323232; color: #b2ad7f;">An algorithm must be seen to be believed.</p>
+            </blockquote>
+            <ul>
+                <li>
+                    <p>So come with me, follow me at any of these following social media websites. Your support is what drives me to write this technical blog. Don't hesitate!! Let’s <strong style="color: #b5e7a0;">“see”</strong> the art of algorithm together!!</p>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCDkz-__gl3frqLexukpG0DA?view_as=subscriber"
+                                target="_blank">Yanzhan's Youtube Channel</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/YangYanzhan" target="_blank">Yanzhan's Twitter Account</a>
+                </li>
+                <li>
+                    <a href="https://github.com/yangyanzhan/code-camp" target="_blank">Yanzhan's GitHub Repo</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr />
+    <div style="display: table; width: 100%;">
+        <div style="float: left; width: 20%; padding-top: 10%; padding-left: 5%; padding-right: 5%; display: table-cell; font-size: medium; font-style: italic;">
+            Solutions
+        </div>
+        <div style="float: right; width: 70%; display: table-cell;">
+            <h2>You can check out solutions for all kinds of algorithmic problems on this site.</h2>
+            <h4>C++ Solutions:</h4>
+            <ul>
+                <li><a href="/leetcode/" target="_blank">LeetCode Solutions by Yanzhan</a></li>
+                <li><a href="/codesignal/" target="_blank">CodeSignal Solutions by Yanzhan</a></li>
+                <li><a href="/codewars/" target="_blank">CodeWars Solutions by Yanzhan</a></li>
+                <li><a href="/hackerrank/" target="_blank">HackerRank Solutions by Yanzhan</a></li>
+                <li><a href="/interviewbit/" target="_blank">InterviewBit Solutions by Yanzhan</a></li>
+            </ul>
+            <h4>Raku Solutions:</h4>
+            <ul>
+                <li><a href="/exercism/" target="_blank">Exercism Solutions by Yanzhan</a></li>
+                <li><a href="/rosetta/" target="_blank">Rosetta Solutions by Yanzhan</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr />
+    <div style="display: table; width: 100%;">
+        <div style="float: left; width: 20%; padding-top: 5%; padding-left: 5%; padding-right: 5%; display: table-cell; font-size: medium; font-style: italic;">
+            Raku
+        </div>
+        <div style="float: right; width: 70%; display: table-cell;">
+            <h2>
+                The Tao of Raku
+            </h2>
+            <div>
+                I'm very interested in using Raku language. You can find all kinds of video clips about Raku on my youtube channel. I'll also write blog articles about Raku tips and tricks on my homepage. If you like Raku, don't forget to follow me. :)
+            </div>
+        </div>
     </div>
     <hr />
     <footer>
-        <p>Copyright © 2019-2099 Yanzhan Yang.</p>
+        <p style="text-align: right; font-size: medium;">Copyright © 2019-2099 Yanzhan Yang.</p>
     </footer>
 </body>
 

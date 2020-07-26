@@ -69,3 +69,10 @@ pre {
     word-wrap: break-word;
 }
 
+hr {
+    border: 3px solid #323232;
+}
+
+li {
+    margin-bottom: 10px;
+}
