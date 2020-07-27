@@ -10,6 +10,8 @@ my @third-party-solutions = ["rosetta"];
 
 my @raku-solutions = ["exercism", "rosetta"];
 
+my @full-template-judges = ["csacademy"];
+
 use lib '.';
 use my-config;
 
@@ -77,6 +79,11 @@ sub my-fetch($filename-input) {
     }
 
     my $template = "./tools/cpp-template.cpp".IO.slurp;
+    if $language eq $cpp-language {
+        if @full-template-judges.contains($judge) {
+            $template = "./tools/cpp-full-template.cpp".IO.slurp;
+        }
+    }
     if $language eq $raku-language {
         $template = "./tools/raku-template.raku".IO.slurp;
         if $is-third-party-solution {
