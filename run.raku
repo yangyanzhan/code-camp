@@ -80,7 +80,7 @@ sub my-fetch($filename-input) {
 
     my $template = "./tools/cpp-template.cpp".IO.slurp;
     if $language eq $cpp-language {
-        if @full-template-judges.first($judge, :k) {
+        if @full-template-judges.first($judge, :k).defined {
             $template = "./tools/cpp-full-template.cpp".IO.slurp;
         }
     }
