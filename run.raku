@@ -161,7 +161,7 @@ sub my-build() {
     shell $cmd;
 
     # roots of solutions
-    my @roots = [["leetcode", "leetcode/c++", $cpp-extension], ["codesignal", "codesignal/c++", $cpp-extension], ["codewars", "codewars/c++", $cpp-extension], ["hackerrank", "hackerrank/c++", $cpp-extension], ["interviewbit", "interviewbit/c++", $cpp-extension], ["exercism", "exercism/raku", $raku-extension], ["rosetta", "rosetta/raku", $raku-extension]];
+    my @roots = [["leetcode", "leetcode/c++", $cpp-extension], ["codesignal", "codesignal/c++", $cpp-extension], ["codewars", "codewars/c++", $cpp-extension], ["hackerrank", "hackerrank/c++", $cpp-extension], ["interviewbit", "interviewbit/c++", $cpp-extension], ["csacademy", "csacademy/c++", $cpp-extension], ["exercism", "exercism/raku", $raku-extension], ["rosetta", "rosetta/raku", $raku-extension]];
     for @roots -> @root {
         my $name = @root[0];
         my $path = @root[1];
