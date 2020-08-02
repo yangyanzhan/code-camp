@@ -231,6 +231,15 @@ sub my-format-all() {
     shell $cmd;
 }
 
+sub my-execute() {
+    my-format();
+    my $path = my-get-path();
+    my $cmd = "g++ -std=c++17 '$path'";
+    shell $cmd;
+    $cmd = "cat input.txt | ./a.out";
+    shell $cmd;
+}
+
 sub MAIN($action, $filename = "") {
     if $action eq "fetch" {
         my-fetch($filename);
@@ -246,6 +255,8 @@ sub MAIN($action, $filename = "") {
         my-format();
     } elsif $action eq "format-all" {
         my-format-all();
+    } elsif $action eq "execute" {
+        my-execute();
     } else {
         say "error: unknown action.";
     }
