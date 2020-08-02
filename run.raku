@@ -255,7 +255,7 @@ sub MAIN($action, $filename = "") {
         my-format();
     } elsif $action eq "format-all" {
         my-format-all();
-    } elsif $action eq "execute" || $action eq "exec" {
+    } elsif $action eq "execute" || $action eq "exec" || $action eq "test" {
         my-execute();
     } else {
         say "error: unknown action.";
