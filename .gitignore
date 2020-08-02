@@ -108,8 +108,8 @@ run.py
 a.out
 .DS_Store
 .precomp
-my-config.pm6
-my-config.rakumod
+# my-config.pm6
+# my-config.rakumod
 book.txt
 build
 build-third-party-assets
