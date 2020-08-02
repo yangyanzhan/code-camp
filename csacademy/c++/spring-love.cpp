@@ -26,6 +26,7 @@ typedef long long ll;
 
 int main() {
     int n;
+    cin >> n;
     int res = 0;
     for (int i = 0; i < n; i++) {
         int num;
