@@ -247,15 +247,15 @@ sub MAIN($action, $filename = "") {
         my-submit();
     } elsif $action eq "info" {
         my-info();
-    } elsif $action eq "copy" {
+    } elsif $action eq "copy" || $action eq "cp" {
         my-copy();
     } elsif $action eq "build" {
         my-build();
-    } elsif $action eq "format" {
+    } elsif $action eq "format" || $action eq "fmt" {
         my-format();
     } elsif $action eq "format-all" {
         my-format-all();
-    } elsif $action eq "execute" {
+    } elsif $action eq "execute" || $action eq "exec" {
         my-execute();
     } else {
         say "error: unknown action.";
