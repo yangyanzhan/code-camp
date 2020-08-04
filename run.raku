@@ -257,6 +257,7 @@ sub MAIN($action, $filename = "") {
         my-format-all();
     } elsif $action eq "execute" || $action eq "exec" || $action eq "test" {
         my-execute();
+        my-copy();
     } else {
         say "error: unknown action.";
     }
