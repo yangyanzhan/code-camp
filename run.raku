@@ -297,6 +297,17 @@ sub MAIN($action, $filename = "") {
 
 sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
     # setup variables
+    my $attach-description = "";
+    my $attach-analysis = "";
+    my $attach-path = "./attach/{$judge-name}/{$filename}.json";
+    if $attach-path.IO.e {
+        my $attach-content = $attach-path.IO.slurp.trim;
+        my %attach = from-json($attach-content);
+        $attach-description = %attach{"description"};
+        $attach-description ~~ s:s:g/\\n/<br \/>/;
+        $attach-analysis = %attach{"analysis"};
+        $attach-analysis ~~ s:s:g/\\n/<br \/>/;
+    }
     my $comment-sign = %language-comment-signs{$language};
     my $highlight-class = %language-highlight-classes{$language};
     my $is-third-party-solution = @third-party-solutions.first($judge-name, :k).defined;
@@ -362,6 +373,36 @@ sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
     if $is-third-party-solution {
         $disclaimer's = $contributor-disclaimer's;
     }
+    # generate description
+    my $description-lines = "
+        <h3>
+            description:
+        </h3>
+        <div style=\"border: dotted; padding: 10px;\">
+            {$attach-description}
+        </div>
+    ";
+    if $attach-description.chars <= 0 {
+        $description-lines = "
+            <div>
+            </div>
+        ";
+    }
+    # generate analysis
+    my $analysis-lines = "
+        <h3>
+            analysis:
+        </h3>
+        <div style=\"border: dotted; padding: 10px;\">
+            {$attach-analysis}
+        </div>
+    ";
+    if $attach-analysis.chars <= 0 {
+        $analysis-lines = "
+            <div>
+            </div>
+        ";
+    }
     # generate video lines
     my $video-lines = "
         <div>
@@ -372,12 +413,21 @@ sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
         my $v = "https://www.youtube.com/embed/";
         $video-url ~~ s/$k/$v/;
         $video-lines = "
+            <h3>
+                video tutorial:
+            </h3>
             <div class=\"video-wrapper yanzhan-hidden\">
                 <iframe class=\"video-item\" src=\"{$video-url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>
                 </iframe>
             </div>
         ";
     }
+    # generate solution header
+    my $solution-header-lines = "
+        <h3>
+            solution:
+        </h3>
+    ";
     for 0..^@parts2.elems -> $i {
         my $k = "<";
         my $v = "&lt;";
@@ -400,7 +450,10 @@ sub gen-solution($file, $filename, $judge-name, $judge-path, $language) {
     @solution-lines.push: "<ul>";
     @solution-lines.push: @parts1.map( { "<li>{$_}</li>" } ).join("\n");
     @solution-lines.push: "</ul>";
+    @solution-lines.push: $description-lines;
+    @solution-lines.push: $analysis-lines;
     @solution-lines.push: $video-lines;
+    @solution-lines.push: $solution-header-lines;
     if $highlight-class.chars > 0 {
         @solution-lines.push: "<pre class=\"yanzhan-hidden\"><code class=\"{$highlight-class}\">" ~ @parts2.grep({$_.trim.chars > 0}).join("\n");
         @solution-lines.push: "</code></pre>";
