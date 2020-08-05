@@ -6,6 +6,8 @@
 #                  0           1            2             3           4             5            6            7             8           9
 my @judges = ["leetcode", "lintcode", "codeforces", "codesignal", "codewars", "hackerrank", "exercism", "interviewbit", "rosetta", "csacademy"];
 
+use JSON::Tiny;
+
 my @third-party-solutions = ["rosetta"];
 
 my @raku-solutions = ["exercism", "rosetta"];
@@ -262,8 +264,10 @@ sub my-execute() {
 sub my-attach() {
     my $code-path = my-get-path();
     my $attach-path = my-get-attach-path();
-    say $code-path;
-    say $attach-path;
+    my $proc = shell "pbpaste", :out;
+    my $str = $proc.out.slurp: :close;
+    my %content = description => $str, analysis => "";
+    spurt $attach-path, to-json(%content);
 }
 
 sub MAIN($action, $filename = "") {
