@@ -268,6 +268,9 @@ sub my-attach() {
     my $str = $proc.out.slurp: :close;
     my %content = description => $str, analysis => "";
     spurt $attach-path, to-json(%content);
+    my $cmd = "printf '$attach-path' | pbcopy";
+    say $attach-path;
+    shell $cmd;
 }
 
 sub MAIN($action, $filename = "") {
