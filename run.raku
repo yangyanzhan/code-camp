@@ -146,6 +146,25 @@ sub my-get-path() {
     return $path;
 }
 
+sub my-get-attach-path() {
+    my $proc = shell "git status --porcelain", :out;
+    my $str = $proc.out.slurp: :close;
+    my $match = $str ~~ /(<-[\/]>+)\.cpp/;
+    my $path;
+    if $match {
+        $path = "./attach/{ $judge.lc }/{ $match[0].Str }.json";
+    } else {
+        $match = $str ~~ /(<-[\/]>+)\.raku/;
+        if $match {
+            $path = "./attach/{ $judge.lc }/{ $match[0].Str }.json";
+        } else {
+            say "error: language not known.";
+            exit 1;
+        }
+    }
+    return $path;
+}
+
 sub my-info() {
     my-format();
     my $path = my-get-path();
@@ -240,6 +259,13 @@ sub my-execute() {
     shell $cmd;
 }
 
+sub my-attach() {
+    my $code-path = my-get-path();
+    my $attach-path = my-get-attach-path();
+    say $code-path;
+    say $attach-path;
+}
+
 sub MAIN($action, $filename = "") {
     if $action eq "fetch" {
         my-fetch($filename);
@@ -258,6 +284,8 @@ sub MAIN($action, $filename = "") {
     } elsif $action eq "execute" || $action eq "exec" || $action eq "test" {
         my-execute();
         my-copy();
+    } elsif $action eq "attach" || $action eq "at" {
+        my-attach();
     } else {
         say "error: unknown action.";
     }
