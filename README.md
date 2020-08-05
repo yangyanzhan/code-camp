@@ -16,14 +16,14 @@ How can you split number n into two numbers a and b, so that a + b = n
 and there is no digit 4 in a and b.
 ```
 
-* This may seem difficult at first glance. Maybe one can iterate through 1 to n - 1, and check each possible pairs until the pair with desired properties is found. However, this solution requires **O(n)** :-1: time complexity which is too slow for this problem. Actually, there's a **O(1)** :+1: solution for this problem. Can you think of the correct solution?
+* This may seem difficult at the first glance. Maybe one can iterate through 1 to n - 1, and check each possible pair until the pair with the desired properties is found. However, this solution requires **O(n)** :-1: time complexity which is too slow for this problem. Actually, there's a **O(1)** :+1: solution for this problem. Can you think of the correct solution?
 
 * It turns out that the **O(1)** :+1: solution is quite simple and intuitive. Just follow these steps:
    * Replace all the digit 4 with digit 3, so this is number a.
    * And replace all the digit 4 with digit 1, then we get number b.
    It's just that simple!
 
-* Algorithmic problems sometimes may seem daunting and unapproachable. However, once you have understood the underlying logic for the solution. It will become clear and simple, just like the above example. So just feel free to solve algorithmic problems. It's a wonderful experience.
+* Algorithmic problems sometimes may seem daunting and unapproachable. However, once you have understood the underlying logic for the solution, it will become clear and simple, just like the above example. So just feel free to solve algorithmic problems. It's a wonderful experience.
 
 As [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) has once said:
 
