@@ -66,6 +66,7 @@ sub my-fetch($filename-input) {
     $filename ~~ s:g/\)/ /;
     $filename ~~ s:g/\!/ /;
     $filename ~~ s:g/\,/ /;
+    $filename ~~ s:g/\./ /;
     $filename ~~ s:g/\#/ /;
     $filename ~~ s:g/\:/ /;
     $filename ~~ s:g/\?/ /;
