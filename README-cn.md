@@ -89,4 +89,6 @@ and there is no digit 4 in a and b.
 
 一言以蔽之，宣传算法、C++和Raku语言。
 
+与此同时，你也可以访问[animate.site](https://animate.site)这个网站，观看动画来了解算法的运行原理。
+
 如果感觉这个仓库不错，可以提出更多的建议，帮助我做的更好。
